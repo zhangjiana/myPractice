@@ -1,0 +1,132 @@
+.doctor-list li:last-child {
+    border-bottom: none;
+}
+.doctor-list>li {
+    border-bottom: solid 1px #e5e5e5;
+    padding: .28rem 0;
+    margin: 0 0.3rem;
+    line-height: .42rem;
+    background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/doctor-arrow.png) no-repeat right center;background-size: .16rem .3rem;
+}
+.doctor-list>li>a {
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.doctor-head {
+    width: 1.16rem;
+    height: 1.16rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: .2rem;
+    background-color: #e5e5e5;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.16rem;
+}
+.pt02 {
+    padding-top: 0.02rem;
+}
+.doctor-filter li {
+    float: left;
+    margin: .15rem 0;
+    height: .6rem;
+    line-height: .6rem;
+}
+.location {
+    border-right: solid 1px #42babb;
+    padding: 0 .85rem 0 .65rem;
+    background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/location.png) no-repeat .2rem center;background-size: .44rem;
+}
+.department {
+    padding-left: .45rem;
+    background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/department.png) no-repeat .35rem center;background-size: .44rem;
+    text-indent: .5rem;
+}
+.location:after, .department:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: .22rem;
+    bottom: .13rem;
+    border-top: solid .13rem #42babb;
+    border-left: solid .13rem transparent;
+    border-right: solid .13rem transparent;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.department:after {
+    right: -.05rem;
+}
+.pull-down {
+    width: 100%;
+    bottom: -.5rem;
+    left: 0;
+}
+
+/*筛选医生弹窗*/
+.win-city {
+    width: 100%;
+    height: 100%;
+    padding-top: 2.58rem;
+    background: rgba(0, 0, 0, .2);
+    z-index: 2;
+}
+.city-list {
+    width: 1.82rem;
+    border-radius: .1rem;
+    margin-top: .16rem;
+    margin-left: .5rem;
+    padding: .12rem;
+}
+.city-list li {
+    line-height: .9rem;
+    border-bottom: solid 1px #ccc;
+}
+.city-list li:last-child {
+    border-bottom: none;
+}
+.city-list:before, .dpt-list-wrap:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/triangle.png) no-repeat center;background-size: .25rem .15rem;
+    width: .25rem;
+    height: .15rem;
+    top: -.14rem;
+    right: .2rem;
+}
+.city-list li:active, .dpt-list li:active {
+    color: #42babb;
+}
+.dpt-list-wrap {
+    margin: .16rem auto 0;
+    padding: .06rem .32rem;
+    width: 97.33%;
+    border-radius: .1rem;
+    height: 88%;
+}
+.dpt-list li {
+    height: 100%;
+    line-height: .9rem;
+    border-bottom: solid 1px #e5e5e5;
+}
+.dpt-list-wrap:before {
+    top: 2.58rem;
+    right: .24rem;
+    z-index: 5;
+}
+.dpt-list-wrap>div:first-child {
+    overflow: hidden;
+    height: 90%;
+}
+.btn-close {
+    margin-top: .04rem;
+    height: 10%;
+}
+.btn-close img {
+    width: .52rem;
+    vertical-align: middle;
+}

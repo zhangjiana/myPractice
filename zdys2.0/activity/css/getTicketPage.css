@@ -1,0 +1,37 @@
+.main{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/ticket/bg1.jpg) no-repeat top;background-size:contain;
+    min-height:100%;padding-top:1.63rem;}
+.bg-red2{background-color: #f83e3f}
+.btn-get-code{width:1.8rem;height:.78rem;line-height: .78rem;margin-top:.3rem;
+    border-radius: .1rem;}
+.margin-auto{margin:0 auto;}
+.form-wrap{width:4.8rem;}
+.input-tel,.input-code{padding-left:.18rem;width:4.8rem;height:.78rem;line-height: .78rem;border:solid 1px #999;
+    border-radius:0.1rem;margin-top:0.3rem;}
+.input-tel input,.input-code input
+{border:none;height:100%;width:100%;border-radius:0.1rem;
+    background: transparent;}
+.input-code{width:2.8rem;}
+.btn-get-ticket{width:4.8rem;height:.78rem;line-height: .78rem;border-radius:
+0.1rem;margin-top:.32rem;background:rgba(248,62,63,.76);}
+.btn-disable{opacity:.8}
+input::-webkit-input-placeholder{ color: #999; }
+.title2{margin-top:.28rem;margin-bottom:.3rem;}
+.service-list li img{width:73%;vertical-align: middle}
+.service-list li{text-align: center;}
+.service-list li p{margin-top:.1rem;}
+.mt64{margin-top:.64rem;}
+.weixin-num{color:#eb3a46;text-decoration: underline;}
+.user-name{padding-bottom:0.47rem;padding-top:.18rem;}
+.line1{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/ticket/line_01.png) no-repeat
+center;background-size:contain;}
+.line2{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/ticket/line_02.png) no-repeat
+center;background-size:7.5rem;}
+@media screen and (width:320px) {
+    .main{min-height:auto;}
+}
+.form-notice{height:0.2rem;}
+.index-page{ display: block; }
+.user-head{width:1.58rem;height:1.58rem;border-radius: 50%;background: #ededed;}
+.bot-part{padding-top:.3rem;padding-bottom: .25rem;font-size:12px;}
+.logo{right:.3rem;top:.3rem;width:.7rem;border-radius:50%;}
+.back { position: absolute; top: 0.3rem; left: 0.3rem; display: block; width: .6rem; height: .6rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/back_white_03.png) rgba(0, 0, 0, .48) no-repeat center;background-size:.48rem; }

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/myAni.css">
+</head>
+<body>
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+</script>
+<!--解锁-->
+<div class="mask">
+    <div class="lock-wrap">
+        <div class="lock-box">
+            <div class="lock">
+
+            </div>
+            <div class="unlock"></div>
+            <div class="cover">
+                <div class="slide-text f34">向右滑动解锁</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide page01 pr fir-bg dn">
+                    <div class="ul-wrap">
+                        <ul class="pic-wrap">
+                            <li class="xiantiao animated fadeInDownBig">
+                                <img src="img/birthday/xiantiao.png">
+                            </li>
+                            <li class="gold animated fadeInUpBig">
+                                <img src="img/birthday/goldbg.jpg">
+                            </li>
+                            <li class="tag animated fadeIn ani" swiper-animate-delay="3s">
+                                <img src="img/birthday/tag.png"/>
+                            </li>
+                            <li class="birth animated fadeIn ani" swiper-animate-delay="3s">
+                                <img src="img/birthday/birth.png">
+                            </li>
+                            <li class="flower animated fadeInUp ani" swiper-animate-delay="4s">
+                                <img src="img/birthday/flower.png" />
+                            </li>
+                            <li class="star animated zoomIn ani" swiper-animate-delay="4s">
+                                <img src="img/birthday/ss.png" />
+                            </li>
+                            <li class="text  animated zoomIn  ani"  swiper-animate-delay="4s">
+                                  宝宝，生日快乐！
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="swiper-slide page001">
+                    <ul class="pic-wrap">
+                        <li class="ani me" swiper-animate-effect="zoomInLeft"   swiper-animate-delay="1s">
+                            <img src="img/she/IMG_20150404_182425.jpg" />
+                        </li>
+                        <li class="text  animated zoomIn  ani"  swiper-animate-delay="2s">
+                            待我念个经，许个愿望~~~
+                        </li>
+                        <li class="page001-text ani" swiper-animate-effect="fadeIn"  swiper-animate-delay="3s">
+                            步入回忆……
+                        </li>
+                    </ul>
+            </div>
+            <div class="swiper-slide page02">
+                <ul>
+                    <li class="ani  smile animated"  swiper-animate-effect="flip">
+                        <img  src="img/she/IMG_20120820_180539_0.jpg"/>
+                    </li>
+                    <li class="animated ani page02-text" swiper-animate-effect="fadeIn" swiper-animate-delay="1s">
+                       第一次约会，你一直低着头，笑的那么腼腆
+                    </li>
+                </ul>
+
+            </div>
+            <div class="swiper-slide page03">
+                <ul class="page02-list">
+                    <li class="animated  first ani" swiper-animate-effect="rollIn">
+                        <img class="trY15" src="img/she/IMG_20121002_122829_0.jpg"/>
+                    </li>
+                    <li class="animated  second ani" swiper-animate-effect="bounceInDown" swiper-animate-delay="1s">
+                        <img class="trX30" src="img/she/IMG_20120930_143135_0.jpg"/>
+                    </li>
+                    <li  class="animated  fifth ani" swiper-animate-effect="zoomIn" swiper-animate-delay="2s">
+                        <img src="img/she/mmexport1398609262659.jpg"/>
+                    </li>
+                    <li class="animated  page03-text ani" swiper-animate-effect="fadeIn" swiper-animate-delay="3s">
+                        那年，我们的第一次旅游
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide page04">
+                <ul class="page02-list">
+                    <li class="animated  third ani" swiper-animate-effect="bounceInUp">
+                        <img class="trX30" src="img/she/IMG_20121002_075856_0.jpg" />
+                    </li>
+                    <li class="animated  sweet ani" swiper-animate-effect="zoomInDown" swiper-animate-delay="1s">
+                        <img  src="img/she/mmexport1398754503798.jpg"/>
+                    </li>
+
+                    <li class="animated  page03-text ani" swiper-animate-effect="fadeIn" swiper-animate-delay="2s">
+                        乌黑靓丽的头发，我心中的女神范儿
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide page05">
+                <ul>
+                    <li class="animated  box ani" swiper-animate-effect="bounceInUp">
+                        <img  src="img/she/IMG_20121002_134510_0.jpg" />
+                    </li>
+                    <li  class="animated  paomian ani" swiper-animate-effect="fadeIn" swiper-animate-delay="1s">
+                        还记得这两桶泡面吗。
+                    </li>
+                    <li class="animated ani paoTxt" swiper-animate-effect="fadeIn" swiper-animate-delay="2s">
+                       我记得你说，这是你吃过的最香的泡面，没有之一。因为那天咱俩确实都累坏了。
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide page06">
+                <ul class="page06-img">
+                    <li class="ani" swiper-animate-effect="slideInLeft" swiper-animate-delay="0.5s">
+                        <img  src="img/she/IMG_20131002_171137.jpg" />
+                    </li>
+                    <li class="ani" swiper-animate-effect="slideInRight" swiper-animate-delay="1.5s">
+                        <img  src="img/she/IMG_20131003_090650.jpg" />
+                    </li>
+                    <li class="ani" swiper-animate-effect="rotateInUpRight" swiper-animate-delay="2.5s">
+                        <img  src="img/she/IMG_20131003_091532.jpg" />
+                    </li>
+                    <li class="ani page06-text" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="3s" >
+                        偷拍~~~ 哈哈哈
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide page07">
+                <ul class="page07-img">
+
+                    <li class="ani page07-text" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="1s" >
+                        女神，请收下我的鲜花吧~
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide page08">
+                <ul class="page08-img">
+
+                    <li class="ani page08-text" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="1s" >
+                        就一支都想收买我?算了吧~~
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide page09">
+                <ul class="page09-img">
+
+                    <li class="ani page09-text" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="1s" >
+                       这支如何？
+                    </li>
+
+                </ul>
+            </div>
+            <div class="swiper-slide page10">
+                <ul class="page09-img">
+
+                    <li class="ani page09-text" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="1s" >
+                        或者这样？
+                    </li>
+
+                </ul>
+            </div>
+            <!--<div class="swiper-slide page11">
+                <ul class="page11-img">
+
+                    <li class="ani page11-text" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="1s" >
+                        我记得那天天气不好，我和小伙伴们铺了三次，才铺的像个样子
+                        <br>
+                        <span class="ani"  swiper-animate-effect="slideInLeft" swiper-animate-delay="2s">后来，还把你吓哭了。。。</span>
+                    </li>
+                </ul>
+            </div>-->
+            <div class="swiper-slide page12">
+                <ul class="page12-img">
+
+                    <li class="ani page12-img01 " swiper-animate-effect="flip" swiper-animate-delay="1.5s">
+                        <img src="img/she/IMG_20131025_210701_0.jpg"/>
+                    </li>
+                    <li class="ani page12-text" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="1s" >
+                        情侣装~~~
+                    </li>
+
+
+                </ul>
+            </div>
+            <div class="swiper-slide page13">
+                <ul class="page12-img">
+
+                    <li class="ani page13-img01 " swiper-animate-effect="flipInY" swiper-animate-delay="1.5s">
+                        <img src="img/she/IMG_20141110_160933.jpg"/>
+                    </li>
+                    <li class="ani page13-text" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="1s" >
+                        一起上自习
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide page14">
+                <ul class="page12-img">
+
+                    <li class="ani third " swiper-animate-effect="flipInY" swiper-animate-delay="1.5s">
+                        <img src="img/she/IMG_20130610_144439.jpg"/>
+                    </li>
+                    <li class="ani first" swiper-animate-effect="flipInX" swiper-animate-delay="0.5s">
+                        <img src="img/she/IMG_20141007_173954.jpg"/>
+                    </li>
+                    <li class="ani forth" swiper-animate-effect="flipInX" swiper-animate-delay="0.5s">
+                        <img src="img/she/IMG_20141111_134802.jpg"/>
+                    </li>
+                    <li class="ani page13-text" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="1s" >
+                        一起逛校园
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide page14">
+                <ul class="page12-img">
+
+                    <li class="ani jump0 " swiper-animate-effect="flipInY" swiper-animate-delay="1.5s">
+                        <img src="img/she/DSC_0028.JPG"/>
+                    </li>
+                    <li class="ani jump" swiper-animate-effect="flipInY" swiper-animate-delay="1.5s">
+                        <img src="img/she/DSC_0031.JPG"/>
+                    </li>
+                    <li class="ani jump1" swiper-animate-effect="flipInY" swiper-animate-delay="1.5s">
+                        <img src="img/she/DSC_0010.JPG"/>
+                    </li>
+                    <li class="ani jump2" swiper-animate-effect="flipInY" swiper-animate-delay="1.5s">
+                        <img src="img/she/DSC_0040.JPG"/>
+                    </li>
+                    <li class="ani page13-text" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="1s" >
+                        一起玩抓拍
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide page15">
+                <ul class="page12-img">
+
+                    <li class="ani page15-img1 " swiper-animate-effect="flipInY" swiper-animate-delay="1s">
+                        <img src="img/she/IMG_20131025_150656.jpg"/>
+                    </li>
+                    <li class="ani page15-img2" swiper-animate-effect="flipInY" swiper-animate-delay="2s">
+                        <img src="img/she/IMG_20131025_151011.jpg"/>
+                    </li>
+                    <li class="ani page15-img3" swiper-animate-effect="flipInY" swiper-animate-delay="3s">
+                        <img src="img/she/IMG_20131025_152856.jpg"/>
+                    </li>
+                    <li class="ani page15-img4" swiper-animate-effect="flipInY" swiper-animate-delay="4s">
+                        <img src="img/she/IMG_20131025_153605.jpg"/>
+                    </li>
+                    <li class="ani page13-text" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="1s" >
+                        一起玩3D会展
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide page16">
+
+                <ul class="page12-img">
+
+                    <li class="ani page16-img1 " swiper-animate-effect="flipInY" swiper-animate-delay="1s">
+                        <img src="img/she/IMG_20150530_162733.jpg"/>
+                    </li>
+                    <li class="ani page13-text" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="1s" >
+                        一起去看大海~
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide page17 circle">
+                <ul class="page12-img">
+                    <li class="ani page17-img0" swiper-animate-effect="flipInY" swiper-animate-delay="1s">
+                        <img src="img/she/IMG_20150530_143138.jpg"/>
+                    </li>
+                    <li class="ani page17-img1 " swiper-animate-effect="flipInY" swiper-animate-delay="2s">
+                        <img src="img/she/IMG_20150530_135617_1.jpg"/>
+                    </li>
+                    <li class="ani page17-img2" swiper-animate-effect="flipInY" swiper-animate-delay="3s">
+                        <img src="img/she/IMG_20150530_115049.jpg"/>
+                    </li>
+                    <li class="ani page17-img3" swiper-animate-effect="flipInY" swiper-animate-delay="4s">
+                        <img src="img/she/IMG_20150530_162812.jpg"/>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="swiper-slide page17">
+                <ul class="page12-img">
+
+                    <li class="ani page17-img0 " swiper-animate-effect="flipInY" swiper-animate-delay="1s">
+                        <img src="img/she/IMG_20150531_172855_1.jpg"/>
+                    </li>
+                    <li class="ani page17-img1" swiper-animate-effect="flipInY" swiper-animate-delay="2s">
+                        <img src="img/she/IMG_20150531_130214.jpg"/>
+                    </li>
+                    <li class="ani page17-img2" swiper-animate-effect="flipInY" swiper-animate-delay="3s">
+                        <img src="img/she/IMG_20150531_174113_2.jpg"/>
+                    </li>
+                    <li class="ani page17-img3" swiper-animate-effect="flipInY" swiper-animate-delay="4s">
+                        <img src="img/she/IMG_20150601_161708.jpg"/>
+                    </li>
+                    <li class="ani page13-text" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="1s" >
+                        一起去游青岛~
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide page17">
+                <ul class="page12-img">
+
+                    <li class="ani page17-img0" swiper-animate-effect="flipInY" swiper-animate-delay="1s">
+                        <img src="img/she/IMG_20150531_174213_1.jpg"/>
+                    </li>
+                    <li class="ani page17-img3" swiper-animate-effect="flipInY" swiper-animate-delay="2s">
+                        <img src="img/she/IMG_20150531_174139_1.jpg"/>
+                    </li>
+                    <li class="ani page17-img1" swiper-animate-effect="flipInY" swiper-animate-delay="3s">
+                        <img src="img/she/IMG_20150601_140938.jpg"/>
+                    </li>
+                    <li class="ani page17-img2" swiper-animate-effect="flipInY" swiper-animate-delay="4s">
+                        <img src="img/she/IMG_20150531_174401_1.jpg"/>
+                    </li>
+                    <li class="ani page13-text" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="1s" >
+                        一起二并快乐着
+                    </li>
+                </ul>
+            </div>
+        <div class="swiper-slide page18">
+                <ul class="page12-img">
+                    <li class="ani page18-text" swiper-animate-effect="fadeIn" swiper-animate-delay="1s" >
+                        愿：执子之手，与子偕老
+                    </li>
+                    <li class="ani page18-img0" swiper-animate-effect="flipInY" swiper-animate-delay="1s">
+                        <img src="img/she/DSC_0062.JPG"/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--横屏提示-->
+    <div class="notice" id="notice"><h2>请将屏幕竖向浏览</h2></div>
+    <!--背景音乐-->
+    <div class="music dn">
+        <img src="img/musicBtn.png" id="musicPic"/>
+        <audio class="audio" id="audio" src="music/aihenmei.mp3"></audio>
+    </div>
+    <!--底部箭头-->
+    <div class="bot-arow dn"><img class="arowUp" src="img/arrow-up.png"/></div>
+    <!--js-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/myAni.js"></script>
+</body>
+</html>

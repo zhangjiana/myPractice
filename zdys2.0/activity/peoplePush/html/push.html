@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>找对医生</title>
+    <link href="../../../css/base.css?v=1" rel="stylesheet"/>
+    <link href="../css/push.css?v=3" rel="stylesheet"/>
+</head>
+<body>
+<script>
+    function getCookie(name) {
+        var str = document.cookie.split('; ');
+        for (i = 0; i < str.length; i++) {
+            arr = str[i];
+            arr1 = arr.split('=');
+            if (arr1[0] == name)
+                return arr1[1];
+        }
+        return '';
+    }
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+   /* if (!window.localStorage.openid&&!window.sessionStorage.n&&(!getCookie('user')||11!==getCookie('user').length)){
+        window.sessionStorage.n = ' ';
+        var appId="wx14da7f3cb2e1b8ff";
+        var redirect_uri=encodeURI('http://www.zhaoduiyisheng.com/activity/peoplePush/html/push.html');
+        window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appId+"&redirect_uri="+redirect_uri+
+                "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+    }*/
+</script>
+<div class="main-wrap" id="main">
+    <div>
+        <ul class="bg-wrap">
+            <li class="pr"><img src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/luck_top_01.jpg"/>
+                <a class="back"  href="../../../index.html"></a>
+            </li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/luck_top_02.jpg"/> </li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/luck_top_03.jpg"/> </li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/luck_top_04.jpg"/> </li>
+        </ul>
+        <div class="content-wrap">
+            <div class="list">
+                <img class="centerX pr" width="90%" src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/list.png" alt="">
+            </div>
+            <div class="ward-wrap">
+                <img src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/wards.jpg"/>
+            </div>
+        </div>
+        <div class="bg-green">
+            <p class="rulesFlag tc cbo"  id="actDet"><em class="fl">活动详情</em><span class="rulesArrow fr">&nbsp;&nbsp;</span></p>
+            <div class="rules" id="rulesDet" style="display: none;" >
+                <div class="question">
+                    <h2>Q1: 怎么参与0元抽奖？</h2>
+                    <p>点击立即0元抽，验证手机号码，即成功参加本次抽奖活动，手机号码为本次唯一抽奖凭证</p>
+                </div>
+                <div class="question">
+                    <h2>Q2：怎么冲关成功？</h2>
+                    <p>参加活动人数累计达到当前关卡人数，即为冲关成功；若冲关未成功，当前关卡红包不解锁，4.22将自动公布中奖用户</p>
+                </div>
+                <div class="question">
+                    <h2>Q3：怎么抢到红包？</h2>
+                    <p>在每轮关卡还差20人冲关成功时，找对e生服务号会通知您，此时您可进入活动页面等待红包开抢</p>
+                </div>
+            </div>
+            <p class="rulesFlag tc cbo"  id="actRul"><em class="fl">活动规则</em><span class="rulesArrow fr">&nbsp;&nbsp;</span></p>
+            <div class="rules" id="rulesRul" style="display: none;">
+                <ul class="cbo rulesText">
+                    <li>点击立即0元抽，视为同意本活动规则</li>
+                    <li>用户手机号码为唯一抽奖凭证，每个号码仅有一次中奖机会</li>
+                    <li>用户可抢多次红包，红包金额随机数量有限，先到先得</li>
+                    <li>中奖用户实物礼品将在2016.4.22公示并安排寄送</li>
+                    <li>本次活动解释权归找对e生所有</li>
+                </ul>
+                <div class="tc f24 c-white">
+                    <img class="erweima" src="http://imgcdn.zhaoduiyisheng.com/img/icon/vip_erwm.jpg"/>
+                    <p class="tc">长按关注找对e生</p>
+                    <p class="tc">周周都有健康活动</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pop-wrap dn" id="pop-window">
+
+    <!--红包尚未开始-->
+    <!--抢到红包-->
+    <div class="dialog center dn" id="notOpen">
+        <img src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/notOpen_top.png"/>
+        <div class="dialog_content">
+            <h2 class="dialog_text">上轮红包已被抢光！</h2>
+            <h2 class="dialog_text">本轮冲关还没成功哦！</h2>
+            <img class="pa dialog_img" src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/content.jpg"/>
+        </div>
+    </div>
+
+    <!--您已参加过红包-->
+    <div class="dialog center dn" id="already">
+        <img src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/already_join.png"/>
+        <div class="dialog_content">
+            <h2 class="dialog_text">当前冲关成功后,将解锁千元红包！</h2>
+            <h2 class="dialog_text">请您随时注意冲关进度,先抢先得！</h2>
+            <img class="pa dialog_img" src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/content.jpg"/>
+        </div>
+    </div>
+
+    <!--抢到红包-->
+    <div class="dialog center dn" id="gotten">
+        <img src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/get_top.png"/>
+        <div class="dialog_content">
+            <h2 class="dialog_text">恭喜您抢到红包啦！</h2>
+            <h2 class="dialog_text"> 继续冲关等待下一波红包</h2>
+            <img class="pa dialog_img" src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/content.jpg"/>
+        </div>
+    </div>
+    <!--红包已抢光-->
+    <div class="dialog center dn" id="empty">
+        <img src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/empty-top.png"/>
+        <div class="dialog_content">
+            <h2 class="dialog_text">手慢啦，红包被抢光了！</h2>
+            <h2 class="dialog_text"> 继续冲关等待下一波红包</h2>
+            <img class="pa dialog_img" src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/content.jpg"/>
+        </div>
+    </div>
+    <!--手机号已注册-->
+    <div class="dialog center dn" id="registed">
+        <img src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/registed_top.png"/>
+        <div class="dialog_content">
+            <h2 class="dialog_joined">您的手机号码已经注册了哦，请重新用手机号登录参加活动</h2>
+            <img class="pa dialog_img" src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/content.jpg"/>
+        </div>
+    </div>
+    <!--参加成功-->
+    <div class="dialog center dn" id="joined">
+        <img src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/joined_top.png"/>
+        <div class="dialog_content">
+            <h2 class="dialog_joined">您的手机号为本次抽奖活动唯一凭证，冲关进度将通过微信消息通知您开抢红包！</h2>
+            <img class="pa dialog_img" src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/content.jpg"/>
+        </div>
+    </div>
+    <!--验证手机号-->
+    <div class="dialog center dn" id="RegTel">
+        <img src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/reg_top.png"/>
+        <div class="dialog_regPhone">
+            <h2 class="opacity8">您的手机号码为本次抽奖活动唯一凭证，并将冲关抢红包最新进度以微信方式通知您!</h2>
+            <input type="tel" class="regPhone mt50" id="regPhone" placeholder="输入手机号">
+            <div class="regPhone mt25">
+                <input type="tel" class="regNum" id="regNum" placeholder="输入验证码">
+                <span class="getRegNum" id="getRegNum">获取验证码</span>
+            </div>
+            <div class="confirm" id="btnSubmit">确定</div>
+            <p class="tc c-red mt20" id="notice"></p>
+        </div>
+    </div>
+    <!--抽奖流程-->
+    <div class="dialog center dn" id="process">
+        <img src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/process_top.png"/>
+        <img src="http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/process_05.jpg"/>
+    </div>
+
+    <span class="db closePop" id="closeThis"></span>
+</div>
+
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../../../js/base.js"></script>
+<script src="../js/push.js"></script>
+</body>
+</html>

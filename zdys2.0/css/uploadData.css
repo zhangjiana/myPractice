@@ -1,0 +1,44 @@
+.pl50 { padding-left: 0.50rem; }
+section>div { background-color: #fff; }
+.data-upload>ol { overflow: hidden; max-height: 2rem; }
+.data-upload>ol>li { float: left; width: 1.52rem; height: 1.52rem; background-color: #ccc; position: relative; margin-right: .27rem; margin-bottom: .27rem; }
+.data-upload img { max-height: 100%; max-width: 100%; position: absolute; left: 50%; top: 50%; -webkit-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0); }
+.data-upload>ol>li:nth-child(4n) { margin-right: 0; }
+@media screen and (max-width: 321px){
+	.data-upload>ol>li:nth-child(4n) {
+		margin-right: .27rem;
+	}
+	.data-upload>ol>li:nth-child(3n) {
+		margin-right: 0;
+	}
+
+}
+.upload-plus{background: url("http://imgcdn.zhaoduiyisheng.com/img/icon/up_page_btn.png") no-repeat; background-size: cover; }
+.data-upload input[type=file] { position: absolute; top: 0; left: 0; opacity: 0; width: 100%; height: 100%; }
+.big-pic-box { position: relative; background-repeat: no-repeat; background-position: center; background-size: contain; -webkit-box-flex: 1; flex: 1; overflow: auto; background-color: #ededed; }
+.del-pic { position: absolute; top: 0.30rem; right: 0.30rem; }
+.icon-more { right: 0; background-image: url("http://imgcdn.zhaoduiyisheng.com/img/icon/more.png"); }
+.icon-close { background-image: url("http://imgcdn.zhaoduiyisheng.com/img/icon/arrow_up.png"); }
+.clear-input { margin: 0; }
+.spacing-one { letter-spacing: 0.28rem; }
+.contact-title { width: 22%; float: left; }
+.contact-content { width: 78%; float: right; height: .74rem; }
+.contact-content input { border: none; }
+.data-upload>.more { max-height: none; }
+p { text-align: justify; }
+textarea { width: 100%; border: 0; text-indent: .4rem; padding: .28rem  .25rem; background: #fff url(http://imgcdn.zhaoduiyisheng.com/img/icon/pen.png) no-repeat left top/.35rem; background-origin: content-box; min-height: 2rem; text-align: justify; vertical-align: middle; line-height: 1.2; overflow: hidden; color: #666 !important; }
+textarea::-webkit-input-placeholder { text-indent: .4rem; vertical-align: middle; line-height: 1.2; }
+.file-name { width: 100%; border: 0; margin: 0 auto; background-color: #fff; height: .7rem; line-height: .7rem; border-radius: 5px; text-indent: .2rem; }
+input:disabled, textarea:disabled { -webkit-text-fill-color: #666; -webkit-opacity: 1; background-color: #fff; color: #666 !important; }
+.base, .c-red { background-color: #ededed; }
+.c-red { height: .6rem; }
+.upload-plus { width: 2.44rem; height: .44rem; margin: 0 auto; position: relative; }
+/*.upload-plus:before { content: ""; width: 80%; height: 2px; background-color: #fff; position: absolute; left: 50%; top: 50%; -webkit-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0); }
+.upload-plus:after { content: ""; width: 2px; height: 80%; background-color: #fff; position: absolute; left: 50%; top: 50%; -webkit-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0); }*/
+.morebox { height: .6rem; }
+.edit { right: .2rem; }
+.del-pic-2 { right: 0; bottom: 0; width: .44rem; height: .44rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/del_red2.png) no-repeat center;background-size: .44rem; z-index: 10;}
+.up-page-smpic p { width: 100%;height: 100%; background-color: rgba(0, 0, 0, .5); position: relative; z-index: 9; color: #fff; font-size: .24rem;}
+.up-page-smpic em{height: 1.52rem;line-height: 1.52rem;}
+.up-page-smpic p:after{content: "正在上传...";width: 100%;text-align: center; position: absolute;left: 50%;top: 50%;-webkit-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0);}
+.name-bg { background-color: #42babb; padding: .2rem; }

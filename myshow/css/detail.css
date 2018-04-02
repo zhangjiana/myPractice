@@ -1,0 +1,7 @@
+
+section img{ width: 100%; height: 11.53rem; display: block;}
+section p{ height: auto; line-height: 1.5rem; background: #F5F5F5;color: #333; padding-top: 2rem;}
+section span{ padding-left: 2rem;}
+
+
+footer span.line{ position: absolute; bottom: 3.22rem; left: 33%; width: 33%; height: 0.15rem; display: block; background: #E4366B;}

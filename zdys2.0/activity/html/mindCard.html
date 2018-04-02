@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>找对医生</title>
+    <link href="../../css/base.css?v=12" rel="stylesheet"/>
+    <style>
+        body{background-color:#4a529a;}
+        .main-wrap{height: 100%;}
+        .bg-wrap{top: 3rem;left: 0;padding: 0 .64rem 0 .72rem;width: 100%;}
+        img{width: 100%;display: block;}
+        .bg-wrap>li{position: relative;}
+        .wl{width: 65%;}
+        .wr{width: 35%;}
+        .f28 { font-size: 14px}
+        .f30 { font-size: 15px}
+        .f32 { font-size: 16px}
+        .f34 { font-size: 17px}
+        .f36 { font-size: 18px}
+        .f48{font-size: 24px}
+        .c{color: #00a2ff}
+        input{height: .78rem;line-height: .78rem;}
+        textarea{height: 1.28rem;padding-top: 5px;}
+        input,textarea{background-color: rgba(255,255,255,.8);border: 0;padding-left: 5px;}
+        .w100{width: 100%;}
+        #name{width: 80%;}
+        .page{background:url(http://imgcdn.zhaoduiyisheng.com/activity/img/mindCard/bg.jpg) no-repeat top center;background-size: cover;padding:0 .76rem 0;width: 100%;height: 100%;top: 0;}
+        #img{min-height: 5rem;padding-top: .66rem;}
+        .m0a{line-height: .86rem;width: 4.6rem;background-color: #00a2ff;}
+        .save{width: 4.1rem;margin: .3rem auto;}
+        .return{line-height: .6rem;width: 1.74rem;margin-bottom: .4rem;}
+        .mb10{margin-bottom: .1rem;}
+        .mb20{margin-bottom: .2rem;}
+        .mb30{margin-bottom: .3rem;}
+        .mb40{margin-bottom: .4rem;}
+        .pop-wrap{ position: absolute; z-index: 999; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .5); }
+        .pop-con{ width: 5.80rem; border-radius: 20px; }
+        .closePop{top: 0;right: 0; width: .8rem; height: .8rem; }
+        .diaContent{width: 5.8rem;height: 7.18rem;padding: 0 .6rem;top: 2rem;-webkit-border-radius: 12px;border-radius: 12px;overflow: hidden;background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/mindCard/bind.jpg) no-repeat center;background-size: cover}
+        .w100{width: 100%;}
+        .regNum{width: 55%;}
+        .getRegNum{background-color: #00a2ff;width: 45%;line-height: .72rem;height: .72rem;}
+        .pop-wrap input{line-height: .72rem;height: .72rem;border:0;background-color: #cacddc;color: #333;padding-left: .2rem;}
+        .confirm{line-height: .72rem;margin-top: .6rem;}
+        .spinning-square{width: 100%;height: 100%;position: absolute;z-index: 999;left: 0;top: 0;background-color: rgba(0,0,0,.5);overflow: hidden;}
+        .spinning-square .square{width: 40px;height: 40px;position: absolute;top: 40%;left: 50%;margin-left: -20px;background-color: #00a2ff;opacity: 1;-webkit-animation: rotatesquare 1.2s infinite ease-in-out;animation: rotatesquare 1.2s infinite ease-in-out;}
+        .spinning-square .txt{width: 100px;line-height: 30px;text-align: center;color: #fff;font-size: 18px;position: absolute;top: 50%;left: 50%;margin-left: -50px;}
+        @-webkit-keyframes rotatesquare {
+            0%{-webkit-transform:perspective(120px)}
+            50%{-webkit-transform:perspective(120px) rotateY(180deg)}
+            100%{-webkit-transform:perspective(120px) rotateY(180deg) rotateX(180deg)}
+        }
+
+        @keyframes rotatesquare {
+             0%{-webkit-transform:perspective(120px) rotateX(0) rotateY(0);transform:perspective(120px) rotateX(0) rotateY(0)}
+             50%{-webkit-transform:perspective(120px) rotateX(-180.1deg) rotateY(0);transform:perspective(120px) rotateX(-180.1deg) rotateY(0)}
+             100%{-webkit-transform:perspective(120px) rotateX(-180deg) rotateY(-179.9deg);transform:perspective(120px) rotateX(-180deg) rotateY(-179.9deg)}
+        }
+        @media screen and (width:320px) {
+            html { font-size: 42.666px !important; }
+        }
+    </style>
+</head>
+<body>
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+    var u = window.navigator.userAgent.toLocaleLowerCase();
+    if (u.indexOf("micromessenger") > -1) {
+      if (!window.localStorage.openid&&!window.sessionStorage.n){
+           window.sessionStorage.n = ' ';
+           var appId="wx14da7f3cb2e1b8ff";
+           var redirect_uri=encodeURI(window.location.origin+window.location.pathname);
+           window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appId+"&redirect_uri="+redirect_uri+"&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+       }
+    }
+</script>
+<div class="main-wrap pr" id="main">
+    <div class="pr">
+        <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/mindCard/card.jpg" alt="">
+    <ul class="bg-wrap pa f34 c">
+        <li class="clearfix mb20">
+            <div class="wl fl">对TA的昵称：</div>
+            <div class="wr fl">TA生日：</div>
+        </li>
+        <li class="clearfix mb20">
+            <div class="wl fl"><input class="br5 f30" id="name" type="text" placeholder="如：母后" maxlength="10"></div>
+            <div class="wr fl"><input class="br5 f30 w100" id="birth" type="tel" placeholder="输入月份,如：1" maxlength="2"></div>
+        </li>
+        <li class="clearfix mb20">
+            <div>最喜欢：</div>
+        </li>
+        <li class="clearfix">
+            <div><input class="br5 f30 w100" id="like" type="text" placeholder="如食物、电影、歌曲等" maxlength="10"></div>
+        </li>
+        <li class="clearfix">
+            <div class="tr f24">10个字以内</div>
+        </li>
+        <li class="clearfix mb20">
+            <div>最近：</div>
+        </li>
+        <li class="clearfix">
+            <div><textarea class="br5 f30 w100" id="recent" placeholder="如有点感冒，你要注意身体哦" maxlength="18"></textarea></div>
+        </li>
+        <li class="clearfix mb40">
+            <div class="tr f24">18个字以内</div>
+        </li>
+        <li class="clearfix mb30">
+            <div class="m0a tc c-white br5" id="go">生成关爱卡片</div>
+        </li>
+        <li class="clearfix">
+            <div class="tc c-white f24">前500名参与用户有红包可以领哦 </div>
+        </li>
+    </ul>
+    </div>
+</div>
+<a class="back-act" href="/index.html"></a>
+<div class="pa page dn" id="result">
+    <div class="pr cbo">
+      <div id="img"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/mindCard/card.jpg" alt=""></div>
+      <img class="save" src="http://imgcdn.zhaoduiyisheng.com/activity/img/mindCard/txt.png" alt="">
+      <div class="m0a return br5 tc c-white f30" id="return">返回</div>
+    </div>
+</div>
+<div class="pop-wrap dn" id="pop-window">
+    <div class="diaContent centerX" id="bindPhone">
+        <p class="f34 mt30 tl c-white mb30">为了验证是您本人操作，请输入手机号获取验证码</p>
+        <input type="tel" class="regPhone w100 br5" id="regPhone" placeholder="输入手机号" maxlength="11">
+        <div class="mt30 cbo f30">
+            <input type="tel" id="regNum" class="regNum brl fl" placeholder="输入验证码" maxlength="6">
+            <span class="getRegNum brr fl tc c-white" id="getRegNum">获取验证码</span>
+        </div>
+        <p class="tc c-red f28 mt30" id="notice"></p>
+        <span class="confirm f34 db m0a br5 w100 c-white tc" id="btnSubmit">确定</span>
+        <span class="pa closePop" id="closeThis"></span>
+    </div>
+</div>
+<div class="spinning-square dn" id="loading">
+    <div class="square"></div>
+    <div class="txt">正在生成</div>
+</div>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/swiper.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../../js/base.js"></script>
+<script>
+    weixinLogin();
+    var scroll = new IScroll('#main', {probeType: 3, mouseWheel: true,bounce:false});
+    $(document).one('touchstart',function(){
+        scroll.refresh();
+    });
+    var obj={},resultScroll;
+    $('#go').swipe({
+        tap: function(){
+            obj.nickname =$('#name').val();
+            obj.birthmonth =$('#birth').val();
+            obj.favorite =$('#like').val();
+            obj.recent =$('#recent').val();
+            if (obj.nickname&&obj.birthmonth&&obj.favorite&&obj.recent) {
+                if (getCookie('user')&&11===getCookie('user').length) {
+                    getPic();
+                }else{
+                    $('#loading').addClass('dn');
+                    $('#pop-window').removeClass('dn');
+                }
+            }else{
+                myalert.tips({
+                    txt: "请将信息填写完整",
+                    btn: 1
+                });
+            }
+        }
+    });
+    $('#return').swipe({
+        tap:function(){
+            $('#result').addClass('dn');
+        }
+    });
+    $('#closeThis').swipe({
+        tap:function(){
+            $('#pop-window').addClass('dn');
+        }
+    });
+    function getPic(){
+        $('#loading').removeClass('dn');
+        $.ajax({
+            type: "POST",
+            url: ajaxUrl + "Promotion/GreetingCard?sessionId=" + window.localStorage.sessionId,
+            contentType: "text/plain; charset=UTF-8",
+            dataType: 'json',
+            data: JSON.stringify(obj),
+            success: function(data) {
+                if (0 === data.code&&data.data) {
+                    var Img = new Image();
+                    Img.src = data.data.imageUrl;
+                    Img.onload = function () {
+                        $('#img').empty().append(Img);
+                        $('#loading').addClass('dn');
+                        $('#result').removeClass('dn');
+                        resultScroll = new IScroll('#result', {probeType: 3, mouseWheel: true,bounce:false});
+                        $('#result').one('touchstart',function(){
+                            resultScroll.refresh();
+                        });
+                    };
+                } else {
+                    myalert.tips({
+                        txt: data.message,
+                        btn: 1
+                    });
+                    $('#loading').addClass('dn');
+                }
+            },
+            error: function(res) {
+                $('#loading').addClass('dn');
+                myalert.tips({
+                    txt: "网络错误，请稍后重试",
+                    btn: 1
+                });
+            }
+        });
+    }
+    bindPhone('#regPhone', '#regNum', '#getRegNum', '#btnSubmit', 'GREETING_CARD',function(){
+        $("#pop-window").addClass('dn');
+        getPic();
+    });
+    shareWeixin('示爱抢红包 | 这份关心有多久没说出口了？','万人示爱开抢红包，好像只差你了哦','http://www.zhaoduiyisheng.com/activity/html/mindCard.html','http://imgcdn.zhaoduiyisheng.com/activity/img/mindCard/face.jpg');
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+.main_container{width:1000px;margin:0 auto;}
+.product_top{border-bottom: 1px solid #cccccc;margin-bottom:20px;}
+/****左部列表****/
+.product_left{width:225px;}
+.product_left i{display: inline-block;padding-right:6px;margin-bottom:2px;width:8px;height:4px;background-position:-191px -125px;}
+.choose_brand{width:225px;height:240px;overflow: auto;margin-top:20px;
+    padding-bottom:20px;border-bottom:1px solid #cccccc; }
+.choose_brand ul{width:200px;}
+.choose_brand li{padding:10px;}
+.choose_kind{width:225px;overflow: auto;margin-top:20px;
+    padding-bottom:20px;border-bottom:1px solid #cccccc;}
+.choose_kind ul{width:200px;}
+.choose_kind li{padding:10px;}
+
+.not_checked{display: block;float:left;background:url(../img/icon_not_selected.png) no-repeat;
+    margin-top:2px;margin-right:10px;width:12px;height:12px;cursor:pointer;text-indent: -9999px;}
+._checked{display: block;float:left;background:url(../img/icon_selected.png) no-repeat;
+    margin-top:2px;margin-right:10px;width:12px;height:12px;cursor:pointer;text-indent: -9999px;}
+
+
+.confirm{width:100px;height:25px;background:#db2726;color:#FFF;
+    text-align: center;line-height:25px;margin:20px 40px;cursor: pointer;}
+
+
+
+/****右部产品展示****/
+.product_right{width:730px;padding:20px;}
+.product_right_top{height:50px;}
+
+.product_right span{display:block;width:124px;height:28px;
+    line-height:28px;text-align:center;float: left;margin-right:20px;}
+.product_right span i{display:block;width:28px;height:18px;float:right;margin-top:5px;
+    background:url(../img3/icon_arrows_bottom.gif) no-repeat center center;
+    border-left:1px solid #cccccc;}
+.product_right em{display: block;font-style: normal;height:30px;line-height: 30px;}
+
+
+
+.product_right_list li{float: left;width:235px;height:400px;margin-right:10px;}

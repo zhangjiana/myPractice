@@ -1,0 +1,52 @@
+
+header h1{height:.88rem;}
+.pb100{padding-bottom: 1rem;}
+.doctor-detail-item{padding:0.3rem 0.3rem 0
+;background: #fff;margin-top:0.2rem;overflow:
+hidden;}
+.doctor-detail-item p{line-height: 0.4rem;text-overflow: ellipsis; display: -webkit-box;
+    -webkit-box-orient: vertical;overflow:hidden;}
+.doctor-detail-item h3{margin-bottom:0.1rem;}
+.doctor-intro{background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/doctor_intro.png) no-repeat left
+center;background-size: .44rem;text-indent:0.5rem;}
+.doctor-specialty{background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/doctor_spec.png) no-repeat left
+center;background-size: .44rem;text-indent:0.5rem;}
+.doctor-position{background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/doctor_posi.png) no-repeat left
+center;background-size: .44rem;text-indent:0.5rem;}
+.doctor-detail-top{height:4.18rem;background: #ccc;padding-top:1.14rem;
+    background: url(http://imgcdn.zhaoduiyisheng.com/img/doctor_datail_bg.jpg) no-repeat center;}
+.doctor-head-pic{margin-left:3.12rem;margin-bottom:0.24rem;width:1.22rem;height:1.22rem;border-radius: 50%;overflow:hidden;background: #ccc;}
+.doctor-head-pic img{width:100%;}
+.mr16{margin-right:0.16rem;}
+.doctor-info-tag{display:-webkit-box;display:flex;padding-top:0.1rem;
+    padding-bottom: 0.15rem;}
+.doctor-info-tag li{box-flex:1;-webkit-box-flex:1;flex:1;-webkit-flex: 1;
+    text-align: center;position:relative;}
+.doctor-info-tag li img{display:block;width:0.6rem;margin-left:0.95rem;}
+.doctor-info-tag li:not(:last-child):after{content:"";display:block;
+    height:0.5rem;width:1px;background: #999;position:absolute;right:0;
+    top:0.22rem;}
+.clamp3{-webkit-line-clamp: 3;}
+
+.top-hospital img{width:100%;display:block;}
+.icon-more{display:block;width:.6rem;height:.6rem;background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/more.png) no-repeat center;background-size: .44rem;margin:0 auto;}
+.icon-close{display:block;width:.6rem;height:.6rem;background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/arrow_up.png) no-repeat center;background-size: .44rem;margin:0 auto;}
+/*点击查看*/
+.click-look{top:43%;right:15%;animation:twinkle 1s infinite;-webkit-animation:twinkle 1s infinite;}
+@media screen and (width:320px) {
+    .doctor-info-tag li img{margin-left:0.8rem;}
+    .doctor-head-pic {margin-left:2.65rem;}
+    .click-look{top:39%;right:13%;}
+}
+@keyframes twinkle {
+    0%{color:#fff;}
+    50%{color:#00fff6;}
+    100%{color:#fff;}
+}
+@-webkit-keyframes twinkle {
+    0%{color:#fff;}
+    50%{color:#00fff6;}
+    100%{color:#fff;}
+}
+.share-btn{ position: absolute; top:.3rem; right: .3rem; width: .5rem; height: .5rem;
+background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_zhuanfa.png) no-repeat center;background-size:cover;}

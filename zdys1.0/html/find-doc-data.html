@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="Cache-Control" content="no-transform" />
+	<meta name="apple-mobile-web-app-title" content="找对医生">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="keywords" content="找对医生,家庭医生">
+	<meta name="description" content="找对医生">
+	<meta name="copyright" content="www.zhaoduiyisheng.com"/>
+	<meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes" />
+	<title>找对医生</title>
+	<link href="../css/base.css" rel="stylesheet"/>
+	<link href="../css/find-doc-data.css" rel="stylesheet">
+
+</head>
+<body>
+<script>
+	function setfont(){
+		var clientWidth = document.body.clientWidth||document.documentElement.clientWidth;
+		if(clientWidth > 750) {
+			clientWidth = 750;
+		}
+		document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+	}
+	setfont();
+	window.onresize=setfont;
+
+
+</script>
+<div class="page">
+	<div class="index-page">
+		<header class="index-head tc">
+			<span class="db fl back" onclick="history.go(-1)"></span>
+			<h1 class="f34 c-f2">找对医生资料</h1>
+		</header>
+		<section class="data-main">
+			<div class="data-frame clearfix">
+				<p class="fl f34">是否吸烟</p>
+				<ul class="fl f28 c-66">
+					<li id="checkbox"><span><i class="fl"></i>是</span><span><i class="fl checked"></i>否</span></li>
+					<li><label>吸烟年数:<input type="text">年</label></li>
+					<li><label>每天几根:<input type="text">根</label></li>
+				</ul>
+			</div>
+			<div class="data-frame">
+				<p class="f34">患者废话</p>
+				<textarea class="f28" placeholder="您可以说说下身体状况，希望解决什么..."></textarea>
+			</div>
+			<div class="data-frame data-upload">
+				<p class="f34">上传病历资料<span>（如病历单）</span></p>
+				<ol class="clearfix">
+					<li><input type="file"></li>
+					<li><input type="file"></li>
+					<li><input type="file"></li>
+					<li><input type="file"></li>
+					<li><input type="file"></li>
+				</ol>
+				<div class="btn-group clearfix f28">
+					<div class="btn-yellow fr upload">上传病例</div>
+					<div class="btn-yellow fr delete">删除</div>
+				</div>
+			</div>
+			<div class="data-frame data-upload">
+				<p class="f34">上传化验资料<span>（如化验单）</span></p>
+				<ol class="clearfix">
+					<li><input type="file"></li>
+					<li><input type="file"></li>
+					<li><input type="file"></li>
+					<li><input type="file"></li>
+				</ol>
+				<div class="btn-group clearfix f28">
+					<div class="btn-yellow fr upload">上传病例</div>
+					<div class="btn-yellow fr delete">删除</div>
+				</div>
+			</div>
+			<div class="data-frame data-upload">
+				<p class="f34">上传辅助资料<span>（如CT\B超等）</span></p>
+				<ol class="clearfix">
+					<li><input type="file"></li>
+					<li><input type="file"></li>
+					<li><input type="file"></li>
+					<li><input type="file"></li>
+				</ol>
+				<div class="btn-group clearfix f28">
+					<div class="btn-yellow fr upload">上传病例</div>
+					<div class="btn-yellow fr delete">删除</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="common-foot f34">
+			下一步
+		</footer>
+	</div>
+</div>
+
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/jquery.touchSwipe.min.js"></script>
+<script src="../js/base.js"></script>
+<script>
+	$(function(){
+   $('#checkbox>span').swipe({
+	   tap: function () {
+		   $(this).children().addClass('checked').end().siblings().children().removeClass('checked');
+	   }
+   });
+	});
+</script>
+</body>
+
+</html>

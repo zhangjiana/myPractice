@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>面对面咨询</title>
+    <link href="../css/base.css" rel="stylesheet"/>
+    <link href="../css/basic-info.css" rel="stylesheet"/>
+    <link href="../css/select-service.css" rel="stylesheet"/>
+</head>
+<body>
+<script>
+    function setFont(){
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if(clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setFont();
+</script>
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="db fl back" onclick="history.go(-1)"></span>
+        <h1 class="f34 c-f2" id="top-title"></h1>
+    </header>
+    <!--服务查看-->
+    <div class="select-wrap" id="look-service">
+        <div class="basic-info-wrap cbo look-service-wrap">
+            <div class="look-service-detail cbo">
+                <h2 class="look-service-title fl f34">面对面咨询</h2>
+                <div class="fl f28 c-red mt24">
+                    <span class="service-price">1280</span>
+                </div>
+            </div>
+            <div class="look-service-explain f28">
+                我们会帮您约定专家进行20-30分钟的面对面咨询服务。
+            </div>
+            <div>
+                <a class="db fr f28 select-service-btn mt50 mb20" href="appoint.html">支付</a>
+            </div>
+        </div>
+    </div>
+    <div class="select-wrap">
+        <div class="basic-info-wrap look-service-wrap f28 mt24">
+            <h2 class="warm-prompt">温馨提示</h2>
+            <div class="c-99 service-doctor-list">
+                高峰期可用医生资源每分钟都在减少，请提前作好预约安排。
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/look-service.js"></script>
+<script src="../js/base.js"></script>
+</html>

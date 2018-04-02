@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>找对医生</title>
+    <link href="../css/base.css?v=2" rel="stylesheet"/>
+    <link href="../css/serviceProcess.css?v=5" rel="stylesheet"/>
+</head>
+<body>
+<script>
+    function setFont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setFont();
+    window.onresize = setFont;
+</script>
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="icon-arrowr go-back"></span>
+        <h1 class="f34 c-f2">订单跟踪</h1>
+    </header>
+    <section class="section-main" id="scroll-process">
+        <div>
+            <div class="service-person bg-white p30 cbo" id="service-person-box">
+                <div class="fl service-person-head mr14 mt20" id="service-person-head">
+                    <!--<img src="http://imgcdn.zhaoduiyisheng.com/img/icon/love_family.png"/>-->
+                </div>
+                <div class="f30 fl">
+                    <p class="mb05">
+                        <span><em class="word-align">咨询</em>人：</span>
+                        <span class="c-66" id="patient-name"></span>
+                    </p>
+                    <p class="mb05"><span>咨询方式：</span>
+                        <span class="c-66" id="service-name"></span></p>
+                    <p class="mb05">
+                        <span><em class="word-align">订单</em>号：</span>
+                        <span class="c-66" id="orderId"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="mt20 bg-white">
+                <h2 class="items-title  service-tracking be5-b">服务跟踪</h2>
+                <div class="cbo service-pro-item" id="service-pro-box">
+                    <!--&lt;!&ndash;服务完成&ndash;&gt;-->
+                    <!--<div class="container">-->
+                        <!--<div class="service-pro-time">-->
+                            <!--<span class="icon icon-clock"></span>-->
+
+                            <!--<p class="f20 mb20 tc">16-01-12<br>10:00:00</p>-->
+                        <!--</div>-->
+                        <!--<div class="be5-b service-pro-notice sub mr30"-->
+                             <!--id="complete-service">-->
+                            <!--<p class="f30 pt30 mb20">服务完成</p>-->
+                            <!--<p class="f24 mb20">-->
+                                <!--您的服务已经完成，感谢您对找对医生的信赖！-->
+                                <!--<span>咨询视频请点击链接查看-->
+                                <!--<a class="video-url c-cyan" href="http://www.zhaoduiyisheng.com">-->
+                                    <!--www.zhaoduiyisheng.com</a>-->
+                                <!--</span>-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;预约时间&ndash;&gt;-->
+                    <!--<div class="container">-->
+                        <!--<div class="service-pro-time">-->
+                            <!--<span class="icon icon-clock"></span>-->
+                            <!--<p class="f20 mb20">16-01-12</p>-->
+                        <!--</div>-->
+                        <!--<div class="be5-b service-pro-notice sub mr30">-->
+                            <!--<p class="f30 pt30 mb20">预约时间</p>-->
+                            <!--<p class="f24 mb20 appoint-time">-->
+                                <!--您的预约时间为2016年1月21日，具体详情发送到您的手机，您也可以点击服务通知查看详情</p>-->
+                            <!--<a class="btn fr btn-service mb20" href="serveNotice.html">服务通知</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;成功预约名医&ndash;&gt;-->
+                    <!--<div class="container" id="match-doctor">-->
+                        <!--<div class="service-pro-time w106">-->
+                        <!--</div>-->
+                        <!--<div class="service-pro-notice sub" id="doctor-detail">-->
+                            <!--<p class="f30 pt30 mb20">成功预约名医</p>-->
+                            <!--<div class="f24 cbo mr30 be5-b">-->
+                                <!--<a href="#" class="db cbo">-->
+                                    <!--<div class="fl service-person-head mr12"><img-->
+                                            <!--src="http://imgcdn.zhaoduiyisheng.com/img/icon/love_family.png"/></div>-->
+                                    <!--<div class="fl">-->
+                                        <!--<p class="mt10">-->
+                                            <!--<span class="f28 mr12">张雨</span>-->
+                                            <!--<span class="f24">主治医师</span>-->
+                                        <!--</p>-->
+                                        <!--<p class="f28 mt10">北京人民医院</p>-->
+                                    <!--</div>-->
+                                    <!--<a class="btn fr btn-service mb20" href="serveNotice.html">去查看</a>-->
+                                <!--</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;立即支付&ndash;&gt;-->
+                    <!--<div class="container">-->
+                        <!--<div class="service-pro-time">-->
+                            <!--<span class="icon icon-clock"></span>-->
+                            <!--<p class="f20 mb20">16-01-12</p>-->
+                        <!--</div>-->
+                        <!--<div class="be5-b service-pro-notice sub mr30">-->
+                            <!--<p class="f30 pt30 mb20">立即支付</p>-->
+                            <!--<p class="f24 mb20">您已经付款完成！</p>-->
+                            <!--<a class="btn fr btn-service mb20"-->
+                               <!--href="pay.html">去付款</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;精准匹配6名专家&ndash;&gt;-->
+                    <!--<div class="container">-->
+                        <!--<div class="service-pro-time">-->
+                            <!--<span class="icon icon-clock"></span>-->
+                            <!--<p class="f20 mb20">16-01-12</p>-->
+                        <!--</div>-->
+                        <!--<div class="be5-b service-pro-notice sub mr30">-->
+                            <!--<p class="f30 pt30 mb20">精准匹配专家</p>-->
+                            <!--<p class="f24 mb20">已经为您匹配六名专家</p>-->
+                            <!--<a class="btn fr btn-service mb20" href="selectService.html">去查看</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;选择服务&ndash;&gt;-->
+                    <!--<div class="container">-->
+                        <!--<div class="service-pro-time w106">-->
+                            <!--<span class="icon icon-clock"></span>-->
+                            <!--<p class="f20 mb20">16-01-12</p>-->
+                        <!--</div>-->
+                        <!--<div class="service-pro-notice sub mr30">-->
+                            <!--<p class="f30 pt30 mb20">您已预约服务</p>-->
+                            <!--<p class="f24 mb20">您已为爸爸头疼的病例选择了名医远程诊服务</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../js/serviceProcess.js"></script>
+</html>

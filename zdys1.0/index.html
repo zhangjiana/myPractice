@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate" />
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <link rel="shortcut icon" href=" /favicon.ico" />
+    <title>找对医生</title>
+    <script>
+        var u = navigator.userAgent,
+        hrefCode = null;
+        if(u.indexOf("Windows")>-1){
+            window.location="pc_index.html";
+        }
+        else{
+            judgeUser();
+        }
+
+        function GetQueryString(name){
+            /*定义正则，用于获取相应参数*/
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            /*字符串截取，获取匹配参数值*/
+            var r = window.location.search.substr(1).match(reg);
+            /*返回参数值*/
+            if(r!=null){
+                return  decodeURI(r[2]);
+            }
+            else{
+                return null;
+            }
+
+        }
+        /*cookie*/
+        function setCookie(name,value,oDay){
+            var oTime=new Date();
+            var oDate=oTime.getDate();
+            oTime.setDate(oDate+oDay);
+            document.cookie=name+'='+value+';expires='+oTime;
+        }
+        function getCookie(name){
+            var str=document.cookie.split('; ');
+
+            for(var i=0;i<str.length;i++){
+                arr=str[i];
+                arr1=arr.split('=');
+                if(arr1[0]==name)
+                    return arr1[1];
+            }
+            return '';
+        }
+        function removeCookie(name){
+
+            setCookie(name,'00',-1);
+
+        }
+
+        /*登录首页 时判断 用户是否登录过*/
+        function judgeUser(){
+            /*登录首页 时判断 用户是否登录过*/
+            hrefCode=GetQueryString("code");
+            if(hrefCode||window.localStorage.openid){
+                window.localStorage.removeItem('hrefCode');
+            }
+            else if( !getCookie('user')&&!getCookie('pwd')){
+                window.location = "login.html";
+            }
+        }
+        function setfont(){
+            var clientWidth = document.body.clientWidth||document.documentElement.clientWidth;
+            if(clientWidth > 750) {
+                clientWidth = 750;
+            }
+            document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+        }
+        setfont();
+        window.addEventListener('resize',setfont);
+    </script>
+
+    <link href="css/base.css" rel="stylesheet"/>
+    <link href="css/swiper.min.css" rel="stylesheet"/>
+    <link href="css/index.css?t=23" rel="stylesheet">
+
+
+</head>
+<body>
+<div style='margin:0 auto;display:none;'>
+    <img src="img/logo01.png" />
+</div>
+<!--首页-->
+    <div id="index-page" class="page index-page">
+    <!--头部-->
+    <header class="index-head cbo tc">
+        <h1 class="f34 c-f2">健康家庭</h1>
+        <a class="db fr" id="user" href="html/myInfo.html"></a>
+    </header>
+    <div class="index-wrap" id="tabs-container">
+        <!--健康家庭-->
+        <div class="parent-height fl">
+            <section class="family-box">
+                <!--banner-->
+                <div class="banner">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/banner_01.jpg"></div>
+                        <div class="swiper-slide"><img src="img/banner_02.jpg"></div>
+                        <div class="swiper-slide"><img src="img/banner_03.jpg"></div>
+                        <div class="swiper-slide"><img src="img/banner_04.jpg"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <!--主体部分-->
+                <div class="main">
+
+                    <!--亲情订阅-->
+                    <div id="subscribe-box" class="subscribe-box">
+                        <div class="personal-subscribe">
+                            <h3 class="fl f32 c-33">找准知识 &nbsp;守护健康</h3>
+                            <span class="clock fr f24 c-99">10:35</span>
+                            <div class="clb"></div>
+                            <p class="subscribe-content">
+                               为您的家人填写关注的疾病资料，获取精准匹配的健康预防及愈后康复知识。
+                            </p>
+                            <p class="f24 subscribe-tips">温馨提示
+                                <span class="c-99">:已有<code>96%</code>的用户转发给了自己的亲人</span>
+                                <span class="fr turn btn-share" id="btn-share0"></span>
+                            </p>
+                        </div>
+                    </div>
+                    <!--家庭成员-->
+                    <div class="family">
+                        <div class="family-top cbo">
+                            <h3 class="fl f32 c-33">家庭成员</h3>
+                            <span id="del-menber-btn" class="del-member fr f18"></span>
+                        </div>
+                        <div class="line"></div>
+                        <div class="member-wrap">
+                            <ul id="family-member" class="member cbo">
+                                <li>
+                                    <em class="head active"></em>
+                                    <span class="tc f20 db">我</span>
+                                </li>
+                                <li>
+                                    <em class="head add"></em>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!--选择服务-->
+                    <div class="choose-service">
+                        <h3 class="fl f32 c-33">选择您<span class="c-cyan" id="service-obj"></span>要的服务</h3>
+                        <a class="fr help db" href="html/help.html"> </a>
+                        <div class="clb"></div>
+                        <div class="line"></div>
+                        <div class="choose-box cbo">
+                            <ul class="choose-item tablecell">
+                                <li>找对体检&nbsp;贴心关怀
+                                    <span id="check-service" class="fr"></span>
+
+                                </li>
+                                <li>找对医生&nbsp;高效治病 <span id="doctor-service" class="fr"></span></li>
+                                <li id="base-service-item">找准知识&nbsp;守护健康 <span id="base-service" class="fr base"></span></li>
+                            </ul>
+                            <div class="tablecell">
+                                <span id="service-sure" class="confirm fr">下一步</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <!--服务流程-->
+        <div class="parent-height fl">
+            <section class="service-box">
+                <div class="people-box">
+                    <ul id="service-people" class="people">
+                        <li class="active">我</li>
+                    </ul>
+                </div>
+                <div id="service-ul" class="service-ul">
+                    <div class="service-list">
+                        <!--找对医生-->
+                        <div class="service-flow">
+                            <h2 class="tit">找对医生服务流程</h2>
+                            <div class="doc-flow-icon flex">
+                                <figure>
+                                    <img class="center" src="img/icon_upload.png" alt="">
+                                </figure>
+                                <div class="doctor-line"></div>
+                                <figure>
+                                    <img class="center" src="img/icon_hand.png" alt="">
+                                </figure>
+                                <div class="doctor-line"></div>
+                                <figure>
+                                    <img class="center" src="img/icon_tel.png" alt="">
+                                </figure>
+                                <div class="doctor-line"></div>
+                                <figure>
+                                    <img class="center" src="img/icon_done.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="icon-text icon-text01 flex">
+                                <p>上传资料<br>等待沟通</p><div></div>
+                                <p>选择服务</p><div></div>
+                                <p>等待邀约</p><div></div>
+                                <p>完成服务</p>
+                            </div>
+                            <div  class="serviceTip cbo">
+                                <p class="serviceTipText dn tc" >资料已上传，等待“医疗编辑”与患者取得联系</p>
+                                <span class="serviceTip-btn go-get-doctor" >去找对医生</span>
+                                <p class="service-doctor-wrap tc dn">
+                                    <img class="db service-doctor" src="img/doctor_head_03.jpg">
+                                    <span>刘强东</span>
+                                </p>
+                                <div class="service-doctorInfo dn" >
+                                    <p>地点：<span class="service-doctor-location">北京市人民医院</span></p>
+                                    <p class="mb40">时间：<span class="service-doctor-time">7月15日下午3点</span></p>
+
+                                    <span class="go-check serviceCom" > 完成服务</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--找对体检-->
+                        <div class="service-flow">
+                            <h2 class="tit">找对体检服务流程</h2>
+                            <div class="check-flow-icon flex">
+                                <figure>
+                                    <img class="center" src="img/icon_upload.png" alt="">
+                                </figure>
+                                <div class="check-line"></div>
+                                <figure>
+                                    <img class="center" src="img/icon_hand.png" alt="">
+                                </figure>
+                                <div class="check-line"></div>
+                                <figure>
+                                    <img class="center" src="img/icon_done.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="icon-text icon-text02 flex">
+                                <p>上传资料<br>等待沟通</p><div></div>
+                                <p>选择服务</p><div></div>
+                                <p>完成服务</p>
+                            </div>
+                            <div class="serviceTip cbo">
+                                <p class="check-serviceTipText dn fl" >患者资料已提交，开始进行体检服务</p>
+                                <span class="go-check go-get-check" >去找对体检</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!--尾部-->
+    <footer class="index-footer">
+        <div class="home f30">
+            <span class="active">健康家庭</span>
+        </div>
+        <div class="service f30">
+            <span>服务流程</span>
+        </div>
+    </footer>
+</div>
+    <!--基本资料-->
+    <div id="basic-info-page" class="page basic-info-page index-page">
+        <header class="index-head cbo tc">
+            <span id="basic-info-back" class="db fl back"></span>
+            <h1 class="f34 c-f2">基本资料</h1>
+        </header>
+        <div class="basic-info-box">
+            <div class="basic-info-wrap">
+                <form class="basic-info-form">
+                    <div class="basic-info-item">
+                        <span class="basic-info-label fl">姓名</span>
+                        <input type="text" id="name"/>
+                    </div>
+                    <div class="basic-info-item cbo" id="select-sex">
+                        <span class="basic-info-label fl">性别</span>
+                        <span class="label-sex label-man f32 db fl selected" data-sex="male">男</span>
+                        <span class="label-sex label-woman f32 db fl" data-sex="female">女</span>
+                    </div>
+
+                    <div class="basic-info-item">
+                        <span class="basic-info-label mb16">出生年份</span>
+                        <select name="bron-year" id="bron-year" class="basic-info-birth">
+                            <option value="0">请选择年份</option>
+                            <option value="1930">1930</option>
+                            <option value="1931">1931</option>
+                            <option value="1932">1932</option>
+                            <option value="1933">1933</option>
+                            <option value="1934">1934</option>
+                            <option value="1935">1935</option>
+                            <option value="1936">1936</option>
+                            <option value="1937">1937</option>
+                            <option value="1938">1938</option>
+                            <option value="1939">1939</option>
+                            <option value="1940">1940</option>
+                            <option value="1941">1941</option>
+                            <option value="1942">1942</option>
+                            <option value="1943">1943</option>
+                            <option value="1944">1944</option>
+                            <option value="1945">1945</option>
+                            <option value="1946">1946</option>
+                            <option value="1947">1947</option>
+                            <option value="1948">1948</option>
+                            <option value="1949">1949</option>
+                            <option value="1950">1950</option>
+                            <option value="1951">1951</option>
+                            <option value="1952">1952</option>
+                            <option value="1953">1953</option>
+                            <option value="1954">1954</option>
+                            <option value="1955">1955</option>
+                            <option value="1956">1956</option>
+                            <option value="1957">1957</option>
+                            <option value="1958">1958</option>
+                            <option value="1959">1959</option>
+                            <option value="1960">1960</option>
+                            <option value="1961">1961</option>
+                            <option value="1962">1962</option>
+                            <option value="1963">1963</option>
+                            <option value="1964">1964</option>
+                            <option value="1965">1965</option>
+                            <option value="1966">1966</option>
+                            <option value="1967">1967</option>
+                            <option value="1968">1968</option>
+                            <option value="1969">1969</option>
+                            <option value="1970">1970</option>
+                            <option value="1971">1971</option>
+                            <option value="1972">1972</option>
+                            <option value="1973">1973</option>
+                            <option value="1974">1974</option>
+                            <option value="1975">1975</option>
+                            <option value="1976">1976</option>
+                            <option value="1977">1977</option>
+                            <option value="1978">1978</option>
+                            <option value="1979">1979</option>
+                            <option value="1980" selected="selected">1980</option>
+                            <option value="1981">1981</option>
+                            <option value="1982">1982</option>
+                            <option value="1983">1983</option>
+                            <option value="1984">1984</option>
+                            <option value="1985">1985</option>
+                            <option value="1986">1986</option>
+                            <option value="1987">1987</option>
+                            <option value="1988">1988</option>
+                            <option value="1989">1989</option>
+                            <option value="1990">1990</option>
+                            <option value="1991">1991</option>
+                            <option value="1992">1992</option>
+                            <option value="1993">1993</option>
+                            <option value="1994">1994</option>
+                            <option value="1995">1995</option>
+                            <option value="1996">1996</option>
+                            <option value="1997">1997</option>
+                            <option value="1998">1998</option>
+                            <option value="1999">1999</option>
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                        </select>
+                    </div>
+                    <div class="basic-info-item">
+                        <span class="basic-info-label mb16">所在城市</span>
+                        <select name="province" id="province" class="fl basic-info-city">
+                            <option value="0">请选择省份</option>
+
+                        </select>
+                        <select name="city" id="city" class="fl basic-info-city"><option value="0">请选择市</option></select>
+                    </div>
+
+                </form>
+            </div>
+            <div class="tc c-red f26" id="add-notice"></div>
+        </div>
+        <footer class="common-foot f34">
+            <span id="data-info-next">下一步</span>
+        </footer>
+    </div>
+
+<!--找对医生资料页  新版-->
+<!--找对医生资料页-->
+    <div id="find-doc-page" class="find-doc-page index-page">
+        <header class="index-head tc">
+            <span class="db fl back" id="find-doc-back"></span>
+            <h1 class="f34 c-f2">病历夹</h1>
+        </header>
+        <section id="find-doc-main" class="data-main">
+            <div class="data-frame clearfix">
+                <p class="fl f34">是否吸烟</p>
+                <ul class="fl f28 c-66">
+                    <li id="fire-checkbox"><span data-smoke="on"><i class="fl"></i>是</span><span data-smoke="off"><i class="fl checked"></i>否</span></li>
+                    <li id="smokeAGE" class="dn"><label>吸烟年数:<input type="text" value="0" id="smokeages">年</label></li>
+                    <li id="smokeNUM" class="dn"><label>每天几根:<input type="text" value="0" id="smokenumber">根</label></li>
+                </ul>
+            </div>
+            <p class="c-red tc f28" id="fire-tip"></p>
+            <div class="data-frame">
+                <p class="f34">病情</p>
+                <textarea class="f28" id="description" placeholder="请您写下现在的症状、过往的疾病和治疗情况，及希望解决的问题。"></textarea>
+            </div>
+            <div class="data-frame data-upload">
+                <p class="f34">病历资料<span>（如手写病历、血尿化验结果、CT等）</span></p>
+                <ol data-to="#gallery-page1" class="up-page-smpic clearfix">
+                </ol>
+                <div class="btn-group clearfix f28">
+                    <div class="doc-data-btn btn-yellow fr upload"><input class="up-page-btn" type="file">上传</div>
+                    <div class="file-list"></div>
+                </div>
+            </div>
+            <p class="tc c-red f28 mt22" id="find-doc-notice"></p>
+        </section>
+
+        <footer class="common-foot f34" id="find-doctor-footer">
+            完成
+        </footer>
+    </div>
+
+<!--找对体检 页-->
+<div id="check-health" class="check-health-page index-page">
+    <header class="index-head tc">
+        <span class="db fl back" id="check-health-back"></span>
+        <h1 class="f34 c-f2" id="top-title">体检服务</h1>
+    </header>
+    <section class="check-health-wrap f28">
+        <div class="check-health-item p20">
+            <p>根据您的身体情况，给您匹配的体检服务：</p>
+            <p class="cbo mt46"><span class="btn-experience fr" id="check-health-now">立即体检</span></p>
+           <!-- <div class="mt46 cbo dn">
+                <span id="check-sex">男性</span><span class="check-suit-meal">A</span>套餐
+                <span>价格：</span><span class="c-red" id="check-health-price">590</span>
+
+            </div>-->
+        </div>
+        <div class="p20 c-99 check-heath-iframe">
+           <!-- <p>我们有以下套餐：</p>
+            <p>A套餐   B套餐   C套餐  D套餐  E套餐  F套餐</p>
+            <p>您自己或XX最合适我们的<span class="check-suit-meal">A</span>套餐</p>
+            <div class="mt46 cbo">
+                <a class="btn-look-package fr" href="html/check-health-detail.html">查看<span class="check-suit-meal">A</span>套餐</a>
+            </div>-->
+            <iframe id="health-meal" src="about:blank" class="parent-height"></iframe>
+            
+
+        </div>
+    </section>
+</div>
+
+<!--关注的疾病-->
+    <div id="care-ill-page" class="page care-ill-page index-page">
+    <header class="index-head tc">
+        <span id="care-ill-back" class="db fl back"></span>
+        <h1 class="f34 c-f2">关注的疾病</h1>
+    </header>
+    <div class="care-ill-box section-main">
+        <!--关注的疾病-->
+        <div>
+            <!--病例-->
+            <div class="data-upload focus-illness-case cbo base-info-wrap bg-white">
+                <div class="illness-case-title">
+                    <h2 class="fl icon-illness-case f32">病历资料</h2>
+                    <span class="db f24 c-66">（如手写病历、体检/检查报告）</span>
+                </div>
+                <ol data-to="#gallery-page2" class="up-page-smpic clearfix">
+                </ol>
+                <div class="btn-group clearfix f28">
+                    <div class="doc-data-btn btn-yellow fr upload"><input class="up-page-btn" type="file">上传</div>
+                    <div class="file-list"></div>
+                </div>
+            </div>
+            <!--标签-->
+            <div class="focus-illness-label cbo focus-illness-wrap bg-white">
+                <div class="illness-case-title cbo">
+                    <h2 class="icon-illness-case icon-illness-label f32 fl">疾病标签</h2>
+                    <img class="icon_del_tag fr" src="img/icon_del.png" id="del-tag"/>
+                </div>
+                <ul class="illness-label-list cbo f28" id="getIllTag">
+
+                </ul>
+                <div class="illness-base-btn add-tag f28 cbo">
+                    <span>添加</span>
+                </div>
+
+                <p id="no-add-notice" class="tc f24"></p>
+
+            </div>
+        </div>
+    </div>
+    <footer class="common-foot f34" id="care-ill-footer">
+        <a class="c-white" id="care-complete">完成</a>
+        <span id="care-ill-next" class="dn">下一步</span>
+    </footer>
+</div>
+
+<!--疾病标签页-->
+    <div id ="ill-tag" class="page index-page">
+    <div class="page ill-tag-page">
+        <!--头部-->
+        <header class="index-head tc">
+            <span id="ill-tag-back" class="db fl back"></span>
+            <h1 class="f34 c-f2">疾病标签</h1>
+        </header>
+        <div class="ill-box f28">
+            <!--一级-->
+            <ul class="tag-departments" id="first-tag">
+
+            </ul>
+            <!--二级-->
+            <div class="tag-classify" id="second-tag-box">
+
+            </div>
+
+        </div>
+        <div class="page ill-more-page" id="third-tag-box">
+            <h2 class="f32"><span id="third-tag-title"></span>包括以下疾病</h2>
+            <ol id="third-tag-content"></ol>
+            <!--三级-->
+            <footer class="common-foot addThisTag f34"><span class="db tc" id="choose-this-tag">选择该类</span></footer>
+        </div>
+    </div>
+</div>
+
+   <!--相册页-->
+    <div id="gallery-page1" class="gallery-page index-page">
+    <div class="index-head tc">
+        <span class="db fl back"></span>
+
+        <h1 class="f34 c-f2">资料照片</h1>
+        <span class="manage-pic f28 c-white">管理</span>
+    </div>
+    <div class="gallery-box">
+        <span class="tc db c-red f28 gallery-del-notice mt22"></span>
+        <div class="data-frame data-upload">
+            <ol data-galleryid="0" class="gallery-page-smpic clearfix">
+                <li class="add-more-li"><input class="gallery-page-btn" type="file"></li>
+            </ol>
+        </div>
+
+    </div>
+    <footer class="dn del-pic common-foot f34 c-white">
+        <span class="pic-btn">删除</span>
+    </footer>
+</div>
+    <!--相册页2-->
+    <div id="gallery-page2" class="gallery-page index-page">
+        <div class="index-head tc">
+            <span class="db fl back"></span>
+
+            <h1 class="f34 c-f2">资料照片</h1>
+            <span class="manage-pic f28 c-white">管理</span>
+        </div>
+        <div class="gallery-box">
+            <span class="tc db c-red f28 gallery-del-notice mt22" ></span>
+            <div class="data-frame data-upload">
+                <ol data-galleryid="1" class="gallery-page-smpic clearfix">
+                    <li class="add-more-li"><input class="gallery-page-btn" type="file"></li>
+                </ol>
+            </div>
+        </div>
+        <footer class="dn del-pic common-foot f34 c-white">
+            <span class="pic-btn">删除</span>
+        </footer>
+    </div>
+    <!--大图页-->
+    <div id="big-pic-page" class="big-pic index-page">
+    <div class="index-head tc"><span id="big-pic-page-back" class="db fl back"></span><h1 class="f34 c-f2">查看图片</h1></div>
+    <div id="big-pic-box" class="big-pic-box">
+    </div>
+</div>
+<!--分享菜单-->
+
+<div class="per-info-bot-wrap dn" id="share-list">
+    <!--weixin share-->
+    <div class="weixin-share" id="weixin-share" >
+        <img src="img/weixin_share.png"/>
+    </div>
+    <!--qq uc share-->
+    <div class="my-info-bot-wrap">
+        <div id="nativeShare"></div>
+    </div>
+</div>
+<!--弹窗页-->
+<div id="alert" class="alert-wrap dn">
+    <div class="alert center tc">
+        <div id="alert-text" class="f28 alert-question "></div>
+        <ul class="f34 alert-btn-list">
+            <li id="alertno">取消</li>
+            <li id="alertok">确认</li>
+        </ul>
+    </div>
+</div>
+<!--分享后弹窗页-->
+<div class="share-win-wrap dn" id="share-window">
+    <div class="share-win center tc">
+        <img id="btn-close-share" class="btn-close-share fr" src="img/icon_close.png"/>
+        <div class="share-rocket"><img src="img/share_win.png"/></div>
+        <h2>恭喜您获得一枚有爱勋章</h2>
+    </div>
+</div>
+</body>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.touchSwipe.min.js"></script>
+<script src="js/base.js"></script>
+<script src="js/ill-tag.js"></script>
+<script src="js/index.js?t=24"></script>
+<script>
+    var swiper = new Swiper('.banner', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        centeredSlides: true,
+        loop: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+</script>
+<script src="js/share-test.js"></script>
+</html>

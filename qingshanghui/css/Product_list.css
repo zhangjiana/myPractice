@@ -1,0 +1,21 @@
+.oPacity_Banner{width: 1000px;height:574px;margin:0 auto;}
+.oPacity_Banner ul{position: relative;}
+.oPacity_Banner li{position: absolute;top:0;left:0;}
+
+
+
+.collect_brand{display:block;text-indent:14px;line-height:16px;width:100px;height:16px;background:url(../img3/icon_collect.png) no-repeat left center;}
+.promopt_mes{width:972px;height:145px;border: 1px solid #cccccc;padding:5px 10px;}
+.promopt_mes p{padding:10px 20px;text-indent:2em;background:url(../img3/gift.png) no-repeat left center;}
+
+
+.product_list .list_top span{display: block;width:124px;float:left;height:28px;text-align:center;line-height:28px;margin-right:20px;}
+.product_list .list_top i{display: block;width:28px;height:18px;float:right;margin-top:5px;
+    background:url(../img3/icon_arrows_bottom.gif) no-repeat center center;
+    border-left:1px solid #cccccc;}
+
+.product_all_list{width:1000px;}
+.product_all_list li{float: left;margin-right: 20px;}
+.product_all_list li span{display:block;width:124px;height:28px;
+    line-height:28px;text-align:center;float: left;margin-right:20px;}
+.product_all_list li em{font-weight:bold;display: block;font-style: normal;height:30px;line-height: 30px;}

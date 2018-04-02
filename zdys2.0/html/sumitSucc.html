@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com" />
+    <title>找对医生</title>
+    <link href="../css/base.css" rel="stylesheet" />
+    <style>
+        .submit-succ-wrap{margin:30% 0.76rem 0;text-align: center;}
+        .submit-succ-wrap img{width:1.1rem;}
+        .submit-succ-wrap p{margin:0.52rem 0 0.72rem 0;}
+        .btn-look{display:block;font-size:0.28rem;color:#42babb;width:1.24rem;height:0.48rem;
+            border:solid 1px #42babb;border-radius: 0.05rem;line-height: 0.48rem;}
+    </style>
+</head>
+<body>
+<script>
+    function setFont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setFont();
+    window.onresize=setFont;
+</script>
+<div class="index-page bg-white">
+    <div class="submit-succ-wrap">
+        <img src="http://imgcdn.zhaoduiyisheng.com/img/submit_succ.png"/>
+        <p class="f28 c-66">您的订单号是:<span id="orderId"></span></p>
+        <p class="f28 c-99 tj">找对医生的医学专员正在分析您的资料，将尽快为您对症推荐北上广名医，点击“去查看”详情。</p>
+        <span class="btn-look centerX"  id="go-familyInfo">去查看</span>
+    </div>
+</div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/swiper.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../js/base.js"></script>
+<script>
+    if(GetQueryString('orderId')!=="0"){
+        $("#orderId").text(GetQueryString('orderId'));
+    }else {
+        $("#orderId").parent().addClass('dn');
+    }
+
+
+    $("#go-familyInfo").swipe({
+        tap: function(e){
+            window.location.href = 'familyInfo.html?patientUuid='+GetQueryString('patientUuid')+'&caseUuid='+GetQueryString('caseUuid')+"&orderId="+GetQueryString('orderId')+"&clinicService="+GetQueryString('clinicService');
+            e.preventDefault();
+        }
+    })
+</script>
+</html>

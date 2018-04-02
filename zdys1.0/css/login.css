@@ -1,0 +1,57 @@
+
+/*开场页面*/
+/*html,body{overflow:auto;}*/
+.start-page{position:relative;background:url(../img/login_bg01.jpg) no-repeat;
+    background-size:cover;color:#fff;}
+.start-intro{position:absolute;top:1.90rem;left:0.54rem;line-height: 0.68rem;color:#ffbc08;}
+.start-bot-menu{position:absolute;left:0.3rem;bottom:0;}
+.btn-wechat-login{width:6.9rem;height:0.66rem;background:rgba(255,255,255,.2);
+    border:solid 1px rgba(255,255,255,.8);border-radius: 0.66rem;}
+.icon-weixin{width:0.43rem;height:0.36rem;background:url(../img/icon_weixin.png) no-repeat;
+    background-size: cover;margin-right:0.1rem;}
+.bot-line-main{margin-top:0.24rem;}
+.bot-line-main li{float:left;}
+.bot-line{width:3.2rem;height:1px;background:rgba(255,255,255,.8)}
+.bot-dot{width:0.05rem;height:0.05rem;background:rgba(255,255,255,.8);margin:0 0.22rem;
+    border-radius: 0.05rem;}
+.start-bot-btn a{margin-top:0.36rem;margin-bottom:0.36rem;}
+.start-btn-login{margin-left:0.6rem;}
+.start-btn-reg{margin-right:0.9rem;}
+
+
+/*register页面*/
+.reg-header{position:relative;height:0.88rem;background:#E6E5E5;line-height: 0.88rem;text-align:center;}
+.reg-main{padding-top:0.48rem;padding-left:0.3rem;}
+.arrow-back{position:absolute;width:0.44rem;height:0.44rem;left:0.3rem;top:0.2rem;}
+.input-base{width:6.9rem;height:0.86rem;border:solid 1px #ccc;border-radius: 0.86rem;margin-top:0.42rem;}
+.input-base input{display:block;width:75%;height:100%;border:none;font-size:0.26rem;}
+.icon-base{display:block;margin-left:0.3rem;margin-top:0.2rem;margin-right:0.1rem;
+    width:0.33rem;height:0.47rem;}
+.icon-phone{background:url(../img/icon_phone.png) no-repeat;
+    background-size:cover;}
+.icon-pwd{background:url(../img/icon_pwd.png) no-repeat;
+    background-size:cover;}
+.input-base input.input-code{width:54%;}
+.get-code{display:block;height:0.84rem;width:2.38rem;
+    background:#dfae44;color:#fff;
+    line-height: 0.84rem;border-radius: 0.86rem;}
+.accept-service{margin-top:0.2rem;margin-left:0.3rem;width:4rem;}
+.icon-check{display:block;width:0.34rem;height:0.34rem;
+    border:solid 1px #999;margin-right:0.1rem;margin-top:0.01rem;}
+
+.icon-checked{background:url(../img/icon_check.png) no-repeat;background-size:cover;}
+.btn-reg{width:6.9rem;height:0.89rem;line-height:0.89rem;background:#3DB1B1;
+        border-radius:6.9rem;text-align:center;color:#fff;margin-top:0.9rem;}
+.form-notice{text-align:center;color:#e25e5c;margin:0.3rem 0;height:0.2rem;}
+.disable{background:#ccc;}
+
+/*login页面*/
+.forget-pwd{margin-right:0.6rem;}
+.icon-eye{display:block;width:0.48rem;height:0.3rem;
+    margin-top:0.28rem;margin-right:0.3rem;}
+.icon-close-eye{background:url(../img/icon_close_eye.png) no-repeat;background-size:cover;}
+.icon-open-eye{background:url(../img/icon_open_eye.png) no-repeat;background-size:cover;}
+.login-remember-pwd{margin-top:0.2rem;margin-left:0.3rem;}
+
+.reg-page,.login-page,.reset-page{display:none;}
+.start-bot-btn span{margin :0.12rem 0;width: 2.00rem; height: 0.74rem;text-align: center;line-height: 0.74rem;}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com" />
+    <title>找对医生</title>
+    <link href="../css/base.css" rel="stylesheet" />
+    <style>
+        .search-box { height: .88rem; padding-top: .16rem; }
+        .search { width: 7.1rem; height: .56rem; margin: 0 auto; -webkit-border-radius: 5px; border-radius: 5px; padding-left: .44rem; background: #fff url("http://imgcdn.zhaoduiyisheng.com/img/icon/search.png") no-repeat left center;background-size:.44rem; }
+        .search>input { border: 0; line-height: .56rem; width: 6rem; }
+        .tel { bottom: 0; width: 100%; height: 1.3rem; border-top: .2rem solid #ededed; border-bottom: .2rem solid #ededed; }
+        .tel>a { line-height: .9rem; margin: 0 .22rem 0 .28rem; }
+        .ill-tag{width: auto;  background: url("http://imgcdn.zhaoduiyisheng.com/img/icon/icon_bq.png") no-repeat 0 0.14rem;
+                background-size: 0.28rem;
+        }
+        .ill-tag>li {line-height: .4rem;}
+        .icon-del-red { background: url("http://imgcdn.zhaoduiyisheng.com/img/icon/del_red.png") no-repeat center;background-size:.40rem; }
+        .result-scroll { padding-left: .3rem; top: 0; width: 100%; height: 100%;overflow: hidden;}
+        .result-scroll li { line-height: .89rem; }
+        .bgccc { background-color: #ccc; }
+        .clear-input { margin-top: .06rem; }
+        .ill-list { overflow: hidden;}
+        .ill-list li { line-height: .89rem; text-indent: .3rem; }
+        .no-msg { margin-top: 2rem; }
+        .no-msg img { width: 1.7rem; }
+        .ill-list-page{ z-index: 3;}
+        .wh100{width: 100%;height: 100%;}
+    </style>
+</head>
+<body>
+<script>
+    function setFont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setFont();
+    window.addEventListener('resize', setFont)
+</script>
+<div class="index-page">
+    <div class="index-head">
+        <span id="back" class="icon-arrowr"></span>
+        <h1 class="h1 tc">关注的疾病</h1>
+    </div>
+    <div id="search-box" class="search-box be5-b bg-white">
+        <div class="search">
+            <input id="key-word" class="fl" type="text" placeholder="请输入您关心的疾病">
+            <span id="clear-key" class="clear-input fr dn"></span>
+        </div>
+    </div>
+    <section class="section-main bg-white pr">
+        <ul id="the-ill-tag" class="ill-tag f28 c-yellow clearfix mt20 ml30">
+
+        </ul>
+        <div class="tel f28 pa">
+            <a class="db icon-list" href="tel:4001234567">不会填,电话免费咨询:4001234567</a>
+        </div>
+        <div id="result-scroll" class="dn result-scroll f28 c-66 pa bg-white">
+            <ul id="search-result" >
+            </ul>
+        </div>
+    </section>
+    <footer id="sure" class="common-foot">
+        确定
+    </footer>
+</div>
+<div id="ill-list-page" class="dn index-page ill-list-page">
+    <div class="index-head">
+        <span id="off-ill-list-page" class="icon-arrowr"></span>
+        <h2 id="tit-ill-list" class="h1 tc"></h2>
+    </div>
+    <div id="list-scroll" class="section-main ill-list bg-white f28">
+        <ul id="ill-list">
+        </ul>
+    </div>
+</div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/ill-tag.js"></script>
+
+</html>

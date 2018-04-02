@@ -1,0 +1,73 @@
+.main-wrap{ width: 100%; height: 100%; overflow: hidden;}
+.bg-wrap img{display: block;width: 100%;}
+.backTop{position: absolute;display: block;left: 50%;transform: translateX(-50%);-webkit-transform:translateX(-50%);
+    top: 0.45rem;color: #ff5869;font-size: 14px; }
+.showNow{display: block; width: 4.8rem; height: .8rem;border-radius: 10px; background: #fee476;
+    font-size: .34rem;color:#ed4b5c; top: -.55rem; line-height: .8rem;text-align: center;}
+.uploadImg{width: 4.8rem; height: .8rem;border-radius: 10px;top: -.55rem; opacity: 0; }
+.lookHand{ font-size: .28rem;color: #ffffff;border-bottom: 1px solid #ffffff;top: .68rem}
+.detail{ font-size: .28rem; color:#ed4b5c; ;border-bottom: 1px solid #ed4b5c;bottom: -.1rem; }
+.bg-wrap .erweima{ top:-0.96rem; width: 1.84rem; height:1.84rem; box-shadow:0 0 5px 2px rgba(0,0,0,.3); z-index: 666;}
+.erTxt{ font-size: .28rem; color: #ed4b5c;position:absolute; bottom:.64rem; text-align: center;    width: 100%;}
+
+
+.pop-wrap{ position: absolute; z-index: 999; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .5); }
+.dia-wrap{ padding: .74rem .86rem 0;}
+.diaContent{width: 5.8rem; height: 6.32rem;background: url("http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/may_pop.jpg") no-repeat;
+    background-size: cover; border-radius: 20px  20px 0 0;padding: .50rem .86rem 0 .86rem ;
+    font-size: .28rem;
+}
+.diaContent h2{ font-size: .48rem;}
+.regPhone{width: 100%; border-radius: 8px; border: none;position: relative;
+    background: #ffffff url(http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/reg_icon_01.png) no-repeat .1rem center;
+    background-size: 11%;
+    height: .66rem;
+    padding-left: .56rem;
+    font-size: .28rem;
+    margin-top: .8rem;
+}
+.regNum{ width: 55%;height: .66rem;float: left;
+    border: none;
+    border-radius:8px 0 0 8px;
+    -webkit-border-radius:8px 0 0 8px;
+    background: #ffffff url(http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/reg_icon_02.png) no-repeat .1rem center;
+    background-size: 20%;
+    padding-left: .56rem;
+    font-size: .28rem;
+}
+.getRegNum{display: block; width: 45%;height: .66rem;
+    border-radius:0 8px 8px 0 ;
+    -webkit-border-radius: 0 8px 8px 0 ;
+    color: rgba(255,255,255,.85);
+    text-align: center; font-size: .28rem;
+    background: #1ea8de;  float: left;
+    line-height: .66rem;
+}
+.confirm{display: block; width: 100%;height:.88rem;line-height: .88rem; font-size: .34rem; color: #ffffff;text-align: center;background: #ee495a;  border-radius:  0 0 20px  20px;}
+
+.failContent{background:#ee495a;color:#ffffff;font-size: .34rem;
+    border-radius: 20px;
+    width: 5.8rem;
+    text-align: center;
+    padding: 2rem .3rem;
+}
+.back{
+    position: absolute; top: 0.3rem; left: 0.3rem; display: block; width: .6rem; height: .6rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/back_white_03.png) rgba(0, 0, 0, .48) no-repeat center;background-size: .48rem;
+}
+
+.pop-con{ width: 5.80rem; border-radius: 20px; }
+.closePop{position: absolute; bottom: 11.12%; left: 50%; -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); width: 0.76rem; height: 0.76rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/close.png) no-repeat center;
+    background-size: cover;}
+.c-red{ height: .30rem;line-height: .30rem;}
+.pop-txt{margin: 1.74rem auto 0;text-align: center;}
+.pop-txt p:nth-child(1){font-size: .36rem; color: #ee495a;}
+.pop-txt p:nth-child(2){font-size: 1rem; color: #ee495a;}
+
+@media screen and (width:320px) {
+    html { font-size: 42.666px !important; }
+    .closePop { bottom: 2%; }
+    .diaContent{padding-top: 0.1rem;}
+}
+@media screen and (max-width:361px) and (min-width:341px) {
+    .closePop { bottom: 4%; }
+}

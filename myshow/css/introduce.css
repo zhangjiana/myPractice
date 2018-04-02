@@ -1,0 +1,45 @@
+
+header button{ position: absolute; right: 1rem; top: 0.6rem; border:none; background: #E4366B; height: 1.79rem; border:#AD2950 1px solid; color: #fff; font-size: 1rem; border-radius: 0.5rem;}
+
+.section-introduce { position: relative;}
+.section-introduce p{ height: 3rem; width: 97%; background: #333; color: #fff; font-weight: bold; line-height: 3rem; padding-left: 3%; }
+.section-introduce ul li:nth-child(1) img{ height: 12.53rem; width: 60%; display: block; margin: 0 auto; margin-top: 1rem; margin-bottom:1.5rem; }
+.section-introduce ul li:nth-child(2){ height: 2.76rem; color: #fff; line-height: 2.77rem; text-align:left; width:65%; margin: 0 auto; margin-bottom: 1rem; background: #F14F7E; position: relative; padding-left: 5%;}
+.section-introduce ul li:nth-child(3){ -margin: 0 auto; width: 80%; padding-left: 5%; margin-bottom: 2rem;}
+
+footer .box{ display: box; display: -webkit-box;  width: 100%; height: 3.37rem;}
+footer .box a{ box-flex:1; -webkit-box-flex:1;  display: block; text-align: center; background: #505058; position: relative; color: #fff; font-weight: bold; text-decoration: none; line-height: 3.37rem; height: 3.37rem;}
+footer .box a span{ width: 50%; height: 100%; position: absolute;right: 0; top: 0; border-right: 1px solid #000; }
+footer span{ background: transparent;}
+
+footer span.line{ position: absolute; bottom: 3.22rem; left: 0; width: 33%; height: 0.15rem; display: block; background: #E4366B;}
+
+.top-angle{ border-top: solid 1.4rem transparent; border-bottom: solid 1.4rem transparent; border-right: solid 1.4rem #F14F7E; border-left: none; width: 0; height: 0; overflow: hidden; display: block; width: 1.4rem; float: left; position: absolute; right: 100%;}
+.circle{ width: 0.5rem; height: 0.5rem; display: block; position: absolute; right: 98%; top: 1.1rem; background: #fff; border-radius: 50%;}
+.discount{ padding-left: 2rem;}
+.section-introduce em{ float: right; font-style: normal;}
+
+
+/*************************************************第二个页面******************************************/
+.section-detail{ background: #F5F5F5;}
+.section-detail img{ width: 100%; height: 15rem; display: block; margin-bottom: 2rem;}
+.section-detail p{ height: auto; line-height: 1.5rem; background: #F5F5F5;color: #333; padding-top: 2rem;}
+.section-detail span{ padding-left: 2rem;}
+
+
+/************************************************第三个页面**********************************************/
+.section-picture { overflow: hidden; height: 100%; width: 100%; position: relative;}
+.section-picture ul.main { height: 100%; width: 100%; position: relative;}
+.section-picture ul.main li{ height: 100%; width: 100%; position: absolute; right: -2000px; top: 0; background-size: cover;}
+.section-picture ul.main li:nth-child(1){ right: 0; background: url(../img/show-pg1.jpg)no-repeat center center; background-size: cover;}
+.section-picture ul.main li:nth-child(2){ background: url(../img/show-pg2.jpg) no-repeat center center; background-size: cover;}
+.section-picture ul.main li:nth-child(3){ background: url(../img/show-pg3.jpg) no-repeat center center; background-size: cover;}
+.section-picture ul.main li:nth-child(4){ background: url(../img/show-pg4.jpg) no-repeat center center; background-size: cover;}
+
+.section-picture ul.list { width: 6rem; height: 0.5rem; position: absolute; bottom: 1rem; left: 40%;}
+.section-picture ul.list li{ width: 0.5rem; height: 0.5rem; float: left; background: #58575D; margin-right: 0.5rem; border-radius: 50%;}
+.section-picture ul.list li:nth-child(3){ padding: 0;}
+.list li:nth-child(1){ background: #E4366B;}
+
+
+

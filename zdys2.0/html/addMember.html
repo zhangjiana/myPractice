@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="content-type" content="no-cache, must-revalidate" />
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com" />
+    <link rel="shortcut icon" href=" /favicon.ico" />
+    <title>找对医生</title>
+    <link href="../css/base.css?v=1" rel="stylesheet" />
+    <link href="../css/swiper.min.css" rel="stylesheet" />
+    <link href="../css/add-member.css?t=1" rel="stylesheet">
+</head>
+<style>
+    .items-title{line-height: 0.84rem;padding: .1rem 0;}
+    #add-notice{ height: .4rem;}
+    body{background-color: #fff;}
+    .ml05{margin-left:0.05rem;}
+
+    .select-click{ width: 100%;}
+</style>
+<body>
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+</script>
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="db fl icon-arrowr" id="addMem-back"></span>
+        <h1 class="f34 c-f2">添加家人</h1>
+    </header>
+    <section id="scroll" class="section-main">
+        <!--基本资料-->
+        <div class="bg-white">
+            <h2 class="items-title mrl30">家人信息</h2>
+            <ul class="be5-t pl30 data-info">
+                <li id="head">
+                    <div>
+                        <span><em class="spacing-two">头</em>像:</span>
+                        <span class="c-99" id="head-tip" data-sex="male">选择一个头像</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="no-arrow">
+                        <span><em class="spacing-two">姓</em>名:</span>
+                        <input type="text" class="no-border f30 c-66" id="name"
+                               placeholder="请填写姓名">
+                        <i class="clear-input fr dn"></i>
+                    </div>
+                </li>
+                <li>
+                    <div class="no-arrow">
+                        <span><em>亲属关系:</em></span>
+                        <input type="text" class="no-border c-66 f30" id="relation"
+                               placeholder="请输入称呼"/>
+                        <i class="clear-input fr dn"></i>
+                    </div>
+                </li>
+                <li id="sex">
+                    <div>
+                        <span><em class="spacing-two">性</em>别:</span>
+                        <span class="c-66 ml05" id="sex-text" data-sex="male">男</span>
+                    </div>
+                </li>
+                <li id="birth-date">
+                    <div class="cbo container no-arrow">
+                        <span><em>出生年份:</em></span>
+                        <div class="pr sub"><span class="db tl f30 c-66" id="birth-text">选择年份</span></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="no-arrow">
+                        <span><em>联系方式:</em></span>
+                        <input type="tel" class="no-border f30 c-66" id="tel"
+                               placeholder="请填写您自己的手机号"/>
+                        <i class="clear-input fr dn"></i>
+                    </div>
+                </li>
+                <li id="location">
+                    <div class="cbo container">
+                        <span><em>所在城市:</em></span>
+                        <div class="pr sub f30 tl">
+                            <div class="cbo city-tab">
+                                <span class="pr c-66" id="my-province">请选择</span>
+                                <span class="pr c-66 dn" id="my-city">请选择</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <p class="tc f30 mt20 c-red" id="add-notice"></p>
+        </div>
+
+    </section>
+    <footer class="common-foot">
+       确定
+    </footer>
+</div>
+<!-- 年份选择 -->
+<div id="sel-year" class="index-page dn">
+    <header class="index-head tc">
+        <span class="db fl icon-arrowr back-dn"></span>
+        <h1 class="f34 c-f2">选择年份</h1>
+    </header>
+    <section id="scroll-year" class="section-main bg-white">
+        <ul id="year-ul" class="selectul f30 c-66">
+
+        </ul>
+    </section>
+</div>
+<!-- 省份选择 -->
+<div id="sel-province" class="index-page dn">
+    <header class="index-head tc">
+        <span class="db fl icon-arrowr back-dn"></span>
+        <h1 class="f34 c-f2">选择地区</h1>
+    </header>
+    <section id="scroll-province" class="section-main bg-white">
+        <ul id="province-ul" class="selectul f30 c-66">
+
+        </ul>
+    </section>
+</div>
+<!-- 城市选择 -->
+<div id="sel-city" class="index-page dn">
+    <header class="index-head tc">
+        <span class="db fl icon-arrowr back-dn"></span>
+        <h1 class="f34 c-f2">选择地区</h1>
+    </header>
+    <section id="scroll-city" class="section-main bg-white">
+        <ul id="city-ul" class="selectul f30 c-66">
+
+        </ul>
+    </section>
+</div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/swiper.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/add-member.js"></script>
+</html>

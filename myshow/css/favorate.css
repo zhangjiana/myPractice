@@ -1,0 +1,17 @@
+
+
+section .mylove{ position: relative;}
+section .mylove a { text-decoration: none; color: #000;}
+section .mylove p{ height: 3rem; line-height: 3rem; background: #333; color: #fff; width: 97%; padding-left: 3%;}
+section .mylove p i{ padding-right: 5%;}
+section .mylove dl{ margin-top: 1rem; -margin-bottom: 1rem; font-size: 1rem; height: 6.5rem; border-bottom: 2px solid #979797; position: relative; padding-left: 3%; padding-right: 3%; width: 94%; position: relative;}
+section .mylove dt{ float: left; margin-right: 0.8rem;}
+section .mylove dt img{ height: 5.89rem; width: 5.89rem;}
+section .mylove dd{ -float: left; line-height: 1rem; line-height: 1.3rem;}
+section .mylove dd span{ font-size: 1rem; color: #F20E61; margin-right: 0.5rem;}
+section .mylove em{ position: absolute; right: 0.5rem; top: 0rem;}
+section .mylove dd:nth-child(4){ font-size: 0.9rem;}
+section .mylove del{ padding-left: 1rem; font-size: 0.8rem; color: #666;}
+section .mylove dl input{ position: absolute; right: 1.5rem; bottom: 0.5rem; border: none; height: 1.68rem; width: 3.16rem;}
+
+footer span{ position: absolute; bottom: 3.22rem; left: 60%; width: 18%; height: 0.15rem; display: block; background: #E4366B;}

@@ -1,0 +1,74 @@
+
+
+/*账户设置*/
+.data-info li > div {
+    padding-right: 0.40rem;
+}
+.list-arrow {
+    background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/list_arrow.png) no-repeat right center #ffffff;
+    background-size: 0.44rem;
+}
+.data-info li {
+    padding: 0.30rem 0.12rem 0.3rem 0.3rem;
+}
+.data-info li.no-bg {
+    background: #e5e5e5;
+    padding: 0.20rem 0.56rem;
+}
+.index-page {
+    left: 100%;
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-box-orient: vertical;
+}
+/*默认联系人*/
+.pltr30{padding:0.3rem 0.3rem 0;}
+.input-name{height:0.7rem;border-bottom:solid 1px #e5e5e5;margin-top:0.06rem;}
+.input-name input{height:100%;width:80%;border:none;color:#666;}
+.btn-save{position:absolute;right:0.3rem;top:0;width:0.7rem;}
+/*绑定手机号*/
+.login-form{margin-top:0;}
+/*关于找对医生*/
+.bg-ed{background: #ededed;}
+.about-us{padding:0.5rem 0;}
+.about-us-logo {
+    width: 1.3rem;
+    height: 1rem;
+}
+.copyright-footer {
+    width: 100%;
+    text-align: center;
+}
+/*我们的服务*/
+.our-service{margin-top:0.2rem;padding:.3rem 0.3rem .3rem .46rem;}
+.our-service-text>div{margin-top:0.28rem;color:#333;position:relative;}
+.our-service-text>div p{color:#666;}
+.our-service-text>div:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0.06rem;
+    height: 0.24rem;
+    background: #42babb;
+    left: -0.12rem;
+    top: 0.08rem;
+}
+/*反馈*/
+.appoint-msg-wrap {
+    background: #fff;
+    border: solid 1px #e5e5e5;
+    border-radius: 0.05rem;
+    padding: 0.2rem;
+}
+.appoint-msg {
+    height: 3rem;
+    width: 100%;
+    border: none;
+    resize: none;
+}
+.mt30{margin-top:0.3rem;}
+.bold{font-weight: bold;}
+
+@media screen and (width:320px){
+    .login-form li.input-code input {width: 50%;}
+}

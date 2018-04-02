@@ -1,0 +1,14 @@
+
+.login-wrap{background: url(http://imgcdn.zhaoduiyisheng.com/img/newLogin/login_bg.jpg) no-repeat center;background-size: cover;}
+.service-item{bottom:4%;}
+.login-ul li{height:0.98rem;border-radius: 0.05rem;line-height: .98rem;}
+.login-ul{position:absolute;bottom:20%;width:92%;left:4%;}
+.login-w{background: #46c43c;}
+.login-m{background: #3cbbbb;margin-top:.5rem;}
+.icon-w,.icon-m{width:.74rem;height:.74rem;left:26%;}
+.icon-w{background: url(http://imgcdn.zhaoduiyisheng.com/img/newLogin/login_weixin.png) no-repeat center;background-size: .74rem;}
+.icon-m{background: url(http://imgcdn.zhaoduiyisheng.com/img/newLogin/login_iphone.png) no-repeat center;background-size: .74rem;}
+@media screen and (width:320px){
+    .icon-w,.icon-m{left:23%;}
+}
+.new-login-head{background:rgba(0,0,0,0);}

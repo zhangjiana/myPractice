@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>帮助页面</title>
+    <link href="../css/base.css" rel="stylesheet"/>
+    <style>
+        .use-help-list img{width:100%;display:block;}
+        .back{ position: absolute;top:0.3rem; left: 0.3rem; display: block; width:.6rem;
+            height: .6rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/back_white_03.png) rgba(0,0,0,.48) no-repeat center;background-size: .48rem;
+        }
+    </style>
+</head>
+<body>
+<script>
+    function setfont(){
+        var clientWidth = document.body.clientWidth||document.documentElement.clientWidth;
+        if(clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.onresize=setfont;
+</script>
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="icon-arrowr go-back"></span>
+        <h1 class="f34 c-f2">使用帮助</h1>
+    </header>
+    <section id="main" class="section-main">
+        <ul class="use-help-list">
+            <li class="pr">
+                <a class="back dn" id="index-back" href="../index.html"></a>
+                <img src="http://imgcdn.zhaoduiyisheng.com/img/useHelp/use_help01.png"/>
+            </li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/img/useHelp/use_help02.png"/></li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/img/useHelp/use_help03.png"/></li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/img/useHelp/use_help04.png"/></li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/img/useHelp/use_help05.png"/></li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/img/useHelp/use_help06.png"/></li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/img/useHelp/use_help07.png"/></li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/img/useHelp/use_help08.png"/></li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/img/useHelp/use_help09.png"/></li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/img/useHelp/use_help10.png"/></li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/img/useHelp/use_help11.png"/></li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/img/useHelp/use_help12.png"/></li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/img/useHelp/use_help13.png"/></li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/img/useHelp/use_help14.png"/></li>
+            <li><img src="http://imgcdn.zhaoduiyisheng.com/img/useHelp/use_help15.png"/></li>
+        </ul>
+    </section>
+</div>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script>
+    $(function(){
+        var con = new IScroll('#main', {scrollX: false, scrollY: true});
+        var from=GetQueryString("from");
+        $("#back").swipe({
+            tap: function(e){
+                if(from=="family"){
+                    window.location="newFamily.html";
+                }else if(from=="accountSet"){
+                    window.location="accountSet.html";
+                }else if(from=="selectService") {
+                    window.location = "selectService.html?patientUuid=" + GetQueryString("patientUuid") + '&caseUuid=' + GetQueryString("caseUuid");
+                }
+                else if(from=="my"){
+                    window.location="../html/my.html";
+                }else{
+                    from = null;
+
+//                    window.location="../index.html";
+                }
+                e.preventDefault();
+            }
+        });
+        if(from == null){
+            $("#index-back").removeClass('dn');
+            $('header').addClass('dn');
+        }
+        setTimeout(function(){
+            con.refresh();
+            setTimeout(function(){
+            con.refresh();
+            setTimeout(function(){
+            con.refresh();
+            setTimeout(function(){
+            con.refresh();
+            setTimeout(function(){
+            con.refresh();
+        },1500);
+        },1500);
+        },1500);
+        },1000);
+        },500);
+    });
+
+</script>
+</body>
+</html>

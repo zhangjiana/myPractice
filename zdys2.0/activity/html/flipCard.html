@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>找对医生</title>
+    <link href="../../css/base.css" rel="stylesheet"/>
+    <link href="../css/flipCard.css" rel="stylesheet"/>
+</head>
+<body>
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+</script>
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="icon-arrowr go-back"></span>
+        <h1 class="f34 c-f2">半价秒杀</h1>
+    </header>
+    <section class="section-main" id="scroll-flip">
+        <div>
+            <div class="card-top pr">
+                <div class="countdown pa" id="countdown">
+                    <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/0.png"/>
+                    <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/0.png"/>
+                    <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/0.png"/>
+                    <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/0.png"/>
+                    <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/0.png"/>
+                    <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/0.png"/>
+                </div>
+            </div>
+            <div class="card-wrap">
+                <ul class="card-ul pr" id="card-ul">
+                    <li id="card-0-0">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li id="card-0-1">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li id="card-0-2">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li id="card-1-0">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li id="card-1-1">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li id="card-1-2">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li id="card-2-0">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li id="card-2-1">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                    <li id="card-2-2">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </li>
+                </ul>
+                <div class="btn-start-game"></div>
+            </div>
+            <div class="f28 rules c-white">
+                <h2 class="f38">活动规则</h2>
+                <p>1、新老用户每日均有一次机会，每天仅有3份半价基金，先到先得；</p>
+                <p>2、半价基金仅限在找对医生最新网页端体验服务并选择支付方式时使用，体验服务手机号需为参加活动时的手机号；</p>
+                <p>3、活动期间，如果出现违规行为（如作弊领取、恶意套现等行为），找对医生有权收回用户的半价基金；</p>
+                <p>4、在不违反国家相关法律法规的前提下，找对医生对本次活动拥有最终解释权。</p>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="alert-wrap dn" id="alert-card">
+    <img class="flip-card-result center" src="http://imgcdn.zhaoduiyisheng.com/img/logo.png"/>
+</div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../../js/base.js"></script>
+<script src="../js/flipCard.js"></script>
+</html>

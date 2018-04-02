@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>基本资料</title>
+    <link href="../css/base.css" rel="stylesheet"/>
+    <link href="../css/basic-info.css" rel="stylesheet"/>
+</head>
+<body>
+<script>
+    function setFont(){
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if(clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setFont();
+</script>
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="db fl back" onclick="history.go(-1)"></span>
+        <h1 class="f34 c-f2">添加成员</h1>
+    </header>
+    <!--添加成员-->
+    <div class="section-main">
+        <div class="basic-info-wrap">
+            <form class="basic-info-form">
+                <div class="basic-info-item">
+                    <span class="basic-info-label fl">姓名</span>
+                    <input type="text" id="name"/>
+                </div>
+                <div class="basic-info-item cbo" id="select-sex">
+                    <span class="basic-info-label fl">性别</span>
+                    <span class="label-sex label-man f32 db fl selected" data-sex="male">男</span>
+                    <span class="label-sex label-woman f32 db fl" data-sex="female">女</span>
+                </div>
+
+                <div class="basic-info-item">
+                    <span class="basic-info-label mb16">亲属关系</span>
+                    <select name="call" id="call" class="basic-info-birth">
+                        <option value="0">请选择称呼</option>
+                        <option value="father">爸爸</option>
+                        <option value="mother">妈妈</option>
+                        <option value="law_father">岳父</option>
+                        <option value="law_mother">岳母</option>
+                        <option value="brother">兄弟</option>
+                        <option value="sister">姐妹</option>
+                        <option value="child">孩子</option>
+                        <option value="wife">妻子</option>
+                        <option value="husband">丈夫</option>
+                        <option value="husband_father">公公</option>
+                        <option value="husband_mother">婆婆</option>
+                        <option value="grandfather">爷爷</option>
+                        <option value="grandmother">奶奶</option>
+                        <option value="maternal_grandfather">外公</option>
+                        <option value="maternal_grandmother">外婆</option>
+                        <option value="other">其他</option>
+                    </select>
+                </div>
+
+                <div class="basic-info-item">
+                    <span class="basic-info-label mb16">出生年份</span>
+                    <select name="bron-year" id="bron-year" class="basic-info-birth">
+                        <option value="0">请选择年份</option>
+                        <option value="1930">1930</option>
+                        <option value="1931">1931</option>
+                        <option value="1932">1932</option>
+                        <option value="1933">1933</option>
+                        <option value="1934">1934</option>
+                        <option value="1935">1935</option>
+                        <option value="1936">1936</option>
+                        <option value="1937">1937</option>
+                        <option value="1938">1938</option>
+                        <option value="1939">1939</option>
+                        <option value="1940">1940</option>
+                        <option value="1941">1941</option>
+                        <option value="1942">1942</option>
+                        <option value="1943">1943</option>
+                        <option value="1944">1944</option>
+                        <option value="1945">1945</option>
+                        <option value="1946">1946</option>
+                        <option value="1947">1947</option>
+                        <option value="1948">1948</option>
+                        <option value="1949">1949</option>
+                        <option value="1950">1950</option>
+                        <option value="1951">1951</option>
+                        <option value="1952">1952</option>
+                        <option value="1953">1953</option>
+                        <option value="1954">1954</option>
+                        <option value="1955">1955</option>
+                        <option value="1956">1956</option>
+                        <option value="1957">1957</option>
+                        <option value="1958">1958</option>
+                        <option value="1959">1959</option>
+                        <option value="1960">1960</option>
+                        <option value="1961">1961</option>
+                        <option value="1962">1962</option>
+                        <option value="1963">1963</option>
+                        <option value="1964">1964</option>
+                        <option value="1965">1965</option>
+                        <option value="1966">1966</option>
+                        <option value="1967">1967</option>
+                        <option value="1968">1968</option>
+                        <option value="1969">1969</option>
+                        <option value="1970">1970</option>
+                        <option value="1971">1971</option>
+                        <option value="1972">1972</option>
+                        <option value="1973">1973</option>
+                        <option value="1974">1974</option>
+                        <option value="1975">1975</option>
+                        <option value="1976">1976</option>
+                        <option value="1977">1977</option>
+                        <option value="1978">1978</option>
+                        <option value="1979">1979</option>
+                        <option value="1980" selected="selected">1980</option>
+                        <option value="1981">1981</option>
+                        <option value="1982">1982</option>
+                        <option value="1983">1983</option>
+                        <option value="1984">1984</option>
+                        <option value="1985">1985</option>
+                        <option value="1986">1986</option>
+                        <option value="1987">1987</option>
+                        <option value="1988">1988</option>
+                        <option value="1989">1989</option>
+                        <option value="1990">1990</option>
+                        <option value="1991">1991</option>
+                        <option value="1992">1992</option>
+                        <option value="1993">1993</option>
+                        <option value="1994">1994</option>
+                        <option value="1995">1995</option>
+                        <option value="1996">1996</option>
+                        <option value="1997">1997</option>
+                        <option value="1998">1998</option>
+                        <option value="1999">1999</option>
+                        <option value="2000">2000</option>
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                        <option value="2003">2003</option>
+                        <option value="2004">2004</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                        <option value="2008">2008</option>
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                    </select>
+                </div>
+                <div class="basic-info-item">
+                    <span class="basic-info-label mb16">所在城市</span>
+                    <select name="province" id="province" class="fl basic-info-city">
+                        <option value="0">请选择省份</option>
+
+                    </select>
+
+                        <select name="city" id="city" class="fl basic-info-city">
+                            <option value="0">请选择市</option>
+                        </select>
+
+
+                </div>
+            </form>
+        </div>
+        <div class="tc c-red f26" id="add-notice"></div>
+    </div>
+    <footer class="common-foot f34" id="btn-add-member">
+        确定
+    </footer>
+</div>
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/jquery.touchSwipe.min.js"></script>
+<script src="../js/add-member.js"></script>
+<script src="../js/base.js"></script>
+</body>
+</html>

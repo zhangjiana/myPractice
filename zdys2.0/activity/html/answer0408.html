@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>找对医生</title>
+    <link href="../../css/base.css" rel="stylesheet"/>
+    <style>
+        body{background-color: #082b3e;}
+        .index-page{position: relative;color: #fff;}
+        .index-page>div{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/answerbg.jpg) no-repeat top center;background-size:cover;height: 100%;min-height: 514px;padding-left: .3rem;}
+        .index-page h3{font-size: .34rem;}
+        .index-page ul{font-size: .28rem;color: #d5d5d5;margin-bottom: .2rem;}
+        .index-page li{margin-bottom: .1rem;clear: both;overflow: hidden;}
+        .index-page p{padding-top: .12rem;width: 80%;padding-left: .3rem;position: relative;}
+        .index-page p::before{content: "";height: 5px;width: 5px;background-color: #d5d5d5;-webkit-border-radius: 9999px;border-radius: 9999px;margin:7px 5px 0;position: absolute;left: 0;}
+        .one{padding-top: 2.7rem;}
+        .checks{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/check.png) no-repeat top center;background-size:contain;width: .6rem;height: .6rem;display: block;margin-right: .3rem;}
+        .checked{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/checked.png) no-repeat top center;background-size:contain;}
+        .submit{text-indent: -9999px;width: 2.24rem;height: .8rem;background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/btn_sunmit.png) no-repeat center;background-size:contain;position: relative;left: 50%;margin-left: -1.12rem;margin-top: .3rem;}
+        .alert-wrap { position: absolute; z-index: 999; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .5); }
+        .result { width: 5.86rem; border-radius: 20px; }
+        .closeThis { position: absolute; bottom: 11.12%; left: 50%; -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); width: 1.02rem; height: 1.02rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/close.png) no-repeat center;background-size:cover; }
+        /*.share:before { content: ""; width: 100%; position: absolute; top: 0; height: 1.8rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/weixin_share.png) no-repeat right center;background-size:contain; z-index: 10; }*/
+        .back { position: absolute; top: 0.3rem; left: 0.3rem; display: block; width: .6rem; height: .6rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/back_white_03.png) rgba(0, 0, 0, .48) no-repeat center;background-size:.48rem; }
+        @media screen and (width:320px) {
+          html { font-size: 42.666px !important; }
+          .closeThis { bottom: 2%; }
+          .one{padding-top: 100px;}
+        }
+        @media screen and (max-width:361px) and (min-width:341px) {
+          .closeThis { bottom: 4%; }
+        }
+        .wards{ text-align: center;color:#8496aa;border-bottom: 1px solid #8496aa; display: block;position: absolute;
+            left:50%;transform: translateX(-50%);-webkit-transform: translateX(-50%); bottom: .22rem;white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+    // if (!window.localStorage.openid&&!window.sessionStorage.n) {
+    //     window.sessionStorage.n = ' ';
+    //     var appId="wx14da7f3cb2e1b8ff";
+    //     var redirect_uri=encodeURI(window.location.href);
+    //     window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appId+"&redirect_uri="+redirect_uri+
+    //     "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+    // }
+</script>
+<div id="scroll" class="index-page">
+    <div class="pr">
+        <i class="back go-back"></i>
+        <div class="question one">
+            <h3>题目一</h3>
+            <ul class="cbo">
+                <li>
+                    <p class="fl">高血压者宜常吃苹果</p>
+                    <span data-key="T" class="checks fr"></span>
+                </li>
+                <li>
+                    <p class="fl">果糖会促进头发生长</p>
+                    <span data-key="F" class="checks fr"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="question two">
+            <h3>题目二</h3>
+            <ul class="cbo">
+                <li>
+                    <p data-key="T" class="fl">找对医生名医远程诊是享受北上广名医+本地医生双服务</p>
+                    <span data-key="T" class="checks fr"></span>
+                </li>
+                <li>
+                    <p class="fl">找对医生名医远程诊是一对一和名医视频</p>
+                    <span data-key="F" class="checks fr"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="question thr">
+            <h3>题目三</h3>
+            <ul class="cbo">
+                <li>
+                    <p data-key="T" class="fl">维生素C能治疗贫血，牙龈萎缩，出血症状</p>
+                    <span data-key="T" class="checks fr"></span>
+                </li>
+                <li>
+                    <p class="fl">胃溃疡的人需要多饮用牛奶</p>
+                    <span data-key="F" class="checks fr"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="submit" id="submit">
+            提交
+        </div>
+        <a class="wards f30" href="turnPlate.html">100%中奖，健康转盘等你来转</a>
+    </div>
+</div>
+<div class="alert-wrap dn" id="alert-card">
+    <img class="result center" src="http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/right.jpg">
+    <span class="db closeThis" id="closeThis"></span>
+</div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../../js/base.js"></script>
+<script>
+    var scroll = new IScroll('#scroll', {
+        probeType: 3,
+        mouseWheel: true
+    });
+/*    var problem = {8:['找对医生是利用北上广名医休息时间提供私人医生服务的平台','找对医生可以提供挂号、线上问诊、卖药等服务','高抬手臂睡觉对身体无害','用米醋泡脚会促进新陈代谢','猕猴桃对寒性胃痛有刺激作用','汤泡饭有助于消化，对身体健康'],9:['用找对医生名医远程诊无需北上南下看名医','找北上广名医看病必须长途跋涉到现场','饭后应该立刻刷牙','站立弯膝对胃疼有缓解作用','乘车时晕车可以含一片生姜来缓解','酒后饮茶对身体好'],10:['找对医生名医远程诊是享受北上广名医+本地医生双服务','找对医生名医远程诊是一对一和名医视频','果糖会促进头发生长','高血压者宜常吃苹果','维生素C能治疗贫血，牙龈萎缩，出血症状','胃溃疡的人需要多饮用牛奶'],11:['找对医生是利用北上广名医休息时间提供私人医生服务的平台','找对医生可以提供挂号、线上问诊、卖药等服务','豆浆适合空腹喝','用牛奶代替饮用水，会破坏身体营养平衡','缺乏VB会导致口腔溃疡','蛋糕和豆腐搭配能减肥'],12:['用找对医生名医远程诊无需北上南下看名医','找北上广名医看病必须长途跋涉到现场','身上有伤口不能吃酱油','绿豆有解毒清火，促进机体排毒的功效','一岁以下的婴儿不应进食蜂蜜，因为可能含有肉毒杆菌','蜂蜜、蜂王浆里有激素，不应该给孩子吃，它们会导致性早熟'],13:['找对医生名医远程诊是享受北上广名医+本地医生双服务','找对医生名医远程诊是一对一和名医视频','用微波炉烹调食物会致癌','用米醋泡脚会促进新陈代谢','猕猴桃对寒性胃痛有刺激作用','汤泡饭有助于消化，对身体健康'],14:['找对医生是利用北上广名医休息时间提供私人医生服务的平台','找对医生可以提供挂号、线上问诊、卖药等服务','珍珠奶茶中的珍珠会造成肠梗阻','一岁以下的婴儿不应进食蜂蜜，因为可能含有肉毒杆菌','站立弯膝对胃疼有缓解作用','饭后应该立刻刷牙']};
+    var day = new Date().getDate();
+    // var day = 14;
+    if (day>14||day<8) {day=14;}
+    $('p').each(function(i){
+        $(this).text(problem[day][i]);
+    });*/
+    $('li').swipe({
+        tap:function(){
+            this.find('span').addClass('checked');
+            this.siblings().find('span').removeClass('checked');
+        }
+    });
+    $('#submit').swipe({
+        tap:function(){
+            if(getCookie('user')&&getCookie('user').length == 11){
+
+                var str = '';
+                $('.checked').each(function(){
+                    str+=$(this).data('key');
+                });
+                if(str.length == 3){
+                    getAnswer(str);
+                }else {
+                    myalert.tips({
+                        txt:"题目还未答完哦",
+                        btn: 1
+                    });
+                }
+            }else {
+                myalert.tips({
+                    txt:"请先绑定手机号",
+                    fnok:function(){
+                        window.location.href = "http://www.zhaoduiyisheng.com/activity/html/topicsActivity.html"
+                    },
+                    btn: 1
+                });
+            }
+        }
+    });
+    $("#closeThis").swipe({
+        tap: function(){
+            $("#alert-card").addClass('dn').removeClass('share');
+        }
+    });
+    var sessionId = window.localStorage.sessionId;
+    /*答题后请求*/
+    function getAnswer(obj){
+        $.ajax({
+            type: 'POST',
+            url: 'http://www.zhaoduiyisheng.com/api/Promotion/Monday/AnswerQuestion?sessionId=' +sessionId,
+            contentType: "text/plain; charset=UTF-8",
+            dataType: 'json',
+            data:obj,
+            success: function(data) {
+                console.log(data);
+                if(data.code == 0){
+                    $("#alert-card").removeClass('dn share');
+                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/right.jpg");
+                    setTimeout(function(){
+                        getMoney();
+                    },2000);
+                }else if( data.code == 917){
+                    $("#alert-card").removeClass('dn');
+                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/wrong.jpg");
+                }else if(data.code == 918){
+                    $("#alert-card").removeClass('dn').addClass('share');
+                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/already.jpg");
+                }else if(data.code == 998){
+                    $("#alert-card").removeClass('dn');
+                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/late.jpg");
+                }else{
+                    myalert.tips({
+                        txt:data.message,
+                        btn: 1
+                    });
+                }
+            }
+        });
+    }
+    function getMoney(){
+        $.ajax({
+            type: 'POST',
+            url: 'http://www.zhaoduiyisheng.com/api/Promotion/Monday/CashCoupon?sessionId=' + sessionId,
+            contentType: "text/plain; charset=UTF-8",
+            dataType: 'json',
+            success: function (data) {
+                if(data.code == 0){
+                    console.log('getMoney');
+                    $("#alert-card").removeClass('dn').addClass('share');
+                }else if(data.code == 922){
+                    myalert.tips({
+                        txt:data.message,
+                        btn: 1
+                    });
+                }else if( data.code == 917){
+                    $("#alert-card").removeClass('dn');
+                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/wrong.jpg");
+                }else if(data.code == 918){
+                    $("#alert-card").removeClass('dn').addClass('share');
+                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/already.jpg");
+                }else if( data.code == 998){
+                    $("#alert-card").removeClass('dn');
+                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/late.jpg");
+                }
+            }
+        });
+    }
+    setTimeout(function(){
+        scroll.refresh();
+    },1000);
+    shareWeixin("答题抢红包，和找对医生一起健康每周一","千份红包每周一17：00准时开抢哦","http://www.zhaoduiyisheng.com/activity/html/topicsActivity.html","http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/pig.jpg")
+</script>
+</html>

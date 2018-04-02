@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>致家人的一封信</title>
+    <link href="../css/base.css" rel="stylesheet"/>
+    <link href="../css/my-info.css" rel="stylesheet"/>
+</head>
+<body>
+<script>
+    function setFont(){
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if(clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setFont();
+</script>
+<!--爸爸资料-->
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="db back" onclick="history.go(-1)"></span>
+        <h1 class="f34 c-f2">科普知识详情</h1>
+        <!--<span class="db btn-know-share"></span>-->
+    </header>
+    <section class="section-main f28">
+        <div class="my-info-wrap passage-wrap">
+            <div class="passage-notice">温馨提示：有96%的用户转发了这篇文章</div>
+            <div class="passage-detail">
+                <h2 class="f34">搓手心生火补阳，搓脚心补水滋阴</h2>
+                <p>
+                    手心有个热性的穴位，搓手心可以生“火”，补阳。脚心有个凉性的穴位，搓脚心可以滋阴补水，用热的手心，搓脚心，可以使水火交融，阴阳平衡，很多人的失眠就是这样“搓”好的。</p>
+                <p>
+                    手心的穴位叫劳宫，手握拳时，中指下的那个地方就是，这里是心包经的穴位，和心包经一样属“火”，性质偏热。有个“摩拳擦掌”的成语，一般是形容大干一场之前的准备，在大干一场之前需要鼓动阳气，所以会摩擦手心中这个热性的穴位。</p>
+                <p> 脚心上的穴位叫涌泉，是肾经的井穴，所谓井穴，就是肾经是从这里发源的，肾经性质和心包经是相对的，属于水，有凉性，它的井穴也具备同样性质，多用它来滋阴补水。有的人眼睛发红，肿了，吃去火药总是不好，最后通过按摩脚心治好的，之所以有如此神效，因为这个人的火是虚火，虚火的出现是因为水少了，要补水才能降火，按摩涌泉就等于给身体吃了滋阴药，补水了
+                    有的人心火盛，平时心烦，失眠，多梦，如果吃药，医生会开牛黄清心，天王补心之类的，去火的同时滋养心阴，才能把虚火平复掉，这种人可以先把手心搓热，之后用热的手心搓脚心，这样一来心火就和肾水交汇了，浮越在上的心火因为有了肾水就降了下来，这在中医又称为“引火归元”，多用在治疗心火浮越导致的各种虚性亢奋时，比如失眠，口疮，而且口疮只在舌尖
+                </p>
+                <p class="tc knowledge-img"><img src="../img/knowledge_03.jpg"> </p>
+            </div>
+            <ul class="psg-bot-btn tc">
+                <li>
+                    <img id="btn-good" class="icon-good db" src="../img/icon_good.png"/>
+                    <span class="db">夸夸ta</span>
+                </li>
+                <li><a class="btn-see-more" href="../index.html">查看更多</a></li>
+            </ul>
+        </div>
+    </section>
+</div>
+<!--分享菜单-->
+<div class="per-info-bot-wrap dn" id="share-list">
+    <!--weixin share-->
+    <div class="weixin-share" id="weixin-share" >
+        <img src="../img/weixin_share.png"/>
+    </div>
+    <!--qq uc share-->
+    <div class="my-info-bot-wrap">
+        <div id="nativeShare"></div>
+    </div>
+</div>
+</body>
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/jquery.touchSwipe.min.js"></script>
+<script src="../js/share-test.js"></script>
+</html>

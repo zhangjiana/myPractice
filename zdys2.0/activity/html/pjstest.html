@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>找对医生</title>
+    <link href="../../css/base.css?v=12" rel="stylesheet"/>
+    <style>
+        body{background-color:#01bff6;}
+        .main-wrap,.main-wrap>li{width: 100%;height: 100%;overflow: hidden;}
+        .main-wrap>li{padding-top: 1rem;}
+        .pg{padding: 0 .3rem;font-size: 18px;}
+        img{display: block;}
+        .title{width: 6.12rem; margin:0 auto .3rem;}
+        .main{width: 2.75rem;margin:.5rem auto .3rem;}
+        .bottom{bottom: -.35rem;left: 0;width: 100%;}
+        .start{width: 6.4rem;line-height: 1rem;bottom: 2.05rem;}
+        .progress{width: 2.24rem;line-height: .64rem;-webkit-border-radius: 9999px;border-radius: 9999px;}
+        .problem{margin: .5rem 0;}
+        .problem>*{float: left;}
+        .problem>em{width: .75rem;}
+        .problem>span{width: 6.15rem;}
+        .select{border:1px solid #9a7d12;text-indent: .5rem;line-height: .98rem;margin-bottom: .58rem;}
+        .pg>em{line-height: 1rem;width: 6.9rem;bottom: 2.5rem;}
+        h3{color: #eabf20;}
+        .tips{width: 6.6rem;margin:.5rem auto;}
+        .no{width: 4.62rem;}
+        .low{width: 3.67rem;}
+        .high{width: 3.07rem;}
+        .ewm{bottom: .5rem;width: 100%;left: 0;}
+        .ewm>img{width: 1.5rem;margin: .2rem auto;}
+        .bgc{background-color: #fabf13;border:1px solid #fabf13;}
+        .f28 { font-size: 14px }
+        .f30 { font-size: 15px }
+        .f32 { font-size: 16px }
+        .f34 { font-size: 17px }
+        .f36 { font-size: 18px }
+        .f48{font-size: 24px;}
+        @media screen and (width:320px) {
+            html { font-size: 42.666px !important; }
+            .main-wrap>li{padding-top: .9rem;}
+            .main{width: 2rem;}
+            .start{bottom: 2rem;}
+            .bottom{bottom: -.4rem;}
+            .pg>em{bottom: 1.2rem;}
+            .tips{margin:.05rem auto;}
+            .ewm{bottom: .3rem;}
+            .no{width: 4.2rem;}
+            .low{width: 3.7rem;}
+            .high{width: 2.47rem;}
+        }
+    </style>
+</head>
+<body>
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+    /*if (!window.localStorage.openid&&!window.sessionStorage.n){
+     window.sessionStorage.n = ' ';
+     var appId="wx14da7f3cb2e1b8ff";
+     var redirect_uri=encodeURI(window.location.origin+window.location.pathname);
+     window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appId+"&redirect_uri="+redirect_uri+
+     "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+     }*/
+</script>
+<ul class="main-wrap" id="main">
+    <li class="pg01 pr">
+        <img class="title" src="http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/title.jpg" alt="">
+        <p class="tc c-white f32">测测这些帕金森病症你有没有中 </p>
+        <img class="main" src="http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/main.jpg" alt="">
+        <img class="bottom pa" src="http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/bottom.jpg" alt="">
+        <em class="start bgc f32 c-white tc br5 centerX" id="start">开始测试</em>
+    </li>
+    <li class="pr c-white pg">
+        <div class="progress bgc tc m0a f36">1/8</div>
+        <div class="problem clearfix"><em>一．</em><span>是否出现嗅觉减退或缺失?</span></div>
+        <div>
+            <div class="select br5">A&nbsp;&nbsp;是</div>
+            <div class="select br5">B&nbsp;&nbsp;否</div>
+        </div>
+        <em class="next centerX bgc tc br5">下一题</em>
+    </li>
+    <li class="pr c-white pg">
+        <div class="progress bgc tc m0a f36">2/8</div>
+        <div class="problem clearfix"><em>二．</em><span>是否感觉面部没有表情，不眨眼和双目凝视的情况?</span></div>
+        <div>
+            <div class="select br5">A&nbsp;&nbsp;是</div>
+            <div class="select br5">B&nbsp;&nbsp;否</div>
+        </div>
+        <em class="next centerX bgc tc br5">下一题</em>
+    </li>
+    <li class="pr c-white pg">
+        <div class="progress bgc tc m0a f36">3/8</div>
+        <div class="problem clearfix tj"><em>三．</em><span>是否震颤（例如手抖是在静止时加重或出现，拿东西时手抖减轻或消失）?</span></div>
+        <div>
+            <div class="select br5">A&nbsp;&nbsp;是</div>
+            <div class="select br5">B&nbsp;&nbsp;否</div>
+        </div>
+        <em class="next centerX bgc tc br5">下一题</em>
+    </li>
+    <li class="pr c-white pg">
+        <div class="progress bgc tc m0a f36">4/8</div>
+        <div class="problem clearfix tj"><em>四．</em><span>是否动作慢（例如扣纽扣、穿袜子、系鞋带等）?</span></div>
+        <div>
+            <div class="select br5">A&nbsp;&nbsp;是</div>
+            <div class="select br5">B&nbsp;&nbsp;否</div>
+        </div>
+        <em class="next centerX bgc tc br5">下一题</em>
+    </li>
+    <li class="pr c-white pg">
+        <div class="progress bgc tc m0a f36">5/8</div>
+        <div class="problem clearfix tj"><em>五．</em><span>是否感觉肌肉僵硬，导致姿势步态异常?</span></div>
+        <div>
+            <div class="select br5">A&nbsp;&nbsp;是</div>
+            <div class="select br5">B&nbsp;&nbsp;否</div>
+        </div>
+        <em class="next centerX bgc tc br5">下一题</em>
+    </li>
+    <li class="pr c-white pg">
+        <div class="progress bgc tc m0a f36">6/8</div>
+        <div class="problem clearfix tj"><em>六．</em><span>是否常有便秘、出汗异常的情况?</span></div>
+        <div>
+            <div class="select br5">A&nbsp;&nbsp;是</div>
+            <div class="select br5">B&nbsp;&nbsp;否</div>
+        </div>
+        <em class="next centerX bgc tc br5">下一题</em>
+    </li>
+    <li class="pr c-white pg">
+        <div class="progress bgc tc m0a f36">7/8</div>
+        <div class="problem clearfix tj"><em>七．</em><span>是否经常口水过多，流涎?</span></div>
+        <div>
+            <div class="select br5">A&nbsp;&nbsp;是</div>
+            <div class="select br5">B&nbsp;&nbsp;否</div>
+        </div>
+        <em class="next centerX bgc tc br5">下一题</em>
+    </li>
+    <li class="pr c-white pg">
+        <div class="progress bgc tc m0a f36">8/8</div>
+        <div class="problem clearfix tj"><em>八．</em><span>是否有抑郁或睡眠障碍??</span></div>
+        <div>
+            <div class="select br5">A&nbsp;&nbsp;是</div>
+            <div class="select br5">B&nbsp;&nbsp;否</div>
+        </div>
+        <em class="next centerX bgc tc br5 submit">提交</em>
+    </li>
+    <li class="result c-white pr">
+        <h3 class="f48 tc bold">测试结果</h3>
+        <p class="tips tc f36 vh" id="tips">看来您应该没有患帕金森疾病的风险呢</p>
+        <img class="no m0a vh" id="tips-pic" src="http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/no.jpg" alt="">
+        <p class="tc f24 tc mt20">测试结果仅供参考</p>
+        <div class="ewm f24 tc pa">
+            <img class="vh" src="http://imgcdn.zhaoduiyisheng.com/img/icon/vip_erwm.jpg" alt="">
+            <a class="c-white db" id="focus">长按关注找对e生，名医/福利这都有 </a>
+            <a class="c-white db dn" id="link" href="http://www.zhaoduiyisheng.com/activity/html/freeLook.html">帕金森残虐老人，快和我一起召唤四大名医 </a>
+        </div>
+    </li>
+</ul>
+<a class="back-act" href="/index.html"></a>
+
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/swiper.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../../js/base.js"></script>
+<script>
+    var score = 0;
+    $('#start').swipe({
+        tap: function(e){
+            $(this).parent().addClass('dn');
+            e.preventDefault();
+        }
+    });
+    $('.select').swipe({
+        tap: function(e){
+            $(this).addClass('bgc').siblings().removeClass('bgc');
+            e.preventDefault();
+        }
+    });
+    $('.next').swipe({
+        tap: function(e){
+            if($(this).prev().find('.bgc')[0]){
+                $(this).parent().addClass('dn');
+                if(!$(this).prev().find('.bgc').index()){
+                    score+=1.25;
+                }
+                if ($(this).hasClass('submit')) {
+                    if (score>0&&score<5) {
+                        $('#tips').text('您患帕金森疾病的风险较低，平常要多注意身体哦');
+                        $('#tips-pic').addClass('low').attr('src','http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/low.jpg');
+                        $('#focus').addClass('dn').prev().attr('src','http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/qr.jpg');
+                        $('#link').removeClass('dn');
+                    }else if(score>=5){
+                        $('#tips').text('您患帕金森疾病的风险偏高哦，建议您去医院检查一下比较妥当哦');
+                        $('#tips-pic').addClass('high').attr('src','http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/high.jpg');
+                        $('#focus').addClass('dn').prev().attr('src','http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/qr.jpg');
+                        $('#link').removeClass('dn');
+                    }
+                    $('#focus').prev().removeClass('vh');
+                    $('#tips').removeClass('vh');
+                    $('#tips-pic').removeClass('vh');
+                }
+            }else{
+                myalert.tips({
+                   txt:'请做出选择',
+                   btn:1
+                });
+            }
+            e.preventDefault();
+        }
+    });
+    shareWeixin('测测帕金森离你有多远','我们的爸妈是帕金森高发人群，记得为他们测一测','http://www-test.zhaoduiyisheng.com/activity/html/pjstest.html','http://imgcdn.zhaoduiyisheng.com/img/logo01.png');
+</script>
+</body>
+</html>

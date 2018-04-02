@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>找对医生</title>
+    <link href="../css/base.css" rel="stylesheet"/>
+</head>
+<body>
+<script>
+    function setFont(){
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if(clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setFont();
+</script>
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="db fl back" onclick="history.go(-1)"></span>
+        <h1 class="f34 c-f2" id="top-title">男A套餐</h1>
+    </header>
+    <section class="section-main f28">
+        <h1 class="tc">A类套餐（男）</h1>
+    </section>
+</div>
+</body>
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/base.js"></script>
+</html>

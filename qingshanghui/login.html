@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link href="css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="css/regedit.css" rel="stylesheet" type="text/css"/>
+    <link href="css/login.css" rel="stylesheet" type="text/css"/>
+    <script src="js/my.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body>
+<div class="login_wrapper">
+    <div class="login_container">
+        <div class="regedit_top">
+            <h1><img src="img2/logo.png"/> </h1>
+        </div>
+        <div class="login_contain">
+            <div class="login fr">
+                <div class="free_regedit">
+                    <h3 class="fl">会员登录</h3>
+                    <p class="fr">没有账号？<a class="red" href="regedit.html" style="text-decoration: underline">免费注册</a> </p>
+                </div>
+                <form onsubmit="return test2fn()" action="index.html">
+                <div class="regedit">
+                    <ul class="cbo">
+                        <li>
+                            <span>账户名：</span>
+                            <input type="text" id="txt1" value="手机号/邮箱"/>
+                            <p id="p1">请输入手机号或邮箱</p>
+                        </li>
+                        <li>
+                            <span>密&nbsp; 码：</span>
+                            <input type="password" id="txt2"/>
+                            <p id="p2">请输入密码</p>
+                        </li>
+                        <li>
+                            <span>验证码：</span>
+                            <a href="#" class="randomcode"><img src="img2/getRandom.jpg"/></a>
+                            <input type="text" id="txt4"/>
+                            <p id="p4">验证码错误，请重新输入</p>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="login_btn">
+                    <input type="submit" class="regedit_now" value="会员登录">
+
+                    <p class="pt10"><span class="not_checked" id="choose">复选框</span>下次自动登录  <span class="fr pr4"><a href="#" style="text-decoration: underline">忘记密码?</a></span></p>
+
+                </div>
+                </form>
+                <div class="partner">
+                    <h4 class="fl">联名登录：</h4>
+                    <a href="#" class="weibo"></a>
+                    <a href="#" class="zhifubao"></a>
+                </div>
+                <div class="line">
+
+                </div>
+                <div class="erweima cbo">
+                    <span class="fl"><img src="img/QR_code.png"/> </span>
+                    <p class="fr">扫描二维码或发送短息“MLH”到1002 下载APP尊享独家优惠</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer_advantage mt30">
+            <ul>
+                <li><a  class="a1" href="#">100%品牌授权正品</a> </li>
+                <li><a  class="a2" href="#">满688元免运费</a> </li>
+                <li><a  class="a3" href="#">7天无条件退换货</a> </li>
+                <li><a  class="a4" href="#">超值折扣</a> </li>
+                <li><a  class="a5" href="#">9点限时闪购</a> </li>
+                <li style="border:0"><a  class="a6" href="#">400-664-6698</a> </li>
+            </ul>
+        </div>
+        <p class="footer_link tc">
+            <a href="#">关于我们</a>
+            <a href="#">联系我们</a>
+            <a href="#">加入我们</a>
+            <a href="#">使用帮助</a>
+            <a href="#">使用规则</a>
+            <a href="#">隐私声明</a>
+        </p>
+        <p class="footer_copyright">
+            <span>版权所有，翻版必究！2015-09-09</span>
+        </p>
+    </div>
+
+</div>
+</body>
+</html>

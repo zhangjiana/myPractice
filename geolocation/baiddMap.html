@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>地图测试</title>
+    <style>
+        body,ul,section,header,footer,article,h1,h2,h3,h4,h5,h6,ol,ul,figure,p,menu{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{height:100%;}
+        #mymap{width:100%;height:100%;}
+    </style>
+</head>
+<body>
+<div id="mymap"></div>
+<script type="text/javascript" src="http://api.map.baidu.com/api?type=quick&ak=cs97NtFzAAVloyqutjuq6V4N&v=1.0"></script>
+<script type="text/javascript">
+    getLocation();
+    function getLocation(){
+        console.log("ok");
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition,handlePositionError,{timeout:10000});
+        }else{
+            console.log('error');
+        }
+    }
+
+    function showPosition(position){
+        console.log('showPosition');
+        console.log(position.coords.latitude);
+        console.log(position.coords.longitude);
+        console.log(position.coords.altitude);
+    }
+    function handlePositionError(error){
+        console.log(error);
+        switch(error.code){
+            case 0:console.log("尝试获取您的位置信息时发生错误：" + error.message);
+                    break;
+            case 1:
+                console.log("用户拒绝了获取位置信息请求。");
+                break;
+            case 2:
+                console.log("浏览器无法获取您的位置信息。");
+                break;
+            case 3:
+                console.log("获取您位置信息超时。");
+                break;
+        }
+    }
+
+    var mymap = new BMap.Map("mymap");
+    var point = new BMap.Point(116.404, 39.915);
+   mymap.centerAndZoom(point, 15);
+    var zoomControl=new BMap.ZoomControl();
+    mymap.addControl(zoomControl);//添加缩放控件
+    var scaleControl=new BMap.ScaleControl();
+    mymap.addControl(scaleControl);//添加比例尺控件
+
+</script>
+
+</body>
+</html>

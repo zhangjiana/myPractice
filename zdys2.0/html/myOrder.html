@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>找对医生</title>
+    <link href="../css/base.css" rel="stylesheet"/>
+    <link href="../css/my.css" rel="stylesheet"/>
+</head>
+<body>
+<script src="../js/init.js"></script>
+<!--管理订单-->
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="icon-arrowr go-back"></span>
+        <h1 class="f34 c-f2">订单管理</h1>
+    </header>
+    <ul class="my-order-nav" id="my-order-nav">
+        <li class="selected">
+            <span>全部订单</span >
+        </li>
+        <li>
+            <span>完成订单</span>
+        </li>
+        <li>
+            <span>未完订单</span>
+        </li>
+    </ul>
+    <section class="section-main f28" id="scroll-order">
+        <div>
+            <div id="my-order-box" class="f28">
+                <!--<div class="order-item pr">-->
+                    <!--<div class="cbo">-->
+                        <!--<span class="fl f28 order-label">名医当面诊</span>-->
+                        <!--<em class="fl c-red service-price">630</em>-->
+                        <!--<em class="fr f20 c-99" id="order-time">11:00</em>-->
+                    <!--</div>-->
+                    <!--<div class="cbo">-->
+                        <!--<span class="order-label fl"><em class="spacing-ask">咨询</em>者</span>-->
+                        <!--<em class="c-66">爸爸</em>-->
+                    <!--</div>-->
+                    <!--<div class="cbo">-->
+                        <!--<span class="order-label fl">-->
+                            <!--<em class="spacing-order">病例名</em>称-->
+                        <!--</span>-->
+                        <!--<em class="c-66">头疼</em>-->
+                    <!--</div>-->
+                    <!--<div class="cbo">-->
+                        <!--<span class="order-label fl">-->
+                            <!--<em class="spacing-order">订单编</em>号-->
+                        <!--</span>-->
+                        <!--<em class="c-66">9922255611444</em>-->
+                    <!--</div>-->
+                    <!--<span class="order-btn fr f20 pa">订单跟踪</span>-->
+                    <!--<img class="pa order-status" src="http://imgcdn.zhaoduiyisheng.com/img/icon/order_finish.png"/>-->
+                 <!--</div>-->
+            </div>
+            <ul class="no-order-wrap f28 dn">
+                <li><img class="cloud" src="http://imgcdn.zhaoduiyisheng.com/img/icon/cloud.png"/></li>
+                <li>您还没有订单</li>
+            </ul>
+            <footer class="f24 c-99 prl30 tc pt20 footer-order">
+                如果您发现订单不全,请您登录另一账号(手机号或微信)
+            </footer>
+        </div>
+    </section>
+</div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../js/getOrderList.js"></script>
+</html>

@@ -1,0 +1,31 @@
+.shopping_header_container{width:100%;height:130px;position:relative;margin:0 auto;
+    background:url(../img3/shopping_header_line.png) repeat-x;}
+.main_shopping{width:1000px;margin:0 auto;}
+
+.shopping_mes{height:20px;margin-top:20px;padding-bottom:10px;border-bottom: 2px solid #000;}
+.shopping_mes h4{height:20px;line-height:20px;padding-right:20px;}
+.shopping_mes li{float:left;padding:0 40px;}
+
+.shopping_items{width:960px;padding:20px;border-bottom: dotted 1px #cccccc;}
+.shopping_items b{display: block;float: left;border: 1px solid #cccccc;}
+.shopping_items span{display: block;margin-left:20px;float: left;width:240px;}
+
+.shopping_items dl dt{float:left;width:340px;margin-right:110px;}
+.shopping_items dl dd{float: left;padding:10px 28px;}
+
+.shopping_items dd.items_number{width:108px;height:28px;border: 1px solid #cccccc;padding:0;}
+.shopping_items span.number_reduce{margin:0;width:28px;height:28px;border-right:1px solid #999;background:url(../img/reduce.gif) no-repeat;text-indent:-9999px;cursor:pointer}
+.shopping_items span.number_increase{margin:0;width:28px;height:28px;border-left:1px solid #999;background:url(../img/increase.gif) no-repeat;text-indent:-9999px;cursor:pointer}
+.shopping_items dd span.quantity_number{margin:0;border:none;float:left;width:50px;height:28px;font-size:14px;}
+.shopping_items dd input{border:none;line-height:28px;text-align:center;width:50px;height:18px;}
+
+
+
+.promotion_shopping{width:952px;border:1px solid #cccccc;height:40px;line-height:40px;text-indent:2em;}
+.shadow_fake_r{margin-top:4px;float:left;width:6px;height:38px;background:#f0f0f0;}
+.shadow_fake_b{float:left;width:956px;height:6px;margin-left:4px;background:#f0f0f0;}
+
+.price_sum{width:972px;}
+.shopping_bottom{width:100%;border-bottom: 1px solid #cccccc;}
+.continue_buy{width:222px;cursor:pointer;height:32px;line-height: 32px;text-align: center;}
+.buy_bill{width:222px;height:32px;cursor:pointer;line-height:32px;text-align: center;margin-left:20px;background:#DB2726;color:#FFF;}

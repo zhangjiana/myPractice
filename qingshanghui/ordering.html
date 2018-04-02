@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>订单详情</title>
+    <link href="css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="css/base1.css" rel="stylesheet" type="text/css"/>
+    <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="css/shopping.css" rel="stylesheet" type="text/css"/>
+    <link href="css/ordering.css" rel="stylesheet" type="text/css"/>
+
+    <script src="js/my.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/ordering.js"></script>
+</head>
+<body>
+<div class="shopping_header_container">
+    <div class="header">
+
+        <div class="top bg-f2">
+            <div class="topL fl">
+                <ul id="ul_header">
+                    <li><a href="regedit.html" target="_blank">免费注册</a> </li>
+                    <li><span>|</span></li>
+                    <li><a href="login.html" target="_blank" id="login">登录</a>
+                        <input type="button" id="account"/> </li>
+                    <li><span>|</span></li>
+                    <li><a href="#">收藏</a> </li>
+                </ul>
+            </div>
+            <div class="topR fr">
+                <ul>
+                    <li><a href="#">欢迎</a> </li>
+                    <li><span>|</span></li>
+                    <li>
+                        <a href="#" id="mobile">我的购物车</a> </li>
+                    <li><span>|</span></li>
+                    <li><a href="#">400-800-7800</a> </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="branding">
+            <h1 class="mt10 fl"><img src="img3/logo.png"/> </h1>
+
+        </div>
+
+    </div>
+</div>
+<div class="main_shopping">
+    <h2 class="bord-b-hei-000 pb10 f24">确认订单信息</h2>
+    <h3 class="pb10 pt20" style="border-bottom:2px solid #000;">收货地址</h3>
+    <p class="pt20 pb20 cp">使用新地址</p>
+
+    <form>
+
+        <ul class="user_address">
+            <li>
+                <span>收货人：</span><input type="text" class="txt" />
+            </li>
+            <li>
+                <span>手机号码：</span><input type="text" class="txt" />
+            </li>
+            <li>
+                <span>所在地区：</span>
+                <b class="bord-b-hui-dc font100">请选择省<i class="icon_down"></i></b>
+                <b class="bord-b-hui-dc font100">请选择市<i class="icon_down"></i></b>
+                <b class="bord-b-hui-dc font100">请选择县<i class="icon_down"></i></b>
+            </li>
+            <li>
+                <span>详细地址：</span><input type="text" class="txt" />
+            </li>
+            <li style="position: relative">
+                <span>邮政编码：</span><input type="text" class="txt" />
+                <p class="tip">错误的邮编可能导致无法送到，请谨慎填写</p>
+            </li>
+        </ul>
+        <span class="send_address">送到该地址</span>
+    </form>
+    <h3 class="pb10 pt20" style="border-bottom:2px solid #000;">配送时间</h3>
+    <form class="send_time" id="send_time">
+    <label><input type="radio" checked="checked">不限</label>
+    <label> <input type="radio" >只有工作日</label>
+    <label><input type="radio" >只有双休日/节假日</label>
+    </form>
+    <h3 class="pb10 pt20" style="border-bottom:2px solid #000;">支付方式</h3>
+    <p class="pt20 pb20">请选择适合您的支付方式:</p>
+    <div class="payment">
+    <ul class="pay_ways cbo" id="pay_ways">
+        <li class="changed">第三方支付</li>
+        <li class="not_change">快捷支付</li>
+        <li class="not_change">网上银行支付</li>
+        <li class="not_change">货到付款</li>
+    </ul>
+    <div class="pay_box cbo" id="pay_box">
+        <ul class="pay">
+            <li><img src="img3/zhifubao.png"/> </li>
+            <li><img src="img3/scan_code.png"/> </li>
+            <li><img src="img3/kuaiqian.png"/> </li>
+            <li><img src="img3/zhaoshang.png"/> </li>
+        </ul>
+        <ul   style="display: none" class="pay">
+
+            <li><img src="img3/jianshe.gif"/> </li>
+            <li><img src="img3/gongshang.gif"/> </li>
+            <li><img src="img3/zhongguo.gif"/> </li>
+        </ul>
+        <ul style="display: none" class="pay">
+            <li><img src="img3/zhaoshang.gif"/> </li>
+            <li><img src="img3/jiaotong.gif"/> </li>
+            <li><img src="img3/zhongguo.gif"/> </li>
+            <li><img src="img3/nongye.gif"/> </li>
+        </ul>
+        <ul style="display: none" class="pay">
+            <li><img src="img3/huodaopay.png"/> </li>
+        </ul>
+    </div>
+    </div>
+
+    <div class="mt30">
+    <h2 class="bord-b-hei-000 pb10">购物清单</h2>
+    <div class="shopping_mes">
+        <h4 class="fl">商品信息</h4>
+        <div class="out_keeper fl"><b>预计出库日期:</b>2015年09月08日</div>
+        <ul class="fr fontbold">
+            <li>单价</li>
+            <li>数量</li>
+            <li>优惠</li>
+            <li>小计</li>
+            <li>删除</li>
+        </ul>
+    </div>
+    <div class="shopping_items">
+        <dl class="cbo">
+            <dt>
+                <b><img src="img3/item1.png"/></b>
+                <span class="fontbold">BRUNOMAGLI</span>
+                <span>灰色翻盖旋扣牛皮手提包</span>
+            </dt>
+            <dd>￥8308.00</dd>
+            <dd class="items_number"><span class="number_reduce">数量减</span>
+                <span class="quantity_number"><input type="text" name="quantity_number" value="1" readonly="true"> </span>
+                <span class="number_increase">数量加</span>
+            </dd>
+            <dd>￥697.57</dd>
+            <dd>￥7610.43</dd>
+            <dd> <img style="cursor:pointer;" src="img3/icon_close.png"/> </dd>
+        </dl>
+        <dl class="cbo mt20">
+            <dt>
+                <b><img src="img3/item2.png"/></b>
+                <span class="fontbold">BRUNOMAGLI</span>
+                <span>灰色翻盖旋扣牛皮手提包</span>
+            </dt>
+            <dd>￥8308.00</dd>
+            <dd class="items_number"><span class="number_reduce">数量减</span>
+                <span class="quantity_number"><input type="text" name="quantity_number" value="1" readonly="true"> </span>
+                <span class="number_increase">数量加</span>
+            </dd>
+            <dd>￥697.57</dd>
+            <dd>￥7610.43</dd>
+            <dd> <img style="cursor:pointer;" src="img3/icon_close.png"/> </dd>
+        </dl>
+    </div>
+
+   <div class="fapiao mt30" id="fapiao"> <p class="fl pr40">是否需要开具发票</p>
+
+            <label><input type="radio" checked="checked">是</label>
+        <label><input type="radio">否</label>
+
+   </div>
+    <div class="mt40 price_sum cbo">
+        <div class="fr">
+        <p class="mt10 tr">商品小计:￥100002（已优惠:￥1000.00）</p>
+        <p class="tr mt10">+运费:￥0.00</p>
+       <p class="mt10"> <span class="fr font18px">=应付：<strong class="c-red">￥10910.00</strong> </span></p>
+        <div class="buy_bill fr mt20"><a href="Paysuccess.html" style="color:#FFF;"> 提交订单</a></div>
+        </div>
+
+    </div>
+    </div>
+</div>
+<div class="footer_container mt70 cbo">
+    <div class="footer">
+        <div class="footer_advantage">
+            <ul>
+                <li><a  class="a1" href="#">100%品牌授权正品</a> </li>
+                <li><a  class="a2" href="#">满688元免运费</a> </li>
+                <li><a  class="a3" href="#">7天无条件退换货</a> </li>
+                <li><a  class="a4" href="#">超值折扣</a> </li>
+                <li><a  class="a5" href="#">9点限时闪购</a> </li>
+                <li style="border:0"><a  class="a6" href="#">400-664-6698</a> </li>
+            </ul>
+        </div>
+        <p class="footer_link">
+            <a href="#">关于我们</a>
+            <a href="#">联系我们</a>
+            <a href="#">加入我们</a>
+            <a href="#">使用帮助</a>
+            <a href="#">使用规则</a>
+            <a href="#">隐私声明</a>
+        </p>
+        <p class="footer_copyright">
+            <span>版权所有，翻版必究！2015-09-09</span>
+        </p>
+        <p class="footer_license">
+            <span><a href="#"><img src="img/icon_badge.png"/> </a> </span>
+            <a href="#"><img src="img/icon_badge3%20(1).png" /></a>
+        </p>
+    </div>
+</div>
+</body>
+</html>

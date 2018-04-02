@@ -1,0 +1,7 @@
+.partner{width:350px;margin-top:20px;overflow: hidden;}
+
+.partner h4{font-weight: normal;padding-left:24px;font-size: 14px;}
+a.weibo{padding-right:10px;width:20px;height:17px;display: block;float: left;background:url(../img2/icon_weibo.png) no-repeat}
+a.zhifubao{width:44px;height:17px;background:url(../img2/icon_zhifubao.png) no-repeat;display: block;float: left;}
+a.weibo:hover{background:url(../img2/icon_weibo_03.png) no-repeat;}
+a.zhifubao:hover{background: url(../img2/icon_zhifubao_03.png) no-repeat;}

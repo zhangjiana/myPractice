@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="content-type" content="no-cache, must-revalidate" />
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com" />
+    <link rel="shortcut icon" href=" /favicon.ico" />
+    <title>找对医生</title>
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/swiper.min.css" rel="stylesheet" />
+    <link href="../css/family-info.css?t=3213" rel="stylesheet">
+
+</head>
+<body>
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+</script>
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="icon-arrowr" id="back"></span>
+        <h1 class="f34 c-f2">家人资料</h1>
+    </header>
+    <section class="section-main" id="scroll-family-info">
+        <div>
+            <!--爸爸的头像和标签-->
+            <div class="bg-white">
+                <div class="pt20 pb20 f30 cbo goBasic mrl30">
+                    <img class="mem-head" src="http://imgcdn.zhaoduiyisheng.com/img/icon/icon_gou.png"/>
+                    <div class="fl ml40">
+                        <span class="db" id="name"></span>
+                        <span class="db family-tel" id="tel"></span>
+                    </div>
+                    <em class="family-arrow"></em>
+                </div>
+
+            </div>
+
+            <!--病例夹-->
+            <div class="bg-white">
+                <h2 class="items-title mt20 mrl30 chartFile"> 病历夹
+                    <em class="family-arrow no-margin"></em>
+                </h2>
+            </div>
+
+
+            <!--服务详情-->
+            <div class="service-details  pb20 bg-white mt22 pr">
+                <div class="cbo mr30 c-66">
+                    <h2 class="items-title mrl30 fl"> 服务流程</h2>
+                    <div class="fr db f28 orderNum dn" id="order">订单号:<span id="orderNum"></span>
+
+                    </div>
+                </div>
+                <div class="order-wrap dn">
+                    <div class="swiper-container order-list  f30 bg-white tc"  id="order-list" style="display: none;">
+                        <ul class="swiper-wrapper" id="swiper-wrapper">
+                            <!-- <li class="c-cyan swiper-slide">
+                                <span class="c-33 f28">盐酸背痛</span>
+                                <span class="c-66 f24">订单号:165516<em class="orderId"></em></span>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="process be5-t prl30">
+                    <div class="process-item">
+                        <em class="choose"></em>
+                        <span>选择服务</span>
+                    </div>
+                    <em class="process-arrow"></em>
+                    <div  class="process-item">
+                        <em class="upload"></em>
+                        <span>上传资料</span>
+                    </div>
+                    <em class="process-arrow"></em>
+                    <div  class="process-item">
+                        <em class="match"></em>
+                        <span>精准匹配<br>专家</span>
+                    </div>
+                    <em class="process-arrow"></em>
+                    <div  class="process-item">
+                        <em class="pay"></em>
+                        <span>确认及支付</span>
+                    </div>
+                    <em class="process-arrow"></em>
+                    <div  class="process-item">
+                        <em class="consult"></em>
+                        <span>咨询专家</span>
+                    </div>
+                </div>
+
+                <p class="go-btn-wrap f24 tc"> <span class="go-btn centerX">找对医生</span> </p>
+
+            </div>
+            <!--广告位-->
+            <!--<div class="family-ad">
+                <a href="healthyTest.html"><img src="http://imgcdn.zhaoduiyisheng.com/img/health_banner.jpg"/></a>
+            </div>
+            &lt;!&ndash;找对文章&ndash;&gt;
+            <div class="mt22 bg-white" id="article-wrap">
+                <h2 class="items-title mrl30"> 每天健康一点点<span class="fr f28"></span></h2>
+                <div class="be5-b"></div>
+
+            </div>-->
+            <div class="f30 tc">
+                <a class="service-tel c-white" href="tel:4008-370-095">
+                    <span>4008-370-095</span>
+                </a>
+                <p class="c-99">客服时间：9:30-17:30</p>
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="index">
+            <em class="index_img"></em>
+            <span class="c-66">找对医生</span>
+        </div>
+        <div class="family">
+            <em class="family_img active"></em>
+            <span class="c-cyan">家庭</span>
+        </div>
+        <div class="doctor">
+            <em class="doctor_img"></em>
+            <span class="c-66">名医资源</span>
+        </div>
+        <div class="me">
+            <em class="me_img"></em>
+            <span class="c-66">我的</span>
+        </div>
+    </footer>
+</div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/swiper.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/familyInfo.js"></script>
+</html>

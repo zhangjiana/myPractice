@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <meta name="format-detection"content="telephone=no"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>找对医生</title>
+    <link href="../css/base.css?v=1" rel="stylesheet"/>
+    <link href="../css/swiper.min.css" rel="stylesheet"/>
+    <link href="../css/doctorInfo.css" rel="stylesheet"/>
+    <style>
+        .doctor-filter{
+            position: relative;
+            z-index: 3;}
+        .index-head{
+            z-index: 3;}
+        .search{height: .77rem;width: 100%;background-color: #e6e5e5;}
+        .searchon{height: 1.05rem;z-index: 4;top: 0;position: absolute;background-color: #ededed;}
+        .search .box{width: 90%;background: #fff url(http://imgcdn.zhaoduiyisheng.com/img/icon/zoom.png) no-repeat .1rem center;background-size:.44rem;padding-left: .6rem;height: .66rem;}
+        .ml10{margin-left: .1rem;}
+        .search .w85{width: 81%;}
+        .box>input{border:0;height: .5rem;line-height:.5rem;width: 60%;}
+        input::-webkit-input-placeholder{height: .5rem;line-height:.5rem;}
+        .del{width: .44rem;height: .44rem;background: #fff url(http://imgcdn.zhaoduiyisheng.com/img/icon/del.png) no-repeat center;background-size:.44rem;right: .1rem;}
+        .cancel{right: 0;width: 15%;}
+        .result{width: 100%;background-color: #ededed;top:1.05rem;height: 12.5rem;overflow: hidden;}
+        .result>div{width: 92%;}
+        .clear-history{color: #42babb;border:1px solid #42babb;padding: .1rem .15rem;line-height: normal;right: 0;margin-right: 1px;}
+        .history{line-height: .88rem;}
+        .bb{border-bottom: 1px solid #d9d9d9;}
+        .result>div>div{line-height: .88rem;border-bottom: 1px solid #d9d9d9;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+        .icon-list{background-color: transparent;}
+    </style>
+</head>
+<body>
+<script src="../js/init.js"></script>
+<div class="index-page">
+    <header class="index-head tc">
+        <h1 class="f34 c-f2">名医资源</h1>
+    </header>
+    <div class="search pr f30 c-66">
+        <div class="box center br5">
+            <input class="centerY c-66 f30" id="search" type="text" placeholder="请输入医生姓名">
+            <i id="del" class="del centerY dn"></i>
+        </div>
+        <em class="cancel pa tc centerY dn" id="cancel">取消</em>
+        <div id="result" class="result pa dn">
+            <div class="m0a c-66">
+            </div>
+        </div>
+    </div>
+    <ul class="doctor-filter bg-white prl30 f30 cbo container be5-b">
+        <li class="location pr" id="filter-city"></li>
+        <li class="department pr sub" id="filter-dpt"></li>
+    </ul>
+    <section class="section-main" id="scroll-doctor">
+        <div class="pr">
+            <ul class="doctor-list bg-white" id="doctor-list">
+                <!--<li>-->
+                    <!--<a href="doctorDetail.html">-->
+                        <!--<div class="fl doctor-head"-->
+                             <!--style="background-image:url(http://imgcdn.zhaoduiyisheng.com/img/doctor01.png);"></div>-->
+                        <!--<ul class="fl">-->
+                            <!--<li class="cbo">-->
+                                <!--<span class="f34 fl mr14">李雨雨</span>-->
+                                <!--<span class="f28 c-66 fl pt02">主任医师</span>-->
+                            <!--</li>-->
+                            <!--<li class="f28 c-66">心脑血管科</li>-->
+                            <!--<li class="f24 c-99">北京市第二人民医院</li>-->
+                        <!--</ul>-->
+                    <!--</a>-->
+                <!--</li>-->
+            </ul>
+            <div class="f20 tc pa pull-down c-99">上拉加载更多</div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="index">
+            <em class="index_img"></em>
+            <span class="c-66">找对医生</span>
+        </div>
+        <div class="family">
+            <em class="family_img"></em>
+            <span class="c-66">家庭</span>
+        </div>
+        <div class="doctor">
+            <em class="doctor_img active"></em>
+            <span class="c-cyan">名医资源</span>
+        </div>
+        <div class="me">
+            <em class="me_img"></em>
+            <span class="c-66">我的</span>
+        </div>
+    </footer>
+</div>
+<!--弹窗 城市-->
+<div class="win-city pa dn" id="win-city">
+    <ul class="city-list f30 bg-white tc pr" id="city-list">
+        <li class="c-cyan">北京</li>
+        <li>上海</li>
+        <li>广州</li>
+    </ul>
+</div>
+<!--弹窗 科室-->
+<div class="index-page win-city dn" id="win-dpt">
+    <div class="dpt-list-wrap bg-white">
+        <div class="f30 tc" id="scroll-dpt">
+            <ul class="dpt-list" id="dpt-list">
+                <li>心血管内科</li>
+                <li>呼吸内科</li>
+                <li>消化内科</li>
+                <li>内分泌与代谢科</li>
+                <li>肾脏内科</li>
+                <li>风湿免疫科</li>
+                <li>神经内科</li>
+                <li>老年病科</li>
+                <li>感染疾病科</li>
+                <li>普通外科</li>
+                <li>骨科</li>
+                <li>泌尿外科</li>
+                <li>神经外科</li>
+                <li>心血管外科</li>
+                <li>胸外科</li>
+                <li>妇产科</li>
+                <li>儿科</li>
+                <li>皮肤科</li>
+                <li>眼科</li>
+                <li>耳鼻喉科</li>
+                <li>肿瘤科</li>
+            </ul>
+        </div>
+        <div class="f20 btn-close pr">
+            <img id="close-dpt" class="center" src="http://imgcdn.zhaoduiyisheng.com/img/icon/doctor_list_close.png"/>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/doctorInfo.js"></script>
+</html>

@@ -1,0 +1,13 @@
+footer span.line{ position: absolute; bottom: 3.22rem; left: 66%; width: 33%; height: 0.15rem; display: block; background: #E4366B;}
+
+section { overflow: hidden; height: 100%; width: 100%; position: relative;}
+section ul.main { height: 100%; width: 100%; position: relative;}
+section ul.main li{ height: 100%; width: 100%; position: absolute; left: -2000px; top: 0; background-size: cover;}
+section ul.main li:nth-child(1){ left: 0; background: url(../img/show-pg1.jpg)no-repeat center center; background-size: cover;}
+section ul.main li:nth-child(2){ background: url(../img/show-pg2.jpg) no-repeat center center; background-size: cover;}
+section ul.main li:nth-child(3){ background: url(../img/show-pg3.jpg) no-repeat center center; background-size: cover;}
+section ul.main li:nth-child(4){ background: url(../img/show-pg4.jpg) no-repeat center center; background-size: cover;}
+
+section ul.list { width: 6rem; height: 0.5rem; position: absolute; bottom: 1rem; left: 40%;}
+section ul.list li{ width: 0.5rem; height: 0.5rem; float: left; background: #58575D; margin-right: 0.5rem; border-radius: 50%;}
+section ul.list li:nth-child(3){ padding: 0;}

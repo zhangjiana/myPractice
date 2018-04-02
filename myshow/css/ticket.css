@@ -1,0 +1,9 @@
+footer span{ position: absolute; bottom: 3.22rem; left: 60%; width: 18%; height: 0.15rem; display: block; background: #E4366B;}
+
+section h1{ width: 82%; margin-left: 9%; height: 2.1rem; margin-top: 1rem; clear: both;}
+section a{ color: #000; text-decoration: none; width: 24%; text-align: center; display: block; float: left; font-size: 1rem; border: 1px solid #ccc; height: 2.1rem; line-height: 2.1rem;}
+section a:nth-child(1){ border-top-left-radius: 0.3rem; border-bottom-left-radius: 0.3rem;}
+section a:nth-child(4){ border-top-right-radius: 0.3rem; border-bottom-right-radius: 0.3rem;}
+section div{ clear: both; margin-top: 1rem; width: 77%; margin-left: 9%; border: 1px solid #ccc; border-radius: 0.5rem; padding: 0.5rem;}
+section div p{ height: 1.16rem; line-height: 1.16rem;}
+section div p span{ color: #999;}

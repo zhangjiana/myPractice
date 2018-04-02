@@ -1,0 +1,50 @@
+.father-info-wrap{
+    height:100%;
+    width: 100%;
+    position:relative;
+}
+#basic-info-page{
+    position:absolute;
+    top:0;
+    right: -100%;
+}
+#father-page{
+    position: absolute;
+    top:0 ;
+    left: 0;
+}
+/*基本资料页*/
+.basic-info-page,.care-ill-page,.find-doc-page,#ill-tag{
+    background-color: #f2f2f2;
+    z-index: 10;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+.basic-info-box{-webkit-box-flex: 1;flex: 1;padding: 0.2rem 0.1rem 0 0.1rem;}
+.basic-info-wrap{background:#fff;border:solid 1px #e5e5e5;
+    border-radius:0.05rem;}
+
+.padding20{ padding: 0.2rem;}
+.basic-info-label{color:#333;font-size:0.34rem;display:block;margin-right:0.2rem;}
+.basic-info-form{padding-left:1.22rem;margin-top:0.26rem;margin-bottom:1.12rem;}
+.basic-info-item{margin-bottom:0.4rem;}
+.basic-info-item input,.basic-info-item select{display:block;width:3.8rem;height:0.6rem;font-size:0.26rem;
+    border:solid 1px #ccc;border-radius: 0.05rem;background:#fff;-webkit-appearance: none;padding-left: .1rem}
+.label-sex{width:1.7rem;height:0.6rem;border-radius:0.05rem;
+    text-indent:0.8rem;line-height: 0.6rem;}
+.label-man{color:#666;background:#e6e6e6 url(../img/icon_male_black.png) no-repeat 0.4rem center;
+    background-size:30%;margin-right:0.4rem;}
+.label-woman{color:#666;background:#e6e6e6 url(../img/icon_famale_black.png) no-repeat 0.4rem center;
+    background-size:25%;}
+.basic-info-item .selected{background-color:#3DB1B1;color:#fff;}
+.mb16{margin-bottom:0.16rem;}
+.basic-info-item .basic-info-birth{width:4.6rem;margin-left: .08rem}
+.basic-info-item .basic-info-city{width:2.2rem;margin-right: .12rem;margin-left: .08rem}
+.basic-info-item span:nth-child(2).selected{
+    background:#42BABB url(../img/icon_male_white.png) no-repeat 0.4rem center;
+    background-size:30%;
+}
+.basic-info-item span:nth-child(3).selected{
+    background:#42BABB url(../img/icon_famale_white.png) no-repeat 0.4rem center;
+    background-size:25%;
+}

@@ -1,0 +1,1252 @@
+/*header*/
+/*公用样式*/
+
+html,body{
+      width:100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+}
+.index-page{ width:100%;
+             height: 100%;
+             position: absolute;
+             display: -webkit-box;
+             display: -moz-box;
+             -webkit-box-orient:vertical;
+             display: flex;
+             flex-direction: column;
+             overflow: hidden;
+             top: 0;
+            -webkit-transition: .5s;
+            transition: .5s;
+    z-index:8;
+}
+.index-wrap{ -webkit-box-flex:1;
+             flex: 1;
+             width: 200%;
+             overflow: hidden;
+             -webkit-transition: .5s;
+             transition: .5s;
+}
+
+section.family-box{
+  overflow: hidden;
+}
+
+.index-wrap>.fl{
+  overflow: auto;
+  width: 50%;
+  -webkit-overflow-scrolling: touch;
+  height: 400px;
+}
+
+
+/*首页尾部*/
+.index-footer{ width: 100%;
+               height: 0.98rem;
+               display: box;
+               display: -webkit-box;
+               background: #ffffff;
+}
+.index-footer div{ -webkit-box-flex: 1;
+                    border-left: 1px solid #cccccc;
+                    _text-align: center;
+}
+.index-footer div span{ display: block;
+                        width:1.95rem;
+                        background-size:17%;
+                        background-repeat: no-repeat;
+                        background-position: left center;
+                        text-indent: 0.44rem;
+                        line-height: 0.98rem;
+                        margin: 0 auto;
+}
+
+
+.index-footer .home span.active{
+    color: #3db1b1;
+    background-image: url(../img/icon_home.png);
+}
+.index-footer .service span.active{
+    color: #3db1b1;
+    background-image: url(../img/icon_status2.png);
+}
+
+/*首页尾部的两个图标*/
+.home span{ background-image: url(../img/icon_home2.png);}
+.service span{ background-image: url(../img/icon_status.png);}
+
+
+
+/*首页头部 的用户图标*/
+#user{ width: 0.44rem;
+       height: 0.45rem;
+       background: red;
+       position: absolute;
+       right: 0.30rem;
+       top: 0.22rem;
+       background: url(../img/icon_user.png) no-repeat center;
+       background-size:cover;
+}
+
+/*banner 滑动  ，swiper.min.css 和swiper.js*/
+.banner{width: 100%;
+        height: 2.6rem;
+        overflow: hidden;
+        position: relative;
+}
+
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #cccccc;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide img{ width: 100%;}
+.swiper-pagination{ height: 1rem;}
+.swiper-pagination-bullet{
+  opacity: .5;
+  background-color: #fff;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #fff;
+}
+/*主体部分*/
+.main{ padding: 0.2rem 0.1rem 0.12rem 0.1rem;
+       background:#f2f2f2;
+}
+
+/*亲情订阅 */
+.subscribe-box{
+  overflow: hidden;
+  height: 2.47rem;
+  position: relative;
+  width: 100%;
+}
+.personal-subscribe{
+                    width: 100%;
+                    border: 2px  solid  #42BABB;
+                    border-radius: 0.05rem;
+                    overflow: hidden;
+                    padding:0.18rem;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    -webkit-transition: .5s;
+                    transition: .5s;
+}
+.personal-subscribe:first-child{
+  -webkit-transform: translate3d(-100%, 0, 0);;
+  transform: translate3d(-100%, 0, 0);
+}
+.personal-subscribe span.turn{ width: 0.44rem;
+                         height:0.44rem;
+                         background:url(../img/icon_turn.png) no-repeat center;
+                         background-size: cover;
+}
+.subscribe-content{  margin-top: 0.18rem;
+                    margin-bottom: 0.18rem;
+                    width:100%;
+                    font-size:0.28rem;
+                    color: #666666;
+                    line-height: 0.42rem;
+                    overflow : hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+}
+.personal-subscribe span.clock{  width:1.06rem;
+                                height:0.36rem;
+                                background: url(../img/icon_clock.png) no-repeat left center;
+                                background-size:23%;
+                                text-indent: 0.32rem;
+}
+.subscribe-tips{
+  color: #e25e5c;
+}
+.subscribe-tips code{
+  color: #e25e5c;
+}
+
+
+
+/*家庭成员*/
+.family{ border: 1px  solid #cccccc;
+         border-radius: 0.05rem;
+         margin-top:0.1rem;
+         padding: 0.16rem 0.19rem;
+         background-color: #fff;
+}
+.add-member{ width:1.4rem;
+             height:0.44rem;
+             line-height:0.44rem;
+}
+.del-member{ width: .42rem;
+             height: .42rem;
+             background: url("../img/icon_del.png") no-repeat center/80%;
+}
+.line{ border-top: 1px solid #cccccc;
+       margin-top: 0.20rem;
+}
+
+
+.member-wrap{ overflow: auto;
+  -webkit-overflow-scrolling:touch;
+  width: 100%;
+    padding-bottom: 0.1rem;
+}
+.member{ height: 1.45rem;
+         margin-top: 0.20rem;
+         width: 500%;
+}
+.member li{ float: left;
+            width:1.04rem;
+            height:1.45rem;
+            overflow: hidden;
+            margin-right:0.40rem;
+}
+.member li:last-child{ margin-right: 0;}
+.member li em.head{   display: block;
+                      width: 1rem;
+                      height: 1rem;
+                      border-radius: 50%;
+                      margin-bottom: 0.12rem;
+                      border: 2px solid #fff;
+                      background-color: #ccc;
+}
+.member li em.add{
+  background:#ccc url(../img/icon_add.png) no-repeat center/80%;
+}
+.member li em.active { border: 2px solid #42BABB;}
+
+.member li:nth-child(1) em{  background: url(../img/me_boy.png) no-repeat center;
+    background-size: cover;
+}
+/*.member li:nth-child(2) em{  background: url(../img/head_father.jpg) no-repeat center;
+                             background-size: cover;
+}
+.member li:nth-child(3) em{  background: url(../img/head_mother.jpg) no-repeat center;
+    background-size: cover;
+}*/
+
+
+
+
+.member li em.father{  background: url(../img/father.png) no-repeat center;
+    background-size: cover;
+}
+.member li em.brother{  background: url(../img/me_boy.png) no-repeat center;
+    background-size: cover;
+}
+.member li em.mother{  background: url(../img/mother.png) no-repeat center;
+    background-size: cover;
+}
+.member li em.sister{  background: url(../img/me_girl.png) no-repeat center;
+    background-size: cover;
+}
+.member li  em.law_father{  background: url(../img/grandpa.png) no-repeat center;
+    background-size: cover;
+}
+.member li  em.law_mother{  background: url(../img/grandma.png) no-repeat center;
+    background-size: cover;
+}
+.member li  em.husband_father{  background: url(../img/grandpa.png) no-repeat center;
+    background-size: cover;
+}
+.member li  em.husband_mother{  background: url(../img/grandma.png) no-repeat center;
+    background-size: cover;
+}
+
+.member li  em.wife{  background: url(../img/me_girl.png) no-repeat center;
+    background-size: cover;
+}
+.member li  em.husband{  background: url(../img/me_boy.png) no-repeat center;
+    background-size: cover;
+}
+.member li  em.child{  background: url(../img/me_boy.png) no-repeat center;
+    background-size: cover;
+}
+
+.member li em.grandfather{ background: url(../img/grandpa.png) no-repeat center;
+    background-size: cover;}
+.member li em.grandmother{ background: url(../img/grandma.png) no-repeat center;
+    background-size: cover;}
+
+.member li em.maternal_grandmother{background: url(../img/grandma.png) no-repeat center;
+    background-size: cover;
+}
+.member li em.maternal_grandfather{background: url(../img/grandpa.png) no-repeat center;
+    background-size: cover;
+}
+
+
+/*选择服务*/
+.choose-service{ border: 1px solid #cccccc;
+                 border-radius: 0.05rem;
+                 margin-top:0.1rem;
+                 padding: 0.20rem 0.20rem 0 0.20rem;
+
+                 background-color: #fff;
+}
+.choose-service a.help{ display: block;
+                           width: 0.44rem;
+                           height: 0.44rem;
+                           background: url(../img/icon_help.png) no-repeat center;
+                           background-size: cover;
+}
+.choose-box{ width: 100%;
+             padding-bottom: .24rem;
+             font-size: 0.28rem;
+             display:table;
+}
+
+.choose-item{ width: 3.4rem;}
+.choose-item li{ line-height: 0.60rem;
+
+                 height:0.60rem;
+
+}
+.choose-item li:last-child{ border: none;}
+
+.choose-item li span{ width: 0.44rem;
+                      height: 0.44rem;
+                      border: 1px  solid #cccccc;
+                      margin-top:0.06rem;
+}
+.choose-item li span.checked{background:url(../img/icon_check.png) no-repeat center;
+    background-size:cover;}
+.choose-item li span.base{ background:url(../img/icon_check_gray.png) no-repeat center;
+                                 background-size:cover;
+}
+
+
+
+.tablecell{display: table-cell;
+  vertical-align: middle;}
+/*确定按钮*/
+.choose-box span.confirm{ display: block;
+                          position: relative;
+                          top: 50%;
+                          /*margin-top: -.29rem;*/
+                          margin-right: 0.84rem;
+                          width: 1.6rem;
+                          background-color: #dfae44;
+                          line-height: 0.58rem;
+                          color:#ffffff;
+                          text-align: center;
+                          border-radius: 0.05rem;
+}
+
+/*tab 选项 服务流程*/
+
+.flex{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+/*人物列表*/
+.people-box{ overflow-x: auto;background: #ffffff;}
+.people{
+    background-color: #fff;
+    padding-top: .22rem;
+    font-size: .3rem;
+    height: .88rem;
+}
+.people>li{
+    float: left;
+    width: 1.5rem;
+    height: .44rem;
+    text-align: center;
+    border-left: 1px solid #ccc;
+    color: #999;
+}
+.people>li:first-child{ border-left:0;}
+.people>li.active{ color: #42BABB!important;}
+/*服务流程*/
+.service-box{
+  width: 100%;
+  height: 100%;
+}
+.service-ul{
+  overflow: hidden;
+  position: relative;
+  height: 90%;
+  margin: 0 auto;
+  width: 97%;
+}
+.service-list{
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.service-list:first-child{
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+.service-flow{
+    padding: .04rem .08rem 0.5rem;
+    border: 1px solid #e6e6e6;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: .1rem 0 .15rem;
+}
+h2.tit{
+    font-size: .32rem;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    line-height: .68rem;
+}
+/*流程图标*/
+.check-flow-icon,
+.doc-flow-icon{
+    height: 1.18rem;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    padding-top: .36rem;
+}
+.check-flow-icon>figure,
+.doc-flow-icon>figure{
+    width: .6rem;
+    height: .6rem;
+    -webkit-border-radius:999px;
+    border-radius: 999px;
+    background-color: #ccc;
+    position: relative;
+}
+.check-flow-icon>figure.active,
+.doc-flow-icon>figure.active{
+    background-color: #42BABB!important;
+}
+.check-flow-icon>div,
+.doc-flow-icon>div{
+    height: .3rem;
+    margin: 0 .08rem;
+    border-bottom: 2px solid #ccc;
+}
+.doctor-line{ width: 1.08rem;}
+.check-line{ width: 2rem;}
+.check-flow-icon img,
+.doc-flow-icon img{
+    max-width: 80%;
+    max-height: 80%;
+}
+/*图标下的说明文字*/
+.icon-text{
+    padding-bottom: .6rem;
+}
+.icon-text>p{
+    width: 1.2rem;
+    font-size: .2rem;
+    text-align: center;
+}
+.icon-text01>div{ width: .65rem;}
+.icon-text02>div{ width: 1.55rem;}
+/*提示信息*/
+.serviceTip {
+    font-size: 0.28rem;
+    color: #666;
+    width: 100%;
+    padding: 0 .3rem;
+    line-height: .4rem;
+}
+.serviceTip-btn{
+    margin: 0.2rem 2.4rem;
+    width: 1.8rem;
+    border-radius: 5px;
+    font-size: .24rem;
+    border: 1px solid #f0d9a8;
+}
+
+.serviceTipText{ margin-bottom: 0.30rem;float: left;}
+
+.serviceTip span{ background-color: #42BABB;
+                    color: #ffffff;
+                    float: left;
+    text-align: center;
+    line-height: .6rem;
+
+}
+
+.serviceTip .go-get-doctor,.serviceTip .go-get-check{ background-color: #dfae44;}
+.serviceTip .inServiceBtn{ background-color: #42BABB;}
+.service-doctor-wrap{
+    width: 1.27rem;
+    float: left;
+}
+.service-doctor{
+    width: 1.27rem;
+    height: 1.27rem;
+    float: left;
+    margin-bottom: 0.20rem;
+}
+
+.service-doctorInfo{ width: 3.56rem;
+                     padding: 0.01rem;
+                     float: right;
+}
+.service-doctorInfo p.mb40{margin-bottom: 0.4rem;}
+
+
+/*服务流程按钮*/
+.go-check{
+    width: 1.8rem;
+    border-radius: 5px;
+    font-size: .24rem;
+    color: #fff;
+    background-color: #dfae44;
+    border: 1px solid #f0d9a8;
+    margin: 0.2rem 2.4rem;
+
+}
+
+.page{ width:100%;
+       height:100%;
+       margin:0 auto;
+       max-width:768px;
+}
+
+
+
+
+
+/*删除成员*/
+.del-main-wrap{ -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.del-member-wrap{
+    padding: 0.38rem;
+    margin: 0.20rem 0.30rem;
+    border: 1px solid #e5e5e5;
+    overflow: auto;
+    border-radius: 0.05rem;
+}
+.del-member-wrap li em.active { border: 2px solid #E25E5C;}
+
+/*医生详情*/
+
+/*医生详情   和  面诊服务通知页面 的section 的外包裹*/
+.doctor-details-wrap,.diagnose-notice-wrap{ -webkit-box-flex: 1;
+    flex: 1;
+    padding: 0.19rem 0.20rem 0 0.20rem;
+    background: #f2f2f2;
+    overflow: auto;
+}
+.doctor-head,.doctor-instro,.doctor-profession,.notice-info,.notice-content{ width: 100%;
+              border: 1px solid #e5e5e5;
+              border-radius: 0.05rem;
+              overflow: hidden;
+              background: #ffffff;
+}
+
+/*头像上传*/
+.doctor-head { padding : 0.30rem 0.20rem;}
+
+/*个人简介  和  专业特长*/
+.doctor-instro,.doctor-profession{ padding: 0.14rem 0.20rem;
+                                   margin-top: 0.10rem;
+}
+
+.doctor-head>em{ width: 1.20rem;
+                   height: 1.20rem;
+                   background:  #cccccc;
+                   position: relative;
+}
+
+.doctor-head>div{ width: 75%;}
+.mb12{ margin-bottom: 0.06rem;}
+.doctor-head .comment{ margin-top: 0.10rem;}
+
+
+.doctor-instro>p,.doctor-profession>p{ margin-top:0.24rem;
+                  line-height: 0.42rem;
+                  overflow : hidden;
+                  text-overflow: ellipsis;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+}
+
+
+.doctor-instro h3,.doctor-profession h3{ width:1.80rem;
+                                         height: 0.40rem;
+                                         text-indent: 0.34rem;
+}
+.doctor-instro h3{ background: url(../img/icon_instro.png) no-repeat left center;
+                   background-size: 15%;
+}
+.doctor-profession h3{ background: url(../img/icon_pro.png) no-repeat left center;
+                       background-size: 15%;
+}
+/*头像上传的ID*/
+
+#head{ width: 1.20rem;
+       height: 1.20rem;
+       opacity: 0;
+       position: absolute;
+       top: 0;
+       left: 0;
+}
+
+/*面诊服务通知*/
+
+
+.notice-info{ padding: 0.20rem 0.18rem;}
+.notice-content{ padding: 0.24rem 0.18rem;
+                 margin-top: 0.10rem;
+}
+
+
+.service-title{ width:23%;
+                color: #333333;
+}
+.service-text{ width:76%;
+               line-height: 0.5rem;
+               color: #666666;
+}
+
+
+
+/*我的订单*/
+
+.my-order-nav{background:#fff;display:box;display:-webkit-box;display:flex;}
+.my-order-nav li{box-flex:1;-webkit-box-flex:1;flex:1;font-size:0.3rem;margin:0.2rem 0;text-align:center;}
+.my-order-nav li a{padding:0 0.6rem;border-right:solid 1px #ccc;color:#666;}
+.my-order-nav li:last-child a{border-right:0;}
+.my-order-nav li.selected a{color:#3db1b1;}
+
+.order-item{ margin: 0.22rem 0.10rem;
+             padding: 0.20rem ;
+             border: 1px solid #e5e5e5;
+             border-radius: 0.05rem;
+             background: #ffffff;
+}
+.order-item p{ margin-bottom: 0.10rem;}
+
+.order-item .order-btn{ padding: 0.09rem 0.18rem;
+                        border: 1px solid #cccccc;
+                        border-radius: 0.05rem;
+                        color: #999999;
+                        margin-left: 0.20rem;
+
+}
+
+
+/*基本资料页*/
+.basic-info-page,.care-ill-page,.find-doc-page,#ill-tag,.check-health-page{
+  position: absolute;
+  top: 0;
+  right: -100%;
+  background-color: #f2f2f2;
+}
+.basic-info-box{-webkit-box-flex: 1;flex: 1;padding: 0.2rem 0.1rem 0 0.1rem;}
+.basic-info-wrap{background:#fff;border:solid 1px #e5e5e5;
+  border-radius:0.05rem;}
+.basic-info-label{color:#333;font-size:0.34rem;display:block;margin-right:0.2rem;}
+.basic-info-form{padding-left:1.22rem;margin-top:0.26rem;margin-bottom:1.12rem;}
+.basic-info-item{margin-bottom:0.4rem;}
+.basic-info-item input,.basic-info-item select{display:block;width:3.8rem;height:0.6rem;font-size:0.26rem;
+  border:solid 1px #ccc;border-radius: 0.05rem;background:#fff;-webkit-appearance: none;padding-left: .1rem}
+.label-sex{width:1.7rem;height:0.6rem;border-radius:0.05rem;
+  text-indent:0.8rem;line-height: 0.6rem;}
+.label-man{color:#666;background:#e6e6e6 url(../img/icon_male_black.png) no-repeat 0.4rem center;
+  background-size:30%;margin-right:0.4rem;}
+.label-woman{color:#666;background:#e6e6e6 url(../img/icon_famale_black.png) no-repeat 0.4rem center;
+  background-size:25%;}
+.basic-info-item .selected{background-color:#3DB1B1;color:#fff;}
+.mb16{margin-bottom:0.16rem;}
+.basic-info-item .basic-info-birth{width:4.6rem;margin-left: .08rem}
+.basic-info-item .basic-info-city{width:2.2rem;margin-right: .12rem;margin-left: .08rem}
+.basic-info-item span:nth-child(2).selected{
+  background:#42BABB url(../img/icon_male_white.png) no-repeat 0.4rem center;
+  background-size:30%;
+}
+.basic-info-item span:nth-child(3).selected{
+  background:#42BABB url(../img/icon_famale_white.png) no-repeat 0.4rem center;
+  background-size:25%;
+}
+/*关注的疾病页*/
+
+.care-ill-box{-webkit-box-flex: 1;flex: 1;
+  padding-top:.2rem;}
+/*病例*/
+.focus-illness-case,
+.focus-illness-label{padding:0.2rem;
+  border: solid 1px #e5e5e5;
+  border-radius: 5px;}
+.illness-case-title{border-bottom:solid 1px #ccc;padding-bottom:0.2rem;}
+.icon-illness-case {
+
+    height: 0.34rem;
+    line-height: 0.34rem;
+    background: url(../img/icon_f03.png) no-repeat 0 center;
+    background-size: 0.34rem 0.34rem;
+    text-indent: 0.5rem;
+}
+
+.icon_del_tag{
+    width: 0.44rem;
+    height: 0.44rem;
+}
+
+.illness-case-list{
+  padding-top:.3rem;}
+.illness-case-list li{
+  float: left;
+  width: 1.52rem;
+  height: 1.52rem;
+  background-color: #ccc;
+  margin-right: .26rem;
+  margin-bottom: .26rem;
+  position: relative;
+}
+.illness-case-list li:nth-child(4) {
+  margin-right: 0;
+}
+
+/*无标签时添加标签样式*/
+
+
+.add-tag{ width: 50%;
+          text-align: center;
+           margin: 0.30rem auto;
+           background: #dfae44;
+}
+.ill-add-bg span{ background: #dfae44;}
+.illness-label-btn{ float: right;}
+.illness-base-btn span,.add-tag span{display:block;padding:0.1rem 0.22rem;color:#fff;border-radius: 0.05rem;}
+.illness-case-btn span{ background:#dfae44;}
+.illness-case-btn span:first-child{margin-right:0.2rem;}
+
+/*标签*/
+.focus-illness-label{margin-top:0.38rem;}
+.illness-label-list{ margin-bottom: 0.2rem;}
+.illness-label-list li{float:left;padding:0.1rem 0.3rem;margin:0.32rem 0.3rem 0 0;
+  border:solid 1px #dfae44;color:#dfae44;border-radius: 0.5rem;
+    position: relative;
+}
+.illness-label-list li.del-btn:after{
+    content: "";
+    position: absolute;
+    top: -0.1rem;
+    right: -0.1rem;
+    width: .3rem;
+    height: .3rem;
+    background: url(../img/icon_close.png) no-repeat center/contain;
+}
+.illness-label-btn span{background:#999;}
+.icon-illness-label {
+    width: 1.8rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    background: url(../img/icon_f04.png) no-repeat 0 center;
+    background-size: 23%;
+    text-indent: 0.48rem;
+}
+#no-add-notice{ color:#E25E5C;}
+.ill-add-bg span{ background: #dfae44;}
+
+/*疾病标签页*/
+#ill-tag header{ z-index: 3;}
+.ill-tag-page{
+    display: -webkit-box;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+}
+.ill-box{
+    -webkit-box-flex: 1;
+    flex: 1;
+    overflow: hidden;
+    margin-top: .1rem;
+    display: -webkit-box;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+.tag-departments{
+    width: 3.38rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.ill-box li>em{
+    display: block;
+    height: .7rem;
+    padding-left: .26rem;
+    border-bottom: 1px solid #d6d6d6;
+    line-height: .7rem;
+    color: #666;
+    overflow: hidden;
+}
+.tag-departments>li>em.active{
+    background-color: #fff;
+    color: #dfae44;
+    border-right: 1px solid #3db1b1;
+}
+.tag-classify{
+    width: 4.1rem;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.tag-classify ul{ width: 100%; overflow: hidden;}
+.tag-classify li{
+    border-right: 1px solid #f2f2f2;
+    position: relative;
+}
+.tag-classify li>em{
+    color: #dfae44;
+}
+.tag-classify span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #999;
+    line-height: .7rem;
+    padding-right: .18rem;
+}
+
+.ill-more-page{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: -100%;
+    padding-top: .88rem;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    -webkit-transition: .5s;
+    transition: .5s;
+    overflow: auto;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    display: flex;
+    flex-direction: column;
+
+}
+.ill-more-page h2{
+    padding-left: 0.64rem;
+    line-height: 1rem;
+}
+.ill-more-page .addThisTag{
+    width: 100%;
+    text-align: center;
+}
+.ill-more-page .addThisTag span{
+    color:#ffffff;
+    font-size: 0.32rem;
+}
+.ill-more-page>ol{
+    list-style-type: decimal;
+    list-style-position: inside;
+    font-size: .28rem;
+    line-height: .68rem;
+    padding-left: .64rem;
+    padding-top: .05rem;
+    -webkit-box-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+
+
+
+
+/*
+!*找对医生页*!
+.data-main {
+  -webkit-box-flex: 1;
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: .2rem .1rem .17rem;
+}
+.data-frame {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  padding: .2rem .18rem;
+  margin-bottom: .1rem;
+}
+.data-frame>ul{
+  padding-left: .6rem;
+  padding-bottom: .15rem;
+}
+.data-frame>p,
+.data-frame>ul>li {
+  line-height: 0.60rem;
+}
+.data-frame>ul>li:nth-child(2) {
+  margin: .22rem 0 .05rem;
+}
+.data-frame>ul span{
+  display: inline-block;
+  margin-right: .77rem;
+}
+.data-frame>ul i {
+  width: .44rem;
+  height: .44rem;
+  border: 1px solid #999;
+  margin-top: .08rem;
+  margin-right: .2rem;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.data-frame>ul i.checked{
+  background: url(../img/icon_check.png) no-repeat center/cover;
+}
+.data-frame>ul input{
+  width: 1.18rem;
+  height: .5rem;
+  border: 1px solid #999;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
+  margin-left: .22rem;
+  margin-right: .14rem;
+}
+.data-frame>textarea{
+  width: 6.9rem;
+  height: 2.76rem;
+  padding: .13rem .1rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #999;
+  resize: vertical;
+}
+.data-frame:nth-child(2)>p{
+  color: #ccc;
+}
+.data-upload>p{
+  border-bottom: 1px solid #ccc;
+}
+.data-upload>p>span{
+  font-size: .24rem;
+  color: #999;
+}
+.data-upload>ol{
+  padding-top: .3rem;
+}
+.data-upload>ol>li{
+  float: left;
+  width: 1.52rem;
+  height: 1.52rem;
+  background-color: #ccc;
+  margin-right: .27rem;
+  margin-bottom: .27rem;
+  position: relative;
+}
+.data-upload>ol>li:nth-child(4n){
+  margin-right: 0;
+}
+.data-upload input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+.data-upload .btn-yellow{
+  padding: .12rem .22rem;
+  background-color: #dfae44;
+  color: #fff;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-left: .2rem;
+}
+*/
+
+/*找对医生页  新版*/
+/*.index-page {
+    overflow: hidden;
+    background-color: #f2f2f2;
+    -webkit-transition: .5s;
+    transition: .5s;
+}*/
+.data-main {
+    -webkit-box-flex: 1;
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: .2rem .1rem .17rem;
+}
+.data-frame {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    padding: .2rem .18rem;
+    margin-bottom: .1rem;
+}
+.data-frame>ul{
+    padding-left: .6rem;
+    padding-bottom: .15rem;
+}
+.data-frame>p,
+.data-frame>ul>li {
+    line-height: 0.60rem;
+}
+.data-frame>ul>li:nth-child(2) {
+    margin: .22rem 0 .05rem;
+}
+.data-frame>ul span{
+    display: inline-block;
+    margin-right: .77rem;
+}
+.data-frame>ul i {
+    width: .44rem;
+    height: .44rem;
+    border: 1px solid #999;
+    margin-top: .08rem;
+    margin-right: .2rem;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.data-frame>ul i.checked{
+    background: url(../img/icon_check.png) no-repeat center/cover;
+}
+.data-frame>ul input{
+    width: 1.18rem;
+    height: .5rem;
+    border: 1px solid #999;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    margin-left: .22rem;
+    margin-right: .14rem;
+}
+.data-frame>textarea{
+    width: 6.9rem;
+    height: 2.76rem;
+    padding: .13rem .1rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #999;
+    resize: vertical;
+}
+.data-frame:nth-child(2)>p{
+    color: #ccc;
+}
+.data-upload>p{
+    border-bottom: 1px solid #ccc;
+}
+.data-upload>p>span{
+    font-size: .24rem;
+    color: #999;
+}
+.data-upload>ol{
+    padding-top: .3rem;
+}
+.find-doc-page .data-upload>ol,
+.care-ill-page .data-upload>ol{
+    max-height: 2.09rem;
+    overflow: hidden;
+}
+.data-upload>ol>li{
+    float: left;
+    width: 1.52rem;
+    height: 1.52rem;
+    background-color: #ccc;
+    position: relative;
+    margin-right: .27rem;
+    margin-bottom: .27rem;
+}
+.care-ill-page ol>li{
+    margin-right: .26rem;
+}
+.data-upload img{
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+.find-doc-page ol>li:nth-child(4n+1),
+.care-ill-page ol>li:nth-child(4n+1){
+    margin-right: 0;
+}
+.gallery-page ol>li:nth-child(4n){
+    margin-right: 0;
+}
+.data-upload input[type=file]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+.data-upload .btn-yellow{
+    padding: .12rem .22rem;
+    background-color: #dfae44;
+    position: relative;
+    color: #fff;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-left: .2rem;
+}
+.gallery-page,
+.big-pic{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    -webkit-transform: translate3d(0, 0%, 0);
+    transform: translate3d(0, 0%, 0);
+}
+.manage-pic{
+    position: absolute;
+    right: .3rem;
+    top: 0;
+}
+.gallery-box,
+.big-pic-box{
+    -webkit-box-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+.gallery-box p{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+}
+.gallery-box p.checked:after{
+    content: "";
+    position: absolute;
+    height: .3rem;
+    width: .3rem;
+    top: 0;
+    right: 0;
+    background: url("../img/icon-selected.png") no-repeat center/contain;
+}
+.gallery-page .data-upload{
+    width: 98%;
+    margin: .2rem auto;
+    padding-top: 0;
+}
+.big-pic-box{
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.big-pic-box img{
+    width: 100%;
+    height: auto;
+}
+.pic-btn{
+    text-align: center;
+}
+.add-more-li{
+    background: url("../img/icon_add.png") no-repeat center/80%;
+}
+.care-ill-page .data-upload .add-more-li,
+.find-doc-page .data-upload .add-more-li{
+    display: none!important;
+}
+
+/*找对体检页*/
+.check-health-wrap {
+    -webkit-box-flex: 1;
+    flex: 1;
+    padding: 0;
+    background: #f2f2f2;
+    overflow: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-box-orient:vertical;
+    display: flex;
+    flex-direction: column;
+}
+.check-health-item,.check-heath-iframe {
+    background: #fff;
+    border: solid 1px #e5e5e5;
+    border-radius: 0.05rem;
+    margin:0.2rem 0.1rem 0 0.1rem;
+}
+.check-health-item{
+    height: 2.0rem;
+}
+
+.btn-experience  {
+    padding: 0.1rem 0.2rem;
+    background: #dfae44;
+    color: #fff;
+    border-radius: 0.05rem;
+}
+.btn-look-package {
+    padding: 0.1rem 0.2rem;
+    background: #fff;
+    color: #dfae44;
+    border-radius: 0.05rem;
+    border:solid 1px #dfae44;
+}
+.p20{padding:0.2rem;}
+.mt46{margin-top:0.46rem;}
+
+.check-heath-iframe{
+    flex: 1;
+    -webkit-box-flex: 1;
+}
+iframe{
+    width: 100%;border: 0;}
+
+/*个人信息底部*/
+.per-info-bot li{width:100%;height:1rem;border-bottom:solid 1px #ccc;line-height: 1.12rem;background:#fff;}
+.per-info-bot li:last-child{margin-top:0.1rem}
+.per-info-bot-wrap{width:100%;height:100%;position:fixed;top:0;
+    z-index: 99;;background:rgba(0,0,0,0.5);}
+.per-info-bot{width:100%;position:absolute;bottom:0;}
+
+/*个人中心底部*/
+.my-info-bot{display:box;display:-webkit-box;}
+.my-info-bot li{box-flex:1;-webkit-box-flex:1;flex:1;padding:0.4rem 0;}
+.my-info-bot li img{width:70%;}
+.my-info-bot-wrap{position:absolute;width:100%;}
+.btn-cancel-share{height:0.92rem;line-height: 0.92rem;margin-top:0.1rem;}
+
+
+.weixin-share img{width:5.93rem;float:right;margin-right:0.6rem;}
+
+.share-win-wrap{width:100%;height:100%;position:absolute;top:0;z-index:999;background: rgba(0,0,0,.5)}
+.share-win{width:3.7rem;height:4.8rem;background: #dbedfd;border-radius:0.1rem;}
+.share-win h2{color:#42babb;font-size:0.38rem;margin:0.2rem 0.48rem;line-height: 1.5em;}
+.share-rocket img{width:2.46rem;height:2.22rem;margin-top:0.8rem;}
+.btn-close-share{width:0.26rem;height:0.26rem;position:absolute;top:0.1rem;right:0.1rem;}

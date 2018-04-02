@@ -1,0 +1,6 @@
+.main_pay{width:1000px;margin: 0 auto;}
+.main_pay p{line-height: 40px;}
+.use_payway{line-height:40px;height:40px;margin-top:20px;}
+.use_payway span{display: inline-block;}
+.use_payway a{display: inline-block;width:36px;cursor:pointer;height: 30px;line-height:30px;background:url(../img3/icon_arrows_down.png) no-repeat right center;}
+.confirm_pay{width:225px;height:35px;line-height:35px;text-align:center;background:#DB2726;color:#fff;}

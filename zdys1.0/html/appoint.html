@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>找对医生</title>
+    <link href="../css/base.css" rel="stylesheet"/>
+    <style>
+        .a-input-base{background:#fff;height:0.85rem;border:solid 1px #e5e5e5;border-radius: 0.05rem;
+            margin:0.2rem 0.1rem;}
+        .a-input-base input{display:block;width:70%;height:98%;border:none;
+            background:#fff;}
+        .a-icon-base{display:block;margin:0.2rem;
+            width:0.33rem;height:0.47rem;}
+        .a-icon-phone{background:url(../img/icon_phone.png) no-repeat;
+            background-size:cover;margin-right:0.28rem;margin-left:0.3rem;}
+        .a-icon-name{width:0.5rem;background:url(../img/icon_person_name.png) no-repeat;
+            background-size:cover;}
+        .appoint-msg{height:3rem;width:100%;}
+        .appoint-msg-wrap{background:#fff;border:solid 1px #e5e5e5;border-radius: 0.05rem;
+            margin:0.2rem 0.1rem;padding:0.2rem;}
+    </style>
+</head>
+
+<body>
+<script>
+    function setFont(){
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if(clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setFont();
+</script>
+    <div class="index-page">
+        <header class="index-head tc">
+            <span class="db fl back" onclick="history.go(-1)"></span>
+            <h1 class="f34 c-f2">付款</h1>
+        </header>
+        <div class="section-main">
+            <form class="c-99">
+                <div class="a-input-base cbo">
+                    <span class="a-icon-base a-icon-phone fl"></span>
+                    <input class="fl f28" type="text" placeholder="请输入手机号" id="reg-phone-num" autofocus/>
+                </div>
+                <div class="tc c-red f20">
+                    如果您不输入手机号，将默认为注册账户手机号
+                </div>
+                <div class="a-input-base cbo">
+                    <span class="a-icon-base a-icon-name fl"></span>
+                    <input class="fl f28" type="text" placeholder="请输入联系的称呼" id="reg-pwd"/>
+                </div>
+                <div class="appoint-msg-wrap">
+                    <textarea class="appoint-msg f28" resize="no" placeholder="您可以在这里给我我们留下您对本次服务想说的话..."></textarea>
+                </div>
+            </form>
+        </div>
+        <footer class="common-foot f34" id="btn-pay">
+           <a href="pay-now.html" class="c-white db"> 立即付款</a>
+        </footer>
+    </div>
+</body>
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/base.js"></script>
+</html>

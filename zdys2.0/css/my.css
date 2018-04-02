@@ -1,0 +1,96 @@
+.doctor-detail-top{height:4.18rem;background: #ccc;padding-top:1.05rem;
+    background: url(http://imgcdn.zhaoduiyisheng.com/img/doctor_datail_bg.jpg) no-repeat center;}
+.doctor-head-pic{margin-left:3.15rem;margin-bottom:0.2rem;width:1.2rem;height:1.2rem;border-radius: 50%;overflow:hidden;}
+.doctor-head-pic img{width:100%;}
+@media screen and (width:320px) {
+    .doctor-info-tag li img{margin-left:0.8rem;}
+    .doctor-head-pic {margin-left:2.65rem;}
+}
+.setting {
+    background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_setting.png) no-repeat;
+    background-size: 0.5rem;
+    z-index: 999;
+    right: .3rem;
+    width: 0.50rem;
+    height: 0.50rem;
+    top:0.5rem;
+}
+.f44{font-size:.44rem;}
+.bcc-r{border-right:solid 1px #ccc;}
+.ptb28{padding-top:.28rem;padding-bottom:.28rem;}
+.my-tel{background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_iphone.png) no-repeat left center;background-size: .15rem .24rem;width:2.2rem;text-indent: 0.1rem;}
+.my-tel-no{background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_iphone.png) no-repeat left center;background-size: .15rem .24rem;width:1.2rem;text-indent: 0.1rem;}
+.my-score-ul li {
+    padding-left: 0.3rem;
+    padding-right: 0.16rem;
+    height:.9rem;
+    line-height: .9rem;
+    background-origin: content-box;
+}
+.my-score-ul li a{text-indent: 0.6rem;}
+.pr14{padding-right:.14rem;}
+.icon-list-manage{background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_dingdan.png) no-repeat left
+center;background-size: .4rem;text-indent: 0.6rem;}
+.icon-business{background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_business.png) no-repeat left
+center;background-size: .4rem;text-indent: 0.6rem;}
+.icon-contact-us{background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_tel.png) no-repeat left
+center;background-size: .44rem;text-indent: 0.6rem;}
+.icon-about-zdys{background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_zdys.png) no-repeat left
+center;background-size: .44rem;text-indent: 0.6rem;}
+.icon-use-help{background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_help.png) no-repeat left
+center;background-size: .44rem;}
+.service-item01{margin-top:.2rem;text-align:justify;}
+
+/*订单管理*/
+#my-order-box{padding-top:.22rem;}
+.my-order-nav{background:#fff;display:-webkit-box;display:flex;}
+.my-order-nav li{box-flex:1;-webkit-box-flex:1;flex:1;font-size:0.3rem;margin:0.2rem 0;text-align:center;}
+.my-order-nav li span{padding:0 0.2rem;border-right:solid 1px #e5e5e5;color:#666;display: block;}
+.my-order-nav li:last-child span{border-right:0;}
+.my-order-nav li.selected span{color:#3db1b1;}
+.order-item{ margin-bottom: 0.22rem;
+    padding: 0.20rem 0.28rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.05rem;
+    background: #fff;
+}
+.order-item>div{ margin-bottom: 0.1rem;}
+.order-item .order-btn{ padding: .12rem .2rem;
+    border: solid 1px #e5e5e5;
+    border-radius: 0.05rem;
+    color: #999;
+    margin-left: 0.20rem;
+}
+.order-btn{bottom:.2rem;right:.28rem;}
+.order-label{margin-right:.18rem;width:1.4rem;text-align: justify;text-align-last: justify;}
+.spacing-ask{letter-spacing: .27rem;}
+.spacing-order{letter-spacing: .09rem;}
+
+.no-order-wrap{padding-top:40%;text-align: center;}
+.no-order-btn{margin-top:0.7rem;width:2.8rem;height:0.6rem;line-height: 0.6rem;
+    border:solid 1px #42babb;border-radius: 0.05rem;background:
+#fff;letter-spacing: 0.1rem;margin-left:50%;
+    transform:translateX(-50%);-webkit-transform:translateX(-50%); }
+.no-order-btn a{color:#42babb;display:block;}
+.cloud{width:2rem;}
+
+.service-item-text p, .service-item-text h2 { margin: 0.3rem 0; line-height: 0.4rem; }
+.service-item-text p { text-align: justify; }
+.service-item-text h2 { font-weight: bold; }
+.no-margin { margin: 0; }
+.our-service h3 { color: #333; font-size: 0.28rem; }
+.our-service p { color: #666; }
+.service-item-text p.mb56 { margin-bottom: 0.56rem; }
+.mr10 { margin-right: 0.1rem; }
+.service-item-text .service-title{margin:0.5rem 0;}
+
+.order-status{top:17%;right:33%;width:1.23rem;height:1.23rem;}
+.share-btn{
+    background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_zhuanfa.png) no-repeat;
+    background-size: 0.5rem;
+    z-index: 999;
+    left: .3rem;
+    width: 0.50rem;
+    height: 0.50rem;
+    top: 0.5rem;
+   }

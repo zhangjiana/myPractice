@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <title></title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <p>
+        <span class="picture "></span><span class="holdy">掌小财</span>
+        <!--<a href="#myModal"  class=" fr get btn" role="button" data-toggle="modal" data-target="#myModal">规则</a>-->
+        <button type="button" data-toggle="modal" data-target="#myModal" class="fr get butop">规则</button>
+        <button class=" fr butop">领取</button>
+
+    </p>
+</header>
+<section>
+    <table width="90%" height="30%" border="1px" bordercolor="#f00">
+        <thead>
+        <tr>
+            <td class="td-width">日期</td>
+            <td>一</td>
+            <td>二</td>
+            <td>三</td>
+            <td>四</td>
+            <td>五</td>
+        </tr>
+        </thead>
+        <tr>
+            <td class="td-width">11.23~11.27</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="td-width">11.30~12.4</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="td-width">12.7~12.11</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <div class="robet">
+        <img src="img/robert.gif.gif" class="fr"/>
+    </div>
+</section>
+<!--<div id="ball"></div> -->
+<footer id="footer">
+    <canvas id="myCanvas" class="ov">
+    </canvas>
+    <div class="press" id="press">
+        press
+    </div>
+    <div class="allstrock move" id="allstrock">
+        <div class="strock"></div>
+        <div class="angle "></div>
+    </div>
+</footer>
+<!--<a href="#myModal" role="button" class="btn" data-toggle="modal">查看演示案例</a>-->
+<!-- Modal -->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">规则</h3>
+    </div>
+    <div class="modal-body">
+        <p>One fine body…</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+        <button class="btn btn-primary">Save changes</button>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var pressWidth = $("#press").width(),
+                footWidth = $("body").width(),
+                footHeight = $("body").height(),
+                ballr = footWidth / 2;
+
+//			$(".strock").css({"height":footWidth-pressWidth})	
+        $("footer").css({"height": footWidth / 2});
+        $("#press").css({"left": footWidth / 2});
+        $("#allstrock").css({"left": footWidth / 2 - 10});
+        var c = document.getElementById("myCanvas");
+        var cxt = c.getContext("2d");
+        c.width = $("body").width();
+        console.log(c.width);
+//			c.height=$("body").height();
+//			console.log(c.height);
+        c.height = $("body").width()/2;
+        cxt.fillStyle = "#FF0000";
+        cxt.beginPath();
+        cxt.arc(ballr, ballr, ballr, 0, Math.PI, true);
+        cxt.closePath();
+        cxt.fill();
+        var toX = 0,
+                toY = 0,
+                perX = 0,
+                preY = 0,
+                deg = 0;
+        //不用箭头，用footer的滑动事件
+
+        $("#footer").bind("touchstart", function () {
+            $("#allstrock").removeClass("move")
+            console.log("1")
+            $("#footer").bind("touchmove", function (e) {
+                toX = e.originalEvent.targetTouches[0].pageX
+                toY = e.originalEvent.targetTouches[0].pageY
+
+                perX = toX - footWidth / 2
+                perY = footHeight - toY
+
+                //注意要有iphone5演示，因为你底部的图宽度适合iPhone5的，6以上有一段偏移
+                //Math.atan是反正切函数；perX/perY是偏转的x/y，即tanA=x/y
+                deg = Math.atan(perX / perY)
+                //改变旋转角度
+                $("#allstrock").css("transform", "rotate(" + deg / 0.01745329 + "deg)")
+
+                //tanA数值与角度的关系是0.01745329倍，除了之后是角度
+                console.log(deg / 0.01745329);
+            })
+
+        })
+        //滑动结束后箭头归位
+        $("#footer").bind("touchend", function () {
+            $("#allstrock").addClass("move")
+            $("#allstrock").css("transform", "rotate:0deg)")
+        })
+
+        $("#press").bind("click", function () {
+//				$("#allstrock").css("transform","rotate("+deg/0.01745329+"deg)" )
+            $("#allstrock").removeClass("move")
+
+        })
+
+        //球球
+//			var y=550; 
+//			var x=170;
+//			var oDiv=document.getElementById('ball');
+//			setInterval(function()
+//			{
+//				y-=10
+//				
+//				if(y<550&&y>80)
+//				{
+//	//			x=Math.ceil(-Math.sqrt(20000-Math.pow((y-200),2))+300)
+//				
+//				oDiv.style.left=x+'px'
+//				oDiv.style.top=y+'px'
+//				document.title=x+':'+y
+//				}
+//	         },50)
+
+
+    })
+
+</script>
+</body>
+</html>

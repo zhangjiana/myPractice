@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <title>周边定位</title>
+    <style>
+        body,ul,section,header,footer,article,h1,h2,h3,h4,h5,h6,ol,ul,figure,p,menu{
+            margin: 0;
+            padding: 0;
+        }
+        @media screen and (max-width:320px){
+            html{font-size:12px;}
+        }
+        @media screen and (min-width:321px) and (max-width:360px){
+            html{font-size:16px;}
+        }
+        @media screen and (min-width:361px) and (max-width:414px){
+            html{font-size:20px;}
+        }
+        @media screen and (min-width:415px) and (max-width:460px){
+            html{font-size:24px;}
+        }
+        @media screen and  (min-width:461px){
+            html{font-size:26px;}
+        }
+        body,html{height:100%;width:100%;}
+        html{font-size: 12px;}
+        body{display: -webkit-box;display: box;-webkit-box-orient: vertical;}
+        header{width:100%;height:4rem;background:#CD2711;padding:0.3rem 0; color: #fff; line-height: 4rem;text-align: center;}
+        footer{width:100%;height:5rem;background:#CD2711;}
+        section{-webkit-box-flex: 1;}
+       /*  header span{display: block;color:#FFF;} */
+        /* header span:first-child{width:45%;height:4rem;text-indent: 4rem;font-size: 1.8rem;
+                    background:url(img/img1.png) no-repeat left center;line-height: 4rem;font-weight:bold;float: left;} */
+       /*  header span{height:88px;background:url(img/img2.png) no-repeat 90% center;
+                   line-height: 3rem;margin-right:1rem;margin-top:1rem;font-size:1.6rem;} */
+        footer{display: -webkit-box;display: box;padding:0.6rem 0;}
+        footer span{display: block;-webkit-box-flex: 1;}
+        footer span:first-child{background:url(img/b1.png) no-repeat center;background-size:80%}
+        footer span:nth-child(2){background:url(img/b2.png) no-repeat center;background-size:80%}
+        footer span:nth-child(3){background:url(img/b3.png) no-repeat center;background-size:80%}
+        footer span:nth-child(4){background:url(img/b4.png) no-repeat center;background-size:80%}
+        article{height:4rem;width:100%;display:-webkit-box;display:box;}
+        article span{display:block;background:#9E9E9E;color:#FFF;font-weight: bold;font-size: 2rem;
+                    text-align: center;-webkit-box-flex: 1;line-height: 4rem;border-left:1px solid #000;border-right:1px solid #fff;}
+        article span:first-child{border-left: 0;}
+        article span:last-child{border-right: 0;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=cs97NtFzAAVloyqutjuq6V4N"></script>
+</head>
+<body>
+
+<header id="city">
+   Geolocation Application
+</header>
+<section id="mymap"></section>
+
+<footer>
+    <span id="bj"></span>
+    <span id="xx"></span>
+    <span id="meal"></span>
+    <span id="move"></span>
+</footer>
+
+<script type="text/javascript">
+
+    getLocation();
+
+    var meal = document.getElementById("meal");
+    var move = document.getElementById("move");
+    var beijing = document.getElementById("bj");
+    var xinxiang = document.getElementById("xx");
+    var city = document.getElementById('city');
+    
+   function getLocation(){
+        console.log("ok");
+        
+        if(window.navigator.geolocation){
+           navigator.geolocation.getCurrentPosition(showPosition,handlePositionError,{
+                // 指示浏览器获取高精度的位置，默认为false  
+                enableHighAcuracy: true,  
+                // 指定获取地理位置的超时时间，默认不限时，单位为毫秒  
+                timeout: 5000,  
+                // 最长有效期，在重复获取地理位置时，此参数指定多久再次获取位置。  
+                maximumAge: 3000  
+           });
+        }else{
+            console.log('浏览器不支持');
+            alert("Your browser does not support Geolocation!");  
+        }
+    }
+    function showPosition(position){
+        var map = new BMap.Map("mymap");//创建地图实例
+        var point = new BMap.Point(position.coords.longitude, position.coords.latitude);//创建点坐标
+        map.centerAndZoom(point,15); //地图初始化
+        
+            
+        var marker = new BMap.Marker(point);        // 创建标注    
+        map.addOverlay(marker); 
+        map.addControl(new BMap.GeolocationControl());//定位控件
+        map.addControl(new BMap.NavigationControl());  //地图平移缩放控件
+        map.addControl(new BMap.ScaleControl());    //比例尺控件
+
+        
+
+
+      /*  map.addControl(new BMap.GeolocationControl);*/
+    /*  BMap.Convertor.translate(point,2,function(p){
+            var marker = new BMap.Marker(p);
+                map.addOverlay(marker);
+                map.centerAndZoom(p,15);
+                map.addControl(new BMap.GeolocationControl());
+             
+      })*/
+
+      /*关键字检索功能*/
+      var local = new BMap.LocalSearch(map, {
+            renderOptions:{map: map}
+       });
+        meal.onclick = function(){
+              local.searchInBounds("餐厅", map.getBounds());
+        }
+        beijing.onclick = function(){
+            map.centerAndZoom("北京",11); 
+        }
+        xinxiang.onclick = function(){
+            map.centerAndZoom("新乡",11); 
+        }
+        /*单个点沿线运动*/
+		function goBack(){
+			 var myP1 = point;    //起点
+			 var myP2 = new BMap.Point(113.90631000000008,35.32992);    //以河南师范大学作为终点
+			 var myIcon = new BMap.Icon("http://developer.baidu.com/map/jsdemo/img/Mario.png", new BMap.Size(32, 70), {    //小车图片
+				   
+					imageOffset: new BMap.Size(0, 0)    //图片的偏移量。为了是图片底部中心对准坐标点。
+				  });
+			 var driving2 = new BMap.DrivingRoute(map, {renderOptions:{map: map, autoViewport: true}});    //驾车实例
+				 driving2.search(myP1, myP2);  
+
+			  function run(){
+					 //显示一条公交线路
+					var driving = new BMap.DrivingRoute(map);    //驾车实例
+					driving.search(myP1, myP2);
+					driving.setSearchCompleteCallback(function(){
+						var pts = driving.getResults().getPlan(0).getRoute(0).getPath();    //通过驾车实例，获得一系列点的数组
+						var paths = pts.length;    //获得有几个点
+
+						var carMk = new BMap.Marker(pts[0],{icon:myIcon});
+						map.addOverlay(carMk);
+						i=0;
+						function resetMkPoint(i){
+							carMk.setPosition(pts[i]);
+							if(i < paths){
+								setTimeout(function(){
+									i++;
+									resetMkPoint(i);
+								},100);
+							}
+						}
+						setTimeout(function(){
+							resetMkPoint(5);
+						},100)
+
+					});
+				}
+			setTimeout(function(){
+				run();
+			},1500);
+		}
+         
+		move.onclick = function(){
+               goBack();
+        }
+
+
+    }
+
+  
+
+
+
+    function handlePositionError(error){
+        console.log(error);
+        switch(error.code){
+            case 0:
+                alert("尝试获取您的位置信息时发生错误：" + error.message);
+                break;
+            case 1:
+                alert("用户拒绝了获取位置信息请求。");
+                break;
+            case 2:
+                alert("浏览器无法获取您的位置信息。");
+                break;
+            case 3:
+                alert("获取您位置信息超时。");
+                break;
+        }
+    }
+//convertor.js为百度地图提供的坐标转化文件
+/*(function() { // 闭包
+    function load_script(xyUrl, callback) {
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = xyUrl;
+        // 借鉴了jQuery的script跨域方法
+        script.onload = script.onreadystatechange = function() {
+            if ((!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) {
+                callback && callback();
+                // Handle memory leak in IE
+                script.onload = script.onreadystatechange = null;
+                if (head && script.parentNode) {
+                    head.removeChild(script);
+                }
+            }
+        };
+        // Use insertBefore instead of appendChild to circumvent an IE6 bug.
+        head.insertBefore(script, head.firstChild);
+    }
+    function translate(point, type, callback) {
+        var callbackName = 'cbk_' + Math.round(Math.random() * 10000); // 随机函数名
+        var xyUrl = "http://api.map.baidu.com/ag/coord/convert?from=" + type
+                + "&to=4&x=" + point.lng + "&y=" + point.lat
+                + "&callback=BMap.Convertor." + callbackName;
+        // 动态创建script标签
+        load_script(xyUrl);
+        BMap.Convertor[callbackName] = function(xyResult) {
+            delete BMap.Convertor[callbackName]; // 调用完需要删除改函数
+            var point = new BMap.Point(xyResult.x, xyResult.y);
+            callback && callback(point);
+        }
+    }
+
+    window.BMap = window.BMap || {};
+    BMap.Convertor = {};
+    BMap.Convertor.translate = translate;
+})();
+	*/	
+
+</script>
+</body>
+</html>

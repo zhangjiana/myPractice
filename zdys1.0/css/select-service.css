@@ -1,0 +1,28 @@
+
+/*选择服务*/
+.service-title{padding:0.3rem 0.2rem;}
+.select-service-btn{padding:0.1rem 0.2rem;background:#dfae44;color:#fff;border-radius:0.05rem;}
+.service-doctor-list{padding:0 0.1rem 0.2rem 0.1rem;}
+
+
+.select-wrap{ margin: 0.20rem;}
+.service-doctor-item:nth-child(2){margin:0 0.3rem;}
+.doctor-pic{width:2.08rem;height:2.08rem;background:#eee;}
+.doctor-name{height:0.68rem;color:#333;}
+.doctor-name span:first-child{margin-top:0.24rem;margin-right:0.2rem;}
+.doctor-name span:last-child{margin-top:0.28rem;}
+
+
+.look-service-wrap{ padding: 0.2rem;}
+.look-service-title{margin-top:0.18rem;margin-right:0.2rem;}
+.look-service-explain{line-height:0.46rem;margin-top:0.1rem;}
+.mt50{margin-top:0.5rem;}
+.mb20{margin-bottom:0.2rem;}
+.mt24{margin-top:0.24rem;}
+
+.warm-prompt{margin:0.2rem;border-bottom:solid 1px #ccc;}
+
+
+@media screen and (width:320px){
+    .service-doctor-item:nth-child(2){margin:0 0.17rem;}
+}

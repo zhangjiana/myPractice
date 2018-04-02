@@ -1,0 +1,91 @@
+body{background:#f4f4f4;}
+.f29{font-size:.29rem;}
+.f36{font-size:.36rem;}
+.f40{font-size:.4rem;}
+.f44{font-size:.44rem;}
+.f46{font-size:.46rem;}
+.f60{font-size:.6rem;}
+.f143{font-size:1.43rem;}
+.prl70{padding-left:.7rem;padding-right:.7rem;}
+.prl66{padding-left:.66rem;padding-right:.66rem;}
+.bg-cyan{background: #42babb;}
+
+.wrap{height:100%;overflow:hidden;}
+.page01{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/ad01/bg.jpg) no-repeat center;background-size:cover;}
+.logo{width:1.36rem;height:1.36rem;background:url(http://imgcdn.zhaoduiyisheng.com/activity/img/ad01/logo.png) no-repeat center;background-size:1.36rem;margin-left:.27rem;margin-top:.25rem;}
+.menu{width:1.2rem;height:1.2rem;background:#9a9a9a url(http://imgcdn.zhaoduiyisheng.com/activity/img/ad01/icon_menu.png) no-repeat center;background-size:.4rem;margin-top:.35rem;margin-right:.41rem;}
+.btn-list>li{height:1rem;width:90.26%;line-height: 1rem;border-radius: .1rem;}
+.btn-reg{background: #42babb;}
+.btn-login{border:solid 2px #42babb;}
+.btn-list{width:100%;bottom:6%;left:4.87%;}
+
+.index-text{margin-left:.6rem;bottom:40%;}
+.index-top{border-bottom: solid 1px rgba(165,165,165,.3);padding-bottom: .28rem;}
+@media screen and (width:320px){
+    .f143{font-size:1.2rem;}
+    .f60{font-size:.5rem;}
+}
+
+.remote-ser{width:1.76rem;height:1.76rem;}
+.remote-ser-active{width:1.76rem;height:1.76rem;background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/ad01/remote.png) no-repeat center;background-size:1.76rem;}
+.face-ser{width:1.76rem;height:1.76rem;background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/ad01/face.png) no-repeat center;background-size:1.76rem;}
+.face-ser-active{width:1.76rem;height:1.76rem;background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/ad01/face.png) no-repeat center;background-size:1.76rem;}
+.page02 .f44{padding-top:1.2rem;}
+.page02 p.f34,.page02 p.f28{line-height: 1.5em;margin-top:.2rem;}
+
+.remote-ser img{width:100%;}
+.ser{padding-top: .86rem;}
+.doctor-list{width:100%;margin-top:.7rem;}
+.core-doctor{margin-top:1.05rem;}
+.core-doctor>li{background: #fff;padding-bottom: .16rem;width:1.97rem;
+    border-radius: .2rem;border:solid 1px #ebebeb;overflow:hidden;margin-left:4.93%;margin-right:4.93%;}
+
+.core-doctor>li>div{padding-left:.16rem;padding-right: .16rem;}
+.core-doctor>li img{width:100%;}
+.look-doctor{position:relative;width:2.56rem;height:.75rem;line-height: .75rem;border:solid 1px #42babb;border-radius: 0.1rem;margin-top:1.25rem;margin-bottom:1.14rem;}
+
+.come-zdys h2{padding-top:1.08rem;padding-bottom: .68rem;}
+.come-zdys .text{line-height: 1.5em;padding-bottom: 1.16rem;}
+.long-tap{color:#cce9e9;padding-top:.4rem;padding-bottom: .87rem;}
+.come-zdys img{width:1.89rem;}
+.flip-card{width:84.8%;margin-top:1rem;}
+.btn-game{width:3.42rem;position:relative;}
+.btn-game img{width:100%;}
+.get-health{padding-top:.5rem;padding-bottom: .77rem;}
+.game{padding-top:.75rem;padding-bottom: .4rem;}
+
+.map{background: #f2ede4;border-bottom: solid 1px #42babb;}
+.map h2{padding-top:.65rem;}
+.map img{width:100%;margin-top: .9rem;margin-bottom: .2rem;}
+
+.ad01-footer{padding-top:.45rem;padding-bottom: .4rem;}
+.ad01-footer p:first-child{margin-bottom:.25rem;}
+.ser-tel{color:#5961d9;text-decoration: underline;}
+
+.menu-list{width:100%;top:1.9rem;background: rgba(0,0,0,.7);
+    z-index: 10;}
+.menu-list li{line-height: .98rem;}
+.menu-list li a{display:block;color:#fff;}
+
+.map-dot{position:absolute;width:.13rem;height:.13rem;background: #42babb;border-radius: 50%;}
+.dot1{top:53%;left:22%;}
+.dot2{top:69%;left:26%;}
+.dot3{top:49%;left:53%;}
+.dot4{bottom:18%;left:48%;}
+.dot5{top:47%;right:23%;}
+.dot6{bottom:14%;right:11%;}
+.map>div .blink{width:.4rem;height:.4rem;}
+
+.map>div{width:.4rem;height:.4rem;}
+
+.blink{animation:dotBlink 2s infinite;-webkit-animation:dotBlink 2s infinite;}
+@keyframes dotBlink {
+    0%{opacity: 0;transform:scale(0);}
+    50%{opacity: 0.5;transform:scale(1);}
+    100%{opacity: 0;transform:scale(0);}
+}
+@-webkit-keyframes dotBlink {
+    0%{opacity: 0;-webkit-transform:scale(0);}
+    50%{opacity: 0.5;-webkit-transform:scale(1);}
+    100%{opacity: 0;-webkit-transform:scale(0);}
+}

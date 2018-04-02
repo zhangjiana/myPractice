@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>找对医生</title>
+    <link href="../../css/base.css?v=1" rel="stylesheet"/>
+    <style>
+        .main-wrap{ width: 100%; height: 100%; overflow: hidden;}
+        body{background-color:#fede47;}
+        img{display: block;width: 100%;}
+        .bg-wrap>li{position: relative;}
+        .bg-wrap>li>div{position: relative;}
+        .prev-now{margin-top: .4rem;}
+        .prev{width: 3.6rem;height: 1.1rem;bottom: 0;}
+        .myprev{bottom: -.8rem;z-index: 3;}
+        .head{padding-top: .9rem;padding-bottom: 1.1rem;}
+        .tips{padding-top: .64rem;}
+        .pg03{padding-top: .35rem;}
+        .ill{margin-top: .4rem;border-top:1px solid #7b6b6b;border-bottom:1px solid #7b6b6b;}
+        .illbox{width: 100%;height: 100%;top: 0;display:-webkit-box;-webkit-box-orient:vertical;display: flex;flex-direction: column;}
+        .illbox>li{-webkit-box-flex: 1; flex: 1;}
+        .illbox>li>p{height: 100%;width: 75%;margin-left: .3rem;}
+        .illbox>li>a{width: 1.08rem;height: .56rem;background: #000;margin-top: .44rem;margin-right: .3rem;}
+        #rules{bottom: .5rem;}
+        .item{padding:.4rem 0;}
+        .item *{color:#333;}
+        .item>p{position: relative;padding-left:.3rem; margin-bottom: .1rem;text-align: justify;}
+        .item>p::before { display: inline-block; position: absolute; top: 0; left: 0; color: #333; }
+        .item>p:nth-child(1)::before { content: "1."; }
+        .item>p:nth-child(2)::before { content: "2."; }
+        .item>p:nth-child(3)::before { content: "3."; }
+        .item>p:nth-child(4)::before { content: "4."; }
+        .item>p:nth-child(5)::before { content: "5."; }
+        .item>p:nth-child(6)::before { content: "6."; }
+        .b0{bottom: 0;}
+        .z3{z-index: 3;}
+        .pa{position: absolute!important;}
+        a{color:#311919;}
+        .o0{opacity: 0;}
+        .f28{font-size:14px}
+        .f30{font-size:15px}
+        .f32{font-size:16px}
+        .f34{font-size:17px}
+        .f36{font-size:18px}
+        .f38{font-size:19px}
+        .f48{font-size:24px}
+        .bot-arow { position: fixed; z-index: 50; width: 6%; bottom: 10px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); }
+        .bot-arow img { width: 100%; animation: upArrow 1.5s ease-in-out infinite; -webkit-animation: upArrow 1.5s ease-in-out infinite; }
+        .dialog-all{width: 100%;height: 100%;top: 0;z-index: 3;background-color:rgba(0,0,0,.3);}
+        .dialog-all:after{content:"";width: 1px;height: .95rem;position: absolute;top: 0;background-color:#fff;left: 50%;-webkit-box-shadow: 0 0 0 1px rgba(255,255,255,.3);box-shadow: 0 0 0 1px rgba(255,255,255,.3);}
+        .oa0:after{opacity: 0;}
+        .dialog:before{content:"";width: 1px;height: .95rem;position: absolute;top: -.95rem;background-color:#fff;left: 50%;-webkit-box-shadow: 0 0 0 1px rgba(255,255,255,.3);box-shadow: 0 0 0 1px rgba(255,255,255,.3);}
+        .dialog{width: 6.3rem;height: 8.4rem;background:#ffda44 url(http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/hook.jpg) no-repeat center .16rem;-webkit-background-size: .42rem;
+        background-size: .5rem;padding:.66rem .32rem .3rem;top: 1.9rem;-webkit-transition: .5s;transition: .5s;position: relative;z-index: 10;}
+        .d-scroll{height: 100%;overflow: hidden;}
+        .close{width: .62rem;height: .34rem;background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/knife.png) no-repeat center;background-size:cover;left: 52%;top: .9rem;}
+        .d-scroll .f34{border-bottom: 1px solid #000;padding-bottom: .16rem;}
+        .pics img{width: 1.6rem;}
+        .pics>img{margin-left: .6rem;}
+        .pics>a{margin-right: .6rem;}
+        .tel{padding: .7rem 0 .2rem;}
+        .tel img{width: 3.96rem;}
+        .tel a{width: 3.96rem;height: .64rem;top: .7rem;}
+        .tt{-webkit-transform: translate3d(0,-150%,0);transform: translate3d(0,-150%,0);}
+        .t0{-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+        .tb{-webkit-transform: translate3d(0,150%,0);transform: translate3d(0,150%,0);}
+        @keyframes upArrow {
+          0% { opacity: 0; transform: translateY(100%) }
+          100% { opacity: 1; transform: translateY(0) }
+        }
+        @-webkit-keyframes upArrow {
+          0% { opacity: 0; -webkit-transform: translateY(100%) }
+          100% { opacity: 1; -webkit-transform: translateY(0) }
+        }
+        @media screen and (width:320px) {
+          html { font-size: 42.666px !important; }
+          .closeThis { bottom: 2%; }
+        }
+        @media screen and (max-height:558px) {
+          .b0{bottom: -.8rem;}
+          .w90{width: 97%;}
+          .ill img{width: 97%;margin: 0 auto;}
+          .illbox>li>p{width: 70%;margin-left: .6rem;}
+          .illbox>li>a{margin-top: .4rem;margin-right: .55rem;}
+        }
+        @media screen and (max-height:520px) {
+          .b0{bottom: -1rem;}
+          .w90{width: 90%;}
+          .ill img{width: 90%;margin: 0 auto;}
+          .illbox>li>p{width: 70%;margin-left: .6rem;}
+          .illbox>li>a{margin-top: .4rem;margin-right: .55rem;}
+        }
+        @media screen and (width:320px) and (max-height:480px) {
+          .prev-now {margin-top: -.3rem;}
+          .prev-now2 {margin-top: .1rem;}
+          .b0{bottom: -1rem;}
+          .tips{padding-top: .3rem;}
+          .myprev{bottom: -.6rem;}
+          .head{padding-top: .5rem;padding-bottom: .7rem;}
+          .ill{margin-top: .1rem;}
+          .w90{width: 90%;}
+          .ill img{width: 90%;margin: 0 auto;}
+          .illbox>li>p{width: 70%;margin-left: .6rem;}
+          .illbox>li>a{margin-top: .4rem;margin-right: .55rem;}
+          #rules{bottom: .1rem;}
+        .dialog-all:after{height: .7rem;}
+        .dialog:before{height: .7rem;top: -.7rem;}
+        .dialog{top: 1.4rem;height: 7.7rem;}
+        .close{top: .6rem;}
+        }
+        @media screen and (max-width:361px) and (min-width:341px) {
+          .closeThis { bottom: 4%; }
+        }
+    </style>
+</head>
+<body>
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+    var u = window.navigator.userAgent.toLocaleLowerCase();
+    if (u.indexOf("micromessenger") > -1) {
+      if (!window.localStorage.openid&&!window.sessionStorage.n){
+           window.sessionStorage.n = ' ';
+           var appId="wx14da7f3cb2e1b8ff";
+           var redirect_uri=encodeURI(window.location.origin+window.location.pathname);
+           window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appId+"&redirect_uri="+redirect_uri+"&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+       }
+    }
+</script>
+<div class="main-wrap" id="main">
+    <ul class="bg-wrap swiper-wrapper f28">
+        <li class="swiper-slide pg01">
+            <div class="z3"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/free01.jpg" alt=""></div>
+            <div class="prev-now">
+                <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/free02.jpg" alt="">
+                <a class="pa o0 centerX tc prev" href="prevNow.html?a">免费预约</a>
+                <a class="pa centerX tc myprev" href="myLook.html?a">进入我的预约》</a>
+            </div>
+            <div class="pa b0"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/free03.jpg" alt=""></div>
+        </li>
+        <li class="swiper-slide pg02">
+            <div><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/free04.jpg" alt=""></div>
+            <div class="head"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/free05.jpg" alt=""></div>
+            <div><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/free06.jpg" alt=""></div>
+            <div class="prev-now prev-now2">
+                <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/free07.jpg" alt="">
+                <a class="pa o0 centerX tc prev" href="prevNow.html?prev=0">免费预约</a>
+            </div>
+            <div class="tips"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/free08.jpg" alt=""></div>
+        </li>
+        <li class="swiper-slide pg03">
+            <div><img class="w90 m0a" src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/free09.jpg" alt=""></div>
+            <div class="ill">
+                <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/free10.jpg" alt="">
+                <ul class="illbox pa o0" id="illbox">
+                    <li>
+                        <p class="fl">1</p>
+                        <a class="fr" href="prevNow.html?prev=1">抢约</a>
+                    </li>
+                    <li>
+                        <p class="fl">2</p>
+                        <a class="fr" href="prevNow.html?prev=2">抢约</a>
+                    </li>
+                    <li>
+                        <p class="fl">3</p>
+                        <a class="fr" href="prevNow.html?prev=3">抢约</a>
+                    </li>
+                    <li>
+                        <p class="fl">4</p>
+                        <a class="fr" href="prevNow.html?prev=4">抢约</a>
+                    </li>
+                    <li>
+                        <p class="fl">5</p>
+                        <a class="fr" href="prevNow.html?prev=5">抢约</a>
+                    </li>
+                    <li>
+                        <p class="fl">6</p>
+                        <a class="fr" href="prevNow.html?prev=6">抢约</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="pa centerX" id="rules">活动规则》</a>
+        </li>
+    </ul>
+</div>
+<a class="back-act" href="/index.html?a"></a>
+<div class="bot-arow"><img src="http://imgcdn.zhaoduiyisheng.com/img/icon/arrow-up.png"></div>
+<div class="dialog-all pa dn oa0">
+    <div class="dialog br5 m0a dn tt">
+        <div class="d-scroll">
+            <div class="f24 c-33">
+                <p class="f34 tc">活动规则</p>
+                <div class="item">
+                    <p>本次预约患者享受服务为找对e生“名医远程诊”服务<a href="/html/teleDiagnose.html?clinicService=remote_face">(点击了解服务)</a>，全国各地患者均可预约，在家享受服务</p>
+                    <p>每类疾病服务周期按照预约患者人数安排，服务顺序按照预约患者人数排序</p>
+                    <p>预约患者服务顺序遵循“先预约先服务，先付费有优先服务权”原则</p>
+                    <p>患者满意后付费，不满意不付费；优先付费患者可享立减200元</p>
+                    <p>凡预约本次活动患者均视为已同意找对e生服务协议<!-- <a href="../../html/serviceItem.html">(点击查看服务协议)</a> --></p>
+                    <p>本次活动解释权归找对e生所有</p>
+                </div>
+                <div class="pics clearfix">
+                    <img class="fl" src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/rule01.jpg" alt="">
+                    <a class="fr" href="/index.html"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/rule02.jpg" alt=""></a>
+                </div>
+                <div class="tel pr">
+                    <img class="m0a" src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/rule03.jpg" alt="">
+                    <a class="pa o0 centerX" href="tel:4008370095">4008370095</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog br5 m0a dn tt"><div class="d-scroll"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/alert01.jpg" alt=""></div></div>
+    <div class="dialog br5 m0a dn tt"><div class="d-scroll"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/alert02.jpg" alt=""></div></div>
+    <div class="dialog br5 m0a dn tt"><div class="d-scroll"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/alert03.jpg" alt=""></div></div>
+    <div class="dialog br5 m0a dn tt"><div class="d-scroll"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/alert04.jpg" alt=""></div></div>
+    <div class="dialog br5 m0a dn tt"><div class="d-scroll"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/alert05.jpg" alt=""></div></div>
+    <div class="dialog br5 m0a dn tt"><div class="d-scroll"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/alert06.jpg" alt=""></div></div>
+    <div class="close pa" id="close" style="display: none;"></div>
+</div>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/swiper.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../../js/base.js"></script>
+<script>
+    var len = document.querySelectorAll('.swiper-slide').length - 1,
+        arrow = document.querySelector('.bot-arow'),
+        alertN = 0;
+    var swiper = new Swiper('#main', {
+        direction : 'vertical',
+        'transition-timing-function': 'ease-in-out',
+        onSlideChangeStart: function(swiper) {
+            arrow.style.display = swiper.activeIndex === len? 'none': 'block';
+            $('#illbox p').height($('#illbox li').eq(0).height());
+        }
+    });
+    $('#illbox p').height($('#illbox li').eq(0).height());
+    weixinLogin(function(){
+        $.ajax({
+            type: "GET",
+            url: ajaxUrl + "Promotion/RemoteClinic?sessionId=" + window.localStorage.sessionId,
+            contentType: "text/plain; charset=UTF-8",
+            dataType: 'json',
+            success: function(data) {
+                if (0 === data.code&&data.data) {
+                    flag=false;
+                }
+            }
+        });
+    });
+    $('#rule').on('click',function(){
+        $('#item').slideToggle(function(){
+            // scroll.scrollTo(0,scroll.maxScrollY,200);
+        });
+        $('#arr').toggleClass('active');
+    });
+    $('.go-now').swipe({
+        tap:function(){
+            if (flag) {
+                window.location='prevNow.html';
+            }else {
+                myalert.tips({
+                    txt: "您已预约过！点击确定进入我的预约",
+                    fnok: function() {
+                        window.location = "myLook.html";
+                    }
+                });
+            }
+        }
+    });
+    $('#rules').click(function(e){
+        dialog(0);
+        e.preventDefault();
+    });
+    var aDialog = $('.dialog'),
+      oClose = $('#close'),
+      scrollA = null;
+    function dialog(n){
+        alertN = parseInt(n);
+        aDialog.eq(alertN).removeClass('dn tb t0');
+        aDialog.eq(alertN).parent().removeClass('dn');
+        setTimeout(function(){
+            aDialog.eq(alertN).addClass('t0');
+        },10);
+        setTimeout(function(){
+            aDialog.eq(alertN).parent().removeClass('oa0');
+        },300);
+        setTimeout(function(){
+            oClose.fadeIn();
+        },500);
+        scrollA = new IScroll($('.d-scroll')[alertN], {probeType: 3, mouseWheel: true});
+    }
+    aDialog.click(function(e){
+        e.stopPropagation();
+    });
+    aDialog.eq(0).parent().click(function(e){
+        aDialog.eq(alertN).addClass('tb');
+        setTimeout(function(){
+            aDialog.eq(alertN).addClass('dn');
+            aDialog.eq(alertN).parent().addClass('dn oa0');
+            oClose.fadeOut();
+        },500);
+        e.preventDefault();
+    });
+    $('#illbox p').swipe({
+        tap:function(e){
+            dialog($(this).text());
+            e.preventDefault();
+        }
+    });
+    if('sqqd' == GetQueryString('p')){
+        shareWeixin('先看病后付费，顶级名医实力秒杀莆田系！','三甲名医远程看病，不满意不收费','http://www.zhaoduiyisheng.com/activity/html/freeLook.html?p=sqqd','http://imgcdn.zhaoduiyisheng.com/img/logo01.png');
+    }else{
+        shareWeixin('召唤名医远程救命，实力羞辱莆田系！','顶级名医先看病后付费，不满意不收费','http://www.zhaoduiyisheng.com/activity/html/freeLook.html','http://imgcdn.zhaoduiyisheng.com/img/logo01.png');
+    }
+</script>
+</body>
+</html>

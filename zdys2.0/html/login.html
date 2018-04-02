@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com" />
+    <title>找对医生</title>
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/login.css" rel="stylesheet" />
+    <style>
+        .login-m-b{white-space: nowrap;position: relative;}
+        .login-head{background: #fff;}
+        .login-top{padding-top:.3rem;}
+        @media screen and (max-width: 321px) {
+            /*.login-top{padding-top: 0.30rem;}*/
+            .login-form{ margin-top: 0.90rem;}
+            .form-notice{ margin-top: 0.20rem;}
+            .weixin-login{ margin-top: 0.20rem;}
+            .icon-weixin{ margin-top: 0.20rem;}
+            .login-question{ bottom: 0.20rem;}
+            .login-top{padding-top:.2rem;}
+        }
+    </style>
+</head>
+<body>
+<script>
+    function setFont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setFont();
+    window.onresize=setFont;
+</script>
+    <div class="index-page bg-white">
+        <header class="index-head tc login-head pt30">
+            <a href="newLogin.html"><span class="icon-arrowr"></span></a>
+            <h1>&nbsp;</h1>
+        </header>
+        <header class="login-top prl30" id="btn-tab">
+            <span class="active">登录</span>
+            <span>注册</span>
+        </header>
+        <section class="section-main prl30" id="page-box">
+            <!--login-->
+            <div id="page-login">
+                <ul class="login-form">
+                    <li class="input-tel">
+                        <input type="tel" class="fl" placeholder="输入手机号"
+                               id="login-phone-num">
+                        <em class="clear-input fr dn"></em>
+                    </li>
+                    <li class="input-pwd">
+                        <input type="password" class="fl" placeholder="输入密码" id="login-pwd">
+                        <em class="clear-input fr dn"></em>
+                    </li>
+                    <li class="input-code dn" id="input-code">
+                        <input type="tel" class="fl" placeholder="输入验证码"
+                               id="login-code">
+                    <span class="tag-green btn-get-code fr" id="get-login-code">获取验证码
+                    </span>
+                    </li>
+                </ul>
+                <div class="btn-login opacity78" id="btn-login">登录</div>
+                <div class="msg-login"><span id="btn-login-msg">用短信验证码登录(免密码)</span></div>
+                <div class="form-notice" id="login-notice"></div>
+                <!--<div class="weixin-login">-->
+                    <!--<img class="weixin-login-title" src="http://imgcdn.zhaoduiyisheng.com/img/login-bot.png"/>-->
+                    <!--<img id="btn-w-login" class="icon-weixin" src="http://imgcdn.zhaoduiyisheng.com/img/icon_weixin_login.png"/>-->
+                    <!--<p class="f20 c-99 tc">微信登录</p>-->
+                <!--</div>-->
+            </div>
+            <!--reg-->
+            <div id="page-reg" class="dn">
+                <ul class="login-form">
+                    <li class="input-tel">
+                        <input type="tel" class="fl" placeholder="输入手机号"
+                               id="reg-phone-num">
+                        <em class="clear-input fr dn"></em>
+                    </li>
+                    <li class="input-pwd">
+                        <input type="password" class="fl" placeholder="输入密码" id="reg-pwd">
+                        <em class="eye fr" id="reg-eye"></em>
+                    </li>
+                    <li class="input-code">
+                        <input type="tel" class="fl" placeholder="输入验证码" id="reg-code">
+                    <span class="tag-green btn-get-code fr" id="get-reg-code">获取验证码
+                    </span>
+                    </li>
+                </ul>
+                <div class="btn-login" id="btn-reg">同意服务协议注册</div>
+                <div class="msg-login"><a href="serviceItem.html">《找对医生用户服务协议》</a></div>
+                <div class="form-notice" id="reg-notice"></div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/login.js"></script>
+<script src="../js/weixin-login.js"></script>
+</html>

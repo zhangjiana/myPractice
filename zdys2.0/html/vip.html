@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>找对医生</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <style>
+        .section-main{background: #fff;}
+        .bg-ed{background: #ededed;}
+        .vip-top{width:100%;}
+        .vip-text{padding:.3rem .28rem;}
+        .vip-intro{line-height: 1.5em;text-align:justify;}
+        .service-tel{display:block;width:100%;height:.98rem;
+            background: #42babb;line-height: .98rem;}
+        .vip-erwm{margin:.26rem auto;}
+        .vip-erwm img{width:1.43rem;}
+        .mt76{margin-top:.76rem;}
+        .service-tel span{display:block;width:2rem;margin:auto;background:url(http://imgcdn.zhaoduiyisheng.com/img/icon/vip_tel.png)
+        no-repeat left center;background-size: .44rem;text-indent:.44rem;}
+        .ser-time{padding-top:1.7rem;padding-bottom: .5rem;}
+        @media screen and (width:320px){
+            .ser-time{padding-top:.3rem;}
+        }
+        .vip-img-list img{width:86.67%;padding-top:.82rem;}
+    </style>
+</head>
+<body>
+<script>
+    function setfont(){
+        var clientWidth = document.body.clientWidth||document.documentElement.clientWidth;
+        if(clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.onresize=setfont;
+</script>
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="icon-arrowr go-back"></span>
+        <h1 class="f34 c-f2">VIP通道</h1>
+    </header>
+    <section class="section-main" id="scroll-vip">
+        <div>
+            <div class="bg-ed"><img class="vip-top" src="http://imgcdn.zhaoduiyisheng.com/img/img_vip.jpg"/></div>
+            <div class="vip-text bg-white">
+                <h2 class="f32 bold">医疗专员代办更省心</h2>
+                <p class="f28 c-66 vip-intro mt10">一个电话，全程VIP通道服务，医疗专员为您安排妥当。100元医疗专员服务费，满意后支付。</p>
+                <p class="f38 c-red bold mt20">￥100</p>
+            </div>
+            <div class="bg-ed pt20">
+                <div class="vip-img-list bg-white tc">
+                    <img src="http://imgcdn.zhaoduiyisheng.com/img/vip_b.jpg">
+                </div>
+                <p class="bg-white f24 c-99 tc ser-time">客服时间：9:30-17:30</p>
+            </div>
+        </div>
+    </section>
+    <a class="service-tel c-white f30" href="tel:4008-370-095">
+        <span>免费咨询</span>
+    </a>
+</div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script>
+    var scroll = new IScroll('#scroll-vip', { probeType: 3, mouseWheel: true });
+</script>
+</html>

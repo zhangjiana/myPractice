@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>帮助页面</title>
+    <link href="../css/base.css" rel="stylesheet"/>
+    <link href="../css/index.css" rel="stylesheet"/>
+    <style>
+        .notice-content p{
+            margin-bottom: 0.2rem;
+        }
+        h2{ font-weight: bold;}
+        ol{
+            list-style-type: square;
+            list-style-position: inside;
+        }
+    </style>
+</head>
+<body>
+<script>
+    function setfont(){
+        var clientWidth = document.body.clientWidth||document.documentElement.clientWidth;
+        if(clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.onresize=setfont;
+</script>
+
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="db fl back"  onclick="history.go(-1)"></span>
+        <h1 class="f34 c-f2">使用帮助</h1>
+    </header>
+    <section class="diagnose-notice-wrap">
+
+        <div class="notice-content f28">
+            <h2 class="f34 mb16">找对知识：</h2>
+
+            <p class="f32">服务介绍：</p>
+            <p>定制和分享“健康预防及愈后康复”知识，增强家庭成员健康管理意识，减少生病；</p>
+            <p class="f32">操作步骤：</p>
+            <ol>
+                <li>为您的家人填写基本资料；</li>
+                <li>添加相应的病情标签或直接上传病历；</li>
+                <li>您将获取精准匹配健康预防及愈后康复知识文章，并可通过微信及给累社交平台分享给家人；</li>
+            </ol>
+            <p>（免费服务）</p>
+
+        </div>
+        <div class="notice-content f28">
+            <h2 class="f34 mb16">找对体检：</h2>
+
+            <p class="f32">服务介绍：</p>
+            <p>为您的家庭定制精准贴心的体检方案，希望您的家庭幸福安康；</p>
+            <p class="f32">用户操作：</p>
+            <ol>
+                <li>选择“找对体检”服务；</li>
+                <li>根据您为家人预留的基本信息，匹配合适的体检计划；</li>
+                <li>付款后，在约定的时间进行体检；</li>
+            </ol>
+            <p>（免费服务，体检项目付费。）</p>
+
+        </div>
+        <div class="notice-content f28">
+            <h2 class="f34 mb16">找对医生：</h2>
+
+            <p class="f32">服务介绍：</p>
+            <p>为您的家人快速精准地找到医疗专家，在减少传统就医成本的同时，提高疾病治愈的几率和效率；</p>
+            <p class="f32">操作步骤：</p>
+            <ol>
+                <li>为您的家人选择“找对医生”服务；</li>
+                <li>提供病历及相关检查资料（如CT、尿检检验单等）；</li>
+                <li>医疗专员根据您提供的资料快速寻找最佳医师；</li>
+                <li>付款并和医疗专家约定诊疗时间；</li>
+                <li>医疗专家将为您的家人进行面对面（外地可视频）诊疗，服务完成；</li>
+            </ol>
+            <p>（精准匹配是免费服务，延伸的咨询服务是付费服务。）</p>
+
+        </div>
+    </section>
+
+</div>
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/base.js"></script>
+</body>
+</html>l>

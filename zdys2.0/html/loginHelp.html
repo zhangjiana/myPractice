@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com" />
+    <title>找对医生</title>
+    <link href="../css/base.css" rel="stylesheet" />
+    <style>
+        h2 { line-height: .98rem; text-indent: .3rem; }
+        .help-login > li { padding: .2rem 0; border-bottom: 1px solid #ccc; }
+        .help-login > li:last-child { border-bottom: 0; }
+        .help-login p { text-indent: .58rem; }
+        .help-login a,.help-login .icon-weixin span { background:
+        url(http://imgcdn.zhaoduiyisheng.com/img/icon/list_arrow.png)
+        no-repeat right
+        center;background-size: .44rem; }
+        .help-login a.no-arrow{background:none;}
+        .icon-phone { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/h_phone.png) no-repeat .01rem center;background-size: .44rem; }
+        .icon-weixin { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/h_weixing.png) no-repeat .01rem center;background-size: .44rem; }
+        .icon-pwd { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/h_pwd.png) no-repeat .01rem center;background-size: .44rem; }
+        .contact-us { line-height: .74rem;}
+        .contact-us a { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/h_tel.png) no-repeat .01rem center;background-size: .44rem; }
+        .contact-us p { text-indent: .58rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/list_arrow.png) no-repeat right center;background-size: .44rem; }
+    </style>
+</head>
+<body>
+<script>
+    function setFont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setFont();
+</script>
+    <header class="index-head">
+        <span class="icon-arrowr go-back"></span>
+        <h1 class="h1 tc">登录帮助</h1>
+    </header>
+    <h2 class="f28 c-99">您可以通过以下方式登录</h2>
+    <ul class="help-login bg-white prl30">
+        <li class="icon-phone"><a class="db" href="login.html">
+            <p class="f30">注册手机号(或已绑定手机号)</p>
+            <p class="c-99 f24">您可以通过手机号+短信验证码登录</p>
+        </a></li>
+        <li class="icon-weixin" id="btn-w-login"><span class="db">
+            <p class="f30">微信一键登录</p>
+            <p class="c-99 f24">可以使用微信登录，建议使用手机登录</p>
+        </span></li>
+        <li class="icon-pwd"><a class="db no-arrow">
+            <p class="f30">忘记密码？</p>
+            <p class="c-99 f24">您可以通过上诉方式登录后重新设置密码</p>
+        </a></li>
+    </ul>
+    <h2 class="f28 c-99">仍无法登录联系我们</h2>
+    <div class="contact-us bg-white prl30">
+        <a class="db c-33" href="tel:4008370095">
+            <p class="f30">4008370095</p>
+        </a>
+    </div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../js/weixin-login.js"></script>
+</html>

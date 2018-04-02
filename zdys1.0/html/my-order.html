@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>找对医生</title>
+    <link href="../css/base.css" rel="stylesheet"/>
+    <link href="../css/index.css?t=5" rel="stylesheet">
+    <link href="../css/my-info.css?t=6" rel="stylesheet"/>
+</head>
+<body>
+<script>
+    function setFont(){
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if(clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setFont();
+</script>
+<!--管理订单-->
+<div id="page-my-list" class="index-page">
+    <header class="index-head tc">
+        <span class="db fl back" id="back-my-list" onclick="history.go(-1)"></span>
+        <h1 class="f34 c-f2">订单管理-找对医生</h1>
+    </header>
+    <section class="section-main f28">
+        <ul class="my-order-nav" id="my-order-nav">
+            <li class="selected">
+                <span>全部订单</span >
+            </li>
+            <li>
+                <span>完成订单</span>
+            </li>
+            <li>
+                <span>未完订单</span>
+            </li>
+        </ul>
+        <div class="tc">暂无</div>
+        <!--<div id="order-box">-->
+        <!--<div class="order-item">-->
+        <!--<p class="cbo"><span class="fl f28">面诊服务 &nbsp;&nbsp;&nbsp;&nbsp;-->
+        <!--<em class="diagnose-price c-red service-price" id="item1">1280</em></span><em class="fr f20 c-red">服务完成</em></p>-->
+        <!--<p class="f28"><span>被服务者 &nbsp;&nbsp;&nbsp;&nbsp;<em class="c-yellow f24">爸爸</em></span></p>-->
+        <!--<p class="cbo"><span class="order-btn fr f20">删除订单</span><span class="order-btn fr f20">查看进度</span></p>-->
+        <!--</div>-->
+        <!--<div class="order-item">-->
+        <!--<p class="cbo"><span class="fl f28">面诊服务 &nbsp;&nbsp;&nbsp;&nbsp;-->
+        <!--<em class="diagnose-price c-red service-price" id="item2">1280</em></span><em class="fr f20 c-red">服务未完成</em></p>-->
+        <!--<p class="f28"><span>被服务者 &nbsp;&nbsp;&nbsp;&nbsp;<em class="c-yellow f24">爸爸</em></span></p>-->
+        <!--<p class="cbo">-->
+        <!--<span class="order-btn fr f20">查看进度</span>-->
+        <!--</p>-->
+        <!--</div>-->
+        <!--</div>-->
+    </section>
+</div>
+</body>
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/base.js"></script>
+</html>

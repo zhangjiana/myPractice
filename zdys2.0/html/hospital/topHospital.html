@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>找对医生</title>
+    <link href="../../css/base.css" rel="stylesheet"/>
+    <style>
+        .index-head{background:#c00000;}
+        .icon-arrowr{background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/arrow_r_white.png) no-repeat center;background-size: contain;}
+        .dpt-list li{line-height:.9rem;border-bottom: solid 1px #e5e5e5;
+            background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/doctor-arrow.png) no-repeat right center;background-size: .16rem .26rem;}
+        .dpt-list li a{display:block;}
+        .dpt-list{padding-bottom: .8rem;}
+    </style>
+</head>
+<body>
+<script>
+    function setfont(){
+        var clientWidth = document.body.clientWidth||document.documentElement.clientWidth;
+        if(clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.onresize=setfont;
+</script>
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="icon-arrowr go-back"></span>
+        <h1 class="f34 c-white">全国最佳医院</h1>
+    </header>
+    <section class="section-main bg-white" id="scroll-hospital">
+        <ul class="dpt-list mrl30 f30">
+            <li><a href="d01.html">传染科</a></li>
+            <li><a href="d02.html">耳鼻喉科</a></li>
+            <li><a href="d03.html">呼吸科</a></li>
+            <li><a href="d04.html">风湿科</a></li>
+            <li><a href="d05.html">妇产科</a></li>
+            <li><a href="d06.html">骨科</a></li>
+            <li><a href="d07.html">精神医学</a></li>
+            <li><a href="d08.html">口腔科</a></li>
+            <li><a href="d09.html">麻醉科</a></li>
+            <li><a href="d10.html">泌尿外科</a></li>
+            <li><a href="d11.html">内分泌</a></li>
+            <li><a href="d12.html">皮肤科</a></li>
+            <li><a href="d13.html">普通外科</a></li>
+            <li><a href="d14.html">神经内科</a></li>
+            <li><a href="d15.html">肾脏病</a></li>
+            <li><a href="d16.html">神经外科</a></li>
+            <li><a href="d17.html">消化病</a></li>
+            <li><a href="d18.html">小儿内科</a></li>
+            <li><a href="d19.html">小儿外科</a></li>
+            <li><a href="d20.html">心血管病</a></li>
+            <li><a href="d21.html">心外科</a></li>
+            <li><a href="d22.html">胸外科</a></li>
+            <li><a href="d23.html">血液学</a></li>
+            <li><a href="d24.html">眼科</a></li>
+            <li><a href="d25.html">整形外科</a></li>
+            <li><a href="d26.html">肿瘤学</a></li>
+            <li><a href="d27.html">老年医学</a></li>
+            <li><a href="d28.html">康复医学</a></li>
+            <li><a href="d29.html">烧伤科</a></li>
+            <li><a href="d30.html">核医学</a></li>
+        </ul>
+    </section>
+</div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../../js/base.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script>
+    var scrollHos = new IScroll('#scroll-hospital', { probeType: 3, mouseWheel: true });
+</script>
+</html>

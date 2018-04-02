@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>找对医生</title>
+    <link href="../../css/base.css?v=1" rel="stylesheet"/>
+    <link href="../css/turnPlate.css?v=3" rel="stylesheet"/>
+    <style>
+      .pre{white-space: nowrap;bottom: 1.7rem;}
+    </style>
+</head>
+<body>
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+</script>
+<div class="main-wrap" id="main">
+    <div>
+      <a class="back"  href="/index.html"></a>
+      <ul class="bg-wrap">
+          <li><img src="http://www-test.zhaoduiyisheng.com/activity/img/turnPlate/chj_01.jpg"/> </li>
+          <li><img src="http://www-test.zhaoduiyisheng.com/activity/img/turnPlate/chj_02.jpg"/> </li>
+          <li><img src="http://www-test.zhaoduiyisheng.com/activity/img/turnPlate/chj_03.jpg"/> </li>
+          <li class="pr">
+              <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/turnPlate/chj_04.jpg"/>
+              <div class="platebg">
+                <div class="plate center" id="plate">
+                    <span class="start center" id="start">
+
+                    </span><em class="handle" id="handle"></em>
+                </div>
+              </div>
+          </li>
+          <li><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/turnPlate/chj_05.jpg"/></li>
+          <li class="pr">
+              <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/turnPlate/chj_06.jpg"/>
+              <span class="gift centerX"></span>
+              <a class="scort" href="/html/my.html"></a>
+              <a class="doc" href="freeLook.html"></a>
+              <span class="pa txt1 f24 c-white">1000积分=10元</span>
+              <span class="pa txt2 f24 c-white">先看病后付费</span>
+          </li>
+      </ul>
+        <div class="contBg">
+        <h3 class="tc f28 c-white pb30">活动规则》</h3>
+            <div class="actRules f28 c-white item">
+                <p>每个用户每日有一次抽奖机会，中奖率100%</p>
+                <p>积分可兑换现金红包，发至用户微信零钱中</p>
+                <p>100积分=1元，1000积分起兑</p>
+                <p>本活动限微信注册用户验证手机号后方可参加领取红包</p>
+                <p>本活动最终解释权归找对医生所有</p>
+            </div>
+            <div class="erweima tc">
+                <img src="http://imgcdn.zhaoduiyisheng.com/img/icon/vip_erwm.jpg"/>
+            </div>
+            <p class="tc f28 c-white">
+                关注找对e生,名医/福利这都有
+            </p>
+        </div>
+    </div>
+
+</div>
+<div class="alert-wrap dn" id="pop-window">
+   <div class="dialog center">
+        <span class="closeDialog" id="closeDialog"></span>
+       <!--绑定手机号-->
+        <div class="diaContent dn" id="bindPhone">
+           <div class="title"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/turnPlate/bindPhone.png" /></div>
+            <input type="tel" class="regPhone mt98" id="regPhone" placeholder="请输入手机号">
+            <div class="mt30 cbo">
+                <input type="tel" class="regNum" id="regNum" placeholder="请输入验证码">
+                <span class="getRegNum" id="getRegNum">获取验证码</span>
+            </div>
+            <div class="confirm" id="btnSubmit">确定</div>
+            <p class="tc c-red mt20 f28" id="notice"></p>
+        </div>
+       <!--获得积分-->
+       <div class="diaContent dn" id="getPoint">
+           <div class="title w60"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/turnPlate/congratulation_03.png" /></div>
+           <p class="f34 tc c-white mt65">今日转盘获得积分为</p>
+           <span class="point" id="point"></span>
+           <p class="f34 tc c-white">明天再来哦</p>
+           <div class="confirm"><a href="../../html/my.html" class="db">进入个人中心</a></div>
+       </div>
+        <!--获得优惠券-->
+        <div class="diaContent dn" id="getTicket">
+            <div class="title w60"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/turnPlate/congratulation_03.png" /></div>
+            <p class="f34 tc c-white mt65">今日转盘获得200元优惠券</p>
+            <p class="f34 tc c-white">明天再来哦</p>
+            <p class="f34 tl c-white mt65">200元优惠券已放入您的账户中!</p>
+            <div class="confirm"><a href="../../html/my.html" class="db">进入个人中心</a></div>
+        </div>
+       <!--获得过-->
+        <div class="diaContent dn" id="outChance" >
+            <div class="title"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/turnPlate/outChance_03.png" /></div>
+            <p class="f34 tc c-white mt165">您今天机会已经用完了哦</p>
+            <p class="f34 tc c-white">明天再来哦</p>
+            <p class="f28 c-white pre pa">抢约名医:先看病后付费火热预约中</p>
+            <div class="confirm"><a href="freeLook.html" class="db">点击查看</a></div>
+        </div>
+   </div>
+</div>
+
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/swiper.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../../js/base.js"></script>
+<script src="../js/turnPlate.js"></script>
+</body>
+</html>

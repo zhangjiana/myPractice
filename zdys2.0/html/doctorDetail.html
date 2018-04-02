@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>医生详情</title>
+    <link href="../css/base.css" rel="stylesheet"/>
+    <link href="../css/doctorDetail.css" rel="stylesheet"/>
+</head>
+<body>
+<script>
+    function setfont(){
+        var clientWidth = document.body.clientWidth||document.documentElement.clientWidth;
+        if(clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.onresize=setfont;
+</script>
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="icon-arrowr go-back"></span>
+        <h1 class="f34 c-f2" id="doctor-name"></h1>
+    </header>
+    <section class="section-main" id="scroll-doctor-detail">
+        <div class="pr">
+            <span class="share-btn"></span>
+            <div class="doctor-detail-top f28 c-white tc" id="doctor-info">
+                <div class="doctor-head-pic"></div>
+                <p><span class="mr16"></span><span></span></p>
+                <p><span class="mr16 f30"></span><span></span></p>
+            </div>
+            <a class="top-hospital db pr" href="hospital/topHospital.html">
+                <img src="http://imgcdn.zhaoduiyisheng.com/img/top_hospital.png"/>
+                <div class="pa f28 c-white click-look">点击查看</div>
+            </a>
+            <div class="pb100">
+                <!--医生个人简介-->
+                <div class="doctor-detail-item">
+                    <h3 class="f30 doctor-intro">个人简介</h3>
+                    <p class="f28 clamp3 c-66 tj" id="doctor-intro"></p>
+                    <span class="icon-more"></span>
+                </div>
+                <!--医生专业特长-->
+                <div class="doctor-detail-item">
+                    <h3 class="f30 doctor-specialty">专业特长</h3>
+                    <p class="f28 clamp3 c-66 tj" id="doctor-specialty"></p>
+                    <span class="icon-more"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../js/share-test.js"></script>
+<script src="../js/doctorDetail.js"></script>
+</body>
+</html>

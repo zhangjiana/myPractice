@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <meta name="format-detection"content="telephone=no"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>找对医生</title>
+    <link href="../css/swiper.min.css" rel="stylesheet"/>
+    <link href="../css/base.css?v=1" rel="stylesheet"/>
+    <link href="../css/diagnose.css" rel="stylesheet">
+    <script src="../lib/swiper.min.js"></script>
+    <script src="../lib/jquery-2.1.4.min.js"></script>
+    <style>
+        .service-tel{width:94%;height:.68rem;
+            background: #4bb0f3;line-height: .68rem;
+            margin:.5rem auto .3rem;border-radius: 0.05rem;}
+        .service-tel span{display:block;width:2.7rem;margin:auto;background:url(http://imgcdn.zhaoduiyisheng.com/img/icon/vip_tel.png)
+        no-repeat left center;background-size: .44rem;text-indent:.5rem;}
+    </style>
+</head>
+<body>
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+</script>
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="fl icon-arrowr" id="back"></span>
+        <h1 class="f34 c-f2">远程预诊</h1>
+    </header>
+    <section class="section-main" id="scroll">
+        <div>
+            <div class="telePre_img pr c-white f24">
+                <img src="http://imgcdn.zhaoduiyisheng.com/img/telepre.jpg"/>
+                <span class="mask pl30">理性诊前评估，科学避免浪费</span>
+            </div>
+            <!--文字介绍-->
+            <div class="bg-white prl30 pt30  pb30 f24">
+                <h3 class="f32 bold">远程预诊</h3>
+                <p class="mt20 mb40 lh36 f28 c-66">全国排名前20家医院专家，30分钟内私人咨询服务。此费用已包括本地协作医生（如需）、医学服务、平台管理，税金。  </p>
+                <div>
+                    <span class="f42 c-red bold">¥1280</span>
+                    <em class="btn-more fr" id="more">收起</em>
+                </div>
+            </div>
+            <!--服务介绍-->
+            <div class="prl30 pt30 pb30 f28 bg-white be5-t" id="service-instro">
+                <h3 class="f30 pb30">服务介绍</h3>
+                <p class="lh42 c-red">全国排名前20家医院专家，20-30分钟咨询费600元。另加当地医生的劳务费200元，15%远程医学服务平台费，5%税金，共1280元！</p>
+                <div class="telePreinstro-img"></div>
+                <a class="db service-tel c-white f30" href="tel:4008-370-095">
+                    <span>4008-370-095</span>
+                </a>
+                <p class="f28 c-99 tc pb30">客服时间：9:30-17:30</p>
+            </div>
+
+
+            <!--选择家人-->
+            <div class="bg-white" id="choose-member">
+                <h2 class="items-title mt20 mrl30 chartFile"> 选择一位需要服务的家人
+                    <em class="family-arrow no-margin"></em>
+                </h2>
+            </div>
+
+            <!--选择病历-->
+            <div class="bg-white" id="choose-chart">
+                <h2 class="items-title mt20 mrl30 chartFile"> TA的病情描述
+                    <em class="family-arrow no-margin"></em>
+                </h2>
+            </div>
+        </div>
+    </section>
+    <footer class="common-foot" id="appointment">
+        立即预约
+    </footer>
+</div>
+
+<div class="alert-wrap dn" id="confirm-appointment">
+    <div class="footer-pop">
+        <div class="section-main pr" id="foot-content">
+            <div class="set-bottom">
+                <em class="close_window" id="closePop"></em>
+                <div class="bg-white prl30 pt30 pb30">
+                    <!--关闭按钮-->
+
+                    <!--top-->
+                    <div class="cbo f34 be5-b pb30">
+                        <img src="http://imgcdn.zhaoduiyisheng.com/img/face_confirm.jpg" class="way-img fl" alt="">
+                        <div class="fl">
+                            <h3 class="mb20">远程预诊</h3>
+                            <p class="c-red">¥960</p>
+                        </div>
+                    </div>
+
+                    <!--咨询者-->
+                    <div class="consulter f34 be5-b pb30 mt30">
+                        <h3 class="pb20">咨询者</h3>
+                        <div class="family-mem f30">
+
+                        </div>
+                    </div>
+                    <!--病历-->
+                    <div class="case-list f30 mt30">
+                        <h3 class="f34">病历</h3>
+                        <div class="case-name">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="common-foot" id="confirm-submit">确定</div>
+    </div>
+</div>
+</body>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/teleDiagnose.js"></script>
+</html>

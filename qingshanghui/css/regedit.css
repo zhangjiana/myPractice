@@ -1,0 +1,49 @@
+
+
+/*****login****/
+.login_wrapper{width:100%;height:auto;background:url(../img2/photo_03.png) repeat-x #dddddb;}
+
+/*****login界面包裹****/
+.login_container{width:1000px;height:auto;margin:0 auto;background:url(../img3/img_ren.png) no-repeat;}
+
+/*****logo****/
+.regedit_top{width:500px;margin:0 auto;padding-top:30px;}
+
+
+.login_contain{width:1000px;height:600px;overflow:hidden;}
+.login{width:400px;padding-top:20px;}
+/*****新用户****/
+.newpeople{width:260px;color:#FF0000;padding-left:86px;padding-bottom:20px;}
+
+
+/*****免费注册****/
+.free_regedit{width:260px;height:32px;line-height:32px;padding-left:86px;}
+
+/*****注册列表****/
+.regedit{width:100%;}
+.regedit p{text-indent:94px;color:#db2726;display: none;}
+.regedit ul li{margin-bottom:10px;width:350px;text-align: left;height:auto;overflow: hidden;}
+.regedit input{float: right;width:258px;height:28px;line-height:28px;border:1px solid #999999;
+    color:#999999;}
+.regedit span{font-size:14px;width:84px;display:block;height:30px;line-height:30px;text-align: right;float:left;}
+a.randomcode{display: block;float: right;height:28px;overflow:hidden;margin-left:12px;border:1px solid #999999;}
+#btn{width:133px;height:28px;border:1px solid #999999;float:right;margin-left:12px;
+    cursor:pointer;background:none;color:#000;}
+#txt4,#txt5{width:112px;}
+
+/*****立即注册大按钮****/
+.login_btn{width:260px;margin-left:92px;}
+.regedit_now{display:block;width:100%;height:36px;background:#DB2725;
+    cursor:pointer;color:#FFF;line-height:36px;text-align: center;}
+
+.not_checked{display: block;float:left;background:url(../img/icon_not_selected.png) no-repeat;
+    margin-top:2px;margin-right:10px;width:12px;height:12px;cursor:pointer;text-indent: -9999px;}
+._checked{display: block;float:left;background:url(../img/icon_selected.png) no-repeat;
+    margin-top:2px;margin-right:10px;width:12px;height:12px;cursor:pointer;text-indent: -9999px;}
+
+
+/*****下部的二维码****/
+.erweima{padding:20px 20px 0 90px;}
+.line{width:100%;height:10px;padding-top:20px;border-bottom:1px solid #999999;}
+.erweima p{width:130px;margin-top:20px;}
+

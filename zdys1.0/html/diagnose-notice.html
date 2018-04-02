@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>面诊服务通知</title>
+    <link href="../css/base.css" rel="stylesheet"/>
+    <link href="../css/index.css" rel="stylesheet"/>
+</head>
+<body>
+<script>
+    function setfont(){
+        var clientWidth = document.body.clientWidth||document.documentElement.clientWidth;
+        if(clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.onresize=setfont;
+</script>
+
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="db fl back"  onclick="history.go(-1)"></span>
+        <h1 class="f34 c-f2">预约通知</h1>
+    </header>
+    <section class="diagnose-notice-wrap">
+         <div class="notice-info f28 c-66">
+             <p>您好!我们已为您预约号适合您的专家！</p>
+             <p>温馨提示：请提前15分钟到达预约地点，以便作咨询前准备。</p>
+         </div>
+        <div class="notice-content">
+            <ul class="cbo f34">
+                <li class="fl service-title">服务方式:</li>
+                <li class="fr service-text f28" id="serviceWay">面对面咨询</li>
+                <li class="clb"></li>
+                <li class="fl service-title">咨&nbsp;询&nbsp;者:</li>
+                <li class="fr service-text f280" id="serviceObject"> 父亲</li>
+                <li class="clb"></li>
+                <li class="fl service-title">专&nbsp;&nbsp;家:</li>
+                <li class="fr service-text f28"><span id="serviceDocName">李雨雨</span>,<span id="serviceDocTitle">主治医师</span>，<span id="serviceDocLocation">青岛大学附属医院本部</span></li>
+                <li class="clb"></li>
+                <li class="fl service-title">地&nbsp;&nbsp;点:</li>
+                <li class="fr service-text f28" id="serviceDocCityName">青岛市中山北路1088号青岛大学附属医院本部妇科门诊</li>
+                <li class="clb"></li>
+                <li class="fl service-title">时&nbsp;&nbsp;间:</li>
+                <li class="fr service-text f28" id="serviceTime">2015年12月5日&nbsp;&nbsp;上午&nbsp;&nbsp;10点</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/base.js"></script>
+
+</body>
+</html>

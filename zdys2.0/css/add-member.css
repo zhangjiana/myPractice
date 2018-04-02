@@ -1,0 +1,12 @@
+.data-info li { padding: 0.30rem  0.12rem 0.30rem 0; border-bottom: 1px solid #e5e5e5; font-size: 0.3rem; }
+.data-info li>div { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/list_arrow.png) no-repeat right center; background-size: 0.44rem; }
+.data-info li>div.no-arrow { background: none; }
+.data-info li input.no-border { border: none; }
+.data-info li i { margin: 0; }
+.data-info li div>span:first-child { margin-right: 0.15rem; }
+#my-province { margin: 0; }
+.spacing-two { letter-spacing: 0.56rem; }
+.add-family-head { width: 0.5rem; height: 0.5rem; border-radius: 50%; vertical-align: middle; }
+.selectul>li { padding: .3rem .2rem .3rem 0; text-indent: .3rem; border-bottom: 1px solid #ccc; background-origin: content-box;}
+.city-tab { width: 100%; }
+.city-tab span { width: 100%; }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>找对医生</title>
+    <link href="../../css/base.css" rel="stylesheet"/>
+    <link href="../css/getTicketPage.css" rel="stylesheet"/>
+</head>
+<body>
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+    if (!window.localStorage.openid&&!window.sessionStorage.n){
+        window.sessionStorage.n = ' ';
+        var appId="wx14da7f3cb2e1b8ff";
+        var redirect_uri=encodeURI(window.location.origin+window.location.pathname);
+        window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appId+"&redirect_uri="+redirect_uri+"&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+    }
+</script>
+<div id="scroll" class="index-page bg-white">
+    <section class="main pr">
+        <a class="back" href="/index.html"></a>
+        <img class="pa logo" src="http://imgcdn.zhaoduiyisheng.com/activity/img/ticket/s_logo.png"/>
+        <div class="user-head margin-auto" id="userHead"></div>
+        <p class="f30 tc user-name" id="username"></p>
+        <h2 class="f30 tc pb10 line1 c-66">现在立即领取</h2>
+        <div class="form-wrap margin-auto">
+            <div class="input-tel">
+                <input id="phone" class="db c-66 f28" type="tel" placeholder="输入手机号"/>
+            </div>
+            <div class="cbo">
+                <div class="input-code fl">
+                    <input id="code" class="db c-66 f28" type="tel" placeholder="输入验证码"/>
+                </div>
+                <span id="btn-get-code" class="db f28 c-white bg-red2 fl ml20 tc btn-get-code">
+                    获取验证码
+                </span>
+            </div>
+            <div class="c-white f28 btn-get-ticket tc btn-disable" id="btn-submit">立即领取</div>
+            <div class="f20 c-red tc mt20 form-notice" id="form-notice"></div>
+        </div>
+        <div>
+            <h2 class="f30 tc pb10 title2 line2 c-66">不在北上广，照样看名医</h2>
+            <ul class="f28 c-66 service-list container ml30 mr30">
+                <li class="sub">
+                    <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/ticket/ycz.jpg"/>
+                    <p>名医远程诊</p>
+                </li>
+                <li class="sub">
+                    <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/ticket/dmz.jpg"/>
+                    <p>名医当面诊</p>
+                </li>
+                <li class="sub">
+                    <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/ticket/ycyz.jpg"/>
+                    <p>远程预诊</p>
+                </li>
+            </ul>
+        </div>
+        <div class="bot-part tc">
+            <span class="c-99">关注公众号</span>
+            <a class="weixin-num" href="ad01.html">找对e生</a>
+        </div>
+    </section>
+</div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../../js/base.js"></script>
+<script src="../../js/form.js"></script>
+<script src="../js/getTicketPage.js"></script>
+</html>

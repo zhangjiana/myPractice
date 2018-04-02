@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>找对医生</title>
+    <link href="../css/base.css" rel="stylesheet"/>
+    <style>
+        .score-banner{height:5.5rem;background: url(http://imgcdn.zhaoduiyisheng.com/img/test_bg.jpg) no-repeat center;}
+        .score{width:2.7rem;margin-top:1.06rem;}
+        .msg-title{margin-top:0.62rem;margin-bottom:0.44rem;}
+        .msg-ul li{margin-bottom:0.32rem;position:relative;}
+        .bot-menu li{height:0.98rem;line-height: 0.98rem;}
+        .msg-ul li:before{position:absolute;content:"";display:inline-block;width:0.08rem;height:0.08rem;border-radius: 50%;top:0.16rem;left:-0.16rem;}
+        .msg-ul li.green:before{background: #76c07b;}
+        .msg-ul li.yellow:before{background: #d39053;}
+        .msg-ul li.red:before{background: #eb6685;}
+        .share-test{padding-left:0.3rem;padding-bottom:0.56rem;}
+    </style>
+</head>
+<body>
+<script>
+    function setfont(){
+        var clientWidth = document.body.clientWidth||document.documentElement.clientWidth;
+        if(clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.onresize=setfont;
+</script>
+<div class="index-page">
+    <section class="section-main bg-white">
+        <div class="score-banner tc pr">
+        </div>
+        <div class="prl30" id="suggestion">
+            <!--<p class="msg-title f30">2个月内，建议到以下科室做对应的检查！ </p>-->
+            <!--<ul class="msg-ul f28 c-66 pl20">-->
+                <!--<li>需要关注心血管疾病，建议到心内科进行咨询！</li>-->
+                <!--<li>需要关注脑血管疾病，建议到神经科进行咨询！</li>-->
+                <!--<li>需要关注冠心病的风险，建议到心内科就诊！</li>-->
+            <!--</ul>-->
+        </div>
+    </section>
+    <p class="f22 share-to cbo share-test bg-white" id="testResult-share">
+        <span class="fl c-99 mr30">发送给家人</span>
+        <img class="fl db index-share ml20" src="http://imgcdn.zhaoduiyisheng.com/img/icon/share.png">
+    </p>
+    <ul class="container bot-menu c-white tc f28">
+        <li class="sub"><a class="db c-white" href="healthyTest.html">再测一次</a></li>
+        <li class="sub"><a class="db c-white" href="../index.html">返回首页</a></li>
+    </ul>
+</div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../js/testResult.js"></script>
+<script src="../js/share.js"></script>
+</html>

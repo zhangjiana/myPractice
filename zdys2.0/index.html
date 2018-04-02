@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com" />
+    <link rel="shortcut icon" href=" /favicon.ico" />
+    <title>找对医生</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/swiper.min.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+    var u = navigator.userAgent;
+    if (u.indexOf("Windows") > -1) {
+        window.location = "pc_index.html";
+    }
+
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont)
+    </script>
+    <div class="index-page">
+        <!--banner-->
+        <div id="scroll" class="section-main">
+            <div>
+                <div class="banner pr">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="activity/html/topicsActivity.html"><img src="http://imgcdn.zhaoduiyisheng.com/img/banner/0425.jpg"></a>
+                        </div>
+                    	   <div class="swiper-slide">
+                            <a href="http://www-test.zhaoduiyisheng.com/activity/html/freeLook.html"><img src="http://imgcdn.zhaoduiyisheng.com/img/banner/0430.jpg"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="http://mp.weixin.qq.com/s?__biz=MzIwMTI2MjQ3NA==&mid=404674789&idx=6&sn=0130a134f0e586224188b5701a43aede&scene=0&previewkey=eExs3l8HTROSM8EclLP%2F38wqSljwj2bfCUaCyDofEow%3D#wechat_redirect"><img src="http://imgcdn.zhaoduiyisheng.com/img/banner/0502.jpg"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="http://www-test.zhaoduiyisheng.com/activity/html/turnPlate.html"><img src="http://imgcdn.zhaoduiyisheng.com/img/banner/0422.jpg"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://gift.yingyinglicai.com/activity/hongbao/8820160322000173/111"><img src="http://imgcdn.zhaoduiyisheng.com/img/banner/0419.jpg"></a>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination dn"></div>
+
+                </div>
+                <!--优惠活动-->
+               <div class="main-activity bg-white">
+                    <a class="free-check" href="activity/html/freeLook.html">
+                        <img src="http://imgcdn.zhaoduiyisheng.com/img/free-check.png" />
+                    </a>
+                    <a class="half-kill" href="activity/html/flipCard.html">
+                        <img src="http://imgcdn.zhaoduiyisheng.com/img/half-kill.png" />
+                    </a>
+               </div>
+                <!--our service-->
+                <div class="service-item">
+                    <div class="our-service f24 c-99">
+                     我们的服务
+                    </div>
+                    <div class="main-activity">
+                        <a class="tele pr" href="html/teleDiagnose.html?clinicService=remote_face">
+                            <img src="http://imgcdn.zhaoduiyisheng.com/img/teleDiagnose.jpg" />
+                            <!-- <span class="short-mask f30 c-white"><em class="bold">名医远程诊</em><em class="bold c-red fr">¥960</em></span> -->
+                        </a>
+                        <em class="face pr" id="faceDia">
+                            <img src="http://imgcdn.zhaoduiyisheng.com/img/faceToface.jpg" />
+                            <!-- <span  class="short-mask f30 c-white"><em class="bold">名医当面诊</em><em class="bold c-red fr">¥630</em></span> -->
+                        </em>
+                    </div>
+
+                    <a class="vip"  href="html/vip.html" >
+                        <img src="http://imgcdn.zhaoduiyisheng.com/img/img_vip.jpg"/>
+                    </a>
+                </div>
+                <div class="teach-use dn bg-white" id="teach-use">
+                    <div class="teach-title cbo">
+                        <h2 class="fl">如何使用找对医生</h2>
+                        <span class="f24 c-cyan fr" id="no-more">不再显示</span>
+                    </div>
+                    <div class="process">
+                        <div class="process-item">
+                            <em class="choose"></em>
+                            <span>选择服务</span>
+                        </div>
+                        <em class="process-arrow"></em>
+                        <div  class="process-item">
+                            <em class="upload"></em>
+                            <span>上传资料</span>
+                        </div>
+                        <em class="process-arrow"></em>
+                        <div  class="process-item">
+                            <em class="match"></em>
+                            <span>精准匹配<br>专家</span>
+                        </div>
+                        <em class="process-arrow"></em>
+                        <div  class="process-item">
+                            <em class="pay"></em>
+                            <span>确认支付</span>
+                        </div>
+                        <em class="process-arrow"></em>
+                        <div  class="process-item">
+                            <em class="consult"></em>
+                            <span>咨询专家</span>
+                        </div>
+                    </div>
+
+                </div>
+                <p class="c-99 f24 mt20 tc">客服热线:4008-370-095 &nbsp;&nbsp;9:30-17:30</p>
+                <p class="f20 tc copyright-footer c-99 pb20">
+                    2015 Copyright © 北京益同行教育科技有限公司<br> All Rights Reserved. 京ICP备14032004号
+                </p>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="index">
+                <em class="index_img active"></em>
+                <span class="c-cyan">找对医生</span>
+            </div>
+            <div class="family">
+                <em class="family_img"></em>
+                <span class="c-66">家庭</span>
+            </div>
+            <div class="doctor">
+                <em class="doctor_img"></em>
+                <span class="c-66">名医资源</span>
+            </div>
+            <div class="me">
+                <em class="me_img"></em>
+                <span class="c-66">我的</span>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/swiper.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="js/base.js"></script>
+<script src="js/index.js?t=24314"></script>
+<script>
+// var swiper = new Swiper('.banner', {
+//     pagination: '.swiper-pagination',
+//     paginationClickable: true,
+//     centeredSlides: true,
+//     loop: true,
+//     autoplay: 2500,
+//     autoplayDisableOnInteraction: false
+// });
+
+var con = new IScroll('#scroll', {probeType: 3, mouseWheel: true});
+
+/*体检无缝滚动*/
+// var marquee = new Swiper('#health', {
+//     direction: 'vertical',
+//     loop: true,
+//     autoplay: 2000,
+// });
+</script>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="content-type" content="no-cache, must-revalidate" />
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <title>找对医生</title>
+    <link href="../css/base.css?v=1" rel="stylesheet" />
+    <link href="../css/swiper.min.css" rel="stylesheet" />
+    <style>
+        .notice-top{line-height: 1.5em;padding:.1rem .3rem;}
+        .notice-main{margin-top:.24rem;}
+        .notice-main li{margin-top:.24rem;clear:both;overflow:hidden;}
+        .notice-main li:last-child{padding-bottom: .95rem;}
+        .service-tel{width:89%;height:.68rem;
+            background: #4bb0f3;line-height: .68rem;
+            margin:1.03rem auto .46rem;border-radius: 0.05rem;}
+        .service-tel span{display:block;width:2.7rem;margin:auto;background:url(http://imgcdn.zhaoduiyisheng.com/img/icon/vip_tel.png)
+        no-repeat left center;background-size: .44rem;text-indent:.5rem;}
+        .word-two{font-weight:100;letter-spacing:.6rem;}
+        .word-three{font-weight:100;letter-spacing: .14rem;}
+        .notice-main li em{float:left;width:1.6rem;}
+        .notice-main li span{float:left;width:75%;text-align:justify;}
+        @media  screen and (width:320px){
+            .notice-main li span{width:72%;}
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+    </script>
+    <!--关注的疾病-->
+    <div class="index-page">
+        <header class="index-head tc">
+            <span class="icon-arrowr go-back"></span>
+            <h1 class="f34 c-f2">服务通知</h1>
+        </header>
+        <section class="section-main" id="scroll-ser-notice">
+            <div>
+                <div class="bg-white f28 c-66 notice-top">
+                    您好！我们已经预约好您的专家！<br>
+                    温馨提示：请您提前15分钟到达预约地点，以便提前做咨询准备。</div>
+                <ul class="cbo f30 prl30 bg-white notice-main" id="notice-main">
+                    <!--<li>-->
+                        <!--<em>服务方式：</em>-->
+                        <!--<span class="c-66" id="serviceName">名医远程诊</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<em><b class="word-three">咨询</b>者：</em>-->
+                        <!--<span class="c-red" id="serviceObject">父亲</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<em>远程专家：</em>-->
+                        <!--<span class="c-66">刘宇，主治医师，北京大学附属医院本部，妇科门诊。</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<em>当地专家：</em>-->
+                        <!--<span class="c-66">-->
+                            <!--李雨雨，主治医师，青岛大学附属医院本部，妇科门诊。-->
+                        <!--</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<em><b class="word-two">地</b>点：</em>-->
+                        <!--<span class="c-66">青岛市中山北路1088号青岛大学附属医院本部妇科门诊。</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<em><b class="word-two">时</b>间：</em>-->
+                        <!--<span class="c-red">2015年12月5日 上午 10点</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<em><b class="word-three">订单</b>号：</em>-->
+                        <!--<span class="c-66">111</span>-->
+                    <!--</li>-->
+                </ul>
+                <a class="db service-tel c-white f30" href="tel:4008-370-095">
+                    <span>4008-370-095</span>
+                </a>
+                <p class="f28 c-99 tc pb30">客服时间：9:30-17:30</p>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/swiper.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/serviceNotice.js"></script>
+</html>

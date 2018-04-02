@@ -1,0 +1,102 @@
+.discount-num { width: 5.70rem; height: 0.74rem; text-indent: 0.28rem; border: none; float: left; background: #eeeeee; border-top-left-radius: 0.05rem; border-bottom-right-radius: 0.05rem; }
+.exchange-btn { display: block; float: left; width: 1.20rem; height: 0.74rem; text-align: center; color: #ffffff; background: #ffae00; border-top-right-radius: 0.05rem; border-bottom-right-radius: 0.05rem; line-height: 0.74rem; font-size: 0.28rem; }
+.discount-ticket { border-radius: 0.1rem; box-shadow: 0 0.02rem 0.04rem 0.04rem #e5e5e5; }
+.discount-logo { width: 1.20rem; height: 1.20rem; }
+.bg-blue { background-color: #4fb9dd; }
+.bg-gray { background-color: #969696; }
+.f80 { font-size: 0.80rem; }
+.f48 { font-size: 0.48rem; }
+.ml16 { margin-left: 0.16rem; }
+.prl40 { padding-right: 0.40rem; padding-left: 0.40rem; }
+.ticket-line { display: block; width: 100%; height: 0.10rem; }
+.discount-price { padding: 0.24rem 0 0.20rem .4rem; background-image: url(http://imgcdn.zhaoduiyisheng.com/img/ticket_.png); background-repeat: no-repeat; background-position: bottom center; background-size: contain; }
+.discount-info { background: #ffffff; padding: 0.30rem 0.40rem 0.20rem 0.40rem; color: #666; }
+.discount-info p { line-height: 2; }
+@font-face { font-family: 'num'; src: url('../font/num.eot'); src: url('../font/num.eot?#iefix') format('embedded-opentype'), url('../font/num.woff2') format('woff2'), url('../font/num.woff') format('woff'), url('../font/num.ttf') format('truetype'), url('../font/num.svg#num') format('svg'); }
+.discount-price>span { font-family: 'num'; font-size: .5rem; color: transparent; position: relative; }
+.discount-price>span:before { content: ""; position: absolute; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/yuan.png) no-repeat center;background-size: cover; width: .5rem; height: .5rem; bottom: .15rem; left: -.1rem; }
+.discount-price>span>b { font-size: 1rem; line-height: 1; color: #eee; }
+.discount-price>p { color: #eee; }
+
+/*顶部切换菜单*/
+.ticket-record-tab { height: 0.56rem; line-height: 0.56rem; border: solid 1px #42babb; border-radius: 0.05rem; color: #42babb; }
+.ticket-record-tab li.active { color: #fff; background: #42babb; }
+.icon-gift { width: 1.1rem; vertical-align: bottom; }
+.icon-ticket { width: 1.26rem; vertical-align: bottom; }
+.no-gift { margin-top: 3rem; }
+.no-ticket { margin-top: 1.7rem; }
+.look-history-ticket { bottom: 0; width: 100%; background: rgba(255, 255, 255, .76); line-height: .98rem; }
+@media screen and (width:320px) {
+    html { font-size: 42.667px !important; }
+    header h1 { height: 44px; line-height: 44px; }
+    .f34 { font-size: 17px!important; }
+    .f30 { font-size: 15px!important; }
+    .f28 { font-size: 14px!important; }
+    .f20 { font-size: 10px!important; }
+    .f24 { font-size: 12px!important; }
+    .ticket-record-tab { height: 28px; line-height: 28px; }
+}
+.bg-yellow { background: #ffae00; }
+.pay-top_img { display: block; width: 100%; height: 0.10rem; }
+.list-arrow { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/list_arrow.png) no-repeat right center #ffffff; background-size: 0.44rem; }
+.pr40 { padding-right: 0.40rem; }
+.pay_icon { display: block; width: 0.50rem; height: 0.50rem; margin-right: 0.16rem; margin-top: 0.10rem; }
+.icon_gou { width: 0.40rem; height: 0.40rem; border: 1px solid #e5e5e5; border-radius: 50%; margin-top: 0.15rem; }
+.active { background: url("http://imgcdn.zhaoduiyisheng.com/img/icon/icon_gou.png") no-repeat center #42babb; background-size: 0.22rem; }
+.pay { padding: 0.30rem 0; background: #42babb; border-radius: 0.05rem; margin-top: .74rem; }
+.pb60 { padding-bottom: .6rem; }
+.footer-order { padding-left: .3rem; padding-right: .3rem; }
+@media screen and (width:320px) {
+    .footer-order { padding-left: .1rem; padding-right: .1rem; }
+}
+
+/*解锁动画*/
+.lock-wrap { position: absolute; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; background: rgba(0, 0, 0, .4); }
+.lock-box { margin: 1rem auto; width: 77.1%; height: 1.1rem; position: relative; }
+.lock { width: 1.1rem; height: 1.1rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/lock.png) no-repeat center;background-size: 1.1rem; position: absolute; left: 0; top: 0; }
+.unlock { width: 1.1rem; height: 1.1rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/unlock.png) no-repeat center;background-size: 1.1rem; position: absolute; right: 0; top: 0; }
+.slide-text { color: #fff; text-align: center; font-weight: bold; line-height: 1.1rem; }
+.cover { animation: slidetounlock 5s infinite; -webkit-animation: slidetounlock 5s infinite; background: -webkit-gradient(linear, left top, right top, color-stop(0, #6f6e6e), color-stop(0.1, white), color-stop(0.3, #6f6e6e), color-stop(1, #6f6e6e)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+@-webkit-keyframes slidetounlock {
+    0% { background-position: -370px 0; }
+    100% { background-position: 370px 0; }
+}
+@keyframes slidetounlock {
+    0% { background-position: -370px 0; }
+    100% { background-position: 370px 0; }
+}
+.slideStop { animation-play-state: paused; -webkit-animation-play-state: paused; }
+@-webkit-keyframes bounce {
+    from, 20%, 53%, 80%, to { -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+    10% { -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); -webkit-transform: translate3d(20px, 0, 0); transform: translate3d(20px, 0, 0); }
+    30% { -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); -webkit-transform: translate3d(14px, 0, 0); transform: translate3d(14px, 0, 0); }
+    50% { -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); -webkit-transform: translate3d(7px, 0, 0); transform: translate3d(7px, 0, 0); }
+    70% { -webkit-transform: translate3d(4px, 0, 0); transform: translate3d(4px, 0, 0); }
+    90% { -webkit-transform: translate3d(1px, 0, 0); transform: translate3d(1px, 0, 0); }
+}
+@keyframes bounce {
+    from, 20%, 53%, 80%, to { -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+    10% { -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); -webkit-transform: translate3d(20px, 0, 0); transform: translate3d(20px, 0, 0); }
+    30% { -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); -webkit-transform: translate3d(14px, 0, 0); transform: translate3d(14px, 0, 0); }
+    50% { -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); -webkit-transform: translate3d(7px, 0, 0); transform: translate3d(7px, 0, 0); }
+    70% { -webkit-transform: translate3d(4px, 0, 0); transform: translate3d(4px, 0, 0); }
+    90% { -webkit-transform: translate3d(1px, 0, 0); transform: translate3d(1px, 0, 0); }
+}
+@-webkit-keyframes bounceLeft {
+    from, 20%, 53%, 80%, to { -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+    10% { -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); -webkit-transform: translate3d(-20px, 0, 0); transform: translate3d(-20px, 0, 0); }
+    30% { -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); -webkit-transform: translate3d(-14px, 0, 0); transform: translate3d(-14px, 0, 0); }
+    50% { -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); -webkit-transform: translate3d(-7px, 0, 0); transform: translate3d(-7px, 0, 0); }
+    70% { -webkit-transform: translate3d(4px, 0, 0); transform: translate3d(-4px, 0, 0); }
+    90% { -webkit-transform: translate3d(1px, 0, 0); transform: translate3d(-1px, 0, 0); }
+}
+@keyframes bounceLeft {
+    from, 20%, 53%, 80%, to { -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+    10% { -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); -webkit-transform: translate3d(-20px, 0, 0); transform: translate3d(-20px, 0, 0); }
+    30% { -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); -webkit-transform: translate3d(-14px, 0, 0); transform: translate3d(-14px, 0, 0); }
+    50% { -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); -webkit-transform: translate3d(-7px, 0, 0); transform: translate3d(-7px, 0, 0); }
+    70% { -webkit-transform: translate3d(4px, 0, 0); transform: translate3d(-4px, 0, 0); }
+    90% { -webkit-transform: translate3d(1px, 0, 0); transform: translate3d(-1px, 0, 0); }
+}
+.bounce { -webkit-animation: bounce 1s; animation: bounce 1s; -webkit-transform-origin: right center; transform-origin: right center; }
+.bounceLeft { -webkit-animation: bounceLeft 1s; animation: bounceLeft 1s; -webkit-transform-origin: right center; transform-origin: right center; }

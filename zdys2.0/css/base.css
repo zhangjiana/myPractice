@@ -1,0 +1,403 @@
+/****-globals-功能: 重设浏览器默认样式****/
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+* { -webkit-box-sizing: border-box; box-sizing: border-box; }
+body, html { overflow: hidden; width: 100%; max-width: 768px; height: 100%; margin: 0 auto; color: #333; background-color: #ededed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+ul, li { list-style: none; }
+
+/*中文：微软雅黑，英文：Helevetica*/
+body { font-family: 'Microsoft YaHei', '微软雅黑', HELVETICA; background: #ededed; position: relative; }
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, menu, nav, section { margin: 0; padding: 0; }
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article, aside, details, figcaption, figure, footer, header, menu, nav, section { display: block; }
+a, input { outline: none; }
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+table { border-spacing: 0; border-collapse: collapse; }
+label { display: block; }
+
+/* IE bug fixed: th 不继承 text-align*/
+th { text-align: inherit; }
+
+/* 去除默认边框 */
+fieldset, img { border: 0; }
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe { display: block; }
+
+/* 去掉 firefox 下此元素的边框 */
+abbr, acronym { font-variant: normal; border: 0; }
+address, caption, cite, code, dfn, em, th, var { font-weight: 500; font-style: normal; }
+
+/* 去掉列表前的标识, li 会继承 */
+ol, ul { list-style: none; }
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption, th { text-align: left; }
+
+/* 标题都自定义, 适应多个系统应用 */
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 500; }
+select { vertical-align: middle; }
+input, select, textarea { -webkit-appearance: none; }
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-focus-ring-color: rgba(0, 0, 0, 0); }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #999; font-size: 12px; }
+
+/*颜色*/
+a { text-decoration: none; color: #333; }
+
+/* 清理浮动 */
+.clear { line-height: 0; display: block; clear: both; overflow: hidden; height: 0; }
+.clearfix:after { font-size: 0; line-height: 0; display: block; visibility: hidden; clear: both; height: 0; content: ''; }
+.clearfix { zoom: 1; }
+
+/* 左浮动 */
+.fl { float: left; }
+
+/* 右浮动 */
+.fr { float: right; }
+
+/*清除浮动*/
+.cbo { clear: both; overflow: hidden; }
+.clb { clear: both; }
+
+/*对齐方式*/
+.tl { text-align: left; }
+.tc { text-align: center; }
+.tr { text-align: right; }
+.cp { cursor: pointer; }
+.center { position: absolute; top: 50%; left: 50%; -webkit-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0); }
+.centerX { position: absolute; left: 50%; -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); }
+.centerY { position: absolute; top: 50%; -webkit-transform: translate3d(0, -50%, 0); transform: translate3d(0, -50%, 0); }
+
+/*找对医生 公用样式*/
+.bold { font-weight: bold; }
+
+/*正文*/
+.f18 { font-size: .18rem; }
+.f20 { font-size: .20rem; }
+
+/*说明文*/
+.f22 { font-size: .22rem; }
+.f24 { font-size: .24rem; }
+.f26 { font-size: .26rem; }
+.f28 { font-size: .28rem; }
+
+/*正文*/
+.f30 { font-size: .30rem; }
+
+/*副标题*/
+.f32 { font-size: .32rem; }
+.f34 { font-size: .34rem; }
+.f38 { font-size: .38rem; }
+
+/*标题*/
+.f48 { font-size: .48rem; }
+.c-33 { color: #333; }
+
+/*副标题*/
+.c-66 { color: #666; }
+
+/*正文*/
+.c-99 { color: #999; }
+
+/*说明文*/
+.c-white { color: #fff; }
+.c-cyan { color: #42babb !important; }
+
+/*主色调*/
+.c-yellow { color: #ffb709; }
+
+/*辅助色*/
+.c-red { color: #F87060; }
+
+/*常用背景色*/
+.c-cc { color: #ccc; }
+.c-ed { color: #ededed; }
+.bg-white { background: #fff; }
+
+/*头尾背景色*/
+.c-e6e5 { color: #e6e5e5; }
+
+/*body背景色*/
+.c-e5 { color: #e5e5e5; }
+
+/*margin*/
+.mt20 { margin-top: .2rem; }
+.mt22 { margin-top: .22rem; }
+.ml20 { margin-left: 0.20rem; }
+.ml30 { margin-left: .3rem; }
+.ml40 { margin-left: .4rem; }
+.mb20 { margin-bottom: .2rem; }
+.mb40 { margin-bottom: .4rem; }
+.mrl30 { margin-right: .3rem; margin-left: .3rem; }
+.mb10 { margin-bottom: 0.10rem; }
+.mr12 { margin-right: 0.12rem; }
+.mr30 { margin-right: 0.30rem; }
+.mt30 { margin-top: 0.3rem; }
+.mb16 { margin-bottom: 0.16rem; }
+.mt10 { margin-top: 0.1rem; }
+.mr14 { margin-right: 0.14rem; }
+.ml24 { margin-left: 0.24rem; }
+.mt06 { margin-top: 0.06rem; }
+
+/*padding*/
+.pt20 { padding-top: .2rem; }
+.pt30 { padding-top: .3rem; }
+.pl20 { padding-left: .2rem; }
+.pl30 { padding-left: .3rem; }
+.pr20 { padding-right: .2rem; }
+.pr30 { padding-right: .3rem; }
+.pb10 { padding-bottom: .1rem; }
+.pb20 { padding-bottom: .2rem; }
+.pb30 { padding-bottom: .3rem; }
+.prl30 { padding-right: .3rem; padding-left: .3rem; }
+.p30 { padding: 0.3rem; }
+
+/*border*/
+.be5 { border: 1px solid #e5e5e5; }
+.be5-b { border-bottom: 1px solid #e5e5e5; }
+.be5-t { border-top: 1px solid #e5e5e5; }
+.bcc { border: 1px solid #ccc; }
+.bcc-b { border-bottom: 1px solid #e5e5e5; }
+.bcc-t { border-top: 1px solid #e5e5e5; }
+.no-margin { margin: 0 !important; }
+.no-padding { padding: 0 !important; }
+
+/*首页头部*/
+.index-head { line-height: .88rem; position: relative; background: #e6e5e5; }
+.index-head .back { position: absolute; top: .14rem; left: .2rem; width: .60rem; height: .60rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon_mainback.png) no-repeat center; background-size: contain; }
+.index-page { position: absolute; top: 0; display: -webkit-box; display: flex; overflow: hidden; flex-direction: column; width: 100%; max-width: 768px; height: 100%; -webkit-box-orient: vertical; }
+.section-main { overflow: hidden; -webkit-box-flex: 1; flex: 1; }
+
+/*首页分享后弹窗*/
+.share-win-wrap { position: relative; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .5); }
+.share-win { width: 3.7rem; height: 4.8rem; -webkit-border-radius: .1rem; border-radius: .1rem; background: #dbedfd; }
+.share-win h2 { font-size: .38rem; line-height: 1.5em; margin: .2rem .48rem; color: #42babb; }
+.share-rocket img { width: 2.46rem; height: 2.22rem; margin-top: .8rem; }
+.btn-close-share { position: absolute; top: .1rem; right: .1rem; width: .26rem; height: .26rem; }
+
+/*1.0微信分享*/
+.weixin-share { text-align: center; }
+.weixin-share img { width: 90%; }
+.per-info-bot-wrap { position: fixed; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .5); }
+.per-info-bot { position: absolute; bottom: 0; width: 100%; }
+
+/*2.0微信分享*/
+.weixin-share-arrow { width: 80%; margin-left: 0.5rem; }
+.love-num { width: 1.96rem; margin-top: 1.3rem; }
+.btn-share-msg { width: 2.91rem; margin-top: 1.2rem; }
+@media screen and (width:320px) {
+    .btn-share-msg { margin-top: 0.6rem; }
+}
+
+/*qq uc 分享*/
+.my-info-bot { display: -webkit-box; display: flex; }
+.my-info-bot li { padding: .4rem 0; -webkit-box-flex: 1; flex: 1; }
+.my-info-bot li img { width: 70%; }
+.my-info-bot-wrap { position: absolute; bottom: 0; width: 100%; }
+.btn-cancel-share { line-height: .92rem; height: .92rem; margin-top: .1rem; }
+.btn-share { width: 1rem; height: .33rem; margin-left: .8rem; text-indent: -.5rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon_share.png) no-repeat right; background-size: 30%; }
+
+/*icon*/
+.icon { display: block; width: .44rem; height: .44rem; background-size: .44rem; background-repeat: no-repeat; background-position: center; }
+
+/*btn*/
+.btn { display: block; text-align: center; -webkit-border-radius: .05rem; border-radius: .05rem; }
+
+/*tag*/
+.tag-gray { display: block; margin-bottom: .1rem; padding: .06rem .2rem; text-align: center; color: #999; font-size: 0.20rem; }
+.line-short { display: block; width: .06rem; height: .28rem; background: #42babb; }
+
+/*title*/
+.h34 { font-size: .34rem; height: .7rem; color: #333; }
+.h1 { font-size: .34rem; color: #333; }
+
+/*返回图标*/
+.icon-arrowr { position: absolute; top: 50%; left: .2rem; width: .6rem; height: .6rem; margin-top: -.3rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/arrow_r.png) no-repeat center;background-size:contain; }
+
+/*列表右边箭头*/
+.icon-list { background: #fff url(http://imgcdn.zhaoduiyisheng.com/img/icon/list_arrow.png) no-repeat right center;background-size: .44rem; }
+
+/*标题和左边小蓝条*/
+.items-title { font-size: .34rem; padding: 0.30rem 0; position: relative; text-indent: .16rem; color: #333; }
+.items-title:before { position: absolute; top: 52%; left: 0; width: .06rem; height: .3rem; margin-top: -.15rem; content: ''; -webkit-border-radius: 2px; border-radius: 2px; background: #42babb; }
+.common-foot { font-size: .34rem; line-height: .98rem; width: 100%; height: .98rem; text-align: center; color: #fff; background: #42babb; }
+
+/*找对医生、2.0*/
+.footer { font-size: .22rem; display: -webkit-box; display: flex; width: 100%; text-align: center; color: #fff; background: #e6e5e5; }
+
+/*底部三选项*/
+.footer div { padding: .12rem 0 0.12rem 0; text-align: center; -webkit-box-flex: 1; flex: 1; }
+.footer div > em { display: block; width: .50rem; height: .50rem; margin: 0 auto; }
+.footer div > span { display: block; margin: 0.08rem auto 0 auto; text-align: center; }
+.index_img { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_index_off.png) no-repeat center; background-size: .50rem; }
+.family_img { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_family_off.png) no-repeat center; background-size: .50rem; }
+.find_img { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/find_off.png) no-repeat center; background-size: .50rem; }
+.me_img { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_me_off_17.png) no-repeat center; background-size: .50rem; }
+.doctor_img { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/doctor_off.png) no-repeat center; background-size: .50rem; }
+
+/*改版样式start*/
+.footer .c-66 { color: #433a35; }
+.footer { border-top: solid 1px #cacaca; }
+.footer .doctor { position: relative; }
+.footer .doctor span { position: absolute; z-index: 2; top: .62rem; white-space: nowrap; left: 50%; -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); }
+.footer .doctor_img { display: block; width: 1.36rem; height: 1.28rem; position: absolute; z-index: 2; top: 0; left: 50%; -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); background: #e6e5e5; }
+.footer .doctor:before { position: absolute; content: ""; display: block; width: 1.28rem; height: 1.28rem; background: #e6e5e5; z-index: 1; top: -.4rem; -webkit-border-radius: 9999px; border-radius: 9999px; left: 50%; -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); border: solid 1px #cacaca; }
+.footer .doctor:after { position: absolute; content: ""; display: block; width: 1.28rem; height: 1.2rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/doctor_on.png) no-repeat center;background-size: .84rem; z-index: 2; top: -.4rem; border-radius: 50%; left: 50%; -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); }
+
+/*改版样式end*/
+.footer .index em.active { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_index_on.png) no-repeat center; background-size: .50rem; }
+.footer .family em.active { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_family_on.png) no-repeat center; background-size: .50rem; }
+.footer .find em.active { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/find_on.png) no-repeat center; background-size: .50rem; }
+.footer .me em.active { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_me_on.png) no-repeat center; background-size: .50rem; }
+
+/*.footer .doctor em.active {background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/doctor_on.png) no-repeat center; background-size: .50rem;}*/
+
+/*分享*/
+.index-share { width: 2.37rem; height: .36rem; margin-left: .15rem; }
+.share-to { width: 100%; padding: .24rem 0; }
+.col-line { display: block; width: 1px; height: .36rem; margin: 0 .20rem; background: #e5e5e5; }
+.index-msg { width: .44rem; height: .44rem; margin-top: -.04rem; }
+.suit-member li { display: inline-block; width: .50rem; height: .50rem; margin-right: .16rem; }
+.suit-member li img { width: 100%; }
+.clear-input { width: .44rem; height: .44rem; margin-top: .18rem; margin-right: .16rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/del.png) no-repeat center; background-size: .44rem; }
+
+/**************所有alert start*************/
+.alert-wrap { position: absolute; z-index: 999; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .5); }
+.alert { width: 5rem; -webkit-border-radius: .1rem; border-radius: .1rem; background: #fff; }
+.alert-question { width: 5rem; min-height: 2.2rem; padding: 0 .3rem; vertical-align: middle; border-bottom: 1px solid #e5e5e5; }
+.alert-btn-list { display: -webkit-box; display: flex; }
+.alert-btn-list li { font-size: .32rem; line-height: 1rem; height: 1rem; text-align: center; color: #42babb; -webkit-box-flex: 1; flex: 1; }
+.alert-btn-list li:first-child { border-right: solid 1px #e5e5e5; }
+.alert-input { width: 2.14rem; height: .7rem; border: 1px solid #ccc; border-radius: .05rem; }
+.mt48 { margin-top: .48rem; }
+.mtb40 { margin: .4rem 0; }
+.alert-question h3 { padding-top: .28rem; }
+.pt60 { padding-top: .6rem; }
+.icon-sex { display: inline-block; height: .6rem; width: 2rem; }
+.icon-man01 { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon_man01.png) no-repeat center;background-size: contain; }
+.icon-woman01 { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon_woman01.png) no-repeat center;background-size: contain; }
+.icon-woman02 { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon_woman02.png) no-repeat center;background-size: contain; }
+.icon-man02 { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon_man02.png) no-repeat center;background-size: contain; }
+.pt88 { padding-top: .88rem; }
+.year-list, .city-wrap { width: 100%; height: 2.2rem; padding-top: .8rem; border-bottom: 1px solid #e5e5e5; }
+.city-wrap { font-size: .28rem; padding-top: .8rem; text-align: center; }
+.year-list span { font-size: .28rem; line-height: .9rem; width: 100%; height: .9rem; }
+.select-click { position: absolute; top: 0; left: 0; width: 100%; height: 0.44rem; opacity: 0; }
+.select-click-pro { position: absolute; top: 0; left: 0; width: 50%; height: 0.44rem; opacity: 0; }
+.select-click-city { position: absolute; top: 0; left: 50%; width: 50%; height: 0.44rem; opacity: 0; }
+.city-tab span { line-height: .44rem; display: inline-block; height: .44rem; }
+
+/*头像弹窗*/
+.prl25 { padding-right: 0.25rem; padding-left: 0.25rem; }
+.person-type { padding: 0.3rem 0; }
+.person-type li { width: 1rem; float: left; margin-right: 0.2rem; }
+.person-type li:last-child { margin: 0; }
+.head-list li { float: left; width: 1rem; height: 1rem; border-radius: 1rem; margin-right: 0.2rem; margin-bottom: 0.2rem; overflow: hidden; }
+.head-list li:nth-child(4n) { margin-right: 0; }
+.head-list li img { display: block; width: 100%; }
+
+/*选择家人*/
+#alertScroll { height: 4.91rem; overflow: hidden; border-radius: 0.1rem; }
+#chartScroll { height: 3.60rem; overflow: hidden; border-radius: 0.1rem; }
+.sel-peo img { width: 1rem; margin-left: .6rem; margin-right: .3rem; border-radius: 50%; }
+.sel-peo p { line-height: 1rem; width: 3rem; white-space: nowrap; overflow: hidden; }
+.sel-peo li:not(:last-child) { border-bottom: 1px solid #e5e5e5; }
+.alert-change-phone>div { width: 3.59rem; margin: .2rem auto; }
+.alert-change-phone input { height: .66rem; color: #888; padding-left: .2rem; }
+.alert-wrap .inp-tel { width: 3.59rem; border-radius: 5px; border: 1px solid #333; }
+.alert-wrap .inp-code { width: 1.79rem; border: 1px solid #333; border-right: 0; border-radius: 5px 0 0 5px; }
+.alert-wrap .code-btn { line-height: .66rem; width: 1.8rem; border: 0; border-radius: 0 5px 5px 0; background-color: #f87060; }
+
+/**************所有alert end***************/
+.db { display: block; }
+.dn { display: none !important; }
+.vv { visibility: visible; }
+.vh { visibility: hidden; }
+
+/*定位*/
+.pr { position: relative; }
+.pa { position: absolute; }
+.pf { position: fixed; }
+.ps { position: static; }
+.back_img { background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/index_back.png) no-repeat center; background-size: .44rem; }
+
+/*弹性盒*/
+.container { display: -webkit-box; display: flex; }
+.sub { -webkit-box-flex: 1; flex: 1; }
+.tj { text-align: justify; }
+@media screen and (width:320px) {
+    html { font-size: 50px !important; }
+}
+.swiper-pagination { font-size: 0 !important; }
+
+/*面包线进程*/
+.process { display: -webkit-box; display: flex; padding-top: 0.32rem; padding-bottom: 0.20rem; }
+.process div { -webkit-box-flex: 1; flex: 1; }
+.process-item em { display: block; width: 0.50rem; height: 0.50rem; margin: 0 auto; background-size: cover;background-repeat: no-repeat;background-position: center center;}
+.process-item span { display: block; color: #999999; text-align: center; margin-top: 0.24rem; font-size: 0.20rem; }
+.process-item em.choose { background-image: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_xzfw_off.png); }
+.process-item em.upload { background-image: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_sczl_off.png); }
+.process-item em.match { background-image: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_jzpp_off.png); }
+.process-item em.pay { background-image: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_pay_off.png); }
+.process-item em.consult { background-image: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_zxdzj_off.png); }
+.process-arrow { display: block; width: 0.18rem; height: 0.18rem; background-image: url(http://imgcdn.zhaoduiyisheng.com/img/icon/icon_jt_off.png);margin-top: 0.25rem;background-size: cover;background-repeat: no-repeat;background-position: center center;}
+
+/*弹窗新增样式*/
+.close_window { position: absolute; top: 0.1rem; right: 0.1rem; width: 0.44rem; height: 0.44rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/delete.png) no-repeat center;background-size: cover; z-index: 666; }
+.swiper-container { border-bottom: 1px solid #e5e5e5; }
+.swiper-slide-active { color: #42babb; font-weight: bold; font-size: .34rem; }
+.swiper-slide-active>p { font-size: .34rem; }
+
+/*加载动画*/
+@-webkit-keyframes rotate_pacman_half_up {
+    0% { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
+    50% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+    100% { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
+}
+@keyframes rotate_pacman_half_up {
+    0% { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
+    50% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+    100% { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
+}
+@-webkit-keyframes rotate_pacman_half_down {
+    0% { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+    50% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+}
+@keyframes rotate_pacman_half_down {
+    0% { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+    50% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+}
+@-webkit-keyframes pacman-balls {
+    75% { opacity: 0.7; }
+    100% { -webkit-transform: translate(-100px, -6.25px); transform: translate(-100px, -6.25px); }
+}
+@keyframes pacman-balls {
+    75% { opacity: 0.7; }
+    100% { -webkit-transform: translate(-100px, -6.25px); transform: translate(-100px, -6.25px); }
+}
+.pacman { width: 2rem; height: 2rem; overflow: hidden; }
+.pacman > div:nth-child(2) { -webkit-animation: pacman-balls 1s 0s infinite linear; animation: pacman-balls 1s 0s infinite linear; }
+.pacman > div:nth-child(3) { -webkit-animation: pacman-balls 1s 0.33s infinite linear; animation: pacman-balls 1s 0.33s infinite linear; }
+.pacman > div:nth-child(4) { -webkit-animation: pacman-balls 1s 0.66s infinite linear; animation: pacman-balls 1s 0.66s infinite linear; }
+.pacman > div:nth-child(5) { -webkit-animation: pacman-balls 1s 0.99s infinite linear; animation: pacman-balls 1s 0.99s infinite linear; }
+.pacman > div:first-of-type { width: 0; height: 0; border-right: 25px solid transparent; border-top: 25px solid #42babb; border-left: 25px solid #42babb; border-bottom: 25px solid #42babb; border-radius: 25px; -webkit-animation: rotate_pacman_half_up 0.5s 0s infinite; animation: rotate_pacman_half_up 0.5s 0s infinite; }
+.pacman > div:nth-child(2) { width: 0; height: 0; border-right: 25px solid transparent; border-top: 25px solid #42babb; border-left: 25px solid #42babb; border-bottom: 25px solid #42babb; border-radius: 25px; -webkit-animation: rotate_pacman_half_down 0.5s 0s infinite; animation: rotate_pacman_half_down 0.5s 0s infinite; margin-top: -50px; }
+.pacman > div:nth-child(3), .pacman > div:nth-child(4), .pacman > div:nth-child(5), .pacman > div:nth-child(6) { background-color: #42babb; width: 15px; height: 15px; border-radius: 100%; margin: 2px; width: 10px; height: 10px; position: absolute; -webkit-transform: translate(0, -6.25px); -ms-transform: translate(0, -6.25px); transform: translate(0, -6.25px); top: 25px; left: 100px; }
+.prl40 { padding-left: .4rem; padding-right: .4rem; }
+.alert-free-check { top: 35%; background: rgba(0, 0, 0, .76); border-radius: 5px; padding: .2rem; white-space: nowrap; }
+.footer-order { padding-bottom: 6%; }
+.pt46 { padding-top: .46rem; }
+.br5{-webkit-border-radius:5px;border-radius:5px}
+.br999{-webkit-border-radius:999px;border-radius:999px}
+.br0{-webkit-border-radius:0;border-radius:0}
+.brl{-webkit-border-radius:5px 0 0 5px;border-radius:5px 0 0 5px}
+.brr{-webkit-border-radius:0 5px 5px 0;border-radius:0 5px 5px 0}
+.m0a{margin: 0 auto}
+.back-act{position: absolute; top: 0.3rem; left: 0.3rem;display: block; width: .6rem; height: .6rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/back_white_03.png) rgba(0, 0, 0, .48) no-repeat center;background-size: .48rem;}
+.share:before { content: ""; width: 100%; position: absolute; top: 0; height: 1.8rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/weixin_share.png) no-repeat right center;background-size:contain; z-index: 10; }

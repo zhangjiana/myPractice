@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="content-type" content="no-cache, must-revalidate" />
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com" />
+    <link rel="shortcut icon" href=" /favicon.ico" />
+    <title>找对医生</title>
+    <link href="../css/base.css?v=1" rel="stylesheet" />
+    <link href="../css/swiper.min.css" rel="stylesheet" />
+    <link href="../css/add-member.css?t=1" rel="stylesheet">
+</head>
+<style>
+    .data-info li>div{ padding-right: 0.40rem;}
+    .list-arrow{
+        background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/list_arrow.png) no-repeat right center #ffffff;
+        background-size: 0.44rem;
+    }
+    .name{ width: 2.1rem; height:0.66rem; border: 1px solid #e5e5e5; border-radius: 0.05rem; }
+
+    .word{
+        width: 100%;
+        height: 2.76rem;
+        padding: .13rem .1rem;
+        background-color: #fff;
+        color: #999;
+        resize: vertical;
+    }
+</style>
+<body>
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+</script>
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="db fl icon-arrowr" id="finDoc-back"></span>
+        <h1 class="f34 c-f2">找对医生</h1>
+    </header>
+    <section class="section-main" id="scroll-find-doctor">
+        <div>
+        <div class="pt30 pb30 f28 mt20 mb20 pl30 list-arrow" id="choose-member">
+            选择一位家庭成员，快速录入信息
+        </div>
+
+        <p class="f20 pl30 mt20 mb20">以上信息将用于创建病历，将确保输入准确</p>
+        <ul class="bg-white pl30 data-info">
+            <li>
+                <div>
+                    <span><em class="spacing-two">姓</em>名:</span>
+                    <span class="f28 c-66 fr" id="name" data-flag="false"></span>
+                   <!-- <input type="text" class="no-border f28 fr" id="name"
+                           placeholder="填写姓名">
+                    <i class="clear-input fr dn"></i>-->
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span><em class="spacing-two">性</em>别:</span>
+                    <span class="f28 c-66 fr" id="sex-text" data-flag="false"></span>
+                    <!--<input type="text" class="no-border f28" id="tel"
+                           placeholder="填写手机号"/>
+                    <i class="clear-input fr dn"></i>-->
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span><em>出生年份:</em></span>
+                    <span class="f28 c-66 fr" id="birth-text" data-flag="false"></span>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span><em>所在城市:</em></span>
+                    <span class="f28 c-66 fr" id="province-val" data-flag="false"></span>
+                    <!--<span class="f28 c-66 fr">合肥</span>
+                    <span class="f28 c-66 fr">-</span>
+                    <span class="f28 c-66 fr">北京</span>-->
+                </div>
+            </li>
+        </ul>
+
+        <p class="f20 pl30 mt20 mb20 pr30 tj">请填写基本状况(如吸烟使、当前症状、家族史您希望解决的问题）</p>
+        <div class="f28 prl30 bg-white pt20 pb20">
+            <textarea id="description" class="word f28 bcc" data-flag="false"></textarea>
+        </div>
+        <p class="c-red tc f28 mt20" id="findDoc-notice"></p>
+        </div>
+    </section>
+    <footer class="common-foot">下一步</footer>
+    <script src="../lib/jquery-2.1.4.min.js"></script>
+    <script src="../lib/swiper.min.js"></script>
+    <script src="../lib/jquery.touchSwipe.min.js"></script>
+    <script src="../lib/iscroll.min.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/findDoc.js"></script>
+    <script>
+        var scroll = new IScroll('#scroll-find-doctor', { probeType: 3, mouseWheel: true });
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>找对医生</title>
+    <link href="../../css/base.css?v=12" rel="stylesheet"/>
+    <style>
+        body{background-color:#6a2697;}
+        .main-wrap{height: 100%;overflow: hidden;}
+        .bg-wrap{padding-bottom: .9rem;}
+        img{width: 100%;display: block;}
+        .bg-wrap>li{position: relative;}
+        .hand{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/limit/hand.png) no-repeat center;background-size: cover;width: .66rem;height: .37rem;left: 2.3rem;top: .22rem;-webkit-animation: hand .5s infinite;animation: hand .5s infinite;}
+        .btn-get{top: 0;width: 4.6rem;height: .88rem;z-index: 3;}
+        .btn-rule{line-height: .78rem;background-color: #5d198a;}
+        .btn-rule>div{width: 2.8rem;line-height: .78rem;color: #fff;}
+        .item{padding: .9rem .4rem .1rem;}
+        .item *{color:#e1d4ea;}
+        .item>p{position: relative;padding-left: .3rem;margin-bottom: .1rem;}
+        .item>p::before { display: inline-block; position: absolute; top: 0; left: 0; color: #e1d4ea; }
+        .item>p:nth-child(1)::before { content: "1."; }
+        .item>p:nth-child(2)::before { content: "2."; }
+        .item>p:nth-child(3)::before { content: "3."; }
+        .item>p:nth-child(4)::before { content: "4."; }
+        .item>p:nth-child(5)::before { content: "5."; }
+        .item>p:nth-child(6)::before { content: "6."; }
+        .item>p:nth-child(7)::before { content: "7."; }
+        .arr{display: inline-block;width: .4rem;height: .4rem;margin-left: .2rem;background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/back_white_03.png) no-repeat center;background-size: cover;-webkit-transition: .2s;transition: .2s;-webkit-transform: rotate(270deg);transform: rotate(270deg);top: 50%;margin-top: -.2rem;}
+        .active {-webkit-transform: rotate(90deg);transform: rotate(90deg);}
+        .enter{background-color: #e63842; padding: .3rem 0;}
+        .enter>div{width: 5.1rem;}
+        .enter input{ border: none; height: 36px;line-height: 36px;width: 100%;padding-left: 27px;margin-bottom: .3rem;}
+        #mobile{background:#f5eeff url(http://imgcdn.zhaoduiyisheng.com/img/icon/phone.png) no-repeat 5px center;;background-size: 22px;}
+        #regCode{width: 60%;background:#f5eeff url(http://imgcdn.zhaoduiyisheng.com/img/icon/code.png) no-repeat 5px center;;background-size: 22px;}
+        .get-code{height: 36px;line-height: 36px;background-color: #f0c224; width: 40%;}
+        #notice{ height: .3rem;line-height: .3rem;}
+        @-webkit-keyframes hand{
+            100%{background: none;}
+        }
+        @keyframes hand{
+            100%{background: none;}
+        }
+        .f28 { font-size: 14px }
+        .f30 { font-size: 15px }
+        .f32 { font-size: 16px }
+        .f34 { font-size: 17px }
+        .f36 { font-size: 18px }
+        .f48{font-size: 24px;}
+        @media screen and (width:320px) {
+            html { font-size: 42.666px !important; }
+        }
+    </style>
+</head>
+<body>
+<script>
+    function GetQueryString(name) {
+        /*定义正则，用于获取相应参数*/
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        /*字符串截取，获取匹配参数值*/
+        var r = window.location.search.substr(1).match(reg);
+        /*返回参数值*/
+        if (r != null) {
+            return decodeURI(r[2]);
+        } else {
+            return null;
+        }
+    }
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+    var u = window.navigator.userAgent.toLocaleLowerCase();
+    if (u.indexOf("micromessenger") > -1) {
+      if (!window.localStorage.openid&&!window.sessionStorage.n){
+           window.sessionStorage.n = ' ';
+           var appId="wx14da7f3cb2e1b8ff";
+           var redirect_uri=window.location.origin+window.location.pathname;
+           if (GetQueryString('channel')) {
+                redirect_uri = redirect_uri + '?channel=' + GetQueryString('channel');
+           }
+           window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appId+"&redirect_uri="+encodeURI(redirect_uri)+"&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+       }
+    }
+</script>
+<div class="main-wrap" id="main">
+    <ul class="bg-wrap">
+        <li><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/limit/01.jpg"/></li>
+        <li class="enter">
+            <div class="m0a f28">
+                <label><input class="br5 f30" type="tel" placeholder="请输入手机号" id="mobile"></label>
+                <div class="mt30 cbo clearfix dn" id="code">
+                    <input class="fl brl f30" type="tel" id="regCode" placeholder="请输入验证码">
+                    <em class="get-code brr tc fl c-white" id="getRegNum">获取验证码</em>
+                </div>
+                <p class="c-white tc" id="notice"></p>
+            </div>
+        </li>
+        <li>
+            <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/limit/021.jpg"/>
+            <div class="hand pa"></div>
+            <div class="btn-get pa centerX" id="submit"></div>
+        </li>
+        <li class="btn-rule"><div class="m0a tc br999 f34 pr" id="rule">活动规则<span class="arr pa" id="arr"></span></div></li>
+        <li class="item f28 tj" id="item" style="display: none;">
+            <p>领取本券用户可独享“先看病后付费，不满意不付费”的优惠</p>
+            <p>200元优惠券可直接用于抵扣找对医生VIP服务费用</p>
+            <p>本券适用于用户为本人或直系亲属预约找对医生</p>
+            <p>限量一万份，先到先得</p>
+            <p>领取日内3个月有效，失效不补</p>
+            <p>本次活动最终解释权归找对医生所有</p>
+            <p>更多使用细则可微信搜索关注“找对e生”联系客服详询</p>
+        </li>
+    </ul>
+</div>
+<a class="back-act" href="/index.html"></a>
+
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/swiper.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../../js/base.js"></script>
+<script>
+    weixinLogin();
+    var scroll = new IScroll('#main', {probeType: 3, mouseWheel: true});
+    $(document).one('touchstart',function(){
+        scroll.refresh();
+    });
+    $('#rule').on('click',function(){
+        $('#item').slideToggle(function(){
+            scroll.refresh();
+            scroll.scrollTo(0,scroll.maxScrollY,200);
+        });
+        $('#arr').toggleClass('active');
+    });
+    $("#mobile").on('input propertychange', function() {
+       if($(this).val().length == 11){
+           exitNum();
+       }
+    });
+    regPhoneNumAnd("#mobile", "#notice");//手机号
+    var $getRegCode = $("#getRegNum"),
+     $regPhone = $("#mobile");
+    /*获取验证码*/
+    $getRegCode.swipe({
+        tap: function() {
+            var type = "";
+            if ($regPhone.triggerHandler('blur')) {
+                if (!$getRegCode.hasClass('disable')) {
+                    /*获取验证码*/
+                    if(localStorage.openid){
+                        type = "bind_mobile";
+                    }else {
+                        type = "register";
+                    }
+                    getRegCodeAjax("#mobile","#getRegNum",type);
+                }
+            } else {
+                $("#notice").text("请先输入手机号");
+            }
+
+        }
+    });
+    /*最后提交*/
+    $("#submit").swipe({
+        tap: function() {
+            var config = {
+                        "mobile": $("#mobile").val(),
+                        "channel": GetQueryString('channel')||''
+                    };
+            if(!$regPhone.triggerHandler('blur')){
+                $("#notice").text("请先输入手机号");
+            }else if(!$('#code').hasClass('dn')&&!$('#regCode').val()){
+                $("#notice").text("请先输入验证码");
+            }else {
+                if(localStorage.openid&&!$('#code').hasClass('dn')){
+                    sendMobile("#mobile","#regCode","FIRST_SERVED_POST_PAID",function(){
+                        subAjax(config);
+                    });
+                }else{
+                    if ($("#regCode").val()) {
+                        config.verifyCode = $("#regCode").val();
+                    }
+                    subAjax(config);
+                }
+            }
+        }
+    });
+    function subAjax(obj){
+        var aurl=ajaxUrl + "Promotion/FirstServedPostPaid";
+        $.ajax({
+            type: "POST",
+            url: aurl,
+            contentType: "text/plain; charset=UTF-8",
+            dataType: 'json',
+            data: JSON.stringify(obj),
+            success: function(data) {
+                if (data.code == 0) {
+                    $('#notice').text('提交成功');
+                    if (data.data&&data.data.sessionId) {
+                        window.localStorage.sessionId=data.data.sessionId;
+                        setCookie('user',$("#mobile").val(),30);
+                    }
+                    window.location = 'limitGet02.html?channel='+GetQueryString('channel');
+                } else if(data.code == 921){
+                    window.location = 'limitGet02.html?channel='+GetQueryString('channel');
+                } else {
+                    myalert.tips({
+                        txt: data.message,
+                        btn: 1
+                    });
+                }
+            },
+            error: function(res) {
+                myalert.tips({
+                    txt: "网络错误，请稍后重试",
+                    btn: 1
+                });
+            }
+        });
+    }
+    //验证手机号格式
+    function regPhoneNumAnd(regPhoneNum, regNotice) {
+        var $regPhoneNum = $(regPhoneNum);
+        var $regNotice = $(regNotice);
+        $regPhoneNum.on("blur", function() {
+            var reg = /^1[3|4|5|7|8][0-9]{9}$/;
+            if (reg.test($regPhoneNum.val())) {
+                $regNotice.text("");
+                return true;
+            } else {
+                $regNotice.text("您输入的手机号无效");
+                $regPhoneNum.val('');
+                return false;
+            }
+        });
+    }
+
+    /*验证手机号是否注册*/
+    function exitNum(){
+        var data = $("#mobile").val();
+        $.ajax({
+            type: "GET",
+            url: ajaxUrl + "User/MobileRegistered?mobile=" + data,
+            contentType: "text/plain; charset=UTF-8",
+            dataType: 'json',
+            data: JSON.stringify(data),
+            success: function(data) {
+                if (data.code == 0) {
+                    /*手机号未注册*/
+                    $("#code").removeClass('dn');
+                } else{
+                    $("#code").addClass('dn');
+                }
+            },
+            error: function(res) {
+                myalert.tips({
+                    txt: "网络错误，请稍后重试",
+                    btn: 1
+                });
+            }
+        });
+    }
+    shareWeixin('一万份“先看病后付钱”特权，居然还有200元补贴','先看病后付钱，不满意不收费','http://www.zhaoduiyisheng.com/activity/html/limit02.html?channel='+GetQueryString('channel'),'http://imgcdn.zhaoduiyisheng.com/img/logo01.png');
+</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>找对医生</title>
+    <link href="../css/base.css" rel="stylesheet"/>
+    <style>
+        .question-list em, .question-list span {
+            display: block;
+            font-size: 0.28rem;
+        }
+
+        .question-list .choose {
+            display: inline-block;
+        }
+
+        .question-list li {
+            margin-top: 0.36rem;
+        }
+
+        .choose {
+            margin-right: 0.44rem;
+            margin-top: 0.30rem;
+        }
+
+        .choose em {
+            display: inline-block;
+            width: 0.3rem;
+            height: 0.3rem;
+            background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/not-choose.png) no-repeat;
+            background-size: 0.3rem;
+            margin-right: 0.2rem;
+        }
+
+        .active em {
+            background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/choosen.png) no-repeat;
+            background-size: 0.3rem;
+        }
+        .ml33{margin-left:0.33rem;}
+        .notice{height:0.5rem;}
+    </style>
+</head>
+<body>
+<script>
+    function setFont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setFont();
+    window.addEventListener('resize', setFont)
+</script>
+<div class="index-page">
+    <header class="index-head tc">
+        <h1 class="f34 c-f2">健康自测</h1>
+    </header>
+    <section id="scroll" class="section-main bg-white prl30">
+        <div>
+            <h2 class="f32 pt30">您想知道TA的健康状况吗？</h2>
+
+            <p class="mt48 f28">对照下面这些症状，测一测TA的健康状况！根据TA最近一周的情况回答下列问题，我们会根据您的测评给出建议：</p>
+            <ul class="question-list pb30">
+                <li>
+                    <em>1.40岁以上男性或绝经后女性？</em>
+                    <em class="ml33">
+                        <span class="choose"><em></em>是</span>
+                        <span class="choose"><em></em>否</span>
+                    </em>
+                </li>
+                <li>
+                    <em>2.大量吸烟、饮酒？</em>
+                    <em class="ml33">
+                        <span class="choose"><em></em>是</span>
+                        <span class="choose"><em></em>否</span>
+                    </em>
+                </li>
+                <li>
+                    <em>3.很少运动？</em>
+                    <em class="ml33">
+                        <span class="choose"><em></em>是</span>
+                        <span class="choose"><em></em>否</span>
+                    </em>
+                </li>
+                <li>
+                    <em>4.昨天想好的某件事，今天怎么也记不起来，而且近些天来，经常出现这种情况！</em>
+                    <em class="ml33">
+                        <span class="choose"><em></em>是</span>
+                        <span class="choose"><em></em>否</span>
+                    </em>
+                </li>
+                <li>
+                    <em>5.连续做家务或劳动一小时后，就感到身体倦怠，胸闷气短！</em>
+                    <em class="ml33">
+                        <span class="choose"><em></em>是</span>
+                        <span class="choose"><em></em>否</span>
+                    </em>
+                </li>
+                <li>
+                    <em>6.有高血压或者糖尿病？</em>
+                    <em class="ml33">
+                        <span class="choose"><em></em>是</span>
+                        <span class="choose"><em></em>否</span>
+                    </em>
+                </li>
+            </ul>
+            <div class="tc c-red f20 notice" id="notice"></div>
+        </div>
+    </section>
+    <footer class="common-foot" id="btn-ok">确定</footer>
+</div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../js/base.js"></script>
+<script>
+    var scroll = new IScroll('#scroll', {probeType: 3, mouseWheel: true});
+    var num;
+    $(".choose").swipe({
+        tap: function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        }
+    });
+    $("#btn-ok").swipe({
+        tap:function(){
+            var arr='0';
+            $(".active").each(function(){
+                if($(this).next().length){
+                    num=$(this).parent().parent().index()+1;
+                    arr+=num;
+                }
+            });
+            if($(".active").length==6){
+                $("#notice").text("");
+                window.location="testResult.html?test=test&arr="+arr;
+            }else{
+                $("#notice").text("您还有问题没有选择答案");
+            }
+        }
+    })
+</script>
+</html>

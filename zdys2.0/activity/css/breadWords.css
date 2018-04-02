@@ -1,0 +1,53 @@
+.main-wrap { height: 100%; width: 100%; overflow: hidden; }
+.top-img img { display: block; width: 100%; }
+.rulesFlag { padding-left: 0.70rem; padding-right: .70rem; height: 0.88rem; background: #f3ac3d; color: #ffffff; font-size: .34rem; line-height: .88rem; }
+.rulesArrow { padding-right: .40rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/icon_down.png) no-repeat center right; background-size: .28rem; }
+.rulesFlag span.active { background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/icon_up.png) no-repeat center right; background-size: .28rem; }
+.rules { padding: 0.52rem 0.70rem; background: #ffb540; font-size: 0.28rem; }
+.rulesText { color: #f7e5ca; margin-bottom: 0.88rem; }
+.rulesText li { position: relative; padding-left: .30rem; margin-bottom: 0.08rem; }
+.rulesText li:before { display: inline-block; position: absolute; top: 0; left: 0; color: #ffffff; }
+.rulesText li:nth-child(1):before { content: "1."; }
+.rulesText li:nth-child(2):before { content: "2."; }
+.rulesText li:nth-child(3):before { content: "3."; }
+.rulesText li:nth-child(4):before { content: "4."; }
+.rulesText li:nth-child(5):before { content: "5."; }
+.rulesText li:nth-child(6):before { content: "6."; }
+.arrowUp { padding-right: .40rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/icon_up.png) no-repeat center right; background-size: .28rem; }
+.topic { background: #0b1041; width: 100%; padding-top: .70rem; padding-bottom: .36rem; }
+.topicBegin { width: 3.27rem; height: .61rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/topic_begin.png) no-repeat center;background-size:cover; margin: 0 auto; }
+.topicSubmit { width: 4.92rem; height: .89rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/icon_submit.png) no-repeat center;background-size:cover; margin: 0 auto; }
+.swive { width: 1.58rem; height: .35rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/swive.png) no-repeat center;background-size:cover; margin: 1.15rem auto; }
+.c-83 { color: #83859e; }
+.mt36 { margin-top: .36rem; }
+.topicBg { width: 100%; height: 7.2rem; margin-top: .45rem; padding-top: 0.80rem; color: #ffffff; }
+.topicContent { width: 6.14rem; margin: 0 auto; font-size: .30rem; }
+.topicContent li { margin-bottom: .50rem; position: relative; padding-left: .30rem; }
+.topicContent li:before { display: inline-block; position: absolute; top: 0; left: 0; color: #ffffff; }
+.topicContent li:nth-child(1):before { content: "1:"; }
+.topicContent li:nth-child(3):before { content: "2:"; }
+.topicContent li:nth-child(5):before { content: "3:"; }
+.topicContent li:nth-child(2), .topicContent li:nth-child(4), .topicContent li:nth-child(6) { text-align: center; }
+.topicContent span { display: inline-block; padding-left: .86rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/icon_wrong.png) no-repeat center left; background-size: .54rem; height: .54rem; line-height: .54rem; margin-right: .80rem; }
+.topicContent span.right { background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/icon_right.png) no-repeat center left; background-size: .54rem; color: #ffb540; }
+.alert-wrap { position: absolute; z-index: 999; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .5); }
+.result { width: 5.86rem; border-radius: 20px; }
+.closeThis { position: absolute; bottom: 11.12%; left: 50%; -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); width: 1.02rem; height: 1.02rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/closeThis.png) no-repeat center;background-size:cover; }
+.bot-arow { position: fixed; z-index: 50; width: 6%; bottom: 10px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); }
+.bot-arow img { width: 100%; animation: upArrow 1.5s ease-in-out infinite; -webkit-animation: upArrow 1.5s ease-in-out infinite; }
+.back { position: absolute; top: 0.3rem; left: 0.3rem; display: block; width: .6rem; height: .6rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/back_white_03.png) rgba(0, 0, 0, .48) no-repeat center;background-size:.48rem; }
+@keyframes upArrow {
+  0% { opacity: 0; transform: translateY(100%) }
+  100% { opacity: 1; transform: translateY(0) }
+}
+@-webkit-keyframes upArrow {
+  0% { opacity: 0; -webkit-transform: translateY(100%) }
+  100% { opacity: 1; -webkit-transform: translateY(0) }
+}
+@media screen and (width:320px) {
+  html { font-size: 42.666px !important; }
+  .closeThis { bottom: 2%; }
+}
+@media screen and (max-width:361px) and (min-width:341px) {
+  .closeThis { bottom: 4%; }
+}

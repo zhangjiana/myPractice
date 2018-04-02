@@ -1,0 +1,69 @@
+/*医生详情*/
+
+body{ overflow-y: auto;}
+.index-page{ overflow-y: auto;}
+/*医生详情   和  面诊服务通知页面 的section 的外包裹*/
+.doctor-details-wrap{ -webkit-box-flex: 1;
+    flex: 1;
+    padding: 0.19rem 0.20rem 0 0.20rem;
+    background: #f2f2f2;
+}
+.doctor-head,.doctor-instro,.doctor-profession,.doctor-socialTitle{ width: 100%;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.05rem;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+/*头像上传*/
+.doctor-head { padding : 0.30rem 0.20rem;}
+
+/*个人简介  和  专业特长*/
+.doctor-instro,.doctor-profession,.doctor-socialTitle{ padding: 0.14rem 0.20rem .1rem;
+    margin-top: 0.10rem;
+}
+
+.doctor-head>em{ width: 1.20rem;
+    height: 1.20rem;
+    background:  #cccccc;
+    position: relative;
+}
+
+.doctor-head>div{ width: 75%;}
+.mb16{ margin-bottom: 0.16rem;}
+.doctor-head .comment{ margin-top: 0.10rem;}
+
+
+.doctor-instro>p,.doctor-profession>p,.doctor-socialTitle>p{ margin-top:0.24rem;
+    line-height: 0.42rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.clamp2{
+    -webkit-line-clamp: 2;
+}
+.doctor-instro h3,.doctor-profession h3,.doctor-socialTitle h3{ width:1.80rem;
+    height: 0.40rem;
+    text-indent: 0.34rem;
+}
+.doctor-instro h3{ background: url(../img/icon_instro.png) no-repeat left center;
+    background-size: 15%;
+}
+.doctor-profession h3{ background: url(../img/icon_pro.png) no-repeat left center;
+    background-size: 15%;
+}
+
+.doctor-socialTitle h3{ background: url(../img/icon-Social.png) no-repeat left center;
+    background-size: 15%;
+}
+/*头像上传的ID*/
+
+.doctor-head>em>img{ width: 1.20rem;
+    height: 1.20rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+

@@ -1,0 +1,36 @@
+
+header button{ position: absolute; right: 1rem; top: 0.6rem; border:none; background: #E4366B; height: 1.79rem; border:#AD2950 1px solid; color: #fff; font-size: 1rem; border-radius: 0.5rem;}
+
+section input{ width: 80%; margin-left: 10%; height: 2.63rem; font-size: 1rem; padding-left: 1%; border-radius: 0.5rem; border: 1px solid #ccc;}
+
+/**改变placeholder的颜色**/
+/*section input::-webkit-input-placeholder { color: #E4366B;}*/
+section input:nth-child(1){ margin-top: 2.11rem;}
+section input:nth-child(2){ margin-top: 1.79rem;}
+section input:nth-child(3){ margin-top: 1.79rem;}
+section p{ width: 80%; margin-left: 10%;}
+section p input{ width: 1rem; margin: 0; padding: 0; height: 1rem; margin-right: 0.5rem;}
+section p a { margin-left: 1.42rem; color: #ccc;}
+section button{ display: block; width: 81%; margin-left: 9.5%; height: 2.63rem; font-size: 1rem; border-radius: 0.5rem; background: #EF4C7B; color: #fff; margin-top: 1.79rem; border: none; border: 1px solid #ccc;}
+
+
+footer span{ position: absolute; bottom: 3.22rem; left: 60%; width: 18%; height: 0.15rem; display: block; background: #E4366B;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

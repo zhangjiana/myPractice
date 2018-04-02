@@ -1,0 +1,25 @@
+
+header button{ position: absolute; right: 1rem; top: 0.6rem; border:none; background: #E4366B; height: 1.79rem; border:#AD2950 1px solid; color: #fff; font-size: 1rem; border-radius: 0.5rem;}
+
+section dl.null{ text-align: center;}
+section dl.null dd:nth-child(1){ font-size: 1.16rem; margin-top: 2.16rem;}
+section dl.null dd:nth-child(2){ height: 8.9rem; margin-top: 0.84rem; margin-bottom: 2.37rem;}
+section dl.null dd:nth-child(2) img{ height: 8.9rem;}
+section dl.null dd:nth-child(3){ height: 3.16rem; line-height: 3.16rem; width: 14.37rem; display: block; margin: 0 auto; background: #E83B70;}
+section dl.null dd:nth-child(3) a { font-size: 1.68rem; color: #fff; font-weight: bold; text-decoration: none;}
+
+section{ -position: relative;}
+section .mylove{ position: relative;}
+section .mylove a{ text-decoration: none; color: #000;}
+section  p{ height: 3rem; line-height: 3rem; background: #333; color: #fff; width: 97%; padding-left: 3%; -position: absolute;}
+section .mylove p i{ padding-right: 5%;}
+section .mylove dl{ margin-top: 1rem; -margin-bottom: 1rem; font-size: 1rem; height: 6.5rem; border-bottom: 2px solid #979797; position: relative; padding-left: 3%; padding-right: 3%; width: 94%;}
+section .mylove dl input{ width: 1.5rem; height: 1rem; vertical-align: middle; font-size: 0.5rem; text-align: center; border-radius: 0.3rem;}
+section .mylove dt{ float: left; margin-right: 0.8rem;}
+section .mylove dt img{ height: 5.89rem;}
+section .mylove dd{ -float: left; line-height: 1rem; line-height: 1.3rem;}
+section .mylove dd span{ font-size: 1rem; color: #F20E61; margin-right: 0.5rem;}
+section .mylove em{ position: absolute; right: 0.5rem; top: 0rem;}
+
+
+footer span{ position: absolute; bottom: 3.22rem; left: 40%; width: 18%; height: 0.15rem; display: block; background: #E4366B;}

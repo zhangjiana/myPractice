@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>找对医生</title>
+    <link href="../../css/base.css?v=1" rel="stylesheet"/>
+    <link href="../css/breadWords.css?v=2" rel="stylesheet"/>
+</head>
+<body>
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+    if (!window.localStorage.openid&&!window.sessionStorage.n){
+        window.sessionStorage.n = ' ';
+        var appId="wx14da7f3cb2e1b8ff";
+        var redirect_uri=encodeURI(window.location.href);
+        window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appId+"&redirect_uri="+redirect_uri+
+                "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+    }
+</script>
+<div class="main-wrap" id="main">
+    <div>
+        <div class="top-img">
+            <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/top.jpg"/>
+        </div>
+        <a class="back" id="index-back" href="../../index.html"></a>
+        <p class="rulesFlag tc cbo"  id="rulesArrow"><em class="fl">活动规则</em><span class="rulesArrow fr">&nbsp;&nbsp;</span></p>
+        <div class="rules" id="rules" style="display: none;" >
+            <ul class="cbo rulesText">
+                <li>关注找对e生服务号后参加本次抢红包活动</li>
+                <li>每个用户仅能领取一次现金红包。</li>
+                <li>现金红包数量有限，先到先得。</li>
+                <li>本次活动解释权归找对医生所有。</li>
+            </ul>
+            <p class="tc"><span class="arrowUp f28 c-white" id="slideUp">收起</span></p>
+        </div>
+        <div class="topic">
+            <p class="swive"> </p>
+            <div class="topicBegin"></div>
+            <p class="tc f24 c-83 mt36">正确分辨下面三条健康常识是真是假，马上开抢红包！</p>
+            <div class="topicBg">
+                <ul class="topicContent cbo">
+                    <li>婴儿喝带籽鲜榨的苹果汁有氰化物中毒风险?</li>
+                    <li id="first">
+                        <span class="choose" data-attr="T">对</span>
+                        <span class="choose" data-attr="F">错</span>
+                    </li>
+                    <li>不锈钢杯子泡茶会释放铬损害健康?</li>
+                    <li id="second">
+                        <span class="choose" data-attr="T">对</span>
+                        <span class="choose" data-attr="F">错</span>
+                    </li>
+                    <li>用茶叶水服药，会解药效?</li>
+                    <li id="third">
+                        <span class="choose" data-attr="T">对</span>
+                        <span class="choose" data-attr="F">错</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="topicSubmit" id="topicSubmit"></div>
+        </div>
+    </div>
+
+</div>
+<div class="alert-wrap dn" id="alert-card">
+    <img class="result center" src="http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/right.jpg">
+    <span class="db closeThis" id="closeThis"></span>
+</div>
+<!-- 箭头 -->
+<div class="bot-arow"><img src="http://imgcdn.zhaoduiyisheng.com/img/icon/arrow-up.png"></div>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/swiper.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../../js/base.js"></script>
+<script src="../js/breadWords.js"></script>
+</body>
+</html>

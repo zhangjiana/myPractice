@@ -1,0 +1,37 @@
+body,section,header,footer,figure,figcaption,h1,h2,h3,h4,h5,h6,ul,li,ol,li,dl,dt,dd,div,p,nav{ display: block; margin: 0; padding: 0;}
+html{ font-size: 19px;}
+body{  display: box; display: -webkit-box; height: 100%; width: 100%; position: absolute;-webkit-box-orient: vertical;}
+input,button,a{ outline: none;}
+/**头部**/
+header{ width: 100%; background: #E4366B; position: relative; height: 3rem;}
+header h1{ text-align: center; font-size: 1.42rem; color: #fff; line-height: 2.90rem; font-weight: bold; border-top: 1px solid #C24C70; border-bottom: 1px solid #C24C70;}
+header h1 img{ height: 1.2rem;}
+header input{ position: absolute; left: 1rem; top: 0.9rem; height: 1.42rem; }
+header a { color: #fff; text-decoration: none;}
+/*中间内容*/
+section{ width: 100%; box-flex:1; -webkit-box-flex: 1; overflow: auto;}
+/*尾部*/
+footer { height: 3.37rem;  background: #484850; width: 100%; font-size: 1rem; }
+footer figure{ float: left; width: 20%; color: #fff; height: 100%; text-align: center; position: relative;}
+footer figure img{ height: 1.74rem; margin-top: 0.1rem; margin-bottom: 0.05rem;}
+footer span{ background: #E4366B;}
+footer em{ font-weight: bold; font-style: normal;position: absolute;right: 0; top: 0; background: #F20E61; color: #fff; width: 1.5rem; height: 1.5rem; border-radius: 50%; line-height: 1.5rem;}
+/*媒体查询*/
+@media only screen and (min-width: 0px) and (max-width: 320px) {
+	html{ font-size: 14px;}
+}
+@media only screen and (min-width: 321px) and (max-width: 360px) {
+	html{ font-size: 16px;}
+}
+@media only screen and (min-width: 361px) and (max-width: 400px) {
+	html{ font-size: 18px;}
+}
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+	html{ font-size: 22px;}
+}
+@media only screen and (min-width: 451px) and (max-width: 800px) {
+	html{ font-size: 26px;}
+}
+@media only screen and (min-width: 801px) {
+	html{ font-size: 28px;}
+}

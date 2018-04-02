@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>找对医生</title>
+    <link href="../../css/base.css?v=1" rel="stylesheet"/>
+    <link href="../css/May.css?v=1" rel="stylesheet"/>
+</head>
+<body>
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+    if (!window.localStorage.openid&&!window.sessionStorage.n){
+     window.sessionStorage.n = ' ';
+     var appId="wx14da7f3cb2e1b8ff";
+     var redirect_uri=encodeURI(window.location.origin+window.location.pathname);
+     window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appId+"&redirect_uri="+redirect_uri+
+     "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+     }
+</script>
+<div class="main-wrap" id="main">
+    <ul class="bg-wrap">
+        <li class="pr">
+            <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/may_01.jpg"/>
+            <a class="back"  href="/index.html"></a>
+        </li>
+        <li><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/may_02.jpg"/> </li>
+        <li><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/may_03.jpg"/> </li>
+        <li><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/may_04.jpg"/> </li>
+        <li><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/may_05.jpg"/> </li>
+        <li><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/may_06.jpg"/> </li>
+        <li><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/may_07.jpg"/> </li>
+        <li><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/may_08.jpg"/> </li>
+        <li class="pr">
+            <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/may_10.jpg"/>
+            <span class="showNow centerX" id="showNow">立即晒手</span>
+            <input type="file" accept="image/*" class="uploadImg centerX vh" id="uploadImg">
+            <a class="lookHand centerX" href="MayPic.html">查看我的最美劳动手</a>
+        </li>
+        <li><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/may_11.jpg"/> </li>
+        <li class="pr">
+            <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/may_12.jpg"/>
+            <span class="centerX detail" id="actDetail">活动详情</span>
+        </li>
+        <li><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/may_13.jpg"/> </li>
+        <li class="pr">
+            <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/may_14.jpg"/>
+            <img class="centerX erweima" src="http://imgcdn.zhaoduiyisheng.com/img/icon/vip_erwm.jpg"/>
+            <p class="erTxt">关注找对e生，名医/福利这都有</p>
+        </li>
+        <li class="pr">
+            <img src="http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/may_15.jpg"/>
+
+            <span class="backTop" id='backTop'>回到顶部</span>
+        </li>
+    </ul>
+</div>
+
+<div class="pop-wrap dn" id="pop-window">
+    <!--活动细则-->
+    <img class="pop-con center dn" id="details" src="http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/details_03.jpg">
+    <!--绑定手机号-->
+    <div class="dia-wrap  center dn" id="bindPhone">
+        <div class="diaContent">
+            <h2 class="f40 c-white tc">绑定手机号</h2>
+            <p class="f24 mt20 tl c-white mb40">为了验证是您本人操作，请验证手机号</p>
+            <input type="tel" class="regPhone" id="regPhone" placeholder="输入手机号">
+            <div class="mt30 cbo">
+                <input type="tel" id="regNum" class="regNum" placeholder="输入验证码">
+                <span class="getRegNum" id="getRegNum">获取验证码</span>
+            </div>
+            <p class="tc c-red f28 mt30" id="notice"></p>
+        </div>
+
+        <span class="confirm" id="btnSubmit">确定</span>
+    </div>
+    <!--上传成功-->
+    <div class="dia-wrap  center dn" id="upload">
+    <div class="diaContent">
+        <h2 class="f40 c-white tc" id="upTitle">恭喜您上传成功</h2>
+        <div class="pop-txt">
+            <p class="f24 mt20 tl c-white mb40 tc">您的活动编号</p>
+            <p class="f48 mt20 tl c-white mb40 tc" id="serialNum"></p>
+        </div>
+
+    </div>
+
+    <a href="MayPic.html" class="confirm" id="golook">去查看</a>
+</div>
+    <!--上传不成功-->
+    <div class="dia-wrap  center dn" id="default">
+        <div class="failContent pr" id="reason">
+
+        </div>
+    </div>
+    <span class="db closePop" id="closeThis"></span>
+</div>
+
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/swiper.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../../js/base.js"></script>
+<script src="../js/May.js"></script>
+</body>
+</html>

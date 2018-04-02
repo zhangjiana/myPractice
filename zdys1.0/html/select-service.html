@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>找对医生</title>
+    <link href="../css/base.css" rel="stylesheet"/>
+    <link href="../css/basic-info.css" rel="stylesheet"/>
+    <link href="../css/select-service.css" rel="stylesheet"/>
+</head>
+<body>
+<script>
+    function setFont(){
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if(clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setFont();
+</script>
+<header class="index-head tc">
+    <span class="db fl back" onclick="history.go(-1)"></span>
+    <h1 class="f34 c-f2">选择服务</h1>
+</header>
+    <!--选择服务-->
+    <div class="basic-info-wrap select-wrap cbo">
+        <div class="service-title cbo">
+            <h2 class="fl f34 c-33">本地医生咨询服务</h2>
+            <a class="db fr f28 select-service-btn" href="look-service.html?service=local">选择</a>
+        </div>
+        <!--本地服务的医生-->
+        <div class="cbo service-doctor-list" id="local-doctor">
+            <a class="db service-doctor-item fl" href="docotr-details.html?">
+                <dl>
+                    <dt class="doctor-pic"></dt>
+                    <dd class="doctor-name">
+                        <span class="f28 db fl">李雨余</span>
+                        <span class="f20 db fl">主治医师</span>
+                    </dd>
+                </dl>
+            </a>
+            <a class="db service-doctor-item fl" href="docotr-details.html?">
+                <dl>
+                    <dt class="doctor-pic"></dt>
+                    <dd class="doctor-name">
+                        <span class="f28 db fl">李雨余</span>
+                        <span class="f20 db fl">主治医师</span>
+                    </dd>
+                </dl>
+            </a>
+            <a class="db service-doctor-item fl" href="docotr-details.html?">
+                <dl>
+                    <dt class="doctor-pic"></dt>
+                    <dd class="doctor-name">
+                        <span class="f28 db fl">李雨余</span>
+                        <span class="f20 db fl">主治医师</span>
+                    </dd>
+                </dl>
+            </a>
+        </div>
+    </div>
+    <!--异地服务-->
+    <div class="basic-info-wrap select-wrap cbo" >
+        <div class="service-title cbo">
+            <h2 class="fl f34 c-33">异地医生咨询服务</h2>
+            <a class="db fr f28 select-service-btn" href="look-service.html?service=remote">选择</a>
+        </div>
+        <!--异地服务的医生-->
+        <div class="cbo service-doctor-list" id="remote-doctor">
+            <a class="db service-doctor-item fl" href="docotr-details.html?">
+                <dl>
+                    <dt class="doctor-pic"></dt>
+                    <dd class="doctor-name">
+                        <span class="f28 db fl">李雨余</span>
+                        <span class="f20 db fl">主治医师</span>
+                    </dd>
+                </dl>
+            </a>
+            <a class="db service-doctor-item fl" href="docotr-details.html?">
+                <dl>
+                    <dt class="doctor-pic"></dt>
+                    <dd class="doctor-name">
+                        <span class="f28 db fl">李雨余</span>
+                        <span class="f20 db fl">主治医师</span>
+                    </dd>
+                </dl>
+            </a>
+            <a class="db service-doctor-item fl" href="docotr-details.html?">
+                <dl>
+                    <dt class="doctor-pic"></dt>
+                    <dd class="doctor-name">
+                        <span class="f28 db fl">李雨余</span>
+                        <span class="f20 db fl">主治医师</span>
+                    </dd>
+                </dl>
+            </a>
+        </div>
+    </div>
+    <div class="basic-info-wrap select-wrap f28">
+        <h2 class="warm-prompt">温馨提示</h2>
+        <div class="c-99 service-doctor-list">
+            通过对您病情专业的分析，以上六名专家就是为你找对的医生。
+        </div>
+    </div>
+</body>
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/select-service.js"></script>
+<script src="../js/base.js"></script>
+</html>

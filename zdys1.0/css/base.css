@@ -1,0 +1,239 @@
+/****-globals-功能: 重设浏览器默认样式****/
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+    color: #333;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background-color:#f2f2f2;
+}
+*{ 
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body,html{width:100%;height:100%;overflow:hidden;margin:0 auto;max-width:768px;}
+.page{width:100%;height:100%;margin:0 auto;max-width:768px;background:#f2f2f2;}
+/*定义字体*/
+/*中文：微软雅黑，英文：Helevetica*/
+body{
+    font-family: "Microsoft YaHei","微软雅黑",HELVETICA;
+}
+input{background:#f2f2f2;}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+    display: block;
+}
+a, input {
+    outline: none;
+}
+/* 去掉各Table  cell 的边距并让其边重合 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+label{ display: block;}
+/* IE bug fixed: th 不继承 text-align*/
+th {
+    text-align: inherit;
+}
+/* 去除默认边框 */
+fieldset, img {
+    border: 0;
+}
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+    display: block;
+}
+
+/* 去掉 firefox 下此元素的边框 */
+abbr, acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+address, caption, cite, code, dfn, em, th, var {
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* 去掉列表前的标识, li 会继承 */
+ol, ul {
+    list-style: none;
+}
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption, th {
+    text-align: left;
+}
+
+/* 标题都自定义, 适应多个系统应用 */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 500;
+}
+select {
+    vertical-align: middle;
+}
+/* 清理浮动 */
+.clear {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    display: block;
+    line-height: 0;
+}
+.clearfix:after {
+    clear: both;
+    font-size: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    content: " ";
+    line-height: 0;
+}
+.clearfix {
+    zoom: 1;
+}
+
+/* 左浮动 */
+.fl{
+    float: left;
+}
+/* 右浮动 */
+.fr {
+    float: right;
+}
+
+/*清除浮动*/
+.cbo{ clear: both;
+      overflow: hidden;
+}
+.clb{ clear: both;}
+
+
+/*对齐方式*/
+.tl{ text-align: left;}
+.tc{ text-align: center;}
+.tr{ text-align: right;}
+.cp { cursor: pointer;}
+.db{display:block;}
+.dn{display:none;}
+.center{position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}
+.centerX{position:absolute;left:50%;-webkit-transform:translate(-50%,0);transform:translate(-50%,0);}
+.centerY{position:absolute;top:50%;-webkit-transform:translate(0,-50%);transform:translate(0,-50%);}
+/*定位*/
+.po-relative{position:relative;}
+.po-absolute{position:absolute;}
+.po-fixed{position:fixed;}
+
+/*宽度百分比*/
+.w10{ width: 10%;}
+.w20{ width: 20%;}
+.w30{ width: 20%;}
+.w40{ width: 20%;}
+.w50{ width: 50%;}
+.w60{ width: 50%;}
+.w70{ width: 50%;}
+.w80{ width: 80%;}
+.w90{ width: 90%;}
+.w100{ width: 100%;}
+.w200{ width: 200%;}
+
+/*找对医生 公用样式*/
+/*正文*/
+.f18{ font-size: 0.18rem;}
+.f20{ font-size: 0.20rem;}/*说明文*/
+.f24{ font-size: 0.24rem;}
+.f26{ font-size: 0.26rem;}
+.f28{ font-size: 0.28rem;}/*正文*/
+.f30{ font-size: 0.30rem;}/*副标题*/
+.f32{ font-size: 0.32rem;}
+.f34{ font-size: 0.34rem;}/*标题*/
+.f48{font-size:0.48rem;}
+/*颜色*/
+a{color:#999;text-decoration: none;}
+
+.c-33{ color: #333333;}/*副标题*/
+.c-66{ color: #666666;}/*正文*/
+.c-99{ color: #999999;}/*说明文*/
+
+.c-white{color:#fff;}
+.c-cyan{ color: #42BABB;}/*主色调*/
+.c-yellow{ color: #dfae44;}/*辅助色*/
+.c-red{ color: #E25E5C;}/*点缀色*/
+
+/*常用背景色*/
+.c-f2{ color: #f2f2f2;}
+.c-e5{ color: #e5e5e5;}
+.c-cc{ color: #cccccc;}
+.bg-white{background:#fff;}
+
+.mt22{ margin-top: 0.22rem;}
+
+/*首页头部*/
+.index-head{ width: 100%;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    background: #42BABB;
+    position: relative;
+}
+.index-head .back{  width: 0.50rem;
+                    height: 0.50rem;
+                    position: absolute;
+                    left: 0.30rem;
+                    top: 0.22rem;
+                    background: url(../img/icon_mainback.png) no-repeat center;
+                    background-size:cover;
+}
+
+
+.common-foot{ width: 100%;
+              height: 0.80rem;
+              background: #42BABB;
+              color: #ffffff;
+              text-align: center;
+              padding: 0.20rem 0;
+}
+.index-page{ width:100%;
+    height: 100%;
+    position: absolute;
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-box-orient:vertical;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    top: 0;
+    max-width:768px;
+    background:#f2f2f2;
+}
+.section-main{ -webkit-box-flex: 1;
+    flex: 1;
+    padding: 0.2rem 0.1rem 0 0.10rem;
+    background: #f2f2f2;
+    overflow:auto;
+}
+.mb40{margin-bottom:0.4rem;}
+.no-bord{border:none;}
+.ml40{margin-left:0.4rem;}
+/*弹窗页*/
+.alert-wrap{width:100%;height:100%;position:absolute;top: 0;background: rgba(0,0,0,.5);
+    z-index: 999;}
+.alert{width:5rem;height:3.2rem;background: #f5f4f0;border-radius:0.1rem;}
+.alert-question{width:5rem;height:2.2rem;border-bottom:solid 1px #999;display: table-cell;
+    vertical-align: middle;}
+.alert-btn-list{display:-webkit-box;display:box;display:flex;}
+.alert-btn-list li{-webkit-box-flex:1;box-flex:1;flex:1;height:1rem;line-height: 1rem;text-align:center;}
+.alert-btn-list li:first-child{border-right:solid 1px #999;}
+/*首页分享后弹窗*/
+.share-win-wrap{width:100%;height:100%;position:relative;background: rgba(0,0,0,.5)}
+.share-win{width:3.7rem;height:4.8rem;background: #dbedfd;border-radius:0.1rem;}
+.share-win h2{color:#42babb;font-size:0.38rem;margin:0.2rem 0.48rem;line-height: 1.5em;}
+.share-rocket img{width:2.46rem;height:2.22rem;margin-top:0.8rem;}
+.btn-close-share{width:0.26rem;height:0.26rem;position:absolute;top:0.1rem;right:0.1rem;}

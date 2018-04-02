@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽</title>
+    <style type="text/css">
+        *{padding:0;margin:0;}
+        #box{width:500px;height:200px;border:1px solid red;margin:30px auto;}
+        #box p{width:400px;height:30px;margin:10px auto;text-align:center;color:#FFF;}
+        #box p:nth-child(1){background: green;}
+        #box p:nth-child(2){background: blue;}
+        #box p:nth-child(3){background: palevioletred;}
+        #box p:nth-child(4){background: sienna;}
+    </style>
+
+</head>
+<body>
+<div id="box">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+</div>
+<script type="text/javascript">
+	 if (navigator.vibrate) {
+            //vibrate 1 second
+            navigator.vibrate(1000);
+        } else if (navigator.webkitVibrate) {
+            navigator.webkitVibrate(1000);
+        }
+    var oBox = document.getElementById('box');
+    var aP = oBox.getElementsByTagName('p');
+    var p_len = aP.length;
+    console.log(p_len);
+    for(var i = 0;i < p_len ; i++){
+
+        aP[i].draggable = true;
+        aP[i].flag = false;
+        aP[i].ondragstart = function(){
+           this.flag = true;
+        };
+        aP[i].ondragend = function(){
+            this.flag = false;
+        }
+    }
+    oBox.ondragover = function(ev){
+        ev.preventDefault();
+    };
+    oBox.ondrop = function(ev){
+        for( var j = 0 ;j < p_len; j++){
+            if(aP[j].flag){
+                oBox.appendChild(aP[j]);
+            }
+            ev.preventDefault();
+        }
+    };
+
+</script>
+</body>
+</html>

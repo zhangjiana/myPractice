@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>找对医生</title>
+    <link href="../../css/base.css?v=1" rel="stylesheet"/>
+    <style>
+        body{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/bg.jpg);background-size:3px 3px;}
+        img{width: 100%;display: block;}
+        .o0{opacity: 0;}
+        .main-wrap{ width: 100%; height: 100%; overflow: hidden;}
+        .bg-wrap{padding-top: 1.8rem;background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/prev_01.jpg) no-repeat center .9rem;background-size:5.48rem;padding-bottom: 88px;}
+        .bg-wrap img{display: block;width: 100%;}
+        .prev02{height: 2.4rem;padding-top: .78rem;background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/prev_02.jpg) no-repeat center top;background-size:5rem;}
+        .content-wrap{padding-left: 1.12rem;padding-right: 1.12rem;width: 100%;
+               top: 2.6rem;
+        }
+        .content-wrap span{ display: block;}
+        .choose{ width: 100%;height: .78rem; line-height:.78rem;
+            background: #ffffff;font-size: .28rem;position: relative;overflow: hidden;margin-bottom: .4rem;}
+        .choose:before{
+            position: absolute;right: 0;top:0;display: block;
+            content: "";width: .78rem; height: .78rem;
+            background: #b09a33;
+        }
+        .choose:after{position: absolute;right: 0;top:0;display: block;
+                content: "";width: 0;height: 0;
+                border-top: .2rem solid #796a25;
+                border-left: .2rem solid transparent;
+                border-right: .2rem solid transparent;
+                margin-top: .33rem;
+                margin-right: .19rem;
+        }
+        .choose-list{ width: 100%; height: 100%;opacity: 0;position: absolute;z-index: 111;}
+        .choose em{    width: 80%;
+            height: .78rem;    padding-left: .3rem;
+            display: block;}
+        .op6{opacity: .6;}
+        .ill-wrap{position: absolute;left: 0;top:.78rem;width: 100%;}
+        .ill-wrap em{ display: block;width: 100%; height: .78rem;
+            line-height: .78rem;text-align: left;padding-left: .2rem;
+            background: rgba(0,0,0,.48);color: #ffffff;font-size: .3rem;
+            margin-bottom: .04rem;
+        }
+        .kinds{ font-size: .3rem; margin-top: .34rem;}
+        .kinds em{display: -webkit-box;display: flex;
+            margin-bottom: .1rem;
+        }
+        .kinds .dot{padding-top:.22rem; height: .15rem;
+            border-bottom: 2px dotted #86806e;
+            -webkit-box-flex: 1;
+            flex: 1;
+        }
+        .kinds i{ font-style: normal;display: block; }
+        .kinds b{width: 100%;display: block;margin-top: .2rem; text-align: right;
+            font-size: .2rem;color: #00ccfd;font-style: normal;}
+        .enter label{font-size: .28rem; margin-top: .3rem;}
+        .enter input{ border: none; height: .78rem;line-height: .78rem;
+             padding-left: .3rem;font-size: .3rem;width: 100%;
+        }
+        #regCode{width: 60%;}
+        .get-code{font-size: .28rem;float: right;display:block;height: .78rem;line-height: .78rem;
+            background-color: #b09a33; width: 40%; text-align: center; color:#38352c;}
+        #notice{ height: .3rem;line-height: .3rem;margin-top: .3rem;}
+        .share::before { content: ""; width: 100%; position: absolute; top: 0; height: 1.8rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/weixin_share.png) no-repeat right center;background-size:contain; z-index: 10; }
+        .sub{width: 100%;height: 44px;line-height: 44px;background: #b09a33;position: fixed;bottom: 0;}
+        a{color:#745f33;}
+        .item{padding:.4rem 0;}
+        .item *{color:#333;}
+        .item>p{position: relative;padding-left:.3rem; margin-bottom: .1rem;text-align: justify;}
+        .item>p::before { display: inline-block; position: absolute; top: 0; left: 0; color: #333; }
+        .item>p:nth-child(1)::before { content: "1."; }
+        .item>p:nth-child(2)::before { content: "2."; }
+        .item>p:nth-child(3)::before { content: "3."; }
+        .item>p:nth-child(4)::before { content: "4."; }
+        .item>p:nth-child(5)::before { content: "5."; }
+        .item>p:nth-child(6)::before { content: "6."; }
+        .pa{position: absolute!important;}
+        .dialog-all{width: 100%;height: 100%;top: 0;z-index: 3;background-color:rgba(0,0,0,.3);}
+        .dialog-all:after{content:"";width: 1px;height: .95rem;position: absolute;top: 0;background-color:#fff;left: 50%;-webkit-box-shadow: 0 0 0 1px rgba(255,255,255,.3);box-shadow: 0 0 0 1px rgba(255,255,255,.3);}
+        .oa0:after{opacity: 0;}
+        .dialog:before{content:"";width: 1px;height: .95rem;position: absolute;top: -.95rem;background-color:#fff;left: 50%;-webkit-box-shadow: 0 0 0 1px rgba(255,255,255,.3);box-shadow: 0 0 0 1px rgba(255,255,255,.3);}
+        .dialog{width: 6.3rem;height: 8.4rem;background:#ffda44 url(http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/hook.jpg) no-repeat center .16rem;-webkit-background-size: .42rem;
+        background-size: .5rem;padding:.66rem .32rem .3rem;top: 1.9rem;-webkit-transition: .5s;transition: .5s;position: relative;z-index: 10;}
+        .d-scroll{height: 100%;overflow: hidden;}
+        .close{width: .62rem;height: .34rem;background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/knife.png) no-repeat center;background-size:cover;left: 52%;top: .9rem;}
+        .d-scroll .f34{border-bottom: 1px solid #000;padding-bottom: .16rem;}
+        .pics img{width: 1.6rem;}
+        .pics>img{margin-left: .6rem;}
+        .pics>a{margin-right: .6rem;}
+        .tel{padding: .7rem 0 .2rem;}
+        .tel img{width: 3.96rem;}
+        .tel a{width: 3.96rem;height: .64rem;top: .7rem;}
+        .tt{-webkit-transform: translate3d(0,-150%,0);transform: translate3d(0,-150%,0);}
+        .t0{-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+        .tb{-webkit-transform: translate3d(0,150%,0);transform: translate3d(0,150%,0);}
+        .f28{font-size:14px}
+        .f30{font-size:15px}
+        .f32{font-size:16px}
+        .f34{font-size:17px}
+        .f36{font-size:18px}
+        .f38{font-size:19px}
+        .f48{font-size:24px}
+        .p108{padding-left: 1.08rem;padding-right: 1.08rem;}
+        @media screen and (width:320px) {
+            html { font-size: 42.666px !important; }
+            .rule-list em{ margin-top: .04rem;}
+        }
+    </style>
+</head>
+<body>
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+    /*if (!window.localStorage.openid&&!window.sessionStorage.n){
+     window.sessionStorage.n = ' ';
+     var appId="wx14da7f3cb2e1b8ff";
+     var redirect_uri=encodeURI(window.location.href);
+     window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+appId+"&redirect_uri="+redirect_uri+
+     "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+     }*/
+</script>
+<div class="main-wrap pr" id="main">
+    <ul class="bg-wrap pr swiper-wrapper">
+        <li class="prev02 c-red f30 tc dn" id="get-ill">顽固高血压及高脂血症</li>
+        <li class="p108 dn" id="chose-ill">
+            <span class="choose db br5">
+                <select class="choose-list" id="select">
+                     <option>帕金森病</option>
+                     <option>乳腺癌</option>
+                     <option>顽固高血压及高脂血症</option>
+                     <option>肺癌</option>
+                     <option>糖尿病</option>
+                     <option>哮喘</option>
+                     <option>癫痫</option>
+                </select>
+                <em class="op6" id="result">选择需要预约的疾病</em>
+            </span>
+            <!--疾病类型-->
+            <span class="kinds">
+                <em><i class="bold">帕金森</i><i class="dot"></i><i class="status">正在进行</i></em>
+                <em><i>乳腺癌</i><i class="dot"></i><i class="status">开放预约</i></em>
+                <em><i>顽固高血压及高脂血症</i><i class="dot"></i><i class="status">开放预约</i></em>
+                <em><i>肺癌</i><i class="dot"></i><i class="status">开放预约</i></em>
+                <em><i>糖尿病</i><i class="dot"></i><i class="status">开放预约</i></em>
+                <em><i>哮喘&amp;COPD</i><i class="dot"></i><i class="status">开放预约</i></em>
+                <em><i>癫痫</i><i class="dot"></i><i class="status">开放预约</i></em>
+                <b>其他疾病陆续开放中</b>
+            </span>
+        </li>
+        <li class="p108">
+            <!--输入验证-->
+            <span class="enter">
+                <label><input class="br5" type="text" placeholder="请输入姓名" id="name"></label>
+                <label><input class="br5" type="tel" placeholder="请输入手机号" id="mobile"></label>
+                <span class="clearfix db mt30 dn" id="code">
+                    <input class="fl brl" type="tel" id="regCode" placeholder="请输入验证码">
+                    <em class="get-code brr" id="getRegNum">获取验证码</em></span>
+                </span>
+            <p class="f28 c-red tc" id="notice"></p>
+            <div class="clearfix f28">
+                <a class="dn" id="rules">活动规则》</a>
+                <a class="fr dn" href="prevNow.html" id="others">其他疾病预约》</a>
+            </div>
+        </li>
+        <!-- <li><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/prev_07.jpg"/> </li> -->
+    </ul>
+    <div class="sub f34 c-white tc" id="submit">提交</div>
+</div>
+<a class="back-act" href="freeLook.html?a"></a>
+<div class="dialog-all pa dn oa0">
+    <div class="dialog br5 m0a dn tt"><div class="d-scroll">
+        <div class="f24 c-33">
+            <p class="f34 tc">活动规则</p>
+            <div class="item">
+                <p>本次预约患者享受服务为找对e生“名医远程诊”服务<a href="/html/teleDiagnose.html?clinicService=remote_face">(点击了解服务)</a>，全国各地患者均可预约，在家享受服务</p>
+                <p>每类疾病服务周期按照预约患者人数安排，服务顺序按照预约患者人数排序</p>
+                <p>预约患者服务顺序遵循“先预约先服务，先付费有优先服务权”原则</p>
+                <p>患者满意后付费，不满意不付费；优先付费患者可享立减200元</p>
+                <p>凡预约本次活动患者均视为已同意找对e生服务协议<!-- <a href="../../html/serviceItem.html">(点击查看服务协议)</a> --></p>
+                <p>本次活动解释权归找对e生所有</p>
+            </div>
+            <div class="pics clearfix">
+                <img class="fl" src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/rule01.jpg" alt="">
+                <a class="fr" href="/index.html"><img src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/rule02.jpg" alt=""></a>
+            </div>
+            <div class="tel pr">
+                <img class="m0a" src="http://imgcdn.zhaoduiyisheng.com/activity/img/freeLook/rule03.jpg" alt="">
+                <a class="pa o0 centerX" href="tel:4008370095">4008370095</a>
+            </div>
+        </div>
+    </div></div>
+    <div class="close pa" id="close" style="display: none;"></div>
+</div>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/swiper.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script src="../../js/base.js"></script>
+<script>
+    weixinLogin();
+    var scroll = new IScroll('#main', {probeType: 3, mouseWheel: true});
+    setTimeout(function(){
+        scroll.refresh();
+    },1000);
+    $(document).one('touchstart',function(){
+        scroll.refresh();
+    });
+    var illName=['帕金森病','乳腺癌','顽固高血压及高脂血症','肺癌','糖尿病','哮喘','癫痫'];
+    if (GetQueryString('prev')&&illName[GetQueryString('prev')]) {
+        $("#result").text(illName[GetQueryString('prev')]);
+        $("#get-ill").removeClass('dn').text(illName[GetQueryString('prev')]);
+        $('#rules').addClass('fl').removeClass('dn');
+        $('#others').removeClass('dn');
+        $("#result").removeClass('op6')
+    }else{
+        $("#chose-ill").removeClass('dn');
+        $('#rules').addClass('fr').removeClass('dn');
+    }
+    /*手机号是否注册开关*/
+    var flag = false;
+
+    $("#select").change(function(){
+        $("#result").text($(this).val()).removeClass('op6');
+    });
+    $("#select").one('touchstart',function(){
+        $("#result").text('帕金森病').removeClass('op6');
+    });
+    if(getCookie('user')&&getCookie('user').length == 11){
+        $("#mobile").attr('disabled','true').val(getCookie('user'));
+        flag = true;
+    }
+    $("#mobile").on('input propertychange', function() {
+       if($(this).val().length == 11){
+           exitNum();
+       }
+    });
+
+
+    subData();
+    function subData(){
+        regPhoneNumAnd("#mobile", "#notice");//手机号
+        nameVali("#name","#notice");//名字
+        var $getRegCode = $("#getRegNum"),
+         $regPhone = $("#mobile"),
+         $name = $("#name");
+        /*获取验证码*/
+        $getRegCode.swipe({
+            tap: function() {
+                var type = "";
+                if($name.triggerHandler('blur')){
+                    if ($regPhone.triggerHandler('blur')) {
+                        if (!$getRegCode.hasClass('disable')) {
+                            /*获取验证码*/
+                            if(localStorage.openid){
+                                type = "bind_mobile";
+                            }else {
+                                type = "register";
+                            }
+                            getRegCodeAjax("#mobile","#getRegNum",type);
+                        }
+                    } else {
+                        $("#notice").text("请先输入手机号");
+                    }
+                }else {
+                    $("#notice").text("请先输入姓名");
+                }
+
+            }
+        });
+        /*最后提交*/
+        $("#submit").swipe({
+            tap: function() {
+                var config = null;
+                if($("#result").hasClass('op6')){
+                    $("#notice").text("请选择预约的疾病")
+                }else if(!$name.triggerHandler('blur')){
+                    $("#notice").text("请先输入姓名");
+                }else if(!$regPhone.triggerHandler('blur')){
+                    $("#notice").text("请先输入手机号");
+                }else if(!$('#code').hasClass('dn')&&!$('#regCode').val()){
+                    $("#notice").text("请先输入验证码");
+                }else if ($name.triggerHandler('blur') && $regPhone.triggerHandler('blur')) {
+                    if(flag){
+                        config = {
+                            "diseaseType":$("#result").text(),
+                            "contactName":$("#name").val(),
+                            "mobile": $("#mobile").val()
+                        };
+                        subAjax(config);
+                    }else {
+                        if(localStorage.openid){
+                            sendMobile("#mobile","#regCode","REMOTE_CLINIC",function(){
+                                config = {
+                                    "diseaseType":$("#result").text(),
+                                    "contactName":$("#name").val(),
+                                    "mobile": $("#mobile").val(),
+                                    "verifyCode": $("#regCode").val()
+                                };
+                                subAjax(config);
+                            });
+                        }else {
+                            config = {
+                                "diseaseType":$("#result").text(),
+                                "contactName":$("#name").val(),
+                                "mobile": $("#mobile").val(),
+                                "verifyCode": $("#regCode").val()
+                            };
+                            subAjax(config);
+                        }
+
+                    }
+
+                }
+            }
+        });
+    }
+
+    /*预约*/
+    function subAjax(obj){
+        var aurl=ajaxUrl + "Promotion/RemoteClinic";
+        if (window.localStorage.sessionId){
+            aurl= aurl+"?sessionId=" + window.localStorage.sessionId
+        }
+        $.ajax({
+            type: "POST",
+            url: aurl,
+            contentType: "text/plain; charset=UTF-8",
+            dataType: 'json',
+            data: JSON.stringify(obj),
+            success: function(data) {
+                if (data.code == 0) {
+                    $('#notice').text('提交成功');
+                    if (data.data&&data.data.sessionId) {
+                        window.localStorage.sessionId=data.data.sessionId;
+                        setCookie('user',$("#mobile").val(),30);
+                    }
+                    var u = window.navigator.userAgent.toLocaleLowerCase();
+                    if (u.indexOf("micromessenger") > -1) {
+                        $('#alert').addClass('share');
+                    }
+                    myalert.tips({
+                        txt: "预约成功！点击确定进入我的预约",
+                        fnok: function() {
+                            window.location = "myLook.html";
+                        },
+                        fnno:function(){
+                            $('#alert').removeClass('share');
+                        }
+                    });
+                } else {
+                    if(data.code == 921){
+                        myalert.tips({
+                            txt: "您已预约过！点击确定进入我的预约",
+                            fnok: function() {
+                                window.location = "myLook.html";
+                            }
+                        });
+                    }
+                    $('#notice').text(data.message);
+                }
+            },
+            error: function(res) {
+                if (res.status == 401) {
+                    myalert.tips({
+                        txt: "会话超时，请重新登录",
+                        fnok: function() {
+                            window.location = "/html/newLogin.html";
+                        },
+                        btn: 1
+                    });
+
+                }
+            }
+        });
+    }
+    //验证手机号格式
+    function regPhoneNumAnd(regPhoneNum, regNotice) {
+        var $regPhoneNum = $(regPhoneNum);
+        var $regNotice = $(regNotice);
+        $regPhoneNum.on("blur", function() {
+            var reg = /^1[3|4|5|7|8][0-9]{9}$/;
+            if (reg.test($regPhoneNum.val())) {
+                $regNotice.text("");
+                return true;
+            } else {
+                $regNotice.text("您输入的手机号无效");
+                $regPhoneNum.val('');
+                return false;
+            }
+        });
+    }
+
+    /*验证手机号是否注册*/
+    function exitNum(){
+        var data = $("#mobile").val();
+        $.ajax({
+            type: "GET",
+            url: ajaxUrl + "User/MobileRegistered?mobile=" + data,
+            contentType: "text/plain; charset=UTF-8",
+            dataType: 'json',
+            data: JSON.stringify(data),
+            success: function(data) {
+                if (data.code == 0) {
+                    /*手机号未注册*/
+                    $("#code").removeClass('dn');
+                    flag = false;
+                } else{
+                    $("#code").addClass('dn');
+                    $('#notice').text(data.message);
+                    flag = true;
+                }
+            },
+            error: function(res) {
+                if (res.status == 401) {
+                    myalert.tips({
+                        txt: "会话超时，请重新登录",
+                        fnok: function() {
+                            window.location = "/html/newLogin.html";
+                        },
+                        btn: 1
+                    });
+
+                }
+            }
+        });
+    }
+    $('#rules').click(function(e){
+        dialog(0);
+        e.preventDefault();
+    });
+    var aDialog = $('.dialog'),
+      oClose = $('#close'),
+      scrollA = null;
+    function dialog(n){
+        alertN = parseInt(n);
+        aDialog.eq(alertN).removeClass('dn tb t0');
+        aDialog.eq(alertN).parent().removeClass('dn');
+        setTimeout(function(){
+            aDialog.eq(alertN).addClass('t0');
+        },10);
+        setTimeout(function(){
+            aDialog.eq(alertN).parent().removeClass('oa0');
+        },300);
+        setTimeout(function(){
+            oClose.fadeIn();
+        },500);
+        scrollA = new IScroll($('.d-scroll')[alertN], {probeType: 3, mouseWheel: true});
+    }
+    aDialog.click(function(e){
+        e.stopPropagation();
+    });
+    aDialog.eq(0).parent().click(function(e){
+        aDialog.eq(alertN).addClass('tb');
+        setTimeout(function(){
+            aDialog.eq(alertN).addClass('dn');
+            aDialog.eq(alertN).parent().addClass('dn oa0');
+            oClose.fadeOut();
+        },500);
+        e.preventDefault();
+    });
+    if('sqqd' == GetQueryString('p')){
+        shareWeixin('先看病后付费，顶级名医实力秒杀莆田系！','三甲名医远程看病，不满意不收费','http://www.zhaoduiyisheng.com/activity/html/freeLook.html?p=sqqd','http://imgcdn.zhaoduiyisheng.com/img/logo01.png');
+    }else{
+        shareWeixin('召唤名医远程救命，实力羞辱莆田系！','顶级名医先看病后付费，不满意不收费','http://www.zhaoduiyisheng.com/activity/html/freeLook.html','http://imgcdn.zhaoduiyisheng.com/img/logo01.png');
+    }
+</script>
+</body>
+</html>

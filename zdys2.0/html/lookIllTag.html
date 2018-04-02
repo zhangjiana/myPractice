@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="content-type" content="no-cache, must-revalidate" />
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <title>找对医生</title>
+    <link href="../css/base.css?v=1" rel="stylesheet" />
+    <link href="../css/swiper.min.css" rel="stylesheet" />
+    <style>
+    .user-head { padding: .25rem .04rem .25rem 0; }
+    .user-head img { width: 1rem; display: block;}
+    .user-head p { width: 1rem; overflow: hidden; }
+    .icon-list { -webkit-background-origin: content; }
+    .ill-tag { width: 4.5rem; margin-top: .3rem; margin-bottom: .3rem; background-position: left .55rem;background-origin: content-box;}
+    .tag-gray { margin-bottom: .1rem; margin-left: .3rem; padding: 0 .04rem;color:#666;}
+    .no-msg .centerX { margin-left: -.3rem; }
+    .no-msg img { width: .8rem; }
+    .tag-box{padding-left: .2rem;}
+    .add-tag{ margin-left: 0; border-radius: 2px;}
+    @media screen and (width: 320px){
+        .ill-tag{background-position: left .65rem;}
+    }
+    @media screen and (width: 414px){
+        .ill-tag{background-position: left .52rem;}
+    }
+    </style>
+</head>
+
+<body>
+    <script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+    </script>
+    <!--关注的疾病-->
+    <div class="index-page">
+        <header class="index-head tc">
+            <span class="icon-arrowr" id="back"></span>
+            <h1 class="f34 c-f2">关注的疾病</h1>
+        </header>
+        <section id="scroll" class="section-main">
+            <ul id="people-box" class="f20 pt20">
+                <!-- <li class="bg-white prl30 mb20 icon-list"><a href="#" class="db clearfix">
+                    <div class="fl user-head tc">
+                        <img src="http://imgcdn.zhaoduiyisheng.com/img/icon/me_boy.png" alt="">
+                        <p class="c-66 pb20">我</p>
+                    </div>
+                    <div class="ill-tag fl">
+                        <span class="tag-gray fl">标签一标签一标签一标签一</span>
+                        <span class="tag-gray fl">标签一标签一标签一</span>
+                        <span class="tag-gray fl">标签一标签一标签一标签一</span>
+                    </div>
+                </a></li>
+                <li class="bg-white prl30 mb20 icon-list"><a href="#" class="db clearfix">
+                    <div class="fl user-head tc">
+                        <img src="http://imgcdn.zhaoduiyisheng.com/img/icon/me_boy.png" alt="">
+                        <p class="c-66 pb20">我我我我</p>
+                    </div>
+                    <div class="ill-tag fl">
+                        <div class="no-msg pr">
+                            <div class="centerX tc">
+                                <img src="http://imgcdn.zhaoduiyisheng.com/img/icon/cloud.png" alt="">
+                                <p class="c-99">还没有关注的疾病</p>
+                            </div>
+                        </div>
+                    </div>
+                </a></li> -->
+            </ul>
+        </section>
+
+    </div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/swiper.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+ <script src="../js/base.js"></script>
+<script src="../js/lookIllTag.js"></script>
+
+</html>

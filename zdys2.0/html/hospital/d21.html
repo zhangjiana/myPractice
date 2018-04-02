@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <title>找对医生</title>
+    <link href="../../css/base.css" rel="stylesheet"/>
+    <link href="../../css/topHos.css" rel="stylesheet"/>
+</head>
+<body>
+<script>
+    function setfont(){
+        var clientWidth = document.body.clientWidth||document.documentElement.clientWidth;
+        if(clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.onresize=setfont;
+</script>
+<div class="index-page">
+    <header class="index-head tc">
+        <span class="icon-arrowr go-back"></span>
+        <h1 class="f34 c-white">心外科</h1>
+    </header>
+    <section class="section-main bg-white" id="scroll-rank">
+        <div>
+            <div class="c-66 source">
+                <p class="f30">中国最佳专科医院声誉排行榜来源</p>
+                <p class="f24">http://www.fudanmed.com/institute/news222.aspx</p>
+            </div>
+            <div class="table-wrap f28 tc mrl10 bg-yellow">
+                <ul class="f34 c-white table-head"><li>排名</li><li>医院</li><li>声誉值</li></ul>
+                <ul><li>1</li><li>中国医学科学院阜外心血管病医院</li><li>11.345</li></ul>
+                <ul><li>2</li><li>首都医科大学附属北京安贞医院</li><li>9.379</li></ul>
+                <ul><li>3</li><li>广东省人民医院</li><li>6.845</li></ul>
+                <ul><li>4</li><li>复旦大学附属中山医院</li><li>6.724</li></ul>
+                <ul><li>5</li><li>第四军医大学西京医院</li><li>5.414</li></ul>
+                <ul><li>6</li><li>华中科技大学同济医学院附属协和医院</li><li>5.017</li></ul>
+                <ul><li>7</li><li>四川大学华西医院</li><li>3.655</li></ul>
+                <ul><li>8</li><li>上海交通大学医学院附属上海儿童医学中心</li><li>3.534</li></ul>
+                <ul><li>9</li><li>中南大学湘雅二医院</li><li>3.000</li></ul>
+                <ul><li>10</li><li>武汉亚洲心脏病医院</li><li>1.259</li></ul>
+            </div>
+            <div class="pb30">
+                <div class="mt20 mrl10">
+                    <h2 class="pl20 mention-hos f30 c-white">获提名医院</h2>
+                    <div class="bg-yellow f28 mention-hos-main tj">第三军医大学新桥医院、广东省心血管病研究所、中国人民解放军总医院、第二军医大学长海医院、福建医科大学附属协和医院、沈阳军区总医院、中南大学湘雅医院、哈尔滨医科大学附属第二医院</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../../js/base.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+<script>
+    var scrollHos = new IScroll('#scroll-rank', { probeType: 3, mouseWheel: true });
+</script>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="content-type" content="no-cache, must-revalidate"/>
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="apple-mobile-web-app-title" content="找对医生">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="找对医生,家庭医生">
+    <meta name="description" content="找对医生">
+    <meta name="copyright" content="www.zhaoduiyisheng.com"/>
+    <link rel="shortcut icon" href=" /favicon.ico"/>
+    <title>找对医生</title>
+    <link href="../css/base.css?v=1" rel="stylesheet"/>
+    <link href="../css/swiper.min.css" rel="stylesheet"/>
+    <link href="../css/add-member.css?t=1" rel="stylesheet">
+    <link href="../css/ticket.css" rel="stylesheet"/>
+</head>
+<style>
+    .index-page {
+        left: 100%;
+        -webkit-transition: .5s;
+        transition: .5s;
+        -webkit-box-orient: vertical;
+    }
+    .word-two{ letter-spacing: 0.15rem;}
+    .pay:active{ opacity: 0.78;}
+    .ml10{margin-left:.1rem;}
+    .uncheck{background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/check.png) no-repeat center;background-size: cover; margin-right: .2rem;}
+    .checked{background-image: url(http://imgcdn.zhaoduiyisheng.com/img/icon/checked.png);}
+    .unable{opacity: .5;}
+    .service-item{margin-top: .4rem;}
+    .service-item>div{line-height: .44rem;}
+</style>
+<body class="pr">
+<script>
+    function setfont() {
+        var clientWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        if (clientWidth > 750) {
+            clientWidth = 750;
+        }
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
+    }
+    setfont();
+    window.addEventListener('resize', setfont);
+</script>
+<div class="index-page ps">
+    <header class="index-head tc">
+        <span class="db fl icon-arrowr go-back"></span>
+        <h1 class="f34 c-f2">支付页面</h1>
+    </header>
+    <section class="section-main">
+        <div class="pt30 pb30 prl30 f30 bg-white">
+            <p>服务种类: <span id="service-way"></span></p>
+            <p>服务金额: <span id="service-price" class="service-price"></span></p>
+            <p>病症名称: <span id="service-CaseName"></span></p>
+            <p><em class="word-two">订单</em>号:<span class="ml10" id="orderId"></span></p>
+        </div>
+        <img src="http://imgcdn.zhaoduiyisheng.com/img/pay_bt.jpg" class="pay-top_img"/>
+
+        <div class="cbo f30 pt30 pb30 list-arrow pl30 mt20" id="use-ticket">
+            <span class="fl">使用优惠券</span>
+            <div class="f30 fr" id="sub-price">
+                <!--<span class="pr40">减<em class="service-price"></em>元</span>-->
+            </div>
+        </div>
+        <div class="need-pay f30 bg-white mt20">
+            <p class="pt20 pb20 be5-b  prl30">还需支付:
+                <span class="service-price c-red prl30" id="final-price"></span>
+                <span class="c-yellow f24">
+                    (已优惠<em id="sub-price02" class="service-price"></em>元)
+                </span>
+            </p>
+            <p class="mrl30 pt20 pb20 be5-b cbo" id="weixin">
+                <img src="http://imgcdn.zhaoduiyisheng.com/img/pay_weixin.png" class="pay_icon fl">
+                <span class="db fl">
+                    <em class="f28 db">微信支付</em>
+                    <em class="f24 db c-99">推荐安装微信5.0以上版本使用</em>
+                </span>
+                <span class="fr icon_gou active"></span>
+            </p>
+
+            <p class="mrl30 pt20 pb20 cbo" id="zhifubao">
+                <img src="http://imgcdn.zhaoduiyisheng.com/img/pay_zhifubao.png" class="pay_icon fl">
+                <span class="db fl">
+                    <em class="f28 db">支付宝支付</em>
+                    <em class="f24 db c-99">推荐安装支付宝5.0以上版本使用</em>
+                </span>
+
+                <span class="fr icon_gou"></span>
+
+            </p>
+        </div>
+        <div class="mrl30 service-item">
+            <div class="f28 mr30 c-cyan cbo"><span id="check" class="uncheck icon fl"></span>同意<a class="c-cyan" href="../html/serviceItem.html">《找对医生服务协议》</a></div>
+        </div>
+        <div id="pay" class="mrl30 c-white f34 tc pay unable">立即支付</div>
+    </section>
+</div>
+<div class="index-page" id="page-ticket">
+    <header class="index-head tc">
+        <span class="db fl icon-arrowr" id="back-pay"></span>
+        <h1 class="f34 c-f2">兑换记录</h1>
+    </header>
+    <section class="section-main bg-white" id="scroll-pay">
+        <div id="ticket-box">
+            <!--优惠券-->
+            <div class="pb30">
+                <p class="f24 prl30 pt20 pb20 c-99">手动添加优惠券</p>
+                <div class="f30 pt10 prl30 cbo">
+                    <input id="ticket-code" type="tel" class="f28 discount-num c-99"
+                           placeholder="请输入优惠券号"/>
+                    <span class="exchange-btn" id="btn-exchange">兑换</span>
+                </div>
+                <div class="f20 c-red tc mt20" id="code-notice"></div>
+                <div id="valid-ticket-box">
+                    <!--优惠券1-->
+                    <!--<div class="discount-ticket cbo mrl30 mt30">-->
+                        <!--<div class="cbo discount-price bg-blue">-->
+                            <!--<img class="discount-logo fl"-->
+                                 <!--src="http://imgcdn.zhaoduiyisheng.com/img/discoun-logo.png"/>-->
+                    <!--<span class="f34 db fl ml30 mt20 c-white">¥<b-->
+                            <!--class="f80 pl20">100</b></span>-->
+                            <!--<p class="c-white fl ml30 mt20">-->
+                                <!--<span class="f24 db">用于找对医生服务</span>-->
+                                <!--<span class="f48 db">元优惠券</span>-->
+                            <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="discount-info f24">-->
+                            <!--<div class="cbo">-->
+                                <!--<span class="fl mr30">优惠券号:<em-->
+                                        <!--class="ml16">254168746517</em></span>-->
+                    <!--<span class="fl">使用范围: <em-->
+                            <!--class="ml16">找对医生服务</em></span>-->
+                            <!--</div>-->
+                            <!--<div><span>有效时间:<em class="ml16">2016.01.01-2016.01-->
+                                <!--.08</em></span></div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--无优惠券-->
+                    <!--<div class="tc no-ticket">-->
+                    <!--<img class="icon-ticket" src="http://imgcdn.zhaoduiyisheng.com/img/no_ticket.png"/>-->
+                    <!--<div class="f28 c-99">暂无优惠券</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<iframe id="paypage" src=""  class="pa dn" style="width:100%;height:100%;top:0;left:0;z-index:9;border:0;background-color:#ededed;"></iframe>
+</body>
+<script src="../lib/jquery-2.1.4.min.js"></script>
+<script src="../lib/swiper.min.js"></script>
+<script src="../lib/jquery.touchSwipe.min.js"></script>
+<script src="../lib/iscroll.min.js"></script>
+ <script src="../js/base.js"></script>
+ <script src="../js/pay.js"></script>
+</html>

@@ -1,0 +1,31 @@
+
+.user_address{width:800px;margin:0 auto;}
+.user_address li{width:470px;height:40px;}
+.user_address span{display: block;float: left;text-align: right;line-height:40px;}
+.user_address b{display: block;float: left;line-height:28px;width:116px;height:28px;
+    margin-left:18px;border: 1px solid #cccccc;text-indent:4px;}
+.user_address b i.icon_down{display:block;width:28px;margin-top:5px;height:18px;float:right;
+    background:url(../img3/icon_arrows_bottom.gif) no-repeat center center;border-left:1px solid #cccccc;}
+.user_address input{float: right;}
+.txt{width:390px;height:28px;border: 1px solid #cccccc;}
+.user_address p.tip{position:absolute;top:10px;left:474px;width:230px;}
+
+.send_address{margin-left:176px;display:block;width:106px;height:36px;text-align: center;
+    cursor:pointer;line-height: 36px;color:#fff;background: #DB2726;}
+
+
+/*********选择送货时间****************/
+.send_time{padding:30px 10px;}
+.send_time label,.fapiao label{padding-right:40px; cursor: pointer;}
+
+/*********支付方式****************/
+
+.payment{width:770px;position: relative;padding-top:25px;}
+.pay_ways{position: absolute;top:0;left: 0;}
+.pay_ways li{width:98px;height:25px;line-height:25px;text-align: center;cursor: pointer;float: left;}
+.pay_ways li.not_change{background:#F2F2F2;color:#999999;border:1px solid #999999;border-bottom: none; }
+.pay_ways li.changed{background:#fff;color:#000;border:1px solid #000; border-bottom: none;}
+.pay_box{width:720px;border:1px solid #000;padding:20px;}
+
+.pay_box li{margin-right:30px;float:left; cursor: pointer;}
+.pay_box img{border: 1px solid #cccccc;}
