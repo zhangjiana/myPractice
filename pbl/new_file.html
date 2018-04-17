@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				background: #F3F2F3;
+			}
+			#main {
+				width: 1225px;
+				border: 1px solid red;
+				margin: 0 auto;
+			}
+			#main .list {
+				width: 245px;
+				float: left;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div id="main">
+			<div class="list"></div>
+			<div class="list"></div>
+			<div class="list"></div>
+			<div class="list"></div>
+			<div class="list"></div>
+		</div>
+		<input type="button" name="" id="" value="点击加载" onclick="init()" />
+		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+		<script type="text/javascript">
+		
+			var $json = [];
+			$(function() {
+				$.getJSON('pbl.json', function(response) {
+					//alert(response[0].src)
+					$json = response;
+					init();
+				})
+			});
+			
+			
+			 //加载方法
+			function init() {
+				var div;
+				for (var i = 0; i < $json.length; i++) {
+					div = ''
+					div += '<div>'
+					div += '<img src="' + $json[i].src + '" />'
+					div += '</div>'
+					//alert(div)
+					getList($(".list")).append(div);
+				}
+			};
+			
+			//寻找list obj比较我们5个list
+			function getList(obj) {
+				var index = 0; //第一张图片
+				var $h = obj.eq(0).height(); //假设第一张图片高度最小
+				for (var i = 0; i < obj.length; i++) {
+					if (obj.eq(i).height() < $h) {
+						index = i;
+						$h = obj.eq(i).height();
+					}
+				}
+				return obj.eq(index);
+			}
+		</script>
+
+	</body>
+
+</html>
