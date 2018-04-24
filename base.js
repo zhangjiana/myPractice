@@ -1,3 +1,4 @@
+// 校验规则
 let checkType=(function(){
     let rules={
         email(str){
@@ -40,7 +41,35 @@ let checkType=(function(){
         }
     }
 })();
-
-
 作者：守候i
 链接：https://juejin.im/post/5adc8e18518825672b0352a8
+// cookie
+function setCookie(name, key, oDay) {
+    let oTime = new Date();
+    let oDate = oTime.getDate()
+    oTime.setDate(oDate + oDay);
+    document.cookie = `${name}=${value};expires=${oTime};path=/`;
+}
+function getCookie(name) {
+    let str = document.cookie.split('; ');
+    for(let i = 0; i < str.length; i++) {
+        arr = str[i].split('=');
+        if (arr[0] === name) {
+            return arr[1]
+        }
+    }
+    return '';
+}
+function removeCookie(name) {
+    setCookie(name, '00', -1)
+}
+
+
+
+
+
+
+
+
+
+
