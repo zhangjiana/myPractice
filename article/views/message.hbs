@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{status}} {{reason}}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+  <style>
+    .container {
+      padding-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="alert alert-{{type}}" role="alert">{{status}} {{reason}}</div>
+  </div>
+</body>
+
+</html>

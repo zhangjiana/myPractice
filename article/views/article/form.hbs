@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{title}}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>{{title}}</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <form method="post" action="/article/save">
+          <div class="form-group">
+            <label>文章标题</label>
+            <input class="form-control" required="" minlength="3" name="title" value="{{article.title}}">
+          </div>
+          <div class="form-group">
+            <label>文章内容</label>
+            <textarea class="form-control" rows="20" required="" name="content" minlength="10" id="input">{{article.content}}</textarea>
+          </div>
+          {{#if article}}
+            <input type="hidden" name="id" value="{{article.id}}"> 
+          {{/if}}
+          <button type="submit" class="btn btn-primary">
+            {{#if article}}更新{{else}}发布{{/if}}
+          </button>
+        </form>
+      </div>
+      <div class="col-md-6" id="output">
+        {{{article.preview}}}
+      </div>
+    </div>
+  </div>
+  <script src="/static/marked.min.js"></script>
+  <script>
+    const input = document.querySelector('#input')
+    const output = document.querySelector('#output')
+
+    input.addEventListener('input', e => {
+      const html = marked(e.target.value)
+      output.innerHTML = html
+    })
+  </script>
+</body>
+
+</html>
