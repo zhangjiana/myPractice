@@ -205,7 +205,7 @@ $(function(){
                 console.log(data);
                 if(data.code == 0){
                     $("#alert-card").removeClass('dn');
-                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/right.jpg");
+                    $("#alert-card img").attr('src',"../img/breakWords/right.jpg");
 
                     setTimeout(function(){
                         getMoney();
@@ -213,13 +213,13 @@ $(function(){
 
                 }else if( data.code == 917){
                     $("#alert-card").removeClass('dn');
-                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/wrong.jpg");
+                    $("#alert-card img").attr('src',"../img/breakWords/wrong.jpg");
                 }else if(data.code == 918){
                     $("#alert-card").removeClass('dn').addClass('share');
-                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/already.jpg");
+                    $("#alert-card img").attr('src',"../img/breakWords/already.jpg");
                 }else {
                     $("#alert-card").removeClass('dn');
-                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/late.jpg");
+                    $("#alert-card img").attr('src',"../img/breakWords/late.jpg");
                 }
             }
         })
@@ -236,13 +236,13 @@ $(function(){
                     console.log('getMoney');
                 }else if( data.code == 917){
                     $("#alert-card").removeClass('dn');
-                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/wrong.jpg");
+                    $("#alert-card img").attr('src',"../img/breakWords/wrong.jpg");
                 }else if(data.code == 918){
                     $("#alert-card").removeClass('dn').addClass('share');
-                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/already.jpg");
+                    $("#alert-card img").attr('src',"../img/breakWords/already.jpg");
                 }else {
                     $("#alert-card").removeClass('dn');
-                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/breakWords/late.jpg");
+                    $("#alert-card img").attr('src',"../img/breakWords/late.jpg");
                 }
             }
         })

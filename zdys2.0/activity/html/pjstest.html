@@ -84,10 +84,10 @@
 </script>
 <ul class="main-wrap" id="main">
     <li class="pg01 pr">
-        <img class="title" src="http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/title.jpg" alt="">
+        <img class="title" src="../img/pjstest/title.jpg" alt="">
         <p class="tc c-white f32">测测这些帕金森病症你有没有中 </p>
-        <img class="main" src="http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/main.jpg" alt="">
-        <img class="bottom pa" src="http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/bottom.jpg" alt="">
+        <img class="main" src="../img/pjstest/main.jpg" alt="">
+        <img class="bottom pa" src="../img/pjstest/bottom.jpg" alt="">
         <em class="start bgc f32 c-white tc br5 centerX" id="start">开始测试</em>
     </li>
     <li class="pr c-white pg">
@@ -165,7 +165,7 @@
     <li class="result c-white pr">
         <h3 class="f48 tc bold">测试结果</h3>
         <p class="tips tc f36 vh" id="tips">看来您应该没有患帕金森疾病的风险呢</p>
-        <img class="no m0a vh" id="tips-pic" src="http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/no.jpg" alt="">
+        <img class="no m0a vh" id="tips-pic" src="../img/pjstest/no.jpg" alt="">
         <p class="tc f24 tc mt20">测试结果仅供参考</p>
         <div class="ewm f24 tc pa">
             <img class="vh" src="http://imgcdn.zhaoduiyisheng.com/img/icon/vip_erwm.jpg" alt="">
@@ -205,13 +205,13 @@
                 if ($(this).hasClass('submit')) {
                     if (score>0&&score<5) {
                         $('#tips').text('您患帕金森疾病的风险较低，平常要多注意身体哦');
-                        $('#tips-pic').addClass('low').attr('src','http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/low.jpg');
-                        $('#focus').addClass('dn').prev().attr('src','http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/qr.jpg');
+                        $('#tips-pic').addClass('low').attr('src','../img/pjstest/low.jpg');
+                        $('#focus').addClass('dn').prev().attr('src','../img/pjstest/qr.jpg');
                         $('#link').removeClass('dn');
                     }else if(score>=5){
                         $('#tips').text('您患帕金森疾病的风险偏高哦，建议您去医院检查一下比较妥当哦');
-                        $('#tips-pic').addClass('high').attr('src','http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/high.jpg');
-                        $('#focus').addClass('dn').prev().attr('src','http://imgcdn.zhaoduiyisheng.com/activity/img/pjstest/qr.jpg');
+                        $('#tips-pic').addClass('high').attr('src','../img/pjstest/high.jpg');
+                        $('#focus').addClass('dn').prev().attr('src','../img/pjstest/qr.jpg');
                         $('#link').removeClass('dn');
                     }
                     $('#focus').prev().removeClass('vh');

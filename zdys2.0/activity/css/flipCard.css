@@ -3,15 +3,15 @@
         font-size: 42.666px !important;
     }
 }
-.card-top{width:100%;height:4.84rem;background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/f_bg01.jpg) no-repeat center;background-size:cover;}
+.card-top{width:100%;height:4.84rem;background: url(../img/f_bg01.jpg) no-repeat center;background-size:cover;}
 
-.countdown{width:2.84rem;height:0.61rem;background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/time.png) no-repeat center;background-size:contain;
+.countdown{width:2.84rem;height:0.61rem;background: url(../img/time.png) no-repeat center;background-size:contain;
     bottom:.46rem;right:1rem;}
 .countdown img{width:0.17rem;height:.22rem;display:block;float:left;margin:.18rem .13rem 0;}
 .countdown img:nth-child(2){margin-right:.26rem;}
 .countdown img:nth-child(4){margin-right:.26rem;}
 .card-wrap{width:100%;height:10.28rem;background:
-        url(http://imgcdn.zhaoduiyisheng.com/activity/img/f_bg02.jpg) no-repeat center;background-size:cover;}
+        url(../img/f_bg02.jpg) no-repeat center;background-size:cover;}
 .card-ul{width:6.36rem;margin:auto;font-size:.28rem;height:7.24rem;}
 .card-ul li{width:2.02rem;height:2.31rem;position:absolute;border-radius:
         0.1rem;overflow:hidden;
@@ -19,16 +19,16 @@
 .card-ul li div{width:2.02rem;height:2.31rem;}
 .front,.back{transition:all 1s;-webkit-transition:all 1s;backface-visibility: hidden;position:absolute;border-radius: 0.1rem;overflow:hidden;
 }
-.front{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/card01.jpg) no-repeat
+.front{background: url(../img/card01.jpg) no-repeat
 center;background-size:cover;transform:rotateY(0deg);-webkit-transform:rotateY(0deg);z-index:2;}
-.back{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/card_back_03.png) no-repeat center;background-size:cover;transform:rotateY(-180deg);-webkit-transform:rotateY(-180deg);z-index:1;}
+.back{background: url(../img/card_back_03.png) no-repeat center;background-size:cover;transform:rotateY(-180deg);-webkit-transform:rotateY(-180deg);z-index:1;}
 .btn-start-game{margin: 0.95rem auto 1.33rem;width:4.18rem;height:0.8rem;background:
-        url(http://imgcdn.zhaoduiyisheng.com/activity/img/btn_flip_card.png) no-repeat center;background-size:contain;}
+        url(../img/btn_flip_card.png) no-repeat center;background-size:contain;}
 .btn-start-game:active{opacity:.8}
-.rules{height:6.57rem;background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/f_bg03.jpg)
+.rules{height:6.57rem;background: url(../img/f_bg03.jpg)
 no-repeat center;background-size:cover;padding:.5rem 0.57rem 0;}
 .rules p{margin-top:0.2rem;text-align:justify;}
 
 .flip-card-result{width:5.82rem;border-radius: 0.1rem;}
 .use-out{margin: 0.85rem auto 1.23rem;width:79.3%;height:1.16rem;background:
-url(http://imgcdn.zhaoduiyisheng.com/activity/img/useOut.png) no-repeat center;background-size:contain;}
+url(../img/useOut.png) no-repeat center;background-size:contain;}

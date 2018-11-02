@@ -10,7 +10,7 @@
             scroll.refresh();
         });
         weixinLogin();
-        shareWeixin('最美劳动手一定是我妈哒！快来帮我~','戳戳戳，还可能掉下红包来','http://www-test.zhaoduiyisheng.com/activity/html/May.html','http://imgcdn.zhaoduiyisheng.com/activity/img/MayDay/face.jpg');
+        shareWeixin('最美劳动手一定是我妈哒！快来帮我~','戳戳戳，还可能掉下红包来','http://www-test.zhaoduiyisheng.com/activity/html/May.html','../img/MayDay/face.jpg');
         /*返回顶部*/
         $("#backTop").click(function(){
             scroll.scrollTo(0,0,500)

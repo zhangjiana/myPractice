@@ -1,4 +1,4 @@
-.main{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/ticket/bg1.jpg) no-repeat top;background-size:contain;
+.main{background: url(../img/ticket/bg1.jpg) no-repeat top;background-size:contain;
     min-height:100%;padding-top:1.63rem;}
 .bg-red2{background-color: #f83e3f}
 .btn-get-code{width:1.8rem;height:.78rem;line-height: .78rem;margin-top:.3rem;
@@ -22,9 +22,9 @@ input::-webkit-input-placeholder{ color: #999; }
 .mt64{margin-top:.64rem;}
 .weixin-num{color:#eb3a46;text-decoration: underline;}
 .user-name{padding-bottom:0.47rem;padding-top:.18rem;}
-.line1{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/ticket/line_01.png) no-repeat
+.line1{background: url(../img/ticket/line_01.png) no-repeat
 center;background-size:contain;}
-.line2{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/ticket/line_02.png) no-repeat
+.line2{background: url(../img/ticket/line_02.png) no-repeat
 center;background-size:7.5rem;}
 @media screen and (width:320px) {
     .main{min-height:auto;}

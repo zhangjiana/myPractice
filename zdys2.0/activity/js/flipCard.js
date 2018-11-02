@@ -9,7 +9,7 @@ $(function() {
         var second = 59 - oTime.getSeconds();
         var str = '' + toD(hour) + toD(minute) + toD(second);
         for (var i = 0; i < aImg.length; i++) {
-            aImg[i].src = 'http://imgcdn.zhaoduiyisheng.com/activity/img/' + str[i] + '.png';
+            aImg[i].src = '../img/' + str[i] + '.png';
         }
     }
 
@@ -32,22 +32,10 @@ $(function() {
     randomPic();
     $('.btn-start-game').swipe({
         tap: function() {
-            if (!localStorage.openid && (!getCookie('user') || '00' === getCookie('user'))) {
-                myalert.tips({
-                    txt: "您未登录，请先登录",
-                    fnok: function() {
-                        window.location.href = '/html/newLogin.html';
-                    },
-                    notxt: "逛一逛",
-                    oktxt: "去登录"
-                });
-            } else {
                 if (bStart) {
-
                     getCardUuid();
                     bStart = false;
                 }
-            }
         }
     });
     //布局
@@ -105,35 +93,32 @@ $(function() {
         var arr = generateRandomNum(9);
         var len = arr.length;
         for (var i = 0; i < len; i++) {
-            $(".card-ul li").find('.front').eq(i).css("background", "url(http://imgcdn.zhaoduiyisheng.com/activity/img/card0" + arr[i] + ".jpg) no-repeat center").css("background-size","cover");
+            $(".card-ul li").find('.front').eq(i).css("background", "url(../img/card0" + arr[i] + ".jpg) no-repeat center").css("background-size","cover");
         }
     }
 
     function clickCard($this) {
         var arr = generateRandomNum(8);
-        $this.find('.front').css("background", "url(http://imgcdn.zhaoduiyisheng.com/activity/img/card0" + arr[0] + ".jpg) no-repeat center").css("background-size","cover");
-        $("#alert-card img").attr("src", "http://imgcdn.zhaoduiyisheng.com/activity/img/r" + arr[0] + ".jpg");
+        $this.find('.front').css("background", "url(../img/card0" + arr[0] + ".jpg) no-repeat center").css("background-size","cover");
+        $("#alert-card img").attr("src", "../img/r" + arr[0] + ".jpg");
         setTimeout(function() {
             $("#alert-card").removeClass("dn");
         }, 1000);
     }
 
     function getCardUuid() {
-        $.ajax({
-            type: "GET",
-            url: ajaxUrl + "User/LotteryRedeem?sessionId=" + window.localStorage.sessionId,
-            contentType: "text/plain; charset=UTF-8",
-            dataType: "json",
-            success: function(res) {
+        var res = {};
+        res.code=0;
                 if (res.code == 0) {
-                    $('.btn-start-game').css('background','url(http://imgcdn.zhaoduiyisheng.com/activity/img/btn_try.png) no-repeat center').css("background-size","contain");
+                    $('.btn-start-game').css('background','url(../img/btn_try.png) no-repeat center').css("background-size","contain");
                     //可以抽奖
                     var $li = $("#card-ul li");
-                    if (res.data) {
-                        for (var i in res.data) {
-                            $li.eq(i).attr('uuid', res.data[i]);
-                        }
-                    }
+                    // 给每一个加uuid
+                    // if (res.data) {
+                    //     for (var i in res.data) {
+                    //         $li.eq(i).attr('uuid', res.data[i]);
+                    //     }
+                    // }
                     $('.front').css({
                         '-webkit-transform': 'rotateY(180deg)',
                         'z-index': '1'
@@ -156,25 +141,19 @@ $(function() {
                         $('.card-ul li').bind('click', function() {
                             if (bFlip) {
                                 var $this = $(this);
-                                var $thisUuid = $(this).attr('uuid');
-                                $.ajax({
-                                    type: "POST",
-                                    url: ajaxUrl + "User/LotteryRedeem?sessionId=" + window.localStorage.sessionId,
-                                    contentType: "text/plain; charset=UTF-8",
-                                    dataType: "json",
-                                    data: $thisUuid,
-                                    success: function(res) {
+                                // var $thisUuid = $(this).attr('uuid');
+                                var res = {};
+                                res.code = 0;
                                         if (res.code == 0) {
-                                            console.log(res.message);
                                             //alert(res.message);
-                                            $this.find('.front').css("background", "url(http://imgcdn.zhaoduiyisheng.com/activity/img/card09.jpg) no-repeat center").css("background-size","cover");
-                                            var price = res.data.voucherCash;
+                                            $this.find('.front').css("background", "url(../img/card09.jpg) no-repeat center").css("background-size","cover");
+                                            var price = 480;
                                             setTimeout(function() {
                                                 if (parseInt(price) == 480) {
-                                                    $("#alert-card img").attr("src", "http://imgcdn.zhaoduiyisheng.com/activity/img/ycz.jpg");
+                                                    $("#alert-card img").attr("src", "../img/ycz.jpg");
                                                     $("#alert-card").removeClass("dn");
                                                 } else if (parseInt(price) == 315) {
-                                                    $("#alert-card img").attr("src", "http://imgcdn.zhaoduiyisheng.com/activity/img/dmz.jpg");
+                                                    $("#alert-card img").attr("src", "../img/dmz.jpg");
                                                     $("#alert-card").removeClass("dn");
                                                 }
                                             }, 1000);
@@ -184,8 +163,6 @@ $(function() {
                                                     window.location = "/html/discountTicket.html";
                                                 }
                                             })
-                                        } else if (res.code == 909) {
-                                            loginTimeOut();
                                         } else {
                                             //没有中奖
                                             clickCard($this);
@@ -201,21 +178,6 @@ $(function() {
                                             'z-index': '1'
                                         });
                                         bFlip = false;
-
-                                    },
-                                    error: function(res) {
-                                        if (res.status == 401) {
-                                            myalert.tips({
-                                                txt:"会话超时，请重新登录",
-                                                fnok:function(){
-                                                    window.location = "/html/newLogin.html";
-                                                },
-                                                btn:1
-                                            });
-                                        }
-                                    }
-                                });
-
                             }
                         })
                     }, 7000)
@@ -231,22 +193,9 @@ $(function() {
                     //机会已用完
                     console.log(res.message);
                     //alert(res.message);
-                    $("#alert-card img").attr("src", "http://imgcdn.zhaoduiyisheng.com/activity/img/no_game.jpg");
+                    $("#alert-card img").attr("src", "../img/no_game.jpg");
                     $("#alert-card").removeClass("dn");
                 }
-            },
-            error: function(res) {
-                if (res.status == 401) {
-                    myalert.tips({
-                        txt:"会话超时，请重新登录",
-                        fnok:function(){
-                            window.location = "/html/newLogin.html";
-                        },
-                        btn:1
-                    });
-                }
-            }
-        });
     }
 
     $("#alert-card").swipe({

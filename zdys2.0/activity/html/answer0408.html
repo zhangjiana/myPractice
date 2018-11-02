@@ -21,19 +21,19 @@
     <style>
         body{background-color: #082b3e;}
         .index-page{position: relative;color: #fff;}
-        .index-page>div{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/answerbg.jpg) no-repeat top center;background-size:cover;height: 100%;min-height: 514px;padding-left: .3rem;}
+        .index-page>div{background: url(../img/topicsActivity/answerbg.jpg) no-repeat top center;background-size:cover;height: 100%;min-height: 514px;padding-left: .3rem;}
         .index-page h3{font-size: .34rem;}
         .index-page ul{font-size: .28rem;color: #d5d5d5;margin-bottom: .2rem;}
         .index-page li{margin-bottom: .1rem;clear: both;overflow: hidden;}
         .index-page p{padding-top: .12rem;width: 80%;padding-left: .3rem;position: relative;}
         .index-page p::before{content: "";height: 5px;width: 5px;background-color: #d5d5d5;-webkit-border-radius: 9999px;border-radius: 9999px;margin:7px 5px 0;position: absolute;left: 0;}
         .one{padding-top: 2.7rem;}
-        .checks{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/check.png) no-repeat top center;background-size:contain;width: .6rem;height: .6rem;display: block;margin-right: .3rem;}
-        .checked{background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/checked.png) no-repeat top center;background-size:contain;}
-        .submit{text-indent: -9999px;width: 2.24rem;height: .8rem;background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/btn_sunmit.png) no-repeat center;background-size:contain;position: relative;left: 50%;margin-left: -1.12rem;margin-top: .3rem;}
+        .checks{background: url(../img/topicsActivity/check.png) no-repeat top center;background-size:contain;width: .6rem;height: .6rem;display: block;margin-right: .3rem;}
+        .checked{background: url(../img/topicsActivity/checked.png) no-repeat top center;background-size:contain;}
+        .submit{text-indent: -9999px;width: 2.24rem;height: .8rem;background: url(../img/topicsActivity/btn_sunmit.png) no-repeat center;background-size:contain;position: relative;left: 50%;margin-left: -1.12rem;margin-top: .3rem;}
         .alert-wrap { position: absolute; z-index: 999; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .5); }
         .result { width: 5.86rem; border-radius: 20px; }
-        .closeThis { position: absolute; bottom: 11.12%; left: 50%; -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); width: 1.02rem; height: 1.02rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/close.png) no-repeat center;background-size:cover; }
+        .closeThis { position: absolute; bottom: 11.12%; left: 50%; -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); width: 1.02rem; height: 1.02rem; background: url(../img/topicsActivity/close.png) no-repeat center;background-size:cover; }
         /*.share:before { content: ""; width: 100%; position: absolute; top: 0; height: 1.8rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/weixin_share.png) no-repeat right center;background-size:contain; z-index: 10; }*/
         .back { position: absolute; top: 0.3rem; left: 0.3rem; display: block; width: .6rem; height: .6rem; background: url(http://imgcdn.zhaoduiyisheng.com/img/icon/back_white_03.png) rgba(0, 0, 0, .48) no-repeat center;background-size:.48rem; }
         @media screen and (width:320px) {
@@ -117,7 +117,7 @@
     </div>
 </div>
 <div class="alert-wrap dn" id="alert-card">
-    <img class="result center" src="http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/right.jpg">
+    <img class="result center" src="../img/topicsActivity/right.jpg">
     <span class="db closeThis" id="closeThis"></span>
 </div>
 </body>
@@ -188,19 +188,19 @@
                 console.log(data);
                 if(data.code == 0){
                     $("#alert-card").removeClass('dn share');
-                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/right.jpg");
+                    $("#alert-card img").attr('src',"../img/topicsActivity/right.jpg");
                     setTimeout(function(){
                         getMoney();
                     },2000);
                 }else if( data.code == 917){
                     $("#alert-card").removeClass('dn');
-                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/wrong.jpg");
+                    $("#alert-card img").attr('src',"../img/topicsActivity/wrong.jpg");
                 }else if(data.code == 918){
                     $("#alert-card").removeClass('dn').addClass('share');
-                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/already.jpg");
+                    $("#alert-card img").attr('src',"../img/topicsActivity/already.jpg");
                 }else if(data.code == 998){
                     $("#alert-card").removeClass('dn');
-                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/late.jpg");
+                    $("#alert-card img").attr('src',"../img/topicsActivity/late.jpg");
                 }else{
                     myalert.tips({
                         txt:data.message,
@@ -227,13 +227,13 @@
                     });
                 }else if( data.code == 917){
                     $("#alert-card").removeClass('dn');
-                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/wrong.jpg");
+                    $("#alert-card img").attr('src',"../img/topicsActivity/wrong.jpg");
                 }else if(data.code == 918){
                     $("#alert-card").removeClass('dn').addClass('share');
-                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/already.jpg");
+                    $("#alert-card img").attr('src',"../img/topicsActivity/already.jpg");
                 }else if( data.code == 998){
                     $("#alert-card").removeClass('dn');
-                    $("#alert-card img").attr('src',"http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/late.jpg");
+                    $("#alert-card img").attr('src',"../img/topicsActivity/late.jpg");
                 }
             }
         });
@@ -241,6 +241,6 @@
     setTimeout(function(){
         scroll.refresh();
     },1000);
-    shareWeixin("答题抢红包，和找对医生一起健康每周一","千份红包每周一17：00准时开抢哦","http://www.zhaoduiyisheng.com/activity/html/topicsActivity.html","http://imgcdn.zhaoduiyisheng.com/activity/img/topicsActivity/pig.jpg")
+    shareWeixin("答题抢红包，和找对医生一起健康每周一","千份红包每周一17：00准时开抢哦","http://www.zhaoduiyisheng.com/activity/html/topicsActivity.html","../img/topicsActivity/pig.jpg")
 </script>
 </html>

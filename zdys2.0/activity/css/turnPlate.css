@@ -1,6 +1,6 @@
 .main-wrap { height: 100%; width: 100%; overflow: hidden; }
 .bg-wrap img { display: block; width: 100%; }
-.contBg { padding: .5rem 0.30rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/turnPlate/bgall.jpg); }
+.contBg { padding: .5rem 0.30rem; background: url(../img/turnPlate/bgall.jpg); }
 .actRules { border: 2px solid #63092c; border-radius: 16px; padding: 0.40rem 0.18rem; margin: 0 auto; }
 .actRules li { margin-top: .26rem; }
 .actRules li:first-child { margin-top: 0; }
@@ -8,11 +8,11 @@
 .erweima img { display: inline-block; width: 2.45rem; height: 2.45rem; }
 .scort { position: absolute; width: 1.92rem; height: .53rem; background: url(http://www-test.zhaoduiyisheng.com/activity/img/turnPlate/scort.png) no-repeat center; background-size: cover; left: .88rem; bottom: .82rem; z-index: 1000; }
 .doc { position: absolute; width: 1.92rem; height: .53rem; background: url(http://www-test.zhaoduiyisheng.com/activity/img/turnPlate/doc.png) no-repeat center; background-size: cover; right: .88rem; bottom: .82rem; z-index: 1000; }
-.platebg { position: absolute; width: 5.14rem; height: 5.14rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/turnPlate/plate.png) no-repeat left; background-size: cover; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); top: -.12rem; z-index: 999; -webkit-animation-name: change; -webkit-animation-duration: 2s; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: step-start; }
+.platebg { position: absolute; width: 5.14rem; height: 5.14rem; background: url(../img/turnPlate/plate.png) no-repeat left; background-size: cover; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); top: -.12rem; z-index: 999; -webkit-animation-name: change; -webkit-animation-duration: 2s; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: step-start; }
 .plate { width: 4.25rem; height: 4.25rem; background: url(http://www-test.zhaoduiyisheng.com/activity/img/turnPlate/plate.jpg) no-repeat center; background-size: cover; border-radius: 50%; }
-.handle { width: .58rem; height: 1.08rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/turnPlate/handle_03.png) no-repeat center; background-size: cover; position: absolute; left: 50%; bottom: 50%; margin-left: -0.29rem; z-index: 666; transition: all 2s; -webkit-transition: all 2s; transform-origin: center bottom; -webkit-transform-origin: center bottom; }
-.start { width: 1.35rem; height: 1.35rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/turnPlate/start_03.jpg) no-repeat center; border-radius: 50%; z-index: 888; background-size: cover; }
-.gift { width: .8rem; height: 1rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/turnPlate/gift_03.png) no-repeat center;background-size: cover;bottom: .52rem; z-index: 8888; }
+.handle { width: .58rem; height: 1.08rem; background: url(../img/turnPlate/handle_03.png) no-repeat center; background-size: cover; position: absolute; left: 50%; bottom: 50%; margin-left: -0.29rem; z-index: 666; transition: all 2s; -webkit-transition: all 2s; transform-origin: center bottom; -webkit-transform-origin: center bottom; }
+.start { width: 1.35rem; height: 1.35rem; background: url(../img/turnPlate/start_03.jpg) no-repeat center; border-radius: 50%; z-index: 888; background-size: cover; }
+.gift { width: .8rem; height: 1rem; background: url(../img/turnPlate/gift_03.png) no-repeat center;background-size: cover;bottom: .52rem; z-index: 8888; }
 @-webkit-keyframes change {
     0%, 50% { background-position: 0 0; }
     100% { background-position: 100% 0; }
@@ -28,8 +28,8 @@
 @media screen and (max-width:361px) and (min-width:341px) {
     .closePop { bottom: 4%; }
 }
-.dialog { width: 5.8rem; height: 7.2rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/turnPlate/popBg_03.jpg) no-repeat center; background-size: cover; border-radius: 20px; position: relative; padding: .60rem .80rem 0; }
-.closeDialog { position: absolute; top: 0; right: 0; width: 1.15rem; height: 1.12rem; background: url(http://imgcdn.zhaoduiyisheng.com/activity/img/turnPlate/close_03.png) no-repeat center; background-size: cover; }
+.dialog { width: 5.8rem; height: 7.2rem; background: url(../img/turnPlate/popBg_03.jpg) no-repeat center; background-size: cover; border-radius: 20px; position: relative; padding: .60rem .80rem 0; }
+.closeDialog { position: absolute; top: 0; right: 0; width: 1.15rem; height: 1.12rem; background: url(../img/turnPlate/close_03.png) no-repeat center; background-size: cover; }
 .title { width: 80%; text-align: center; margin: 0 auto; font-size: 0; }
 .title img { display: inline-block; width: 100%; }
 .regPhone { width: 100%; border-radius: 8px; border: 0; background-color: #fff; height: .66rem; padding-left: .3rem; font-size: .28rem }

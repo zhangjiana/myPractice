@@ -26,7 +26,7 @@ $(function() {
     }
 
     weixinLogin();
-    shareWeixin("积分兑现金，找对医生健康转盘天天转不停","100%中奖，每天一次机会，你还不来吗","http://www-test.zhaoduiyisheng.com/activity/html/turnPlate.html","http://imgcdn.zhaoduiyisheng.com/activity/img/turnPlate/face.jpg");
+    shareWeixin("积分兑现金，找对医生健康转盘天天转不停","100%中奖，每天一次机会，你还不来吗","http://www-test.zhaoduiyisheng.com/activity/html/turnPlate.html","../img/turnPlate/face.jpg");
     function goGet(method){
         $.ajax({
             type: method,

@@ -228,7 +228,7 @@ $(function() {
             }
         });
     }
-    shareWeixin('我刚参加了0元抽奖，快来一起冲关抢红包', '找对医生和你一起为健康出力', 'http://www.zhaoduiyisheng.com/activity/peoplePush/html/push.html', 'http://imgcdn.zhaoduiyisheng.com/activity/peoplePush/img/face.jpg');
+    shareWeixin('我刚参加了0元抽奖，快来一起冲关抢红包', '找对医生和你一起为健康出力', 'http://www.zhaoduiyisheng.com/activity/peoplePush/html/push.html', '../peoplePush/img/face.jpg');
 
 
     //获取注册验证码
